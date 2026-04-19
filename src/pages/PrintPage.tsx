@@ -41,29 +41,29 @@ export default function PrintPage() {
         {studentsWithActivity.map((name, idx) => {
           const activity = session.activities[name]!;
           return (
-            <div key={name} className="print-page p-5 max-w-2xl mx-auto print:max-w-none print:p-0">
+            <div key={name} className="print-page p-6 max-w-2xl mx-auto print:max-w-none print:p-0">
               {/* Student header */}
-              <div className="flex items-center justify-between mb-3 border-b-2 border-gray-800 pb-2">
+              <div className="flex items-center justify-between mb-4 border-b-2 border-gray-800 pb-3">
                 <div>
-                  <h1 className="text-xl font-bold text-gray-800">{name}</h1>
-                  <p className="text-xs text-gray-500 mt-0.5">{formatDate(session.date)} · Literacy</p>
+                  <h1 className="text-2xl font-bold text-gray-800">{name}</h1>
+                  <p className="text-sm text-gray-500 mt-0.5">{formatDate(session.date)} · Literacy</p>
                 </div>
-                <div className="text-xs text-gray-400">{idx + 1} / {studentsWithActivity.length}</div>
+                <div className="text-sm text-gray-400">{idx + 1} / {studentsWithActivity.length}</div>
               </div>
 
               {/* 1. Reading */}
               <PrintSection number={1} title="Reading">
-                <p className="font-semibold text-gray-800 mb-1 text-xs">{activity.reading.title}</p>
-                <p className="text-gray-700 leading-snug text-xs">{activity.reading.passage}</p>
+                <p className="font-semibold text-gray-800 mb-2 text-sm">{activity.reading.title}</p>
+                <p className="text-gray-700 leading-relaxed text-sm">{activity.reading.passage}</p>
               </PrintSection>
 
               {/* 2. Questions */}
               <PrintSection number={2} title="Questions">
-                <ol className="space-y-2">
+                <ol className="space-y-3">
                   {activity.questions.map((q, i) => (
                     <li key={i}>
-                      <p className="text-xs text-gray-700 mb-0.5"><span className="font-bold">{i + 1}.</span> {q}</p>
-                      <div className="border-b border-gray-400 h-4" />
+                      <p className="text-sm text-gray-700 mb-1"><span className="font-bold">{i + 1}.</span> {q}</p>
+                      <div className="border-b border-gray-400 h-5" />
                     </li>
                   ))}
                 </ol>
@@ -71,11 +71,11 @@ export default function PrintPage() {
 
               {/* 3. Writing */}
               <PrintSection number={3} title="Writing">
-                <p className="text-xs text-gray-700 mb-2">{activity.writing.prompt}</p>
+                <p className="text-sm text-gray-700 mb-3">{activity.writing.prompt}</p>
                 {activity.writing.support && <PrintSupportBlock support={activity.writing.support} />}
-                <div className="space-y-2 mt-2">
-                  {[...Array(6)].map((_, i) => (
-                    <div key={i} className="border-b border-gray-400 h-4" />
+                <div className="space-y-3 mt-3">
+                  {[...Array(8)].map((_, i) => (
+                    <div key={i} className="border-b border-gray-400 h-5" />
                   ))}
                 </div>
               </PrintSection>
@@ -89,13 +89,13 @@ export default function PrintPage() {
 
 function PrintSupportBlock({ support }: { support: WritingSupport }) {
   return (
-    <div className="border border-gray-300 rounded-lg p-2 mb-1.5 bg-gray-50">
+    <div className="border border-gray-300 rounded-lg p-3 mb-2 bg-gray-50">
       {support.wordBank && (
         <div>
-          <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Word Bank</p>
-          <div className="flex flex-wrap gap-1">
+          <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Word Bank</p>
+          <div className="flex flex-wrap gap-1.5">
             {support.wordBank.map((w) => (
-              <span key={w} className="border border-gray-400 text-gray-700 text-xs font-medium px-1.5 py-0.5 rounded">
+              <span key={w} className="border border-gray-400 text-gray-700 text-sm font-medium px-2 py-0.5 rounded">
                 {w}
               </span>
             ))}
@@ -104,12 +104,12 @@ function PrintSupportBlock({ support }: { support: WritingSupport }) {
       )}
       {support.vocabularyList && (
         <div>
-          <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">
+          <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">
             Vocabulary ({support.vocabularyList[0]?.language})
           </p>
-          <div className="grid grid-cols-3 gap-x-3 gap-y-0.5">
+          <div className="grid grid-cols-3 gap-x-4 gap-y-1">
             {support.vocabularyList.map((v) => (
-              <div key={v.word} className="flex items-center gap-1 text-xs">
+              <div key={v.word} className="flex items-center gap-1.5 text-sm">
                 <span className="font-semibold text-gray-800">{v.word}</span>
                 <span className="text-gray-400">→</span>
                 <span className="text-gray-600">{v.translation}</span>
@@ -120,10 +120,10 @@ function PrintSupportBlock({ support }: { support: WritingSupport }) {
       )}
       {support.sentenceStarters && (
         <div>
-          <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Sentence Starters</p>
-          <ul className="space-y-0.5">
+          <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Sentence Starters</p>
+          <ul className="space-y-1">
             {support.sentenceStarters.map((s, i) => (
-              <li key={i} className="text-xs text-gray-700 border-l-2 border-gray-400 pl-2">{s}</li>
+              <li key={i} className="text-sm text-gray-700 border-l-2 border-gray-400 pl-2">{s}</li>
             ))}
           </ul>
         </div>
@@ -134,12 +134,12 @@ function PrintSupportBlock({ support }: { support: WritingSupport }) {
 
 function PrintSection({ number, title, children }: { number: number; title: string; children: React.ReactNode }) {
   return (
-    <div className="mb-2">
-      <div className="flex items-center gap-1.5 mb-1">
-        <span className="w-4 h-4 rounded-full bg-gray-800 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">{number}</span>
-        <h2 className="font-bold text-gray-800 text-xs uppercase tracking-wider">{title}</h2>
+    <div className="mb-3">
+      <div className="flex items-center gap-2 mb-2">
+        <span className="w-5 h-5 rounded-full bg-gray-800 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">{number}</span>
+        <h2 className="font-bold text-gray-800 text-sm uppercase tracking-wider">{title}</h2>
       </div>
-      <div className="border border-gray-200 rounded-lg p-2 bg-white">
+      <div className="border border-gray-200 rounded-xl p-3 bg-white">
         {children}
       </div>
     </div>
