@@ -12,6 +12,7 @@ export const STUDENTS = [
   'Matt',
   'Joshua',
   'Maverick',
+  'Jocasta',
 ] as const;
 
 export type Student = (typeof STUDENTS)[number];
@@ -194,6 +195,37 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
               'howling', 'crashed', 'poured', 'trembling', 'drenched',
               'shelter', 'fierce', 'thunder', 'lightning', 'rumbled',
               'dramatic', 'powerful', 'suddenly', 'eventually', 'despite',
+            ],
+          },
+        },
+      },
+
+      // ── Jocasta — Level 26 (~9.5–10 yrs) ────────────────────
+      // Lacks confidence starting writing. Key support: sentence starters.
+      // Once she has a starter she can write independently.
+      Jocasta: {
+        reading: {
+          title: 'The Old Lighthouse',
+          passage:
+            "For nearly a hundred years, the lighthouse at Cape Moody had guided ships safely through the rocky harbour. Old Thomas, the keeper, had lived there all his life. Every evening at dusk, he climbed the spiral staircase to light the lamp. He knew every rock, every current, every shadow on the water. When the council announced the lighthouse would be automated, Thomas sat quietly at his kitchen table for a long time. 'The sea won't know the difference,' he said finally. 'But I will.'",
+        },
+        questions: [
+          'What was the lighthouse used for?',
+          'What did Thomas do every evening at dusk?',
+          'What does the word "automated" mean? How do you think Thomas felt when he heard the news?',
+          "Why do you think Thomas said, 'The sea won't know the difference, but I will'?",
+          'What does this story tell us about the relationship between Thomas and his work?',
+        ],
+        writing: {
+          prompt:
+            'Write about a person who cares deeply about their work or a special place. Describe how they feel when things start to change.',
+          support: {
+            sentenceStarters: [
+              'Every single day, she/he would ...',
+              'It was not just a job — it was ...',
+              'When the news came, she/he ...',
+              'Even though things were changing, she/he still ...',
+              'In the end, what mattered most was ...',
             ],
           },
         },
