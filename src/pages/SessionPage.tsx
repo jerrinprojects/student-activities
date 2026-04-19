@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import { STUDENTS, LITERACY_SESSIONS } from '../data/literacy';
+import { STUDENTS, LITERACY_SESSIONS, type WritingSupport } from '../data/literacy';
 
 export default function SessionPage() {
   const navigate = useNavigate();
@@ -7,18 +7,16 @@ export default function SessionPage() {
 
   const studentName = STUDENTS.find((s) => s.toLowerCase() === student?.toLowerCase());
   const session = LITERACY_SESSIONS.find((s) => s.date === date);
+  const activity = studentName ? session?.activities[studentName] : undefined;
 
-  if (!studentName || !session) {
+  if (!studentName || !session || !activity) {
     return <div className="p-8 text-center text-gray-500">Session not found.</div>;
   }
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center gap-3 no-print">
-        <button
-          onClick={() => navigate(`/literacy/${student}`)}
-          className="text-gray-500 hover:text-gray-800 text-sm font-medium"
-        >
+        <button onClick={() => navigate(`/literacy/${student}`)} className="text-gray-500 hover:text-gray-800 text-sm font-medium">
           ← {studentName}
         </button>
         <span className="text-gray-300">/</span>
@@ -39,16 +37,16 @@ export default function SessionPage() {
           </div>
         </div>
 
-        {/* Reading */}
+        {/* 1. Reading */}
         <Section number={1} title="Reading" color="blue">
-          <h3 className="font-bold text-lg text-gray-800 mb-3">{session.reading.title}</h3>
-          <p className="text-gray-700 leading-relaxed text-base">{session.reading.passage}</p>
+          <h3 className="font-bold text-lg text-gray-800 mb-3">{activity.reading.title}</h3>
+          <p className="text-gray-700 leading-relaxed text-base">{activity.reading.passage}</p>
         </Section>
 
-        {/* Questions */}
+        {/* 2. Questions */}
         <Section number={2} title="Questions" color="green">
           <ol className="space-y-3">
-            {session.questions.map((q, i) => (
+            {activity.questions.map((q, i) => (
               <li key={i} className="flex gap-3">
                 <span className="font-bold text-gray-500 w-5 flex-shrink-0">{i + 1}.</span>
                 <span className="text-gray-700">{q}</span>
@@ -57,10 +55,11 @@ export default function SessionPage() {
           </ol>
         </Section>
 
-        {/* Writing */}
+        {/* 3. Writing */}
         <Section number={3} title="Writing" color="orange">
-          <p className="text-gray-700 mb-4">{session.writing.prompt}</p>
-          <div className="space-y-3">
+          <p className="text-gray-700 mb-4">{activity.writing.prompt}</p>
+          {activity.writing.support && <SupportBlock support={activity.writing.support} />}
+          <div className="space-y-3 mt-4">
             {[...Array(6)].map((_, i) => (
               <div key={i} className="border-b border-gray-300 h-8" />
             ))}
@@ -71,31 +70,60 @@ export default function SessionPage() {
   );
 }
 
-function Section({
-  number, title, color, children,
-}: {
-  number: number;
-  title: string;
-  color: 'blue' | 'green' | 'orange';
-  children: React.ReactNode;
-}) {
-  const colors = {
-    blue: 'bg-blue-50 border-blue-200',
-    green: 'bg-green-50 border-green-200',
-    orange: 'bg-orange-50 border-orange-200',
-  };
-  const badge = {
-    blue: 'bg-blue-200 text-blue-800',
-    green: 'bg-green-200 text-green-800',
-    orange: 'bg-orange-200 text-orange-800',
-  };
+function SupportBlock({ support }: { support: WritingSupport }) {
+  return (
+    <div className="bg-white rounded-xl border border-gray-200 p-4 mb-2">
+      {support.wordBank && (
+        <div className="mb-3">
+          <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Word Bank</p>
+          <div className="flex flex-wrap gap-2">
+            {support.wordBank.map((w) => (
+              <span key={w} className="bg-blue-50 border border-blue-200 text-blue-800 text-sm font-medium px-2 py-0.5 rounded-lg">
+                {w}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+      {support.vocabularyList && (
+        <div>
+          <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
+            Vocabulary — {support.vocabularyList[0]?.language}
+          </p>
+          <div className="grid grid-cols-2 gap-1">
+            {support.vocabularyList.map((v) => (
+              <div key={v.word} className="flex items-center gap-2 bg-violet-50 rounded-lg px-3 py-1.5">
+                <span className="font-semibold text-violet-800 text-sm">{v.word}</span>
+                <span className="text-gray-400 text-xs">→</span>
+                <span className="text-gray-700 text-sm">{v.translation}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+      {support.sentenceStarters && (
+        <div className="mt-3">
+          <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Sentence Starters</p>
+          <ul className="space-y-1">
+            {support.sentenceStarters.map((s, i) => (
+              <li key={i} className="text-sm text-gray-700 bg-yellow-50 border border-yellow-200 rounded-lg px-3 py-1.5">
+                {s}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
 
+function Section({ number, title, color, children }: { number: number; title: string; color: 'blue' | 'green' | 'orange'; children: React.ReactNode }) {
+  const colors = { blue: 'bg-blue-50 border-blue-200', green: 'bg-green-50 border-green-200', orange: 'bg-orange-50 border-orange-200' };
+  const badge = { blue: 'bg-blue-200 text-blue-800', green: 'bg-green-200 text-green-800', orange: 'bg-orange-200 text-orange-800' };
   return (
     <div className={`rounded-2xl border-2 p-5 mb-4 ${colors[color]}`}>
       <div className="flex items-center gap-2 mb-4">
-        <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${badge[color]}`}>
-          {number}
-        </span>
+        <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${badge[color]}`}>{number}</span>
         <h2 className="font-bold text-gray-800 text-base uppercase tracking-wide">{title}</h2>
       </div>
       {children}

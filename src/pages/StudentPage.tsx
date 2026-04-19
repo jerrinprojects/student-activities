@@ -41,7 +41,7 @@ export default function StudentPage() {
                 </div>
                 <div className="flex-1">
                   <div className="font-semibold text-gray-800">{formatDate(session.date)}</div>
-                  <div className="text-sm text-gray-500 mt-0.5">{session.reading.title}</div>
+                  <div className="text-sm text-gray-500 mt-0.5">{studentName ? session.activities[studentName]?.reading.title : ''}</div>
                 </div>
                 {i === 0 && (
                   <span className="text-xs font-semibold bg-violet-100 text-violet-700 px-2 py-0.5 rounded-full">

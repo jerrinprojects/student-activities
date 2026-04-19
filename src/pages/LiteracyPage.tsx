@@ -7,6 +7,7 @@ const avatarColors = [
   'bg-green-200 text-green-800',
   'bg-orange-200 text-orange-800',
   'bg-pink-200 text-pink-800',
+  'bg-teal-200 text-teal-800',
 ];
 
 export default function LiteracyPage() {
@@ -53,7 +54,9 @@ export default function LiteracyPage() {
               </div>
               <div>
                 <div className="font-bold text-gray-800 text-lg">{name}</div>
-                <div className="text-sm text-gray-500">{LITERACY_SESSIONS.length} session{LITERACY_SESSIONS.length !== 1 ? 's' : ''}</div>
+                <div className="text-sm text-gray-500">
+                  {LITERACY_SESSIONS.filter(s => s.activities[name]).length} session{LITERACY_SESSIONS.filter(s => s.activities[name]).length !== 1 ? 's' : ''}
+                </div>
               </div>
               <span className="ml-auto text-gray-400 text-lg">→</span>
             </button>
