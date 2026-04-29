@@ -1,17 +1,21 @@
 import { useNavigate, useParams } from 'react-router-dom';
+import { useState } from 'react';
 import { STUDENTS, LITERACY_SESSIONS, type WritingSupport } from '../data/literacy';
 
 export default function SessionPage() {
   const navigate = useNavigate();
   const { student, date } = useParams<{ student: string; date: string }>();
+  const [activeSet, setActiveSet] = useState(0);
 
   const studentName = STUDENTS.find((s) => s.toLowerCase() === student?.toLowerCase());
   const session = LITERACY_SESSIONS.find((s) => s.date === date);
-  const activity = studentName ? session?.activities[studentName] : undefined;
+  const activitySets = studentName ? session?.activities[studentName] : undefined;
 
-  if (!studentName || !session || !activity) {
+  if (!studentName || !session || !activitySets || activitySets.length === 0) {
     return <div className="p-8 text-center text-gray-500">Session not found.</div>;
   }
+
+  const activity = activitySets[activeSet];
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
@@ -37,6 +41,23 @@ export default function SessionPage() {
           </div>
         </div>
 
+        {/* Set tabs */}
+        <div className="flex gap-2 mb-5">
+          {activitySets.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActiveSet(i)}
+              className={`px-4 py-1.5 rounded-full text-sm font-semibold transition-colors ${
+                activeSet === i
+                  ? 'bg-violet-600 text-white'
+                  : 'bg-white border border-gray-200 text-gray-600 hover:border-violet-300'
+              }`}
+            >
+              Set {i + 1}
+            </button>
+          ))}
+        </div>
+
         {/* 1. Reading */}
         <Section number={1} title="Reading" color="blue">
           <h3 className="font-bold text-lg text-gray-800 mb-3">{activity.reading.title}</h3>
@@ -57,7 +78,10 @@ export default function SessionPage() {
 
         {/* 3. Writing */}
         <Section number={3} title="Writing" color="orange">
-          <p className="text-gray-700 mb-4">{activity.writing.prompt}</p>
+          <p className="text-gray-700 mb-1">{activity.writing.prompt}</p>
+          {activity.writing.promptTranslation && (
+            <p className="text-sm text-gray-400 italic mb-4">{activity.writing.promptTranslation}</p>
+          )}
           {activity.writing.support && <SupportBlock support={activity.writing.support} />}
           <div className="space-y-3 mt-4">
             {[...Array(6)].map((_, i) => (

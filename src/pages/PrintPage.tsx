@@ -1,6 +1,9 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { STUDENTS, LITERACY_SESSIONS, type WritingSupport } from '../data/literacy';
+
+const WRITING_BREAK_STUDENTS = new Set(['Joshua', 'Maverick', 'Jocasta']);
 
 export default function PrintPage() {
   const navigate = useNavigate();
@@ -21,14 +24,20 @@ export default function PrintPage() {
     );
   }
 
-  const studentsWithActivity = STUDENTS.filter((name) => session.activities[name]);
+  const studentsWithActivity = STUDENTS.filter((name) => session.activities[name]?.length);
+
+  // Total pages = sum of all sets across all students
+  const totalPages = studentsWithActivity.reduce(
+    (sum, name) => sum + (session.activities[name]?.length ?? 0), 0
+  );
+  let pageCounter = 0;
 
   return (
     <div>
       <div className="no-print fixed top-0 left-0 right-0 bg-white border-b border-gray-200 px-6 py-3 flex items-center gap-3 z-10 shadow-sm">
         <button onClick={() => navigate('/literacy')} className="text-gray-500 hover:text-gray-800 text-sm font-medium">← Back</button>
         <span className="text-gray-700 font-semibold">Print All — {formatDate(session.date)}</span>
-        <span className="text-sm text-gray-400">({studentsWithActivity.length} students)</span>
+        <span className="text-sm text-gray-400">({studentsWithActivity.length} students · {totalPages} pages)</span>
         <button
           onClick={() => window.print()}
           className="ml-auto bg-violet-600 hover:bg-violet-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
@@ -38,49 +47,80 @@ export default function PrintPage() {
       </div>
 
       <div className="pt-16 print:pt-0">
-        {studentsWithActivity.map((name, idx) => {
-          const activity = session.activities[name]!;
-          return (
-            <div key={name} className="print-page p-6 max-w-2xl mx-auto print:max-w-none print:p-0">
-              {/* Student header */}
+        {studentsWithActivity.map((name) => {
+          const sets = session.activities[name]!;
+          return sets.map((activity, setIdx) => {
+            pageCounter += 1;
+            const currentPage = pageCounter;
+            const isWritingBreak = WRITING_BREAK_STUDENTS.has(name);
+            const pageClass = isWritingBreak
+              ? 'print-page-flow p-6 max-w-2xl mx-auto print:max-w-none print:p-0'
+              : 'print-page p-6 max-w-2xl mx-auto print:max-w-none print:p-0';
+            const writingLines = isWritingBreak ? 16 : 8;
+
+            const studentHeader = (suffix: string) => (
               <div className="flex items-center justify-between mb-4 border-b-2 border-gray-800 pb-3">
                 <div>
                   <h1 className="text-2xl font-bold text-gray-800">{name}</h1>
-                  <p className="text-sm text-gray-500 mt-0.5">{formatDate(session.date)} · Literacy</p>
+                  <p className="text-sm text-gray-500 mt-0.5">{formatDate(session.date)} · {suffix} · Set {setIdx + 1}</p>
                 </div>
-                <div className="text-sm text-gray-400">{idx + 1} / {studentsWithActivity.length}</div>
+                <div className="text-sm text-gray-400">{currentPage} / {totalPages}</div>
               </div>
+            );
 
-              {/* 1. Reading */}
-              <PrintSection number={1} title="Reading">
-                <p className="font-semibold text-gray-800 mb-2 text-sm">{activity.reading.title}</p>
-                <p className="text-gray-700 leading-relaxed text-sm">{activity.reading.passage}</p>
-              </PrintSection>
+            return (
+              <React.Fragment key={`${name}-${setIdx}`}>
+                <div className={pageClass}>
+                  {studentHeader('Literacy')}
 
-              {/* 2. Questions */}
-              <PrintSection number={2} title="Questions">
-                <ol className="space-y-3">
-                  {activity.questions.map((q, i) => (
-                    <li key={i}>
-                      <p className="text-sm text-gray-700 mb-1"><span className="font-bold">{i + 1}.</span> {q}</p>
-                      <div className="border-b border-gray-400 h-5" />
-                    </li>
-                  ))}
-                </ol>
-              </PrintSection>
+                  {/* 1. Reading */}
+                  <PrintSection number={1} title="Reading">
+                    <p className="font-semibold text-gray-800 mb-2 text-sm">{activity.reading.title}</p>
+                    <p className="text-gray-700 leading-relaxed text-sm">{activity.reading.passage}</p>
+                  </PrintSection>
 
-              {/* 3. Writing */}
-              <PrintSection number={3} title="Writing">
-                <p className="text-sm text-gray-700 mb-3">{activity.writing.prompt}</p>
-                {activity.writing.support && <PrintSupportBlock support={activity.writing.support} />}
-                <div className="space-y-3 mt-3">
-                  {[...Array(8)].map((_, i) => (
-                    <div key={i} className="border-b border-gray-400 h-5" />
-                  ))}
+                  {/* 2. Questions */}
+                  <PrintSection number={2} title="Questions">
+                    <ol className="space-y-3">
+                      {activity.questions.map((q, i) => (
+                        <li key={i}>
+                          <p className="text-sm text-gray-700 mb-1"><span className="font-bold">{i + 1}.</span> {q}</p>
+                          <div className="border-b border-gray-400 h-5" />
+                        </li>
+                      ))}
+                    </ol>
+                  </PrintSection>
+
+                  {/* Word Practice after Questions for Joshua/Maverick/Jocasta */}
+                  {isWritingBreak && activity.writing.support && (
+                    <PrintWordPracticeTable support={activity.writing.support} />
+                  )}
+
+                  {/* 3. Writing */}
+                  <PrintSection number={3} title="Writing" breakBefore={isWritingBreak}>
+                    <p className="text-sm text-gray-700 mb-1">{activity.writing.prompt}</p>
+                    {activity.writing.promptTranslation && (
+                      <p className="text-xs text-gray-400 italic mb-3">{activity.writing.promptTranslation}</p>
+                    )}
+                    {activity.writing.support && <PrintSupportBlock support={activity.writing.support} />}
+                    <div className="space-y-3 mt-3">
+                      {[...Array(writingLines)].map((_, i) => (
+                        <div key={i} className="border-b border-gray-400 h-5" />
+                      ))}
+                    </div>
+                  </PrintSection>
                 </div>
-              </PrintSection>
-            </div>
-          );
+
+                {/* Word Practice on separate page for Pharrell/Jierry/Bao/Matt */}
+                {!isWritingBreak && activity.writing.support && (
+                  <div className="print-page p-6 max-w-2xl mx-auto print:max-w-none print:p-0">
+                    {studentHeader('Word Practice')}
+                    <PrintWordPracticeTable support={activity.writing.support} />
+                  </div>
+                )}
+              </React.Fragment>
+            );
+          });
         })}
       </div>
     </div>
@@ -132,9 +172,9 @@ function PrintSupportBlock({ support }: { support: WritingSupport }) {
   );
 }
 
-function PrintSection({ number, title, children }: { number: number; title: string; children: React.ReactNode }) {
+function PrintSection({ number, title, children, breakBefore }: { number: number; title: string; children: React.ReactNode; breakBefore?: boolean }) {
   return (
-    <div className="mb-3">
+    <div className={`mb-3${breakBefore ? ' print-writing-break' : ''}`}>
       <div className="flex items-center gap-2 mb-2">
         <span className="w-5 h-5 rounded-full bg-gray-800 text-white text-xs font-bold flex items-center justify-center flex-shrink-0">{number}</span>
         <h2 className="font-bold text-gray-800 text-sm uppercase tracking-wider">{title}</h2>
@@ -142,6 +182,49 @@ function PrintSection({ number, title, children }: { number: number; title: stri
       <div className="border border-gray-200 rounded-xl p-3 bg-white">
         {children}
       </div>
+    </div>
+  );
+}
+
+function PrintWordPracticeTable({ support }: { support: WritingSupport }) {
+  type PracticeWord = { word: string; translation?: string };
+  let words: PracticeWord[] = [];
+  let hasTranslation = false;
+
+  if (support.vocabularyList && support.vocabularyList.length > 0) {
+    hasTranslation = true;
+    words = support.vocabularyList.map((v) => ({ word: v.word, translation: v.translation }));
+  } else if (support.wordBank && support.wordBank.length > 0) {
+    words = support.wordBank.map((w) => ({ word: w }));
+  }
+
+  if (words.length === 0) return null;
+
+  return (
+    <div className="mt-4">
+      <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Word Practice</p>
+      <table className="w-full border-collapse text-xs">
+        <thead>
+          <tr className="bg-gray-100">
+            <th className="border border-gray-300 px-2 py-1 text-left font-semibold">Word</th>
+            {hasTranslation && <th className="border border-gray-300 px-2 py-1 text-left font-semibold">Translation</th>}
+            {[1, 2, 3, 4, 5].map((n) => (
+              <th key={n} className="border border-gray-300 px-2 py-1 text-center font-semibold">{n}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {words.map((w, i) => (
+            <tr key={i}>
+              <td className="border border-gray-300 px-2 py-1.5 font-semibold text-gray-800">{w.word}</td>
+              {hasTranslation && <td className="border border-gray-300 px-2 py-1.5 text-gray-600">{w.translation}</td>}
+              {[1, 2, 3, 4, 5].map((n) => (
+                <td key={n} className="border border-gray-300 px-2 py-1.5 min-w-[60px]" />
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }

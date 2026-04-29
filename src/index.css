@@ -16,9 +16,20 @@
     break-after: page;
     page-break-inside: avoid;
   }
-  .print-page:last-child {
+  /* For longer students (Joshua/Maverick/Jocasta): allow split across pages */
+  .print-page-flow {
+    page-break-after: always;
+    break-after: page;
+  }
+  .print-page:last-child,
+  .print-page-flow:last-child {
     page-break-after: avoid;
     break-after: avoid;
+  }
+  /* Force Writing section to start on a new page */
+  .print-writing-break {
+    break-before: page;
+    page-break-before: always;
   }
   body { background: white; font-size: 11px; }
   @page {
