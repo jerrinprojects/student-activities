@@ -49,6 +49,546 @@ export interface LiteracySession {
 
 export const LITERACY_SESSIONS: LiteracySession[] = [
   {
+    date: '2026-05-04',
+    activities: {
+
+      // ────────────────────────────────────────────────────────
+      //  PHARRELL — Level 7 (~5 yrs)
+      //  Very short phonics-based texts. Word card support.
+      // ────────────────────────────────────────────────────────
+      Pharrell: [
+        {
+          reading: {
+            title: 'My Pet Dog',
+            passage:
+              'I have a pet dog. His name is Rex. Rex has brown fur. He likes to run and jump. I feed Rex in the morning. He eats his food fast. We go for a walk every day. Rex wags his tail when he is happy. I love my dog.',
+          },
+          questions: [
+            'What is the dog\'s name?',
+            'What colour is his fur?',
+            'When does the writer feed Rex?',
+          ],
+          writing: {
+            prompt: 'Write about a pet you have or would like to have. What does it do?',
+            support: {
+              wordBank: ['dog', 'cat', 'pet', 'fur', 'run', 'eat', 'tail', 'jump', 'play', 'big', 'soft', 'love'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'At the Park',
+            passage:
+              'I go to the park with Dad. There are swings and a slide. I go down the slide fast. Dad pushes me on the swing. I go up high. We see ducks by the pond. Dad gives me bread to feed the ducks. The ducks swim to get the bread. I like the park.',
+          },
+          questions: [
+            'Who does the writer go to the park with?',
+            'Name two things at the park.',
+            'What do the ducks do when they get the bread?',
+          ],
+          writing: {
+            prompt: 'Write about your favourite place to play outside. What do you do there?',
+            support: {
+              wordBank: ['park', 'swing', 'slide', 'duck', 'pond', 'run', 'jump', 'play', 'grass', 'fun', 'fast', 'high'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Classroom',
+            passage:
+              'My classroom is big. There are lots of books on the shelf. My teacher writes on the board. We sit at tables with our friends. I like to draw and write. We read books every day. At mat time we listen to stories. I like my classroom.',
+          },
+          questions: [
+            'What does the teacher do?',
+            'Name two things the writer likes to do in class.',
+            'When do they listen to stories?',
+          ],
+          writing: {
+            prompt: 'Write about something you like to do at school.',
+            support: {
+              wordBank: ['school', 'read', 'write', 'draw', 'friend', 'learn', 'book', 'table', 'sit', 'listen', 'mat', 'class'],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JIERRY — Level 10, ESOL (Mandarin)
+      //  Vocabulary list with Chinese translations.
+      // ────────────────────────────────────────────────────────
+      Jierry: [
+        {
+          reading: {
+            title: 'The Market',
+            passage:
+              'On Saturday, my family went to the market. There were many stalls with fruit and vegetables. We bought apples, carrots and some fresh bread. The market was noisy and busy. A man was selling flowers with bright colours. I helped carry the bags home. Mum said the food from the market is fresher than the supermarket.',
+          },
+          questions: [
+            'When did the family go to the market?',
+            'Name three things they bought.',
+            'What was the market like?',
+            'Why does Mum prefer the market over the supermarket?',
+          ],
+          writing: {
+            prompt: 'Write about a time you went shopping with your family. What did you see and buy?',
+            promptTranslation: '写一写你和家人去购物的经历。你看到了什么？买了什么？',
+            support: {
+              vocabularyList: [
+                { word: 'market', translation: '市场', language: 'Chinese' },
+                { word: 'stall', translation: '摊位', language: 'Chinese' },
+                { word: 'vegetables', translation: '蔬菜', language: 'Chinese' },
+                { word: 'fruit', translation: '水果', language: 'Chinese' },
+                { word: 'fresh', translation: '新鲜的', language: 'Chinese' },
+                { word: 'noisy', translation: '嘈杂的', language: 'Chinese' },
+                { word: 'carry', translation: '搬 / 拎', language: 'Chinese' },
+                { word: 'supermarket', translation: '超市', language: 'Chinese' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'My Birthday',
+            passage:
+              'Last week was my birthday. I turned nine years old. Mum made a chocolate cake with candles. My cousins came to our house for a party. We played games and ate lots of food. I got some presents — a book and a new pencil case. After the party, I helped clean up. It was a really happy day.',
+          },
+          questions: [
+            'How old did the writer turn?',
+            'Who came to the party?',
+            'What presents did the writer get?',
+            'What did the writer do after the party?',
+          ],
+          writing: {
+            prompt: 'Write about your last birthday or a birthday you remember. What happened? How did it feel?',
+            promptTranslation: '写一写你上次生日或你记得的一次生日。发生了什么？感觉怎么样？',
+            support: {
+              vocabularyList: [
+                { word: 'birthday', translation: '生日', language: 'Chinese' },
+                { word: 'cake', translation: '蛋糕', language: 'Chinese' },
+                { word: 'candle', translation: '蜡烛', language: 'Chinese' },
+                { word: 'present', translation: '礼物', language: 'Chinese' },
+                { word: 'cousin', translation: '表弟/表妹', language: 'Chinese' },
+                { word: 'party', translation: '聚会', language: 'Chinese' },
+                { word: 'celebrate', translation: '庆祝', language: 'Chinese' },
+                { word: 'happy', translation: '快乐的', language: 'Chinese' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'By the River',
+            passage:
+              'Near our school there is a river. On Friday, our class walked down to look at it. The water was clear and cold. We saw small fish near the rocks. Our teacher told us that rivers are important for animals and people. We must not put rubbish in the river. I felt happy being close to the water.',
+          },
+          questions: [
+            'Where is the river?',
+            'What did the students see in the water?',
+            'What did the teacher say about rivers?',
+            'Why should people not put rubbish in the river?',
+          ],
+          writing: {
+            prompt: 'Write about a time you visited a place in nature — a river, beach, or park. What did you notice?',
+            promptTranslation: '写一写你去大自然的经历——河边、海滩或公园。你注意到了什么？',
+            support: {
+              vocabularyList: [
+                { word: 'river', translation: '河流', language: 'Chinese' },
+                { word: 'nature', translation: '自然', language: 'Chinese' },
+                { word: 'clear', translation: '清澈的', language: 'Chinese' },
+                { word: 'rubbish', translation: '垃圾', language: 'Chinese' },
+                { word: 'important', translation: '重要的', language: 'Chinese' },
+                { word: 'rocks', translation: '岩石', language: 'Chinese' },
+                { word: 'protect', translation: '保护', language: 'Chinese' },
+                { word: 'environment', translation: '环境', language: 'Chinese' },
+              ],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  BAO — Level 10, ESOL (Vietnamese)
+      //  Vocabulary list with Vietnamese translations.
+      // ────────────────────────────────────────────────────────
+      Bao: [
+        {
+          reading: {
+            title: 'The New Neighbour',
+            passage:
+              'A new family moved in next door last month. They have a girl my age named Linh. At first I was shy and did not talk to her. One afternoon, Linh came outside while I was playing in the front yard. She asked if she could play too. We kicked a ball and laughed a lot. Now we walk to school together every day. I am glad she moved in.',
+          },
+          questions: [
+            'When did the new family move in?',
+            'How did the writer feel at first?',
+            'What did they do when they first played together?',
+            'How do we know they became friends?',
+          ],
+          writing: {
+            prompt: 'Write about making a new friend. How did you meet? What do you do together?',
+            promptTranslation: 'Viết về việc kết bạn mới. Bạn gặp nhau như thế nào? Bạn làm gì cùng nhau?',
+            support: {
+              vocabularyList: [
+                { word: 'neighbour', translation: 'hàng xóm', language: 'Vietnamese' },
+                { word: 'shy', translation: 'nhút nhát', language: 'Vietnamese' },
+                { word: 'friend', translation: 'bạn bè', language: 'Vietnamese' },
+                { word: 'play', translation: 'chơi', language: 'Vietnamese' },
+                { word: 'laugh', translation: 'cười', language: 'Vietnamese' },
+                { word: 'together', translation: 'cùng nhau', language: 'Vietnamese' },
+                { word: 'moved', translation: 'chuyển đến', language: 'Vietnamese' },
+                { word: 'glad', translation: 'vui mừng', language: 'Vietnamese' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'Sports Day',
+            passage:
+              'Last Tuesday was our school sports day. All the classes came outside to the field. I ran in the sprint race. My legs felt fast and my heart was beating hard. I came second and got a red ribbon. My friend Maya won first place. After the races, we played team games. I was tired but very happy at the end of the day.',
+          },
+          questions: [
+            'When was sports day?',
+            'What race did the writer run in?',
+            'What did the writer win?',
+            'How did the writer feel at the end of the day?',
+          ],
+          writing: {
+            prompt: 'Write about a time you competed in a race or sport at school. How did you feel before, during and after?',
+            promptTranslation: 'Viết về một lần bạn thi đấu ở trường. Bạn cảm thấy thế nào trước, trong và sau khi thi?',
+            support: {
+              vocabularyList: [
+                { word: 'race', translation: 'cuộc đua', language: 'Vietnamese' },
+                { word: 'run', translation: 'chạy', language: 'Vietnamese' },
+                { word: 'win', translation: 'thắng', language: 'Vietnamese' },
+                { word: 'ribbon', translation: 'dải ruy băng', language: 'Vietnamese' },
+                { word: 'compete', translation: 'thi đấu', language: 'Vietnamese' },
+                { word: 'nervous', translation: 'hồi hộp', language: 'Vietnamese' },
+                { word: 'excited', translation: 'hào hứng', language: 'Vietnamese' },
+                { word: 'proud', translation: 'tự hào', language: 'Vietnamese' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'Helping at Home',
+            passage:
+              'In my family, everyone helps at home. My older sister washes the dishes after dinner. My brother takes out the rubbish. I help Mum fold the washing. Dad cooks on Fridays. We do not get paid, but Mum says working together keeps our family strong. Sometimes I do not feel like helping, but I always do it because I know it matters.',
+          },
+          questions: [
+            'Name two chores that people in the family do.',
+            'Who cooks on Fridays?',
+            'What does Mum say about working together?',
+            'Why does the writer help even when they do not feel like it?',
+          ],
+          writing: {
+            prompt: 'Write about a job or chore you do at home. Why is it important?',
+            promptTranslation: 'Viết về một công việc hoặc nhiệm vụ bạn làm ở nhà. Tại sao nó quan trọng?',
+            support: {
+              vocabularyList: [
+                { word: 'chore', translation: 'việc nhà', language: 'Vietnamese' },
+                { word: 'help', translation: 'giúp đỡ', language: 'Vietnamese' },
+                { word: 'washing', translation: 'quần áo', language: 'Vietnamese' },
+                { word: 'rubbish', translation: 'rác', language: 'Vietnamese' },
+                { word: 'family', translation: 'gia đình', language: 'Vietnamese' },
+                { word: 'responsible', translation: 'có trách nhiệm', language: 'Vietnamese' },
+                { word: 'important', translation: 'quan trọng', language: 'Vietnamese' },
+                { word: 'together', translation: 'cùng nhau', language: 'Vietnamese' },
+              ],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MATT — Level 10
+      //  Word bank support for writing.
+      // ────────────────────────────────────────────────────────
+      Matt: [
+        {
+          reading: {
+            title: 'The Science Experiment',
+            passage:
+              'In class today we did a science experiment. We mixed baking soda and vinegar in a cup. The mixture started to fizz and bubble. Our teacher told us this is a chemical reaction. We wrote down what we saw and drew a diagram. Some cups fizzed more than others depending on how much we used. Science is one of my favourite subjects because you get to find things out.',
+          },
+          questions: [
+            'What did the students mix together?',
+            'What happened when the mixture was made?',
+            'What is this called?',
+            'Why does the writer like science?',
+          ],
+          writing: {
+            prompt: 'Write about a science experiment or discovery you found interesting. What happened? What did you learn?',
+            support: {
+              wordBank: ['experiment', 'mix', 'fizz', 'bubble', 'react', 'result', 'discover', 'learn', 'test', 'observe', 'science', 'interesting'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Lost Dog',
+            passage:
+              'On Sunday afternoon, our dog Biscuit ran out the gate while we were unloading the car. We looked everywhere in the neighbourhood. I put a post on our community Facebook page with a photo. By dinner time, a woman two streets away messaged us. Biscuit had been sitting at her front door. We drove straight there. He was wagging his tail like nothing had happened. Next time, we are double-checking the gate.',
+          },
+          questions: [
+            'How did Biscuit escape?',
+            'What did the writer do to find him?',
+            'How did they find out where Biscuit was?',
+            'What lesson did they learn?',
+          ],
+          writing: {
+            prompt: 'Write about a time something was lost and then found. How did you feel? What did you do?',
+            support: {
+              wordBank: ['lost', 'found', 'search', 'worried', 'relieved', 'looked', 'called', 'message', 'safe', 'happy', 'lesson', 'careful'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The New Kid',
+            passage:
+              'A new boy called James started in our class on Monday. He sat by himself at lunch because he didn\'t know anyone. I remembered what it felt like when I was new at my old school. I went over and asked if he wanted to sit with us. He said yes. By the end of the week, he was playing basketball with us at break. Sometimes all it takes is one person to say hello.',
+          },
+          questions: [
+            'Why did James sit by himself at lunch?',
+            'Why did the writer decide to talk to James?',
+            'What happened by the end of the week?',
+            'What is the main message of this text?',
+          ],
+          writing: {
+            prompt: 'Write about a time you were kind to someone or someone was kind to you. What happened? How did it make you feel?',
+            support: {
+              wordBank: ['kind', 'new', 'hello', 'alone', 'invite', 'include', 'welcome', 'friend', 'felt', 'remembered', 'brave', 'small'],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOSHUA — Level 23 (~8.5 yrs)
+      //  Inference and vocabulary questions. Word bank for writing.
+      // ────────────────────────────────────────────────────────
+      Joshua: [
+        {
+          reading: {
+            title: 'The Last Train',
+            passage:
+              "The platform was empty except for one old man with a suitcase. The train was already three minutes late. He checked his watch, then looked up the track, then checked his watch again. When the train finally arrived, it was going the wrong direction. He stood still as it passed. Then he picked up his case, walked back to the bench, and sat down. He didn't look surprised. He opened a newspaper and began to read, as though he had expected this all along.",
+          },
+          questions: [
+            'What details suggest the man had been waiting a long time?',
+            'What does "going the wrong direction" suggest happened to his plans?',
+            'What does his reaction — sitting back down and opening a newspaper — tell us about his character?',
+            'What does "as though he had expected this all along" imply about the man?',
+            'Write a possible backstory for this man. Why might he be at the station?',
+          ],
+          writing: {
+            prompt: 'Write a short story told from the perspective of someone waiting — at a station, hospital, or airport. Use details to show how they are feeling without directly saying it.',
+            support: {
+              wordBank: ['waited', 'glanced', 'sighed', 'stood', 'quiet', 'platform', 'clock', 'late', 'still', 'turned', 'walked', 'returned'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Notice Board',
+            passage:
+              "The notice had been up for three days before anyone said anything. In green marker on white paper: 'The big oak tree at the bottom of the school field will be removed on Friday to make way for a new car park.' By Wednesday, someone had written underneath in pencil: 'That tree is 70 years old.' By Thursday, there were thirty sticky notes on it. By Friday morning, the groundskeeper arrived to find forty students sitting under the tree. He phoned the principal. The principal phoned the council. The tree is still there.",
+          },
+          questions: [
+            'Why do you think it took three days before anyone commented on the notice?',
+            'What do the sticky notes suggest about how students felt about the tree?',
+            'What is the significance of the fact that someone wrote the tree\'s age?',
+            'What does the students sitting under the tree represent?',
+            'What does this story suggest about collective action and communities?',
+          ],
+          writing: {
+            prompt: 'Write about something in your community or school that you think is worth protecting or standing up for. Why does it matter?',
+            support: {
+              wordBank: ['community', 'protect', 'matter', 'voice', 'decision', 'together', 'change', 'believe', 'worth', 'action', 'stood', 'listened'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'Night Sky',
+            passage:
+              "Theo's father woke him up at 2am. 'Come look at this,' he said. They stood outside in the dark in their socks, necks tilted back. The Milky Way stretched across the sky like spilled flour. Theo had seen pictures of it, but pictures were nothing like this. 'Did people always know those were stars?' he asked. 'They always looked up,' his father said. 'The questions changed.' On the drive back to the city the next morning, Theo kept looking out the window at the sky — pale and ordinary now — wondering what else he had been too busy to see.",
+          },
+          questions: [
+            'Why do you think Theo\'s father woke him up at 2am rather than waiting until morning?',
+            'What does the simile "like spilled flour" tell us about how the Milky Way looked?',
+            'What does his father\'s reply — "The questions changed" — mean?',
+            'What does Theo wonder on the drive back, and what does this suggest about him?',
+            'What is the central idea this story is exploring?',
+          ],
+          writing: {
+            prompt: 'Write about a moment when something ordinary suddenly seemed extraordinary. What changed the way you saw it?',
+            support: {
+              wordBank: ['noticed', 'looked', 'moment', 'ordinary', 'different', 'changed', 'sky', 'dark', 'quiet', 'wonder', 'realised', 'thought'],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MAVERICK — Level 23 (~8.5 yrs)
+      //  Same level as Joshua, different texts and focus.
+      // ────────────────────────────────────────────────────────
+      Maverick: [
+        {
+          reading: {
+            title: 'The Substitute Teacher',
+            passage:
+              "The substitute arrived ten minutes late carrying two bags, a coffee, and a pile of paper that slid off onto the floor in the doorway. Half the class laughed. He crouched down, picked everything up slowly, and then said, without looking up: 'Room 9, I presume.' Nobody laughed after that. By the end of the lesson, three students who usually said nothing had answered questions. He had a way of asking that made you feel like getting it wrong wasn't really the point.",
+          },
+          questions: [
+            'Why did half the class laugh when the substitute arrived?',
+            'What does "Nobody laughed after that" suggest about the moment he spoke?',
+            'What does the detail about three quiet students answering questions tell us?',
+            'What does the phrase "getting it wrong wasn\'t really the point" suggest about his teaching style?',
+            'What qualities make a good teacher, based on what this text shows?',
+          ],
+          writing: {
+            prompt: 'Write about a teacher or adult who changed the way you thought about something. What did they do or say? What effect did it have?',
+            support: {
+              wordBank: ['taught', 'changed', 'said', 'quiet', 'brave', 'answered', 'felt', 'different', 'moment', 'lesson', 'way', 'asked'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Trophy',
+            passage:
+              "Luka had practised every day for six months. At the regional final, he came second. He stood on the podium and smiled for the photo while the winner held the cup. On the drive home, his dad said, 'You were the best one out there.' Luka looked out the window. He knew it wasn't true — and he knew his dad knew it too. They drove the rest of the way in silence. That night, Luka went back to the garage and practised for another hour. He didn't want to be told he was the best. He wanted to actually be it.",
+          },
+          questions: [
+            'What does six months of daily practice tell us about Luka\'s character?',
+            'Why do you think Luka\'s dad said "You were the best one out there" even though it wasn\'t true?',
+            'How do you know Luka found the comment unhelpful rather than comforting?',
+            'What does going back to practise that night tell us about Luka?',
+            'Do you think it is better to be honest or encouraging when someone loses? Explain your view.',
+          ],
+          writing: {
+            prompt: 'Write about a time you worked hard at something and it didn\'t go the way you hoped. What did you do next? What did it teach you?',
+            support: {
+              wordBank: ['practised', 'tried', 'failed', 'disappointed', 'decided', 'kept going', 'learned', 'improved', 'next time', 'honest', 'worth', 'effort'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The New Student',
+            passage:
+              "Nobody had told them she used a wheelchair. When Amara rolled into Room 6 on her first day, the room went quiet in that particular way rooms do when something unexpected happens. The teacher introduced her. Three students offered to move their bags. One boy asked if she wanted to sit next to him. By lunch, she had been to the library, the canteen, and the field — and she had noticed which doors didn't open automatically, which ramps were too steep, and which of her new classmates had stopped noticing her wheelchair entirely.",
+          },
+          questions: [
+            'What does the phrase "that particular way rooms go quiet" suggest?',
+            'How do the students\' actions show two different kinds of responses to Amara?',
+            'What does Amara\'s observation about doors and ramps tell us about her experience?',
+            'What is significant about the classmates who had "stopped noticing her wheelchair entirely"?',
+            'What does this text suggest about inclusion and what it actually means in practice?',
+          ],
+          writing: {
+            prompt: 'Write about what it means to truly include someone. Give a specific example — real or imagined — of what inclusion looks like in action.',
+            support: {
+              wordBank: ['include', 'welcome', 'notice', 'different', 'access', 'barrier', 'aware', 'accepted', 'ordinary', 'equal', 'effort', 'naturally'],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOCASTA — Level 26 (~9.5–10 yrs)
+      //  Needs sentence starters to begin writing.
+      // ────────────────────────────────────────────────────────
+      Jocasta: [
+        {
+          reading: {
+            title: 'The Letter',
+            passage:
+              "The letter had been in the drawer for eleven years, still sealed. Her mother had never explained it, and after a while, Nina had stopped asking. The return address was a town three hours away — a place no one in the family had ever mentioned. Her mother died in March. In May, Nina opened the drawer for the last time before the house was sold. The letter was still there. She held it for a long time. She thought about all the things a sealed letter could mean: unfinished business, a secret kept out of love, or simply a letter that arrived too late and was never meant to be opened at all.",
+          },
+          questions: [
+            'What details suggest the letter was significant, even before Nina opens it?',
+            'Why do you think Nina\'s mother never explained or opened the letter?',
+            'What does the timing — her mother\'s death in March, Nina opening the drawer in May — add to the emotional weight of the scene?',
+            'What are the three possible meanings Nina imagines? What do these suggest about how she is processing her grief?',
+            'This story ends without telling us whether Nina opens the letter. What effect does this create?',
+          ],
+          writing: {
+            prompt: 'Write a piece about an object, place, or moment that holds an unanswered question. Don\'t resolve it — let the uncertainty be part of what you are exploring.',
+            support: {
+              wordBank: ['sealed', 'unknown', 'secret', 'held', 'never', 'wondered', 'before'],
+              sentenceStarters: [
+                'Nobody ever explained ...',
+                'For years, the question sat there like ...',
+                'There was always something about ... that made me ...',
+                'I never found out ..., but I learned that ...',
+                'Some things stay unanswered, and that ...',
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Storm',
+            passage:
+              "The storm had been building since midday. By five o'clock, the sky had turned the colour of a bruise. Inside the house, the family had pulled the curtains and turned on all the lights, as though they could outvote the dark. The dog was under the bed. The youngest child was pretending to read. When the thunder came, it came without warning — not a distant rumble but a crack directly overhead, as though the sky had split. The power went out. In the silence that followed, the rain began. Not a shower. A erasure. Within minutes, the garden, the path, the road beyond — all gone under white noise and water.",
+          },
+          questions: [
+            'How does the writer build tension before the storm arrives?',
+            'What does "as though they could outvote the dark" suggest about the family\'s feelings?',
+            'What effect does the detail about the dog and child create?',
+            'How does the writer make the thunder feel sudden and shocking?',
+            'Explain the effect of the final word — "erasure" — as a sentence on its own.',
+          ],
+          writing: {
+            prompt: 'Write about a moment when nature felt powerful, overwhelming, or awe-inspiring. Focus on building atmosphere through specific sensory details.',
+            support: {
+              wordBank: ['dark', 'wind', 'quiet', 'still', 'suddenly', 'before', 'after', 'felt'],
+              sentenceStarters: [
+                'Before it arrived, there was ...',
+                'The air felt different — as though ...',
+                'Nobody spoke. The only sound was ...',
+                'It wasn\'t the ... that frightened me; it was ...',
+                'When it was finally over, everything looked ...',
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Interview',
+            passage:
+              "The journalist had been interviewing survivors for three weeks. She had filled four notebooks. Every story was different, and every story was the same. She had learned to listen for the pauses — the places where people stopped before continuing — because that was often where the real story was. At night, in her motel room, she looked at her notebook and thought about what she would leave out. Not because it wasn't true, but because not all truths belonged in a newspaper. Some things were said to her in a particular way — quietly, facing away — that she understood were not for print. She closed the notebook. She wondered if she was getting it right.",
+          },
+          questions: [
+            'What does "every story was different, and every story was the same" mean?',
+            'What technique does the journalist use when interviewing, and why?',
+            'What does "not all truths belonged in a newspaper" suggest about the difference between truth and public information?',
+            'Why do you think the journalist closes the notebook wondering if she is "getting it right"?',
+            'What ethical responsibilities does someone have when telling other people\'s stories? Use evidence from the text in your answer.',
+          ],
+          writing: {
+            prompt: 'Write about the responsibility that comes with sharing someone else\'s story. What decisions have to be made? What can go wrong — and right?',
+            support: {
+              wordBank: ['truth', 'story', 'trust', 'decide', 'private', 'public', 'responsible', 'power'],
+              sentenceStarters: [
+                'When someone tells you something in confidence, ...',
+                'The hardest part isn\'t collecting the story — it\'s deciding ...',
+                'Not everything that is true should be ...',
+                'A story told wrong can ...',
+                'The person whose story it is ...',
+              ],
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
     date: '2026-04-28',
     activities: {
 
