@@ -81,8 +81,8 @@ export default function SessionPage() {
         {/* 3. Sentence Structure */}
         {activity.sentenceStructure && (
           <Section number={3} title="Sentence Structure" color="purple">
-            <p className="text-sm text-gray-600 mb-3">Build 3 sentences. Choose a <strong>subject</strong> and a <strong>verb</strong>.</p>
-            <div className="flex gap-6 mb-4">
+            <p className="text-sm text-gray-600 mb-3">Build 5 sentences. Choose a <strong>subject</strong> and a <strong>verb</strong>.</p>
+            <div className="flex gap-6 mb-3">
               <div>
                 <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Subjects</p>
                 <div className="flex flex-wrap gap-1.5">
@@ -100,8 +100,14 @@ export default function SessionPage() {
                 </div>
               </div>
             </div>
+            <div className="bg-white border border-purple-200 rounded-lg px-3 py-2 mb-4 flex items-center gap-2">
+              <span className="text-xs font-bold text-purple-500 uppercase tracking-wider flex-shrink-0">Example</span>
+              <span className="text-sm text-gray-600 italic">
+                {activity.sentenceStructure.subjects[0]} {activity.sentenceStructure.verbs[0]}.
+              </span>
+            </div>
             <div className="space-y-4">
-              {[1, 2, 3].map((n) => (
+              {[1, 2, 3, 4, 5].map((n) => (
                 <div key={n} className="flex items-end gap-2">
                   <span className="text-gray-400 text-sm font-medium w-4 flex-shrink-0">{n}.</span>
                   <div className="flex-1 border-b-2 border-gray-300 h-8" />
