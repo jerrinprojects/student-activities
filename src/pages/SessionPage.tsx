@@ -81,7 +81,7 @@ export default function SessionPage() {
         {/* 3. Sentence Structure */}
         {activity.sentenceStructure && (
           <Section number={3} title="Sentence Structure" color="purple">
-            <p className="text-sm text-gray-600 mb-3">Build 5 sentences. Choose a <strong>subject</strong> and a <strong>verb</strong>.</p>
+            <p className="text-sm text-gray-600 mb-3">Build {activity.sentenceStructure.lines ?? 8} sentences. Choose a <strong>subject</strong> and a <strong>verb</strong>.</p>
             <div className="flex gap-6 mb-3">
               <div>
                 <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Subjects</p>
@@ -117,7 +117,7 @@ export default function SessionPage() {
               </span>
             </div>
             <div className="space-y-4">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
+              {Array.from({ length: activity.sentenceStructure.lines ?? 8 }, (_, i) => i + 1).map((n) => (
                 <div key={n} className="flex items-end gap-2">
                   <span className="text-gray-400 text-sm font-medium w-4 flex-shrink-0">{n}.</span>
                   <div className="flex-1 border-b-2 border-gray-300 h-8" />

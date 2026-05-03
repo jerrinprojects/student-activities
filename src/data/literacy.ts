@@ -36,6 +36,7 @@ export interface SentenceStructure {
   subjects: string[];
   verbs: string[];
   translations?: Record<string, string>; // word → native-language translation
+  lines?: number; // number of writing lines (defaults to 8)
 }
 
 export interface ActivitySet {
@@ -76,8 +77,8 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'When does the writer feed Rex?',
           ],
           sentenceStructure: {
-            subjects: ['Rex', 'I', 'We'],
-            verbs: ['runs', 'eats', 'jumps', 'wags'],
+            subjects: ['Rex', 'I', 'We', 'Mum', 'The cat'],
+            verbs: ['runs', 'eats', 'jumps', 'wags', 'plays'],
           },
           writing: {
             prompt: 'Write about a pet you have or would like to have. What does it do?',
@@ -98,8 +99,8 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What do the ducks do when they get the bread?',
           ],
           sentenceStructure: {
-            subjects: ['I', 'Dad', 'The ducks'],
-            verbs: ['slides', 'pushes', 'swims', 'feeds'],
+            subjects: ['I', 'Dad', 'The ducks', 'We', 'The boy'],
+            verbs: ['slides', 'pushes', 'swims', 'feeds', 'runs'],
           },
           writing: {
             prompt: 'Write about your favourite place to play outside. What do you do there?',
@@ -120,8 +121,8 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'When do they listen to stories?',
           ],
           sentenceStructure: {
-            subjects: ['I', 'My teacher', 'We'],
-            verbs: ['reads', 'writes', 'draws', 'listens'],
+            subjects: ['I', 'My teacher', 'We', 'My friend', 'The students'],
+            verbs: ['reads', 'writes', 'draws', 'listens', 'sits'],
           },
           writing: {
             prompt: 'Write about something you like to do at school.',
@@ -150,9 +151,9 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'Why does Mum prefer the market over the supermarket?',
           ],
           sentenceStructure: {
-            subjects: ['My family', 'We', 'A man'],
-            verbs: ['went', 'bought', 'carried', 'sold'],
-            translations: { 'My family': '我的家人', 'We': '我们', 'A man': '一个男人', 'went': '去了', 'bought': '买了', 'carried': '提', 'sold': '卖' },
+            subjects: ['My family', 'We', 'A man', 'Mum', 'The flowers'],
+            verbs: ['went', 'bought', 'carried', 'sold', 'helped'],
+            translations: { 'My family': '我的家人', 'We': '我们', 'A man': '一个男人', 'Mum': '妈妈', 'The flowers': '花', 'went': '去了', 'bought': '买了', 'carried': '提', 'sold': '卖', 'helped': '帮了' },
           },
           writing: {
             prompt: 'Write about a time you went shopping with your family. What did you see and buy?',
@@ -184,9 +185,9 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What did the writer do after the party?',
           ],
           sentenceStructure: {
-            subjects: ['I', 'Mum', 'My cousins'],
-            verbs: ['turned', 'made', 'came', 'played'],
-            translations: { 'I': '我', 'Mum': '妈妈', 'My cousins': '我的表弟表妹', 'turned': '变成', 'made': '做了', 'came': '来了', 'played': '玩' },
+            subjects: ['I', 'Mum', 'My cousins', 'Dad', 'We'],
+            verbs: ['turned', 'made', 'came', 'played', 'helped'],
+            translations: { 'I': '我', 'Mum': '妈妈', 'My cousins': '我的表弟表妹', 'Dad': '爸爸', 'We': '我们', 'turned': '变成', 'made': '做了', 'came': '来了', 'played': '玩', 'helped': '帮了' },
           },
           writing: {
             prompt: 'Write about your last birthday or a birthday you remember. What happened? How did it feel?',
@@ -218,9 +219,9 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'Why should people not put rubbish in the river?',
           ],
           sentenceStructure: {
-            subjects: ['Our class', 'We', 'The teacher'],
-            verbs: ['walked', 'saw', 'told', 'felt'],
-            translations: { 'Our class': '我们班', 'We': '我们', 'The teacher': '老师', 'walked': '走了', 'saw': '看见', 'told': '告诉', 'felt': '感觉' },
+            subjects: ['Our class', 'We', 'The teacher', 'The fish', 'I'],
+            verbs: ['walked', 'saw', 'told', 'felt', 'swam'],
+            translations: { 'Our class': '我们班', 'We': '我们', 'The teacher': '老师', 'The fish': '鱼', 'I': '我', 'walked': '走了', 'saw': '看见', 'told': '告诉', 'felt': '感觉', 'swam': '游' },
           },
           writing: {
             prompt: 'Write about a time you visited a place in nature — a river, beach, or park. What did you notice?',
@@ -259,9 +260,9 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'How do we know they became friends?',
           ],
           sentenceStructure: {
-            subjects: ['Linh', 'I', 'We'],
-            verbs: ['moved', 'played', 'laughed', 'asked'],
-            translations: { 'Linh': 'Linh', 'I': 'Tôi', 'We': 'Chúng tôi', 'moved': 'chuyển đến', 'played': 'chơi', 'laughed': 'cười', 'asked': 'hỏi' },
+            subjects: ['Linh', 'I', 'We', 'The family', 'She'],
+            verbs: ['moved', 'played', 'laughed', 'asked', 'kicked'],
+            translations: { 'Linh': 'Linh', 'I': 'Tôi', 'We': 'Chúng tôi', 'The family': 'Gia đình', 'She': 'Cô ấy', 'moved': 'chuyển đến', 'played': 'chơi', 'laughed': 'cười', 'asked': 'hỏi', 'kicked': 'đá' },
           },
           writing: {
             prompt: 'Write about making a new friend. How did you meet? What do you do together?',
@@ -293,9 +294,9 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'How did the writer feel at the end of the day?',
           ],
           sentenceStructure: {
-            subjects: ['I', 'My friend Maya', 'We'],
-            verbs: ['ran', 'won', 'played', 'felt'],
-            translations: { 'I': 'Tôi', 'My friend Maya': 'Bạn tôi Maya', 'We': 'Chúng tôi', 'ran': 'chạy', 'won': 'thắng', 'played': 'chơi', 'felt': 'cảm thấy' },
+            subjects: ['I', 'My friend Maya', 'We', 'The teacher', 'The class'],
+            verbs: ['ran', 'won', 'played', 'felt', 'cheered'],
+            translations: { 'I': 'Tôi', 'My friend Maya': 'Bạn tôi Maya', 'We': 'Chúng tôi', 'The teacher': 'Giáo viên', 'The class': 'Cả lớp', 'ran': 'chạy', 'won': 'thắng', 'played': 'chơi', 'felt': 'cảm thấy', 'cheered': 'cổ vũ' },
           },
           writing: {
             prompt: 'Write about a time you competed in a race or sport at school. How did you feel before, during and after?',
@@ -327,9 +328,9 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'Why does the writer help even when they do not feel like it?',
           ],
           sentenceStructure: {
-            subjects: ['My sister', 'My brother', 'Dad'],
-            verbs: ['washes', 'cooks', 'folds', 'helps'],
-            translations: { 'My sister': 'Chị/Em gái', 'My brother': 'Anh/Em trai', 'Dad': 'Bố', 'washes': 'rửa', 'cooks': 'nấu ăn', 'folds': 'gấp', 'helps': 'giúp đỡ' },
+            subjects: ['My sister', 'My brother', 'Dad', 'Mum', 'I'],
+            verbs: ['washes', 'cooks', 'folds', 'helps', 'cleaned'],
+            translations: { 'My sister': 'Chị/Em gái', 'My brother': 'Anh/Em trai', 'Dad': 'Bố', 'Mum': 'Mẹ', 'I': 'Tôi', 'washes': 'rửa', 'cooks': 'nấu ăn', 'folds': 'gấp', 'helps': 'giúp đỡ', 'cleaned': 'dọn dẹp' },
           },
           writing: {
             prompt: 'Write about a job or chore you do at home. Why is it important?',
@@ -368,8 +369,8 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'Why does the writer like science?',
           ],
           sentenceStructure: {
-            subjects: ['We', 'The mixture', 'Our teacher'],
-            verbs: ['mixed', 'fizzed', 'wrote', 'told'],
+            subjects: ['We', 'The mixture', 'Our teacher', 'The cup', 'I'],
+            verbs: ['mixed', 'fizzed', 'wrote', 'told', 'observed'],
           },
           writing: {
             prompt: 'Write about a science experiment or discovery you found interesting. What happened? What did you learn?',
@@ -391,8 +392,8 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What lesson did they learn?',
           ],
           sentenceStructure: {
-            subjects: ['Biscuit', 'We', 'A woman'],
-            verbs: ['ran', 'looked', 'messaged', 'drove'],
+            subjects: ['Biscuit', 'We', 'A woman', 'The neighbour', 'I'],
+            verbs: ['ran', 'looked', 'messaged', 'drove', 'called'],
           },
           writing: {
             prompt: 'Write about a time something was lost and then found. How did you feel? What did you do?',
@@ -414,8 +415,8 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What is the main message of this text?',
           ],
           sentenceStructure: {
-            subjects: ['James', 'I', 'He'],
-            verbs: ['sat', 'asked', 'played', 'joined'],
+            subjects: ['James', 'I', 'He', 'We', 'The class'],
+            verbs: ['sat', 'asked', 'played', 'joined', 'smiled'],
           },
           writing: {
             prompt: 'Write about a time you were kind to someone or someone was kind to you. What happened? How did it make you feel?',
@@ -445,8 +446,8 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'Write a possible backstory for this man. Why might he be at the station?',
           ],
           sentenceStructure: {
-            subjects: ['The old man', 'The train', 'He'],
-            verbs: ['waited', 'arrived', 'stood', 'opened'],
+            subjects: ['The old man', 'The train', 'He', 'The platform', 'The newspaper'],
+            verbs: ['waited', 'arrived', 'stood', 'opened', 'checked'],
           },
           writing: {
             prompt: 'Write a short story told from the perspective of someone waiting — at a station, hospital, or airport. Use details to show how they are feeling without directly saying it.',
@@ -469,8 +470,8 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What does this story suggest about collective action and communities?',
           ],
           sentenceStructure: {
-            subjects: ['Someone', 'The students', 'The principal'],
-            verbs: ['wrote', 'sat', 'phoned', 'arrived'],
+            subjects: ['Someone', 'The students', 'The principal', 'The groundskeeper', 'The tree'],
+            verbs: ['wrote', 'sat', 'phoned', 'arrived', 'called'],
           },
           writing: {
             prompt: 'Write about something in your community or school that you think is worth protecting or standing up for. Why does it matter?',
@@ -493,8 +494,8 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What is the central idea this story is exploring?',
           ],
           sentenceStructure: {
-            subjects: ['Theo', 'His father', 'They'],
-            verbs: ['looked', 'woke', 'stood', 'wondered'],
+            subjects: ['Theo', 'His father', 'They', 'The Milky Way', 'The sky'],
+            verbs: ['looked', 'woke', 'stood', 'wondered', 'drove'],
           },
           writing: {
             prompt: 'Write about a moment when something ordinary suddenly seemed extraordinary. What changed the way you saw it?',
@@ -524,8 +525,8 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What qualities make a good teacher, based on what this text shows?',
           ],
           sentenceStructure: {
-            subjects: ['The substitute', 'Half the class', 'Three students'],
-            verbs: ['arrived', 'laughed', 'answered', 'asked'],
+            subjects: ['The substitute', 'Half the class', 'Three students', 'Nobody', 'The lesson'],
+            verbs: ['arrived', 'laughed', 'answered', 'asked', 'crouched'],
           },
           writing: {
             prompt: 'Write about a teacher or adult who changed the way you thought about something. What did they do or say? What effect did it have?',
@@ -548,8 +549,8 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'Do you think it is better to be honest or encouraging when someone loses? Explain your view.',
           ],
           sentenceStructure: {
-            subjects: ['Luka', 'His dad', 'He'],
-            verbs: ['practised', 'stood', 'smiled', 'returned'],
+            subjects: ['Luka', 'His dad', 'He', 'The winner', 'The team'],
+            verbs: ['practised', 'stood', 'smiled', 'returned', 'drove'],
           },
           writing: {
             prompt: 'Write about a time you worked hard at something and it didn\'t go the way you hoped. What did you do next? What did it teach you?',
@@ -572,8 +573,8 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What does this text suggest about inclusion and what it actually means in practice?',
           ],
           sentenceStructure: {
-            subjects: ['Amara', 'Three students', 'One boy'],
-            verbs: ['rolled', 'offered', 'asked', 'noticed'],
+            subjects: ['Amara', 'Three students', 'One boy', 'The teacher', 'The class'],
+            verbs: ['rolled', 'offered', 'asked', 'noticed', 'moved'],
           },
           writing: {
             prompt: 'Write about what it means to truly include someone. Give a specific example — real or imagined — of what inclusion looks like in action.',
@@ -603,8 +604,9 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'This story ends without telling us whether Nina opens the letter. What effect does this create?',
           ],
           sentenceStructure: {
-            subjects: ['Nina', 'Her mother', 'The letter'],
-            verbs: ['opened', 'held', 'wondered', 'explained'],
+            subjects: ['Nina', 'Her mother', 'The letter', 'The drawer', 'The house'],
+            verbs: ['opened', 'held', 'wondered', 'explained', 'thought'],
+            lines: 5,
           },
           writing: {
             prompt: 'Write a piece about an object, place, or moment that holds an unanswered question. Don\'t resolve it — let the uncertainty be part of what you are exploring.',
@@ -634,8 +636,9 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'Explain the effect of the final word — "erasure" — as a sentence on its own.',
           ],
           sentenceStructure: {
-            subjects: ['The storm', 'The dog', 'The child'],
-            verbs: ['built', 'hid', 'pretended', 'came'],
+            subjects: ['The storm', 'The dog', 'The child', 'The family', 'The thunder'],
+            verbs: ['built', 'hid', 'pretended', 'came', 'arrived'],
+            lines: 5,
           },
           writing: {
             prompt: 'Write about a moment when nature felt powerful, overwhelming, or awe-inspiring. Focus on building atmosphere through specific sensory details.',
@@ -665,8 +668,9 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What ethical responsibilities does someone have when telling other people\'s stories? Use evidence from the text in your answer.',
           ],
           sentenceStructure: {
-            subjects: ['The journalist', 'She', 'The survivors'],
-            verbs: ['interviewed', 'listened', 'filled', 'closed'],
+            subjects: ['The journalist', 'She', 'The survivors', 'The notebook', 'The story'],
+            verbs: ['interviewed', 'listened', 'filled', 'closed', 'wrote'],
+            lines: 5,
           },
           writing: {
             prompt: 'Write about the responsibility that comes with sharing someone else\'s story. What decisions have to be made? What can go wrong — and right?',

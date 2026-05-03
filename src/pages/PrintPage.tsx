@@ -177,7 +177,7 @@ function PrintSupportBlock({ support }: { support: WritingSupport }) {
 function PrintSentenceStructure({ ss }: { ss: SentenceStructure }) {
   return (
     <div>
-      <p className="text-xs text-gray-600 mb-2">Build 8 sentences. Choose a <strong>subject</strong> and a <strong>verb</strong>.</p>
+      <p className="text-xs text-gray-600 mb-2">Build {ss.lines ?? 8} sentences. Choose a <strong>subject</strong> and a <strong>verb</strong>.</p>
       <div className="flex gap-4 mb-2">
         <div>
           <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Subjects</p>
@@ -204,7 +204,7 @@ function PrintSentenceStructure({ ss }: { ss: SentenceStructure }) {
       </div>
       <p className="text-xs text-gray-500 italic mb-2">Example: <span className="text-gray-700">{ss.subjects[0]} {ss.verbs[0]}.</span></p>
       <div className="space-y-2">
-        {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
+        {Array.from({ length: ss.lines ?? 8 }, (_, i) => i + 1).map((n) => (
           <div key={n} className="flex items-end gap-2">
             <span className="text-xs text-gray-400 w-3 flex-shrink-0">{n}.</span>
             <div className="flex-1 border-b border-gray-400 h-5" />
