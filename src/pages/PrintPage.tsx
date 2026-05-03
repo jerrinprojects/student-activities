@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import { STUDENTS, LITERACY_SESSIONS, type WritingSupport } from '../data/literacy';
+import { STUDENTS, LITERACY_SESSIONS, type WritingSupport, type SentenceStructure } from '../data/literacy';
 
 const WRITING_BREAK_STUDENTS = new Set(['Joshua', 'Maverick', 'Jocasta']);
 
@@ -91,13 +91,20 @@ export default function PrintPage() {
                     </ol>
                   </PrintSection>
 
+                  {/* 3. Sentence Structure */}
+                  {activity.sentenceStructure && (
+                    <PrintSection number={3} title="Sentence Structure">
+                      <PrintSentenceStructure ss={activity.sentenceStructure} />
+                    </PrintSection>
+                  )}
+
                   {/* Word Practice after Questions for Joshua/Maverick/Jocasta */}
                   {isWritingBreak && activity.writing.support && (
                     <PrintWordPracticeTable support={activity.writing.support} />
                   )}
 
-                  {/* 3. Writing */}
-                  <PrintSection number={3} title="Writing" breakBefore={isWritingBreak}>
+                  {/* 4. Writing */}
+                  <PrintSection number={activity.sentenceStructure ? 4 : 3} title="Writing" breakBefore={isWritingBreak}>
                     <p className="text-sm text-gray-700 mb-1">{activity.writing.prompt}</p>
                     {activity.writing.promptTranslation && (
                       <p className="text-xs text-gray-400 italic mb-3">{activity.writing.promptTranslation}</p>
@@ -111,10 +118,10 @@ export default function PrintPage() {
                   </PrintSection>
                 </div>
 
-                {/* Word Practice on separate page for Pharrell/Jierry/Bao/Matt */}
+                {/* Spelling on separate page for Pharrell/Jierry/Bao/Matt */}
                 {!isWritingBreak && activity.writing.support && (
                   <div className="print-page p-6 max-w-2xl mx-auto print:max-w-none print:p-0">
-                    {studentHeader('Word Practice')}
+                    {studentHeader('Spelling')}
                     <PrintWordPracticeTable support={activity.writing.support} />
                   </div>
                 )}
@@ -168,6 +175,41 @@ function PrintSupportBlock({ support }: { support: WritingSupport }) {
           </ul>
         </div>
       )}
+    </div>
+  );
+}
+
+function PrintSentenceStructure({ ss }: { ss: SentenceStructure }) {
+  return (
+    <div>
+      <p className="text-xs text-gray-600 mb-2">Build 5 sentences. Choose a <strong>subject</strong> and a <strong>verb</strong>.</p>
+      <div className="flex gap-4 mb-2">
+        <div>
+          <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Subjects</p>
+          <div className="flex flex-wrap gap-1">
+            {ss.subjects.map((s) => (
+              <span key={s} className="border border-gray-400 text-gray-700 text-xs font-medium px-2 py-0.5 rounded">{s}</span>
+            ))}
+          </div>
+        </div>
+        <div>
+          <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Verbs</p>
+          <div className="flex flex-wrap gap-1">
+            {ss.verbs.map((v) => (
+              <span key={v} className="border border-gray-400 text-gray-700 text-xs font-medium px-2 py-0.5 rounded">{v}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+      <p className="text-xs text-gray-500 italic mb-2">Example: <span className="text-gray-700">{ss.subjects[0]} {ss.verbs[0]}.</span></p>
+      <div className="space-y-2.5">
+        {[1, 2, 3, 4, 5].map((n) => (
+          <div key={n} className="flex items-end gap-2">
+            <span className="text-xs text-gray-400 w-3 flex-shrink-0">{n}.</span>
+            <div className="flex-1 border-b border-gray-400 h-5" />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
