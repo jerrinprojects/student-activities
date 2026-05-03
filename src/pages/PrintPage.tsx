@@ -97,14 +97,17 @@ export default function PrintPage() {
                       <PrintSentenceStructure ss={activity.sentenceStructure} />
                     </PrintSection>
                   )}
+                </div>
 
-                  {/* Word Practice after Questions for Joshua/Maverick/Jocasta */}
-                  {isWritingBreak && activity.writing.support && (
+                {/* Page 2 — Spelling + Writing */}
+                <div className="print-page p-6 max-w-2xl mx-auto print:max-w-none print:p-0">
+                  {studentHeader('Spelling & Writing')}
+
+                  {activity.writing.support && (
                     <PrintWordPracticeTable support={activity.writing.support} />
                   )}
 
-                  {/* 4. Writing */}
-                  <PrintSection number={activity.sentenceStructure ? 4 : 3} title="Writing" breakBefore={isWritingBreak}>
+                  <PrintSection number={activity.sentenceStructure ? 4 : 3} title="Writing">
                     <p className="text-sm text-gray-700 mb-1">{activity.writing.prompt}</p>
                     {activity.writing.promptTranslation && (
                       <p className="text-xs text-gray-400 italic mb-3">{activity.writing.promptTranslation}</p>
@@ -117,14 +120,6 @@ export default function PrintPage() {
                     </div>
                   </PrintSection>
                 </div>
-
-                {/* Spelling on separate page for Pharrell/Jierry/Bao/Matt */}
-                {!isWritingBreak && activity.writing.support && (
-                  <div className="print-page p-6 max-w-2xl mx-auto print:max-w-none print:p-0">
-                    {studentHeader('Spelling')}
-                    <PrintWordPracticeTable support={activity.writing.support} />
-                  </div>
-                )}
               </React.Fragment>
             );
           });
