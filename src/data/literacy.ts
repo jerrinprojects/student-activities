@@ -35,6 +35,7 @@ export interface WritingSupport {
 export interface SentenceStructure {
   subjects: string[];
   verbs: string[];
+  translations?: Record<string, string>; // word → native-language translation
 }
 
 export interface ActivitySet {
@@ -151,6 +152,7 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
           sentenceStructure: {
             subjects: ['My family', 'We', 'A man'],
             verbs: ['went', 'bought', 'carried', 'sold'],
+            translations: { 'My family': '我的家人', 'We': '我们', 'A man': '一个男人', 'went': '去了', 'bought': '买了', 'carried': '提', 'sold': '卖' },
           },
           writing: {
             prompt: 'Write about a time you went shopping with your family. What did you see and buy?',
@@ -184,6 +186,7 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
           sentenceStructure: {
             subjects: ['I', 'Mum', 'My cousins'],
             verbs: ['turned', 'made', 'came', 'played'],
+            translations: { 'I': '我', 'Mum': '妈妈', 'My cousins': '我的表弟表妹', 'turned': '变成', 'made': '做了', 'came': '来了', 'played': '玩' },
           },
           writing: {
             prompt: 'Write about your last birthday or a birthday you remember. What happened? How did it feel?',
@@ -217,6 +220,7 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
           sentenceStructure: {
             subjects: ['Our class', 'We', 'The teacher'],
             verbs: ['walked', 'saw', 'told', 'felt'],
+            translations: { 'Our class': '我们班', 'We': '我们', 'The teacher': '老师', 'walked': '走了', 'saw': '看见', 'told': '告诉', 'felt': '感觉' },
           },
           writing: {
             prompt: 'Write about a time you visited a place in nature — a river, beach, or park. What did you notice?',
@@ -257,6 +261,7 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
           sentenceStructure: {
             subjects: ['Linh', 'I', 'We'],
             verbs: ['moved', 'played', 'laughed', 'asked'],
+            translations: { 'Linh': 'Linh', 'I': 'Tôi', 'We': 'Chúng tôi', 'moved': 'chuyển đến', 'played': 'chơi', 'laughed': 'cười', 'asked': 'hỏi' },
           },
           writing: {
             prompt: 'Write about making a new friend. How did you meet? What do you do together?',
@@ -290,6 +295,7 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
           sentenceStructure: {
             subjects: ['I', 'My friend Maya', 'We'],
             verbs: ['ran', 'won', 'played', 'felt'],
+            translations: { 'I': 'Tôi', 'My friend Maya': 'Bạn tôi Maya', 'We': 'Chúng tôi', 'ran': 'chạy', 'won': 'thắng', 'played': 'chơi', 'felt': 'cảm thấy' },
           },
           writing: {
             prompt: 'Write about a time you competed in a race or sport at school. How did you feel before, during and after?',
@@ -323,6 +329,7 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
           sentenceStructure: {
             subjects: ['My sister', 'My brother', 'Dad'],
             verbs: ['washes', 'cooks', 'folds', 'helps'],
+            translations: { 'My sister': 'Chị/Em gái', 'My brother': 'Anh/Em trai', 'Dad': 'Bố', 'washes': 'rửa', 'cooks': 'nấu ăn', 'folds': 'gấp', 'helps': 'giúp đỡ' },
           },
           writing: {
             prompt: 'Write about a job or chore you do at home. Why is it important?',

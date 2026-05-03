@@ -56,7 +56,7 @@ export default function PrintPage() {
             const pageClass = isWritingBreak
               ? 'print-page-flow p-6 max-w-2xl mx-auto print:max-w-none print:p-0'
               : 'print-page p-6 max-w-2xl mx-auto print:max-w-none print:p-0';
-            const writingLines = isWritingBreak ? 16 : 8;
+            const writingLines = 8;
 
             const studentHeader = (suffix: string) => (
               <div className="flex items-center justify-between mb-4 border-b-2 border-gray-800 pb-3">
@@ -177,13 +177,16 @@ function PrintSupportBlock({ support }: { support: WritingSupport }) {
 function PrintSentenceStructure({ ss }: { ss: SentenceStructure }) {
   return (
     <div>
-      <p className="text-xs text-gray-600 mb-2">Build 5 sentences. Choose a <strong>subject</strong> and a <strong>verb</strong>.</p>
+      <p className="text-xs text-gray-600 mb-2">Build 8 sentences. Choose a <strong>subject</strong> and a <strong>verb</strong>.</p>
       <div className="flex gap-4 mb-2">
         <div>
           <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Subjects</p>
           <div className="flex flex-wrap gap-1">
             {ss.subjects.map((s) => (
-              <span key={s} className="border border-gray-400 text-gray-700 text-xs font-medium px-2 py-0.5 rounded">{s}</span>
+              <span key={s} className="border border-gray-400 text-gray-700 text-xs font-medium px-2 py-0.5 rounded leading-tight text-center">
+                <span className="block">{s}</span>
+                {ss.translations?.[s] && <span className="block text-gray-500" style={{ fontSize: '8pt' }}>{ss.translations[s]}</span>}
+              </span>
             ))}
           </div>
         </div>
@@ -191,14 +194,17 @@ function PrintSentenceStructure({ ss }: { ss: SentenceStructure }) {
           <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Verbs</p>
           <div className="flex flex-wrap gap-1">
             {ss.verbs.map((v) => (
-              <span key={v} className="border border-gray-400 text-gray-700 text-xs font-medium px-2 py-0.5 rounded">{v}</span>
+              <span key={v} className="border border-gray-400 text-gray-700 text-xs font-medium px-2 py-0.5 rounded leading-tight text-center">
+                <span className="block">{v}</span>
+                {ss.translations?.[v] && <span className="block text-gray-500" style={{ fontSize: '8pt' }}>{ss.translations[v]}</span>}
+              </span>
             ))}
           </div>
         </div>
       </div>
       <p className="text-xs text-gray-500 italic mb-2">Example: <span className="text-gray-700">{ss.subjects[0]} {ss.verbs[0]}.</span></p>
-      <div className="space-y-2.5">
-        {[1, 2, 3, 4, 5].map((n) => (
+      <div className="space-y-2">
+        {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
           <div key={n} className="flex items-end gap-2">
             <span className="text-xs text-gray-400 w-3 flex-shrink-0">{n}.</span>
             <div className="flex-1 border-b border-gray-400 h-5" />

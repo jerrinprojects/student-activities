@@ -87,7 +87,12 @@ export default function SessionPage() {
                 <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Subjects</p>
                 <div className="flex flex-wrap gap-1.5">
                   {activity.sentenceStructure.subjects.map((s) => (
-                    <span key={s} className="bg-purple-100 border border-purple-200 text-purple-800 text-sm font-medium px-2.5 py-0.5 rounded-lg">{s}</span>
+                    <span key={s} className="bg-purple-100 border border-purple-200 text-purple-800 text-sm font-medium px-2.5 py-1 rounded-lg leading-tight text-center">
+                      <span className="block">{s}</span>
+                      {activity.sentenceStructure!.translations?.[s] && (
+                        <span className="block text-xs text-purple-500 font-normal">{activity.sentenceStructure!.translations![s]}</span>
+                      )}
+                    </span>
                   ))}
                 </div>
               </div>
@@ -95,7 +100,12 @@ export default function SessionPage() {
                 <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Verbs</p>
                 <div className="flex flex-wrap gap-1.5">
                   {activity.sentenceStructure.verbs.map((v) => (
-                    <span key={v} className="bg-indigo-100 border border-indigo-200 text-indigo-800 text-sm font-medium px-2.5 py-0.5 rounded-lg">{v}</span>
+                    <span key={v} className="bg-indigo-100 border border-indigo-200 text-indigo-800 text-sm font-medium px-2.5 py-1 rounded-lg leading-tight text-center">
+                      <span className="block">{v}</span>
+                      {activity.sentenceStructure!.translations?.[v] && (
+                        <span className="block text-xs text-indigo-500 font-normal">{activity.sentenceStructure!.translations![v]}</span>
+                      )}
+                    </span>
                   ))}
                 </div>
               </div>
@@ -107,7 +117,7 @@ export default function SessionPage() {
               </span>
             </div>
             <div className="space-y-4">
-              {[1, 2, 3, 4, 5].map((n) => (
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
                 <div key={n} className="flex items-end gap-2">
                   <span className="text-gray-400 text-sm font-medium w-4 flex-shrink-0">{n}.</span>
                   <div className="flex-1 border-b-2 border-gray-300 h-8" />
