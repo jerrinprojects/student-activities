@@ -2,6 +2,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { STUDENTS, LITERACY_SESSIONS, type WritingSupport } from '../data/literacy';
 
+type SectionColor = 'blue' | 'green' | 'purple' | 'yellow' | 'orange';
+
 export default function SessionPage() {
   const navigate = useNavigate();
   const { student, date } = useParams<{ student: string; date: string }>();
@@ -76,8 +78,63 @@ export default function SessionPage() {
           </ol>
         </Section>
 
-        {/* 3. Writing */}
-        <Section number={3} title="Writing" color="orange">
+        {/* 3. Sentence Structure */}
+        {activity.sentenceStructure && (
+          <Section number={3} title="Sentence Structure" color="purple">
+            <p className="text-sm text-gray-600 mb-3">Build 3 sentences. Choose a <strong>subject</strong> and a <strong>verb</strong>.</p>
+            <div className="flex gap-6 mb-4">
+              <div>
+                <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Subjects</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {activity.sentenceStructure.subjects.map((s) => (
+                    <span key={s} className="bg-purple-100 border border-purple-200 text-purple-800 text-sm font-medium px-2.5 py-0.5 rounded-lg">{s}</span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Verbs</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {activity.sentenceStructure.verbs.map((v) => (
+                    <span key={v} className="bg-indigo-100 border border-indigo-200 text-indigo-800 text-sm font-medium px-2.5 py-0.5 rounded-lg">{v}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="space-y-4">
+              {[1, 2, 3].map((n) => (
+                <div key={n} className="flex items-end gap-2">
+                  <span className="text-gray-400 text-sm font-medium w-4 flex-shrink-0">{n}.</span>
+                  <div className="flex-1 border-b-2 border-gray-300 h-8" />
+                </div>
+              ))}
+            </div>
+          </Section>
+        )}
+
+        {/* 4. Spelling */}
+        {(() => {
+          const words = activity.writing.support?.wordBank
+            ?? activity.writing.support?.vocabularyList?.map((v) => v.word)
+            ?? [];
+          return words.length > 0 ? (
+            <Section number={activity.sentenceStructure ? 4 : 3} title="Spelling" color="yellow">
+              <p className="text-sm text-gray-600 mb-3">Write each word 3 times.</p>
+              <div className="grid gap-y-1.5">
+                {words.map((word) => (
+                  <div key={word} className="grid grid-cols-[120px_1fr_1fr_1fr] gap-2 items-center">
+                    <span className="bg-yellow-100 border border-yellow-200 text-yellow-900 text-sm font-semibold px-2.5 py-1 rounded-lg text-center">{word}</span>
+                    <div className="border-b-2 border-gray-300 h-7" />
+                    <div className="border-b-2 border-gray-300 h-7" />
+                    <div className="border-b-2 border-gray-300 h-7" />
+                  </div>
+                ))}
+              </div>
+            </Section>
+          ) : null;
+        })()}
+
+        {/* 5. Writing */}
+        <Section number={activity.sentenceStructure ? 5 : (activity.writing.support?.wordBank || activity.writing.support?.vocabularyList ? 4 : 3)} title="Writing" color="orange">
           <p className="text-gray-700 mb-1">{activity.writing.prompt}</p>
           {activity.writing.promptTranslation && (
             <p className="text-sm text-gray-400 italic mb-4">{activity.writing.promptTranslation}</p>
@@ -141,9 +198,9 @@ function SupportBlock({ support }: { support: WritingSupport }) {
   );
 }
 
-function Section({ number, title, color, children }: { number: number; title: string; color: 'blue' | 'green' | 'orange'; children: React.ReactNode }) {
-  const colors = { blue: 'bg-blue-50 border-blue-200', green: 'bg-green-50 border-green-200', orange: 'bg-orange-50 border-orange-200' };
-  const badge = { blue: 'bg-blue-200 text-blue-800', green: 'bg-green-200 text-green-800', orange: 'bg-orange-200 text-orange-800' };
+function Section({ number, title, color, children }: { number: number; title: string; color: SectionColor; children: React.ReactNode }) {
+  const colors: Record<SectionColor, string> = { blue: 'bg-blue-50 border-blue-200', green: 'bg-green-50 border-green-200', orange: 'bg-orange-50 border-orange-200', purple: 'bg-purple-50 border-purple-200', yellow: 'bg-yellow-50 border-yellow-200' };
+  const badge: Record<SectionColor, string> = { blue: 'bg-blue-200 text-blue-800', green: 'bg-green-200 text-green-800', orange: 'bg-orange-200 text-orange-800', purple: 'bg-purple-200 text-purple-800', yellow: 'bg-yellow-200 text-yellow-800' };
   return (
     <div className={`rounded-2xl border-2 p-5 mb-4 ${colors[color]}`}>
       <div className="flex items-center gap-2 mb-4">

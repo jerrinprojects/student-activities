@@ -32,9 +32,15 @@ export interface WritingSupport {
   sentenceStarters?: string[];
 }
 
+export interface SentenceStructure {
+  subjects: string[];
+  verbs: string[];
+}
+
 export interface ActivitySet {
   reading: { title: string; passage: string };
   questions: string[];
+  sentenceStructure?: SentenceStructure;
   writing: { prompt: string; promptTranslation?: string; support?: WritingSupport };
 }
 
@@ -68,6 +74,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What colour is his fur?',
             'When does the writer feed Rex?',
           ],
+          sentenceStructure: {
+            subjects: ['Rex', 'I', 'We'],
+            verbs: ['runs', 'eats', 'jumps', 'wags'],
+          },
           writing: {
             prompt: 'Write about a pet you have or would like to have. What does it do?',
             support: {
@@ -86,6 +96,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'Name two things at the park.',
             'What do the ducks do when they get the bread?',
           ],
+          sentenceStructure: {
+            subjects: ['I', 'Dad', 'The ducks'],
+            verbs: ['slides', 'pushes', 'swims', 'feeds'],
+          },
           writing: {
             prompt: 'Write about your favourite place to play outside. What do you do there?',
             support: {
@@ -104,6 +118,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'Name two things the writer likes to do in class.',
             'When do they listen to stories?',
           ],
+          sentenceStructure: {
+            subjects: ['I', 'My teacher', 'We'],
+            verbs: ['reads', 'writes', 'draws', 'listens'],
+          },
           writing: {
             prompt: 'Write about something you like to do at school.',
             support: {
@@ -130,6 +148,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What was the market like?',
             'Why does Mum prefer the market over the supermarket?',
           ],
+          sentenceStructure: {
+            subjects: ['My family', 'We', 'A man'],
+            verbs: ['went', 'bought', 'carried', 'sold'],
+          },
           writing: {
             prompt: 'Write about a time you went shopping with your family. What did you see and buy?',
             promptTranslation: '写一写你和家人去购物的经历。你看到了什么？买了什么？',
@@ -159,6 +181,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What presents did the writer get?',
             'What did the writer do after the party?',
           ],
+          sentenceStructure: {
+            subjects: ['I', 'Mum', 'My cousins'],
+            verbs: ['turned', 'made', 'came', 'played'],
+          },
           writing: {
             prompt: 'Write about your last birthday or a birthday you remember. What happened? How did it feel?',
             promptTranslation: '写一写你上次生日或你记得的一次生日。发生了什么？感觉怎么样？',
@@ -188,6 +214,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What did the teacher say about rivers?',
             'Why should people not put rubbish in the river?',
           ],
+          sentenceStructure: {
+            subjects: ['Our class', 'We', 'The teacher'],
+            verbs: ['walked', 'saw', 'told', 'felt'],
+          },
           writing: {
             prompt: 'Write about a time you visited a place in nature — a river, beach, or park. What did you notice?',
             promptTranslation: '写一写你去大自然的经历——河边、海滩或公园。你注意到了什么？',
@@ -224,6 +254,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What did they do when they first played together?',
             'How do we know they became friends?',
           ],
+          sentenceStructure: {
+            subjects: ['Linh', 'I', 'We'],
+            verbs: ['moved', 'played', 'laughed', 'asked'],
+          },
           writing: {
             prompt: 'Write about making a new friend. How did you meet? What do you do together?',
             promptTranslation: 'Viết về việc kết bạn mới. Bạn gặp nhau như thế nào? Bạn làm gì cùng nhau?',
@@ -253,6 +287,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What did the writer win?',
             'How did the writer feel at the end of the day?',
           ],
+          sentenceStructure: {
+            subjects: ['I', 'My friend Maya', 'We'],
+            verbs: ['ran', 'won', 'played', 'felt'],
+          },
           writing: {
             prompt: 'Write about a time you competed in a race or sport at school. How did you feel before, during and after?',
             promptTranslation: 'Viết về một lần bạn thi đấu ở trường. Bạn cảm thấy thế nào trước, trong và sau khi thi?',
@@ -282,6 +320,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What does Mum say about working together?',
             'Why does the writer help even when they do not feel like it?',
           ],
+          sentenceStructure: {
+            subjects: ['My sister', 'My brother', 'Dad'],
+            verbs: ['washes', 'cooks', 'folds', 'helps'],
+          },
           writing: {
             prompt: 'Write about a job or chore you do at home. Why is it important?',
             promptTranslation: 'Viết về một công việc hoặc nhiệm vụ bạn làm ở nhà. Tại sao nó quan trọng?',
@@ -318,6 +360,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What is this called?',
             'Why does the writer like science?',
           ],
+          sentenceStructure: {
+            subjects: ['We', 'The mixture', 'Our teacher'],
+            verbs: ['mixed', 'fizzed', 'wrote', 'told'],
+          },
           writing: {
             prompt: 'Write about a science experiment or discovery you found interesting. What happened? What did you learn?',
             support: {
@@ -337,6 +383,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'How did they find out where Biscuit was?',
             'What lesson did they learn?',
           ],
+          sentenceStructure: {
+            subjects: ['Biscuit', 'We', 'A woman'],
+            verbs: ['ran', 'looked', 'messaged', 'drove'],
+          },
           writing: {
             prompt: 'Write about a time something was lost and then found. How did you feel? What did you do?',
             support: {
@@ -356,6 +406,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What happened by the end of the week?',
             'What is the main message of this text?',
           ],
+          sentenceStructure: {
+            subjects: ['James', 'I', 'He'],
+            verbs: ['sat', 'asked', 'played', 'joined'],
+          },
           writing: {
             prompt: 'Write about a time you were kind to someone or someone was kind to you. What happened? How did it make you feel?',
             support: {
@@ -383,6 +437,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What does "as though he had expected this all along" imply about the man?',
             'Write a possible backstory for this man. Why might he be at the station?',
           ],
+          sentenceStructure: {
+            subjects: ['The old man', 'The train', 'He'],
+            verbs: ['waited', 'arrived', 'stood', 'opened'],
+          },
           writing: {
             prompt: 'Write a short story told from the perspective of someone waiting — at a station, hospital, or airport. Use details to show how they are feeling without directly saying it.',
             support: {
@@ -403,6 +461,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What does the students sitting under the tree represent?',
             'What does this story suggest about collective action and communities?',
           ],
+          sentenceStructure: {
+            subjects: ['Someone', 'The students', 'The principal'],
+            verbs: ['wrote', 'sat', 'phoned', 'arrived'],
+          },
           writing: {
             prompt: 'Write about something in your community or school that you think is worth protecting or standing up for. Why does it matter?',
             support: {
@@ -423,6 +485,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What does Theo wonder on the drive back, and what does this suggest about him?',
             'What is the central idea this story is exploring?',
           ],
+          sentenceStructure: {
+            subjects: ['Theo', 'His father', 'They'],
+            verbs: ['looked', 'woke', 'stood', 'wondered'],
+          },
           writing: {
             prompt: 'Write about a moment when something ordinary suddenly seemed extraordinary. What changed the way you saw it?',
             support: {
@@ -450,6 +516,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What does the phrase "getting it wrong wasn\'t really the point" suggest about his teaching style?',
             'What qualities make a good teacher, based on what this text shows?',
           ],
+          sentenceStructure: {
+            subjects: ['The substitute', 'Half the class', 'Three students'],
+            verbs: ['arrived', 'laughed', 'answered', 'asked'],
+          },
           writing: {
             prompt: 'Write about a teacher or adult who changed the way you thought about something. What did they do or say? What effect did it have?',
             support: {
@@ -470,6 +540,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What does going back to practise that night tell us about Luka?',
             'Do you think it is better to be honest or encouraging when someone loses? Explain your view.',
           ],
+          sentenceStructure: {
+            subjects: ['Luka', 'His dad', 'He'],
+            verbs: ['practised', 'stood', 'smiled', 'returned'],
+          },
           writing: {
             prompt: 'Write about a time you worked hard at something and it didn\'t go the way you hoped. What did you do next? What did it teach you?',
             support: {
@@ -490,6 +564,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What is significant about the classmates who had "stopped noticing her wheelchair entirely"?',
             'What does this text suggest about inclusion and what it actually means in practice?',
           ],
+          sentenceStructure: {
+            subjects: ['Amara', 'Three students', 'One boy'],
+            verbs: ['rolled', 'offered', 'asked', 'noticed'],
+          },
           writing: {
             prompt: 'Write about what it means to truly include someone. Give a specific example — real or imagined — of what inclusion looks like in action.',
             support: {
@@ -517,6 +595,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'What are the three possible meanings Nina imagines? What do these suggest about how she is processing her grief?',
             'This story ends without telling us whether Nina opens the letter. What effect does this create?',
           ],
+          sentenceStructure: {
+            subjects: ['Nina', 'Her mother', 'The letter'],
+            verbs: ['opened', 'held', 'wondered', 'explained'],
+          },
           writing: {
             prompt: 'Write a piece about an object, place, or moment that holds an unanswered question. Don\'t resolve it — let the uncertainty be part of what you are exploring.',
             support: {
@@ -544,6 +626,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'How does the writer make the thunder feel sudden and shocking?',
             'Explain the effect of the final word — "erasure" — as a sentence on its own.',
           ],
+          sentenceStructure: {
+            subjects: ['The storm', 'The dog', 'The child'],
+            verbs: ['built', 'hid', 'pretended', 'came'],
+          },
           writing: {
             prompt: 'Write about a moment when nature felt powerful, overwhelming, or awe-inspiring. Focus on building atmosphere through specific sensory details.',
             support: {
@@ -571,6 +657,10 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
             'Why do you think the journalist closes the notebook wondering if she is "getting it right"?',
             'What ethical responsibilities does someone have when telling other people\'s stories? Use evidence from the text in your answer.',
           ],
+          sentenceStructure: {
+            subjects: ['The journalist', 'She', 'The survivors'],
+            verbs: ['interviewed', 'listened', 'filled', 'closed'],
+          },
           writing: {
             prompt: 'Write about the responsibility that comes with sharing someone else\'s story. What decisions have to be made? What can go wrong — and right?',
             support: {
