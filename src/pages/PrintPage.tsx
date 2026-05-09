@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { STUDENTS, LITERACY_SESSIONS, type WritingSupport, type SentenceStructure } from '../data/literacy';
 
-const WRITING_BREAK_STUDENTS = new Set(['Joshua', 'Maverick', 'Jocasta']);
+const WRITING_BREAK_STUDENTS = new Set(['Joshua', 'Maverick', 'Jocasta', 'Cody']);
 
 export default function PrintPage() {
   const navigate = useNavigate();
