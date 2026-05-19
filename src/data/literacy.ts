@@ -449,6 +449,7 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
           sentenceStructure: {
             subjects: ['She', 'The key', 'Her husband', 'The drawer', 'The lock'],
             verbs: ['found', 'tried', 'kept', 'placed', 'searched'],
+            lines: 4,
           },
           writing: {
             prompt: 'Write about an object that raises more questions than it answers. What is it? What might it mean?',
@@ -473,6 +474,7 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
           sentenceStructure: {
             subjects: ['The older man', 'The younger man', 'They', 'The silence', 'The handshake'],
             verbs: ['met', 'shook', 'held', 'sat', 'drove'],
+            lines: 4,
           },
           writing: {
             prompt: 'Write about an unexpected encounter — meeting someone from the past by accident. What happened? What was not said?',
@@ -497,6 +499,7 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
           sentenceStructure: {
             subjects: ['The actor', 'She', 'The audience', 'The lights', 'The stage'],
             verbs: ['sat', 'watched', 'dimmed', 'returned', 'performed'],
+            lines: 4,
           },
           writing: {
             prompt: 'Write about the feeling after something significant ends — a performance, a game, an event. What does it feel like when it\'s over?',
