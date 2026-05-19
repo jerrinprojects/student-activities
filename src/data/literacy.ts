@@ -58,6 +58,745 @@ export interface LiteracySession {
 
 export const LITERACY_SESSIONS: LiteracySession[] = [
   {
+    date: '2026-05-20',
+    activities: {
+
+      // ────────────────────────────────────────────────────────
+      //  PHARRELL — Level 7 (~5 yrs)
+      //  Very short phonics-based texts. Word card support.
+      // ────────────────────────────────────────────────────────
+      Pharrell: [
+        {
+          reading: {
+            title: 'My New Shoes',
+            passage:
+              'Dad took me to buy new shoes. I tried on many pairs. I chose red ones with lights on the side. When I walk, the lights flash. My friends at school liked them too. I wore them to PE. They are my favourite shoes.',
+          },
+          questions: [
+            'Where did Dad take the writer?',
+            'What do the new shoes have on the side?',
+            'When do the lights flash?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Dad', 'My shoes', 'My friends', 'We'],
+            verbs: ['chose', 'tried', 'liked', 'wore', 'walked'],
+          },
+          writing: {
+            prompt: 'Write about a piece of clothing or shoes that you love. What do they look like? When do you wear them?',
+            support: {
+              wordBank: ['shoes', 'new', 'red', 'lights', 'flash', 'try', 'chose', 'feet', 'wear', 'school', 'PE', 'favourite'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Supermarket',
+            passage:
+              'On Friday Mum and I go to the supermarket. We take a trolley. Mum reads from her list. I help put things in the trolley. I pick the bread and the apples. At the end, Mum lets me choose a treat. I choose chocolate. We pack the bags in the car. I like helping Mum shop.',
+          },
+          questions: [
+            'What does Mum read at the supermarket?',
+            'What does the writer put in the trolley?',
+            'What treat does the writer choose?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Mum', 'We', 'The trolley', 'My sister'],
+            verbs: ['choose', 'pack', 'push', 'help', 'buy'],
+          },
+          writing: {
+            prompt: 'Write about going to the supermarket. What do you help with? What do you like to choose?',
+            support: {
+              wordBank: ['supermarket', 'trolley', 'list', 'bread', 'apples', 'choose', 'help', 'pack', 'bag', 'treat', 'shop', 'buy'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'My Baby Sister',
+            passage:
+              'My baby sister was born in March. Her name is Lily. She has big brown eyes. She cannot walk yet but she can sit up. She smiles when she sees me. I read to her at night. Mum says Lily needs a lot of sleep. I love my baby sister.',
+          },
+          questions: [
+            'What is the baby\'s name?',
+            'What can Lily do?',
+            'What does the writer do for Lily at night?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Lily', 'Mum', 'My sister', 'She'],
+            verbs: ['read', 'sits', 'smiles', 'sleeps', 'loves'],
+          },
+          writing: {
+            prompt: 'Write about a baby or young child you know. What are they like? What do you do together?',
+            support: {
+              wordBank: ['baby', 'sister', 'born', 'eyes', 'sit', 'smile', 'read', 'sleep', 'love', 'tiny', 'soft', 'name'],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JIERRY — Level 10, ESOL (Mandarin)
+      //  Vocabulary list with Chinese translations.
+      // ────────────────────────────────────────────────────────
+      Jierry: [
+        {
+          reading: {
+            title: 'A Phone Call Home',
+            passage:
+              'Every Sunday my family calls Grandpa and Grandma in China. We use video chat on the tablet. Grandma always asks if I am eating enough and doing well at school. I show her my room and my books. Last Sunday I read her a poem I wrote in English. She said she was proud of me. I miss them, but seeing their faces helps.',
+          },
+          questions: [
+            'When do they call Grandpa and Grandma?',
+            'What does Grandma always ask about?',
+            'What did the writer read to Grandma?',
+            'Why does the writer say "seeing their faces helps"?',
+          ],
+          sentenceStructure: {
+            subjects: ['My family', 'I', 'We', 'Grandma', 'My parents'],
+            verbs: ['called', 'showed', 'read', 'missed', 'talked'],
+            translations: { 'My family': '我的家人', 'I': '我', 'We': '我们', 'Grandma': '奶奶', 'My parents': '我的父母', 'called': '打了电话', 'showed': '展示了', 'read': '朗读了', 'missed': '想念', 'talked': '聊了' },
+          },
+          writing: {
+            prompt: 'Write about keeping in touch with someone who lives far away. What do you talk about? How does it feel?',
+            promptTranslation: '写一写你如何与住在远处的人保持联系。你们聊什么？感觉如何？',
+            support: {
+              vocabularyList: [
+                { word: 'video call', translation: '视频通话', language: 'Chinese' },
+                { word: 'grandparents', translation: '祖父母', language: 'Chinese' },
+                { word: 'proud', translation: '自豪的', language: 'Chinese' },
+                { word: 'miss', translation: '想念', language: 'Chinese' },
+                { word: 'tablet', translation: '平板电脑', language: 'Chinese' },
+                { word: 'poem', translation: '诗', language: 'Chinese' },
+                { word: 'faces', translation: '面孔', language: 'Chinese' },
+                { word: 'family', translation: '家人', language: 'Chinese' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'My School Project',
+            passage:
+              'This term our class is doing a project on New Zealand animals. I chose the kiwi. I found information in the library and on the internet. I drew a picture and wrote five facts. My favourite fact is that the kiwi cannot fly. I worked on it with my friend James. We presented it to the class on Friday. The teacher said it was excellent.',
+          },
+          questions: [
+            'What is the class project about?',
+            'What animal did the writer choose?',
+            'Who did the writer work with?',
+            'What was the writer\'s favourite fact?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My friend James', 'We', 'The teacher', 'Our class'],
+            verbs: ['chose', 'found', 'drew', 'presented', 'said'],
+            translations: { 'I': '我', 'My friend James': '我的朋友James', 'We': '我们', 'The teacher': '老师', 'Our class': '我们班', 'chose': '选了', 'found': '找到了', 'drew': '画了', 'presented': '展示了', 'said': '说' },
+          },
+          writing: {
+            prompt: 'Write about a project or research topic you have worked on. What did you find out? What was the most interesting fact?',
+            promptTranslation: '写一写你做过的一个项目或研究主题。你发现了什么？最有趣的事实是什么？',
+            support: {
+              vocabularyList: [
+                { word: 'project', translation: '项目', language: 'Chinese' },
+                { word: 'research', translation: '研究', language: 'Chinese' },
+                { word: 'present', translation: '展示', language: 'Chinese' },
+                { word: 'facts', translation: '事实', language: 'Chinese' },
+                { word: 'information', translation: '信息', language: 'Chinese' },
+                { word: 'excellent', translation: '优秀的', language: 'Chinese' },
+                { word: 'library', translation: '图书馆', language: 'Chinese' },
+                { word: 'interesting', translation: '有趣的', language: 'Chinese' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'Saturday Morning',
+            passage:
+              'On Saturday morning I wake up late because there is no school. I help Dad make breakfast. We make eggs and toast. After breakfast I watch cartoons for one hour. Then Mum says I must go outside. I ride my bike around the block three times. When I come home, I feel hungry again. Saturday mornings are my favourite part of the week.',
+          },
+          questions: [
+            'Why does the writer wake up late on Saturday?',
+            'What do they make for breakfast?',
+            'What does Mum say after cartoons?',
+            'Why does the writer feel hungry when they get home?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Dad', 'Mum', 'We', 'My family'],
+            verbs: ['wake', 'make', 'watch', 'ride', 'feel'],
+            translations: { 'I': '我', 'Dad': '爸爸', 'Mum': '妈妈', 'We': '我们', 'My family': '我的家人', 'wake': '醒来', 'make': '做', 'watch': '看', 'ride': '骑', 'feel': '感觉' },
+          },
+          writing: {
+            prompt: 'Write about your favourite morning of the week. What do you do? What makes it special?',
+            promptTranslation: '写一写你最喜欢的一个早晨。你做什么？是什么让它特别？',
+            support: {
+              vocabularyList: [
+                { word: 'Saturday', translation: '星期六', language: 'Chinese' },
+                { word: 'breakfast', translation: '早餐', language: 'Chinese' },
+                { word: 'cartoon', translation: '动画片', language: 'Chinese' },
+                { word: 'outside', translation: '外面', language: 'Chinese' },
+                { word: 'ride', translation: '骑', language: 'Chinese' },
+                { word: 'hungry', translation: '饥饿的', language: 'Chinese' },
+                { word: 'favourite', translation: '最喜欢的', language: 'Chinese' },
+                { word: 'morning', translation: '早上', language: 'Chinese' },
+              ],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  BAO — Level 10, ESOL (Vietnamese)
+      //  Vocabulary list with Vietnamese translations.
+      // ────────────────────────────────────────────────────────
+      Bao: [
+        {
+          reading: {
+            title: 'The School Uniform',
+            passage:
+              'At my school everyone wears a uniform. We have a white shirt, dark blue shorts or a skirt, and black shoes. In winter we wear a jersey too. I like the uniform because I do not have to think about what to wear. My mum says it is easier to wash too. Some of my friends in Vietnam did not wear a uniform. I think uniforms make everyone look the same, and that feels fair.',
+          },
+          questions: [
+            'What does the school uniform include?',
+            'What do students wear in winter?',
+            'Why does the writer like the uniform?',
+            'What does the writer think uniforms do?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'We', 'Mum', 'Everyone', 'My friends'],
+            verbs: ['wear', 'like', 'think', 'said', 'chose'],
+            translations: { 'I': 'Tôi', 'We': 'Chúng tôi', 'Mum': 'Mẹ', 'Everyone': 'Mọi người', 'My friends': 'Bạn bè tôi', 'wear': 'mặc', 'like': 'thích', 'think': 'nghĩ', 'said': 'đã nói', 'chose': 'đã chọn' },
+          },
+          writing: {
+            prompt: 'Write about school uniforms. Do you think they are a good idea? Give reasons for your opinion.',
+            promptTranslation: 'Viết về đồng phục học sinh. Bạn có nghĩ đó là ý kiến hay không? Hãy đưa ra lý do cho ý kiến của bạn.',
+            support: {
+              vocabularyList: [
+                { word: 'uniform', translation: 'đồng phục', language: 'Vietnamese' },
+                { word: 'shirt', translation: 'áo sơ mi', language: 'Vietnamese' },
+                { word: 'skirt', translation: 'váy', language: 'Vietnamese' },
+                { word: 'jersey', translation: 'áo len', language: 'Vietnamese' },
+                { word: 'fair', translation: 'công bằng', language: 'Vietnamese' },
+                { word: 'easier', translation: 'dễ hơn', language: 'Vietnamese' },
+                { word: 'same', translation: 'giống nhau', language: 'Vietnamese' },
+                { word: 'opinion', translation: 'ý kiến', language: 'Vietnamese' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Bus Ride',
+            passage:
+              'I take the bus to school every morning. The bus stop is two minutes from my house. I wait with my neighbour Amara. We talk on the bus. The ride is twenty minutes. I look out the window and watch the streets go past. Sometimes we pass the market where my mum buys vegetables. When I see the school gate, I know we are nearly there. I like the bus because I always see the same people.',
+          },
+          questions: [
+            'How far is the bus stop from the writer\'s house?',
+            'Who does the writer wait with?',
+            'How long is the bus ride?',
+            'Why does the writer like the bus?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'We', 'Amara', 'The bus', 'Mum'],
+            verbs: ['take', 'wait', 'talk', 'watch', 'pass'],
+            translations: { 'I': 'Tôi', 'We': 'Chúng tôi', 'Amara': 'Amara', 'The bus': 'Xe buýt', 'Mum': 'Mẹ', 'take': 'đi', 'wait': 'đợi', 'talk': 'nói chuyện', 'watch': 'nhìn', 'pass': 'đi qua' },
+          },
+          writing: {
+            prompt: 'Write about how you get to school. What do you see or do on the way?',
+            promptTranslation: 'Viết về cách bạn đến trường. Bạn nhìn thấy hoặc làm gì trên đường đi?',
+            support: {
+              vocabularyList: [
+                { word: 'bus stop', translation: 'trạm xe buýt', language: 'Vietnamese' },
+                { word: 'neighbour', translation: 'hàng xóm', language: 'Vietnamese' },
+                { word: 'market', translation: 'chợ', language: 'Vietnamese' },
+                { word: 'gate', translation: 'cổng', language: 'Vietnamese' },
+                { word: 'ride', translation: 'chuyến đi', language: 'Vietnamese' },
+                { word: 'watch', translation: 'nhìn', language: 'Vietnamese' },
+                { word: 'street', translation: 'đường phố', language: 'Vietnamese' },
+                { word: 'morning', translation: 'buổi sáng', language: 'Vietnamese' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'My Favourite Sport',
+            passage:
+              'My favourite sport is badminton. I play it with my dad at the park on Sunday afternoons. We have two rackets and a shuttlecock. Dad taught me how to serve and how to move my feet. I am getting better each week. Sometimes Mum comes to watch and she cheers. I want to join the school badminton team next year. Badminton is a sport that everyone in my family plays back in Vietnam.',
+          },
+          questions: [
+            'What is the writer\'s favourite sport?',
+            'Who does the writer play with, and where?',
+            'What has Dad taught the writer?',
+            'What does the writer want to do next year?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Dad', 'Mum', 'My family', 'We'],
+            verbs: ['play', 'taught', 'cheered', 'improved', 'joined'],
+            translations: { 'I': 'Tôi', 'Dad': 'Bố', 'Mum': 'Mẹ', 'My family': 'Gia đình tôi', 'We': 'Chúng tôi', 'play': 'chơi', 'taught': 'đã dạy', 'cheered': 'đã cổ vũ', 'improved': 'đã tiến bộ', 'joined': 'đã tham gia' },
+          },
+          writing: {
+            prompt: 'Write about a sport or activity you enjoy. Who do you do it with? How did you learn?',
+            promptTranslation: 'Viết về một môn thể thao hoặc hoạt động bạn thích. Bạn làm với ai? Bạn đã học như thế nào?',
+            support: {
+              vocabularyList: [
+                { word: 'badminton', translation: 'cầu lông', language: 'Vietnamese' },
+                { word: 'racket', translation: 'vợt', language: 'Vietnamese' },
+                { word: 'shuttlecock', translation: 'cầu', language: 'Vietnamese' },
+                { word: 'serve', translation: 'giao bóng', language: 'Vietnamese' },
+                { word: 'improve', translation: 'tiến bộ', language: 'Vietnamese' },
+                { word: 'join', translation: 'tham gia', language: 'Vietnamese' },
+                { word: 'team', translation: 'đội', language: 'Vietnamese' },
+                { word: 'sport', translation: 'môn thể thao', language: 'Vietnamese' },
+              ],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MATT — Level 10
+      //  Word bank support for writing.
+      // ────────────────────────────────────────────────────────
+      Matt: [
+        {
+          reading: {
+            title: 'The Sleepover',
+            passage:
+              "On Friday night I stayed at my friend Connor's house for the first time. We stayed up until midnight playing video games. Connor's mum made pizza for dinner. In the morning we had cereal and watched cartoons. I forgot to bring my toothbrush so I had to use Connor's spare one. His dog slept on the bed between us all night, which neither of us had planned. I want to do it again.",
+          },
+          questions: [
+            'How late did the boys stay up?',
+            'What did Connor\'s mum make for dinner?',
+            'What did the writer forget to bring?',
+            'What happened with the dog that neither of them had planned?',
+          ],
+          sentenceStructure: {
+            subjects: ['Connor', 'I', 'We', 'The dog', 'His mum'],
+            verbs: ['stayed', 'played', 'slept', 'forgot', 'made'],
+          },
+          writing: {
+            prompt: 'Write about staying at someone else\'s house, or having someone stay at yours. What happened? What was different or fun about it?',
+            support: {
+              wordBank: ['sleepover', 'midnight', 'pizza', 'cereal', 'forgot', 'toothbrush', 'dog', 'planned', 'fun', 'tired', 'again', 'stayed'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Art Project',
+            passage:
+              "For the last three weeks in class we have been making papier-mâché sculptures. I am making a dolphin. You put strips of wet paper over a balloon and wait for it to dry. Then you pop the balloon and paint the outside. Mine keeps going lopsided no matter what I do. Hana's looks perfect. Mr Davidson said the important thing is the process, not the product. I'm not sure I agree, but I kept going anyway.",
+          },
+          questions: [
+            'What is the class making?',
+            'What is the writer making?',
+            'What does Mr Davidson say about the project?',
+            'Does the writer agree? How do we know?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Hana', 'Mr Davidson', 'The balloon', 'We'],
+            verbs: ['made', 'painted', 'dried', 'kept', 'said'],
+          },
+          writing: {
+            prompt: 'Write about a creative project that didn\'t go as planned. What happened? What did you learn from it?',
+            support: {
+              wordBank: ['papier-mâché', 'balloon', 'sculpture', 'paint', 'process', 'lopsided', 'project', 'dried', 'kept', 'tried', 'finished', 'agreed'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Thunderstorm',
+            passage:
+              "Last Monday there was a thunderstorm while we were in class. The sky went dark during maths. Then the rain started — not drops but walls of water. Lightning flashed twice, very close. Mr Davidson told everyone to move away from the windows. The power flickered but didn't go out. Some people were scared. I wasn't scared exactly, but I wasn't not scared either. After about twenty minutes, it stopped as suddenly as it had started. The playground was completely flooded.",
+          },
+          questions: [
+            'What happened to the sky during maths?',
+            'What did Mr Davidson tell the class to do?',
+            'What does "I wasn\'t scared exactly, but I wasn\'t not scared either" mean?',
+            'What did the playground look like after the storm?',
+          ],
+          sentenceStructure: {
+            subjects: ['The storm', 'Mr Davidson', 'The lightning', 'We', 'The rain'],
+            verbs: ['came', 'flashed', 'moved', 'stopped', 'flooded'],
+          },
+          writing: {
+            prompt: 'Write about a time when sudden weather affected what you were doing. What happened? How did it feel?',
+            support: {
+              wordBank: ['thunder', 'lightning', 'storm', 'windows', 'flash', 'dark', 'flooded', 'scared', 'suddenly', 'power', 'walls', 'close'],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOSHUA — Level 23 (~8.5 yrs)
+      //  Inference and vocabulary questions. Word bank for writing.
+      // ────────────────────────────────────────────────────────
+      Joshua: [
+        {
+          reading: {
+            title: 'The Key',
+            passage:
+              "The key was in an envelope at the back of the drawer, beneath a layer of other things that had been there long enough to seem permanent. She didn't know what it unlocked. She tried it on the locks she could think of: the old cabinet in the hallway, the letterbox, the tool shed her husband had stopped using years before his death. None of them. She kept the key in her cardigan pocket for a week, taking it out sometimes to look at it. It was small and old and ordinary. Eventually she put it on her keyring, beside the others. She thought it belonged somewhere useful.",
+          },
+          questions: [
+            'What does "things that had been there long enough to seem permanent" suggest about this drawer?',
+            'Why does the writer list the specific locks she tried? What does this reveal about her?',
+            'What does carrying the key in her pocket for a week tell us about how she relates to unsolved questions?',
+            'What does the decision to put it "on her keyring, beside the others" suggest about how she resolves uncertainty?',
+            'What might the key represent as a symbol beyond just a key?',
+          ],
+          sentenceStructure: {
+            subjects: ['She', 'The key', 'Her husband', 'The drawer', 'The lock'],
+            verbs: ['found', 'tried', 'kept', 'placed', 'searched'],
+          },
+          writing: {
+            prompt: 'Write about an object that raises more questions than it answers. What is it? What might it mean?',
+            support: {
+              wordBank: ['key', 'unknown', 'drawer', 'pocket', 'tried', 'eventually', 'ordinary', 'unlock', 'keyring', 'belonged', 'quiet', 'hold'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Handshake',
+            passage:
+              "The two men had not spoken in eleven years. They met by accident in the car park of a hardware store on a Tuesday morning — of all places. Each recognised the other immediately. There was no question of pretending not to. The older man put out his hand first. The younger man shook it. Both held on a fraction longer than necessary. Nothing was said. They went their separate ways. The older man sat in his car for ten minutes before starting the engine. The younger one was already on the motorway.",
+          },
+          questions: [
+            'Why does the writer specify "the car park of a hardware store on a Tuesday morning"? What does this ordinary setting contribute?',
+            'What does "there was no question of pretending not to" suggest about their shared history?',
+            'What does "held on a fraction longer than necessary" reveal about both men?',
+            'What does the contrast — one man sitting still, the other already on the motorway — tell us about each?',
+            'The story contains no dialogue. What effect does this silence create?',
+          ],
+          sentenceStructure: {
+            subjects: ['The older man', 'The younger man', 'They', 'The silence', 'The handshake'],
+            verbs: ['met', 'shook', 'held', 'sat', 'drove'],
+          },
+          writing: {
+            prompt: 'Write about an unexpected encounter — meeting someone from the past by accident. What happened? What was not said?',
+            support: {
+              wordBank: ['silence', 'recognised', 'held', 'motorway', 'fraction', 'separate', 'ordinary', 'sat', 'engine', 'eleven years', 'ways', 'accident'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Empty Stage',
+            passage:
+              "The audience had gone. The technicians were wrapping cables. A cleaner moved a mop across the front of the stage in slow arcs. The actor sat in the third row and looked at the place where, an hour ago, she had been someone else. She did this after every show. It was a way of returning to herself — or so she told people when they asked. The truth was closer to the reverse: she sat because she wasn't sure, yet, who she was returning to. The mop reached the corner. The lights began to dim.",
+          },
+          questions: [
+            'Why does the writer describe the ordinary activities of technicians and a cleaner in detail after the show?',
+            'What does "the place where, an hour ago, she had been someone else" suggest about performance and identity?',
+            'What is the difference between what she tells people and what she actually feels?',
+            'What does "she wasn\'t sure, yet, who she was returning to" suggest about her sense of self?',
+            'What is the significance of "the lights began to dim" as the final image?',
+          ],
+          sentenceStructure: {
+            subjects: ['The actor', 'She', 'The audience', 'The lights', 'The stage'],
+            verbs: ['sat', 'watched', 'dimmed', 'returned', 'performed'],
+          },
+          writing: {
+            prompt: 'Write about the feeling after something significant ends — a performance, a game, an event. What does it feel like when it\'s over?',
+            support: {
+              wordBank: ['stage', 'audience', 'lights', 'returning', 'dimmed', 'performance', 'self', 'empty', 'waited', 'truth', 'technicians', 'identity'],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MAVERICK — Level 23 (~8.5 yrs)
+      //  Sentence structure reduced to 4 lines to fit one page.
+      // ────────────────────────────────────────────────────────
+      Maverick: [
+        {
+          reading: {
+            title: 'The Negotiation',
+            passage:
+              "They had been arguing over the same piece of land for thirty years. The solicitor had arranged a meeting — neutral ground, a conference room with no windows. Mr Hemi arrived first and sat with his back to the door. His nephew sat beside him and said nothing. Mrs Pearce arrived with her daughter and a folder. For the first twenty minutes, no one spoke directly to anyone else — only to the solicitor, as though he were a translator. Then Mr Hemi said, without looking up: 'My grandfather planted those trees.' Mrs Pearce said: 'I know.' After that, something changed.",
+          },
+          questions: [
+            'What does "no windows" contribute to the atmosphere of the meeting room?',
+            'Why do both parties speak only to the solicitor for the first twenty minutes?',
+            'What does Mr Hemi\'s statement — "My grandfather planted those trees" — do that thirty years of legal argument has not?',
+            'What does Mrs Pearce\'s reply — "I know" — reveal about her?',
+            'Why does the writer end with "something changed" rather than describing what changed?',
+          ],
+          sentenceStructure: {
+            subjects: ['Mr Hemi', 'Mrs Pearce', 'They', 'The solicitor', 'Something'],
+            verbs: ['arrived', 'sat', 'said', 'changed', 'spoke'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about a disagreement that shifted when someone said something unexpected. What changed, and why?',
+            support: {
+              wordBank: ['land', 'dispute', 'trees', 'planted', 'changed', 'silent', 'neutral', 'directly', 'resolved', 'know', 'thirty years', 'said'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Last Shift',
+            passage:
+              "It was Derek's last shift after twenty-two years. The café had changed completely in that time — different owners, different menus, a full renovation in 2019 — but he had stayed. His colleagues had organised a small cake. They sang. He smiled at the right times. At the end, after the customers had gone and the chairs were on the tables, he stood at the counter for a moment longer than necessary. The night manager asked if he needed anything. He said no. He untied his apron. He folded it instead of throwing it in the basket, which he had never done before.",
+          },
+          questions: [
+            'What does the detail that the café "had changed completely" but Derek "had stayed" reveal about his character?',
+            'Why does the writer say he "smiled at the right times" rather than just "smiled"?',
+            'What does standing at the counter "a moment longer than necessary" tell us about what he is doing?',
+            'What does folding the apron — "which he had never done before" — mean as a final action?',
+            'What does this story suggest about the significance of rituals and small gestures at endings?',
+          ],
+          sentenceStructure: {
+            subjects: ['Derek', 'His colleagues', 'He', 'The café', 'The manager'],
+            verbs: ['stayed', 'smiled', 'stood', 'folded', 'asked'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about the last time you did something — a final game, a last day, a goodbye. What small action made it feel final?',
+            support: {
+              wordBank: ['last', 'stayed', 'apron', 'folded', 'moment', 'ritual', 'final', 'colleagues', 'changed', 'smiled', 'twenty-two years', 'never'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Morning After',
+            passage:
+              "The day after the election results, the town felt different. People were at the same shops, the same cafes, the same bus stops. But conversations were shorter. Some people didn't make eye contact. At the community library, Gail noticed that two women she had known for years walked past each other without acknowledging. She made two cups of tea and placed one near each of them without a word. One woman picked it up. Then, after a moment, the other did too. Gail didn't say anything. She went back to her desk.",
+          },
+          questions: [
+            'What does "conversations were shorter" and "some people didn\'t make eye contact" suggest about how the results affected the community?',
+            'Why does the writer specify that these were women Gail "had known for years"?',
+            'What does Gail\'s act — placing tea without a word — represent?',
+            'What is the significance of the second woman picking up the tea "after a moment"?',
+            'What does Gail returning to her desk without saying anything suggest about the kind of action this is?',
+          ],
+          sentenceStructure: {
+            subjects: ['Gail', 'The two women', 'People', 'The town', 'She'],
+            verbs: ['noticed', 'placed', 'walked', 'picked up', 'returned'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about a small act of connection or kindness during a moment of tension. What happened? Why did it matter?',
+            support: {
+              wordBank: ['division', 'tension', 'silence', 'noticed', 'placed', 'community', 'gesture', 'kindness', 'moment', 'picked up', 'returned', 'acknowledged'],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOCASTA — High level (literary analysis, Year 9+)
+      //  Sentence structure reduced to 3 lines / 4 words to fit one page.
+      // ────────────────────────────────────────────────────────
+      Jocasta: [
+        {
+          reading: {
+            title: 'The Interruption',
+            passage:
+              "She had been writing the same chapter for eleven months. It wasn't that she lacked ideas — she had too many, which was its own kind of blockage. The chapter ended mid-sentence on page one hundred and twelve, where it had ended since the previous October. On a Tuesday in March, her niece came to stay for a week. She was eight years old and had never been told to be quiet at the right moments. She asked questions constantly. By Thursday, the chapter had moved. By Friday, it was finished. Her niece had no idea. She never told her.",
+          },
+          questions: [
+            'What does "she had too many ideas, which was its own kind of blockage" suggest about creativity and how abundance can become an obstacle?',
+            'What does the precision of "page one hundred and twelve" and "since the previous October" add to our understanding of the writer\'s paralysis?',
+            'What is ironic about the niece\'s constant interruptions enabling the breakthrough?',
+            'Why do you think she "never told her"? What does this suggest about her relationship to her own creative process?',
+            'What does this story suggest about the relationship between creativity and control?',
+          ],
+          sentenceStructure: {
+            subjects: ['She', 'Her niece', 'The chapter', 'The question'],
+            verbs: ['finished', 'asked', 'moved', 'interrupted'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about being unexpectedly helped by something — or someone — you did not expect to help. What broke through the block?',
+            support: {
+              wordBank: ['block', 'chapter', 'ideas', 'interrupted', 'finished', 'never', 'unexpected', 'moved', 'ordinary', 'through', 'constant', 'help'],
+              sentenceStarters: [
+                'I didn\'t know I was stuck until ...',
+                'The interruption that changed everything was ...',
+                'The strangest part was that ..., which was what made it work.',
+                'She never knew what she had done, and ...',
+                'Some breakthroughs don\'t come from trying harder — they come from ...',
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Permission',
+            passage:
+              "The letter from the university arrived when she was sixty-one years old. She had applied on an impulse in September, not thinking she would get in. She was the oldest person in the department by thirty years. On her first day, a younger student asked if she was someone's parent. She said no. The weeks that followed were difficult in the ways she had expected: long readings, dense theory, the exhaustion of not knowing things you were supposed to know. They were also difficult in ways she hadn't: the discovery that it was never too late to feel, again, like a complete beginner.",
+          },
+          questions: [
+            'What does applying "on an impulse" and "not thinking she would get in" suggest about her relationship to this decision?',
+            'What does the student\'s question — whether she was "someone\'s parent" — reveal about assumptions and belonging?',
+            'What is the difference between the difficulties she "expected" and the ones she "hadn\'t"?',
+            'What does "the discovery that it was never too late to feel, again, like a complete beginner" suggest about learning and age?',
+            'What does this story suggest about the relationship between permission, age, and starting something new?',
+          ],
+          sentenceStructure: {
+            subjects: ['She', 'The student', 'The university', 'The weeks'],
+            verbs: ['applied', 'arrived', 'asked', 'discovered'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about starting something when it felt too late — or about the fear of starting because of what others might think.',
+            support: {
+              wordBank: ['permission', 'late', 'start', 'beginner', 'expected', 'discovered', 'oldest', 'impulse', 'difficult', 'arrived', 'university', 'belonging'],
+              sentenceStarters: [
+                'I had always told myself it was too late to ...',
+                'On the first day, I felt ...',
+                'What nobody tells you about beginning something new is ...',
+                'The hardest thing wasn\'t ..., it was being ...',
+                'I gave myself permission to ..., and what happened next was ...',
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Habit',
+            passage:
+              "He had walked to the post office every morning for forty years, whether he had anything to post or not. His wife had thought it was eccentric until she understood that it was a structure — not a purpose, but a shape the day took because of it. When she died, he kept walking. When the post office closed and became a clothing shop, he kept walking. When someone finally asked him why, he considered the question seriously. He said: 'I don't know anymore. But stopping would require a reason.' Nobody had a good answer to that.",
+          },
+          questions: [
+            'What is the difference between a "purpose" and a "structure"? How does this distinction illuminate his habit?',
+            'What does continuing to walk after his wife\'s death, and after the post office closed, suggest about the function of the habit?',
+            'What does "he considered the question seriously" reveal about his relationship to self-knowledge?',
+            'What does "stopping would require a reason" mean? Why is it significant that continuing requires none?',
+            'What does this story suggest about how habits shape — or sustain — identity?',
+          ],
+          sentenceStructure: {
+            subjects: ['He', 'His wife', 'The habit', 'The question'],
+            verbs: ['walked', 'continued', 'stopped', 'understood'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about a habit — yours or someone else\'s — that does more than it appears to. What does the habit actually do?',
+            support: {
+              wordBank: ['habit', 'structure', 'purpose', 'routine', 'continued', 'stopped', 'walking', 'required', 'reason', 'shape', 'sustain', 'day'],
+              sentenceStarters: [
+                'Every morning, without fail, I ...',
+                'At first it seemed like ..., but what it really was ...',
+                'The habit didn\'t have a purpose exactly — it had a ...',
+                'Stopping would have meant ...',
+                'Some things we do not because they make sense, but because ...',
+              ],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  CODY — High level (similar to Jocasta)
+      //  Sentence structure reduced to 3 lines / 4 words to fit one page.
+      // ────────────────────────────────────────────────────────
+      Cody: [
+        {
+          reading: {
+            title: 'The Request',
+            passage:
+              "She called him on a Thursday evening and asked him to do something he had never been asked to do before. He said yes before she had finished asking. He knew he would — he had known before he answered — but he let her finish anyway, because the ask deserved to be made in full. He drove to her house the following afternoon. What she had asked for was small and specific, and he completed it in about forty minutes. He didn't ask why. She didn't explain. On the way home, he tried to think of the last time someone had trusted him with something that didn't need explanation. He couldn't remember.",
+          },
+          questions: [
+            'Why does the writer not tell us what the request was? What effect does this create?',
+            'What does "he said yes before she had finished asking" reveal about their relationship?',
+            'What does "the ask deserved to be made in full" suggest about his values?',
+            'What does the silence — "she didn\'t explain. He didn\'t ask why" — suggest about the trust between them?',
+            'What does his inability to remember the last time someone trusted him without explanation reveal about him?',
+          ],
+          sentenceStructure: {
+            subjects: ['He', 'She', 'The request', 'The trust'],
+            verbs: ['asked', 'answered', 'drove', 'completed'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about a moment of trust — being trusted or trusting someone else — where no explanation was needed. What made it feel significant?',
+            support: {
+              wordBank: ['trust', 'asked', 'yes', 'explained', 'finished', 'small', 'completed', 'drove', 'never', 'remember', 'deserved', 'full'],
+              sentenceStarters: [
+                'She didn\'t explain, and I didn\'t ask, because ...',
+                'The strange thing about trust is that it ...',
+                'I said yes before she finished because ...',
+                'It was a small thing, but ...',
+                'I can\'t remember the last time someone trusted me with ...',
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Signal',
+            passage:
+              "For eighteen months, every time she passed the house, she checked the upstairs window. They had agreed on a signal: a yellow lamp meant she was all right. The lamp had been there every time. This morning the lamp was not there. She stood on the pavement. She looked for other explanations: the bulb had gone, it had been moved, the old woman was simply sleeping. She called twice. She rang the bell. She waited four minutes. She was about to call a third time when the curtain moved and the lamp came back on. She breathed. She kept walking. She did not look back.",
+          },
+          questions: [
+            'What does checking the window "every time she passed" for eighteen months suggest about their relationship?',
+            'What does the list of explanations she runs through suggest about her state of mind?',
+            'Why does the writer count the minutes and the calls so precisely?',
+            'What is the effect of "she breathed" as a sentence on its own?',
+            'What does "she did not look back" suggest about how she processes the relief?',
+          ],
+          sentenceStructure: {
+            subjects: ['She', 'The lamp', 'The old woman', 'The curtain'],
+            verbs: ['checked', 'stood', 'called', 'breathed'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about watching out for someone — or someone watching out for you — in a small, regular, unspoken way. What does this kind of care look like?',
+            support: {
+              wordBank: ['signal', 'lamp', 'checked', 'pavement', 'called', 'window', 'breathed', 'explanations', 'care', 'eighteen months', 'back', 'relief'],
+              sentenceStarters: [
+                'Every time I passed, I ...',
+                'We had never talked about it — it was just understood that ...',
+                'The morning it wasn\'t there, I felt ...',
+                'Some forms of care don\'t need words — they just need ...',
+                'When it came back, I ...',
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Last Page',
+            passage:
+              "He had been reading the same novel for six years. Not because it was long — it was less than three hundred pages — but because he had decided, at some point he could no longer precisely identify, that finishing it would mean something he wasn't ready for. He had started it the week his father was diagnosed. His father had been dead for four years. He kept the book on his bedside table. He never put it away. On a Tuesday in April he read the final thirty pages in one sitting, without having planned to. He closed it. He held it. He put it face-down on the table, as though it might still be in progress.",
+          },
+          questions: [
+            'What does keeping a short book unfinished for six years suggest about how we use objects to hold onto emotional states?',
+            'What does being unable to "precisely identify" when the decision was made reveal about how such decisions happen?',
+            'What is the significance of "he never put it away"?',
+            'Why does he put the book face-down — "as though it might still be in progress"?',
+            'What does this story suggest about the relationship between finishing something and grief?',
+          ],
+          sentenceStructure: {
+            subjects: ['He', 'The book', 'His father', 'The table'],
+            verbs: ['read', 'finished', 'kept', 'held'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about something you have been putting off finishing — because finishing it means something. What are you protecting by not finishing it?',
+            support: {
+              wordBank: ['finished', 'kept', 'bedside', 'face-down', 'grief', 'held', 'progress', 'six years', 'planned', 'diagnosis', 'closed', 'protecting'],
+              sentenceStarters: [
+                'I had been putting it off not because ..., but because ...',
+                'Finishing it would mean ...',
+                'I kept it ... because putting it away felt like ...',
+                'On a day I hadn\'t planned, I finally ...',
+                'I held it for a moment afterward, because ...',
+              ],
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
     date: '2026-05-18',
     activities: {
 
