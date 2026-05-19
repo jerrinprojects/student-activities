@@ -622,9 +622,6 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
               sentenceStarters: [
                 'I didn\'t know I was stuck until ...',
                 'The interruption that changed everything was ...',
-                'The strangest part was that ..., which was what made it work.',
-                'She never knew what she had done, and ...',
-                'Some breakthroughs don\'t come from trying harder — they come from ...',
               ],
             },
           },
@@ -654,9 +651,6 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
               sentenceStarters: [
                 'I had always told myself it was too late to ...',
                 'On the first day, I felt ...',
-                'What nobody tells you about beginning something new is ...',
-                'The hardest thing wasn\'t ..., it was being ...',
-                'I gave myself permission to ..., and what happened next was ...',
               ],
             },
           },
@@ -686,9 +680,6 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
               sentenceStarters: [
                 'Every morning, without fail, I ...',
                 'At first it seemed like ..., but what it really was ...',
-                'The habit didn\'t have a purpose exactly — it had a ...',
-                'Stopping would have meant ...',
-                'Some things we do not because they make sense, but because ...',
               ],
             },
           },
