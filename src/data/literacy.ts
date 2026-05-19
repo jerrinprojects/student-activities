@@ -716,9 +716,6 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
               sentenceStarters: [
                 'She didn\'t explain, and I didn\'t ask, because ...',
                 'The strange thing about trust is that it ...',
-                'I said yes before she finished because ...',
-                'It was a small thing, but ...',
-                'I can\'t remember the last time someone trusted me with ...',
               ],
             },
           },
@@ -748,9 +745,6 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
               sentenceStarters: [
                 'Every time I passed, I ...',
                 'We had never talked about it — it was just understood that ...',
-                'The morning it wasn\'t there, I felt ...',
-                'Some forms of care don\'t need words — they just need ...',
-                'When it came back, I ...',
               ],
             },
           },
@@ -780,9 +774,6 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
               sentenceStarters: [
                 'I had been putting it off not because ..., but because ...',
                 'Finishing it would mean ...',
-                'I kept it ... because putting it away felt like ...',
-                'On a day I hadn\'t planned, I finally ...',
-                'I held it for a moment afterward, because ...',
               ],
             },
           },
