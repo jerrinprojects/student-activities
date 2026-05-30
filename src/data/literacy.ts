@@ -58,6 +58,730 @@ export interface LiteracySession {
 
 export const LITERACY_SESSIONS: LiteracySession[] = [
   {
+    date: '2026-06-01',
+    activities: {
+
+      // ────────────────────────────────────────────────────────
+      //  PHARRELL — Level 7 (~5 yrs)
+      //  Very short phonics-based texts. Word card support.
+      // ────────────────────────────────────────────────────────
+      Pharrell: [
+        {
+          reading: {
+            title: 'The Beach',
+            passage:
+              'On Saturday we went to the beach. The sand was warm under my feet. I picked up small shells and put them in my bucket. My dad jumped over the waves with me. The water was cold but I liked it. I made a sandcastle with a tall tower. A bird walked past and looked at my lunch. Mum laughed. I want to go back next week.',
+          },
+          questions: [
+            'What did the writer collect at the beach?',
+            'What did Dad do with the writer?',
+            'What did the writer build in the sand?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Dad', 'Mum', 'The waves', 'We'],
+            verbs: ['jumped', 'made', 'picked', 'walked', 'laughed'],
+          },
+          writing: {
+            prompt: 'Write about going to the beach. What did you do? What did you see?',
+            support: {
+              wordBank: ['beach', 'sand', 'shells', 'bucket', 'waves', 'jump', 'cold', 'castle', 'bird', 'warm', 'feet', 'water'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'My Birthday Cake',
+            passage:
+              'On my birthday Mum and I made a cake. We put flour, eggs, butter, and sugar in a big bowl. I helped to mix it. Mum put the cake in the oven. The kitchen smelled like vanilla. After lunch the cake was cool. I helped put pink icing on top. We put eight candles on the cake. I blew them out in one go.',
+          },
+          questions: [
+            'What did they put in the bowl?',
+            'What colour was the icing?',
+            'How many candles were on the cake?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Mum', 'The cake', 'We', 'The candles'],
+            verbs: ['mixed', 'baked', 'put', 'blew', 'helped'],
+          },
+          writing: {
+            prompt: 'Write about making food with someone. What did you make? What did you do to help?',
+            support: {
+              wordBank: ['cake', 'mix', 'bowl', 'eggs', 'flour', 'sugar', 'oven', 'icing', 'pink', 'candles', 'blew', 'birthday'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Bird in the Tree',
+            passage:
+              'There is a tall tree outside my bedroom window. Every morning a brown bird sits on a branch. It sings a song. I sit on my bed and listen. Sometimes the bird flies away. Sometimes it stays for a long time. Mum says it is the same bird every day. I have not given it a name yet. I want to call it Toby.',
+          },
+          questions: [
+            'Where does the bird sit?',
+            'What does the bird do?',
+            'What name does the writer want to give the bird?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The bird', 'Mum', 'The tree', 'The branch'],
+            verbs: ['sits', 'sings', 'listens', 'flies', 'watches'],
+          },
+          writing: {
+            prompt: 'Write about an animal or bird you can see from your window. What does it look like? What does it do?',
+            support: {
+              wordBank: ['bird', 'tree', 'branch', 'sing', 'window', 'morning', 'brown', 'fly', 'sit', 'listen', 'name', 'song'],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JIERRY — Level 10, ESOL (Mandarin)
+      //  Vocabulary list with Chinese translations.
+      // ────────────────────────────────────────────────────────
+      Jierry: [
+        {
+          reading: {
+            title: 'The Zoo Trip',
+            passage:
+              'Last Thursday our class went to the zoo. We left school at nine on a big bus. At the zoo we saw lions, monkeys, and giraffes. The lions were sleeping in the sun. The monkeys were the funniest because they kept jumping from rope to rope. My friend Lily was scared of the snake house, so I held her hand. We had our lunch by the pond with the ducks. I want my parents to take me again on the weekend.',
+          },
+          questions: [
+            'What time did they leave school?',
+            'Why were the monkeys the funniest?',
+            'What did the writer do for Lily?',
+            'Where did they have lunch?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Our class', 'Lily', 'The lions', 'We'],
+            verbs: ['went', 'saw', 'jumped', 'held', 'ate'],
+            translations: { 'I': '我', 'Our class': '我们班', 'Lily': '丽丽', 'The lions': '狮子', 'We': '我们', 'went': '去了', 'saw': '看到了', 'jumped': '跳了', 'held': '握着', 'ate': '吃了' },
+          },
+          writing: {
+            prompt: 'Write about a school trip you went on. Where did you go? What did you see?',
+            promptTranslation: '写一写你参加过的一次学校郊游。你们去了哪里？看到了什么？',
+            support: {
+              vocabularyList: [
+                { word: 'zoo', translation: '动物园', language: 'Chinese' },
+                { word: 'lion', translation: '狮子', language: 'Chinese' },
+                { word: 'monkey', translation: '猴子', language: 'Chinese' },
+                { word: 'giraffe', translation: '长颈鹿', language: 'Chinese' },
+                { word: 'snake', translation: '蛇', language: 'Chinese' },
+                { word: 'scared', translation: '害怕的', language: 'Chinese' },
+                { word: 'bus', translation: '公共汽车', language: 'Chinese' },
+                { word: 'pond', translation: '池塘', language: 'Chinese' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'Learning to Ride a Bike',
+            passage:
+              'When I was eight my dad started teaching me how to ride a bike. The first day I fell off four times. My knees and hands were sore. I told Dad I wanted to stop. He said one more try, and that time I rode for ten metres before falling. The next weekend I could ride to the end of the street. Now I ride my bike to the dairy on my own. I am proud of myself for not giving up.',
+          },
+          questions: [
+            'How old was the writer when Dad started teaching?',
+            'How many times did the writer fall on the first day?',
+            'How did the writer feel after falling?',
+            'Where can the writer ride to now?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Dad', 'My bike', 'The street', 'We'],
+            verbs: ['rode', 'fell', 'taught', 'tried', 'practised'],
+            translations: { 'I': '我', 'Dad': '爸爸', 'My bike': '我的自行车', 'The street': '街道', 'We': '我们', 'rode': '骑了', 'fell': '摔倒了', 'taught': '教了', 'tried': '试了', 'practised': '练习了' },
+          },
+          writing: {
+            prompt: 'Write about a time you learned to do something new. What did you learn? How did you keep going?',
+            promptTranslation: '写一写你学习新事物的一次经历。你学了什么？你是如何坚持下去的？',
+            support: {
+              vocabularyList: [
+                { word: 'bike', translation: '自行车', language: 'Chinese' },
+                { word: 'ride', translation: '骑', language: 'Chinese' },
+                { word: 'fall', translation: '摔倒', language: 'Chinese' },
+                { word: 'sore', translation: '酸痛的', language: 'Chinese' },
+                { word: 'teach', translation: '教', language: 'Chinese' },
+                { word: 'try', translation: '尝试', language: 'Chinese' },
+                { word: 'practise', translation: '练习', language: 'Chinese' },
+                { word: 'proud', translation: '自豪的', language: 'Chinese' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'Helping at the Market',
+            passage:
+              'Every Saturday morning I go with my mum to the market. She buys fresh vegetables and fish. I push the small trolley and carry the bags. The market is loud because the sellers shout the prices. My favourite stall is the one with mangoes from Vietnam. The lady there always gives me a small piece to taste. Mum says I am her best helper. We go home in time for lunch.',
+          },
+          questions: [
+            'What does Mum buy at the market?',
+            'Why is the market loud?',
+            'What is the writer\'s favourite stall?',
+            'What does the mango lady give the writer?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Mum', 'The lady', 'We', 'The market'],
+            verbs: ['bought', 'pushed', 'carried', 'gave', 'helped'],
+            translations: { 'I': '我', 'Mum': '妈妈', 'The lady': '阿姨', 'We': '我们', 'The market': '市场', 'bought': '买了', 'pushed': '推了', 'carried': '提了', 'gave': '给了', 'helped': '帮忙了' },
+          },
+          writing: {
+            prompt: 'Write about going shopping with a family member. Where did you go? What did you help with?',
+            promptTranslation: '写一写和家人一起去购物的经历。你们去了哪里？你帮了什么忙？',
+            support: {
+              vocabularyList: [
+                { word: 'market', translation: '市场', language: 'Chinese' },
+                { word: 'vegetables', translation: '蔬菜', language: 'Chinese' },
+                { word: 'fish', translation: '鱼', language: 'Chinese' },
+                { word: 'trolley', translation: '手推车', language: 'Chinese' },
+                { word: 'bags', translation: '袋子', language: 'Chinese' },
+                { word: 'seller', translation: '卖家', language: 'Chinese' },
+                { word: 'mango', translation: '芒果', language: 'Chinese' },
+                { word: 'helper', translation: '帮手', language: 'Chinese' },
+              ],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  BAO — Level 10, ESOL (Vietnamese)
+      //  Vocabulary list with Vietnamese translations.
+      // ────────────────────────────────────────────────────────
+      Bao: [
+        {
+          reading: {
+            title: 'Tết at My House',
+            passage:
+              'Tết is Vietnamese New Year and it is the most important festival in my family. We clean the whole house before Tết starts. Mum cooks bánh chưng, a square cake made of sticky rice and pork. My grandmother sends us money in red envelopes from Vietnam. On the first day of Tết everyone wears new clothes. We are not allowed to sweep the floor because it would sweep good luck away. I like Tết because all my cousins come over and we play together late into the night.',
+          },
+          questions: [
+            'Why does the family clean the house before Tết?',
+            'What is bánh chưng made of?',
+            'Why are they not allowed to sweep the floor?',
+            'Why does the writer like Tết?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My family', 'Mum', 'Grandmother', 'We'],
+            verbs: ['cleaned', 'cooked', 'wore', 'sent', 'played'],
+            translations: { 'I': 'Tôi', 'My family': 'Gia đình tôi', 'Mum': 'Mẹ', 'Grandmother': 'Bà', 'We': 'Chúng tôi', 'cleaned': 'đã dọn dẹp', 'cooked': 'đã nấu', 'wore': 'đã mặc', 'sent': 'đã gửi', 'played': 'đã chơi' },
+          },
+          writing: {
+            prompt: 'Write about a festival or holiday that is important to your family. What do you do? Why does it matter?',
+            promptTranslation: 'Viết về một lễ hội hoặc ngày lễ quan trọng đối với gia đình bạn. Bạn làm gì? Tại sao nó quan trọng?',
+            support: {
+              vocabularyList: [
+                { word: 'festival', translation: 'lễ hội', language: 'Vietnamese' },
+                { word: 'New Year', translation: 'Năm mới', language: 'Vietnamese' },
+                { word: 'sticky rice', translation: 'gạo nếp', language: 'Vietnamese' },
+                { word: 'red envelope', translation: 'lì xì', language: 'Vietnamese' },
+                { word: 'sweep', translation: 'quét', language: 'Vietnamese' },
+                { word: 'luck', translation: 'may mắn', language: 'Vietnamese' },
+                { word: 'cousin', translation: 'anh/chị em họ', language: 'Vietnamese' },
+                { word: 'important', translation: 'quan trọng', language: 'Vietnamese' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Football Game',
+            passage:
+              'On Sunday I played football for my club for the first time. I was very nervous before the game. The other team was bigger than us. In the first half they scored two goals. At half-time our coach told us to keep passing the ball and not to give up. In the second half I ran very hard. I passed the ball to my friend Liam and he scored. We lost three to one in the end, but I felt proud. Next week we play again.',
+          },
+          questions: [
+            'Why was the writer nervous?',
+            'What did the coach say at half-time?',
+            'Who scored for the writer\'s team?',
+            'What was the final score?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My team', 'The coach', 'Liam', 'We'],
+            verbs: ['played', 'passed', 'scored', 'ran', 'lost'],
+            translations: { 'I': 'Tôi', 'My team': 'Đội tôi', 'The coach': 'Huấn luyện viên', 'Liam': 'Liam', 'We': 'Chúng tôi', 'played': 'đã chơi', 'passed': 'đã chuyền', 'scored': 'đã ghi bàn', 'ran': 'đã chạy', 'lost': 'đã thua' },
+          },
+          writing: {
+            prompt: 'Write about a sport you played, even when it was hard. What happened? How did you feel?',
+            promptTranslation: 'Viết về một môn thể thao bạn đã chơi, ngay cả khi nó khó. Điều gì đã xảy ra? Bạn cảm thấy thế nào?',
+            support: {
+              vocabularyList: [
+                { word: 'football', translation: 'bóng đá', language: 'Vietnamese' },
+                { word: 'team', translation: 'đội', language: 'Vietnamese' },
+                { word: 'goal', translation: 'bàn thắng', language: 'Vietnamese' },
+                { word: 'coach', translation: 'huấn luyện viên', language: 'Vietnamese' },
+                { word: 'pass', translation: 'chuyền', language: 'Vietnamese' },
+                { word: 'score', translation: 'ghi bàn', language: 'Vietnamese' },
+                { word: 'nervous', translation: 'lo lắng', language: 'Vietnamese' },
+                { word: 'proud', translation: 'tự hào', language: 'Vietnamese' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'My First Day at a New School',
+            passage:
+              'I remember my first day at school in New Zealand very well. I had only been in the country for two weeks. I could say hello and thank you, but not much more. My mum walked me to the gate and gave me a long hug. I was the only new student in my class. A girl called Tessa was given the job of helping me. She showed me the classroom, the toilets, and where to put my bag. At lunch she shared her chips with me. I will never forget how kind she was.',
+          },
+          questions: [
+            'How long had the writer been in New Zealand?',
+            'What English words could the writer say?',
+            'What was Tessa\'s job?',
+            'What does the writer remember most about that day?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Mum', 'Tessa', 'My class', 'We'],
+            verbs: ['arrived', 'walked', 'showed', 'shared', 'remembered'],
+            translations: { 'I': 'Tôi', 'Mum': 'Mẹ', 'Tessa': 'Tessa', 'My class': 'Lớp tôi', 'We': 'Chúng tôi', 'arrived': 'đã đến', 'walked': 'đã đi bộ', 'showed': 'đã chỉ', 'shared': 'đã chia sẻ', 'remembered': 'đã nhớ' },
+          },
+          writing: {
+            prompt: 'Write about a first day — at school, in a new place, or somewhere new. What happened? Who helped you?',
+            promptTranslation: 'Viết về một ngày đầu tiên — ở trường, ở một nơi mới, hoặc một nơi nào đó mới. Điều gì đã xảy ra? Ai đã giúp bạn?',
+            support: {
+              vocabularyList: [
+                { word: 'first day', translation: 'ngày đầu tiên', language: 'Vietnamese' },
+                { word: 'school', translation: 'trường học', language: 'Vietnamese' },
+                { word: 'gate', translation: 'cổng', language: 'Vietnamese' },
+                { word: 'hug', translation: 'cái ôm', language: 'Vietnamese' },
+                { word: 'classroom', translation: 'lớp học', language: 'Vietnamese' },
+                { word: 'share', translation: 'chia sẻ', language: 'Vietnamese' },
+                { word: 'kind', translation: 'tốt bụng', language: 'Vietnamese' },
+                { word: 'remember', translation: 'nhớ', language: 'Vietnamese' },
+              ],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MATT — Level 10
+      //  Word bank support for writing.
+      // ────────────────────────────────────────────────────────
+      Matt: [
+        {
+          reading: {
+            title: 'The Stray Dog',
+            passage:
+              "On the way to school I saw a small brown dog sitting outside the dairy. It had no collar. It looked hungry and tired. I gave it some of the crusts from my sandwich. The dog followed me almost to the school gate before lying down by the fence. After school I walked back the same way, but the dog had gone. The man at the dairy said someone from the SPCA had come and taken it. I hope the dog finds a home with a kind family.",
+          },
+          questions: [
+            'How did the writer know the dog had no owner with it?',
+            'What did the writer give the dog?',
+            'Where did the dog lie down?',
+            'What happened to the dog by the end of the day?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The dog', 'The man', 'The SPCA', 'We'],
+            verbs: ['saw', 'followed', 'gave', 'walked', 'hoped'],
+          },
+          writing: {
+            prompt: 'Write about an animal you helped, or wanted to help. What did you do? What happened?',
+            support: {
+              wordBank: ['dog', 'stray', 'brown', 'dairy', 'collar', 'hungry', 'crusts', 'followed', 'fence', 'gate', 'home', 'SPCA'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'Sunday Pancakes',
+            passage:
+              "Every Sunday morning my older sister and I make pancakes. She is in charge of the batter and I am in charge of the pan. The first one is always a bit weird — too thick or with a hole in the middle — and we give it to the dog. After that they get better. We have a system: I flip, she stacks. By the time Mum and Dad come down, there is a tall pile of pancakes on the bench. They always say the same thing: 'How did you two get so good at this?'",
+          },
+          questions: [
+            'What does each person do — the writer and the sister?',
+            'Why is the first pancake always weird?',
+            'What happens to the first pancake?',
+            'What do Mum and Dad always say?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My sister', 'We', 'The dog', 'Mum and Dad'],
+            verbs: ['made', 'flipped', 'stacked', 'gave', 'said'],
+          },
+          writing: {
+            prompt: 'Write about something you do regularly with a family member. How does it work? Why do you keep doing it?',
+            support: {
+              wordBank: ['pancakes', 'batter', 'pan', 'flip', 'stack', 'sister', 'Sunday', 'thick', 'pile', 'bench', 'system', 'pile'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'My First Fishing Trip',
+            passage:
+              "My uncle took me fishing for the first time last weekend. We drove to the river at half past five in the morning. It was so early that I almost fell asleep in the car. My uncle showed me how to put the bait on the hook. I caught nothing for two hours. Then suddenly there was a tug on my line and I pulled in a small trout. My uncle said you never forget your first fish. I think he is right. I can still see it.",
+          },
+          questions: [
+            'What time did they drive to the river?',
+            'What did the uncle teach the writer?',
+            'How long did the writer wait before catching a fish?',
+            'Why does the writer say "I can still see it"?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My uncle', 'We', 'The fish', 'The line'],
+            verbs: ['drove', 'showed', 'caught', 'pulled', 'remembered'],
+          },
+          writing: {
+            prompt: 'Write about doing something for the first time with an older relative. What did they teach you? What do you remember?',
+            support: {
+              wordBank: ['fishing', 'river', 'morning', 'bait', 'hook', 'line', 'trout', 'caught', 'uncle', 'early', 'pulled', 'first'],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOSHUA — Level 23 (~8.5 yrs)
+      //  Inference and vocabulary questions. Word bank for writing.
+      // ────────────────────────────────────────────────────────
+      Joshua: [
+        {
+          reading: {
+            title: 'The Garden in February',
+            passage:
+              "Her garden was at its strangest in February. The early summer flowers had gone over. The autumn ones had not yet decided to start. The grass was still green but a tired green, the kind of green that has been green for too long. She sat on the back step with her cup of tea and looked at it. Nothing in it was beautiful. Nothing in it was working very hard. She found, to her surprise, that she liked it best like this — when the garden had stopped trying to be anything in particular.",
+          },
+          questions: [
+            'What does "a tired green, the kind of green that has been green for too long" suggest about the time of year?',
+            'Why does the writer say the autumn flowers "had not yet decided to start"?',
+            'What does it mean that "nothing in it was working very hard"?',
+            'Why might she like the garden best when it has "stopped trying to be anything in particular"?',
+            'What does this story suggest about how we value the in-between moments of life?',
+          ],
+          sentenceStructure: {
+            subjects: ['She', 'The garden', 'The flowers', 'The grass', 'The step'],
+            verbs: ['sat', 'looked', 'stopped', 'liked', 'decided'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about a quiet, in-between moment when nothing much was happening — but it mattered. What was it?',
+            support: {
+              wordBank: ['garden', 'February', 'flowers', 'grass', 'tea', 'step', 'tired', 'green', 'beautiful', 'stopped', 'between', 'particular'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Phone Booth',
+            passage:
+              "The red phone booth on the corner of Aspen Street had not had a working phone in it for nine years. The council had not got around to removing it. Someone had cleaned the glass once a month, but no one knew who. Inside, people had started leaving things: a packet of mints with a note, a small book, a single flower in a jar. Other people took some things and left others. No one had organised it. It was simply what the booth had become. A man passing through town for the first time stopped to look. He did not know how to describe what he was seeing.",
+          },
+          questions: [
+            'What does it mean that the council "had not got around to removing it" for nine years?',
+            'Why is it significant that someone cleans the glass "but no one knew who"?',
+            'What does the booth becoming a place where people leave and take things — without anyone organising it — suggest?',
+            'What does the writer mean by "it was simply what the booth had become"?',
+            'Why does the man not know "how to describe what he was seeing"?',
+          ],
+          sentenceStructure: {
+            subjects: ['The booth', 'The phone', 'People', 'The man', 'The council'],
+            verbs: ['stood', 'cleaned', 'left', 'took', 'became'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about a place in your town that has become something other than what it was meant to be. What is it now?',
+            support: {
+              wordBank: ['booth', 'phone', 'corner', 'glass', 'cleaned', 'left', 'took', 'flower', 'note', 'mints', 'became', 'describe'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Recipe Card',
+            passage:
+              "The recipe card had been in the back of her cookbook for as long as she could remember. It was handwritten in her grandmother's blue pen. The card was for plum cake. She had never made it. Every year, when the plum tree at the back of her house dropped its fruit, she would think about making the cake. Every year she would put the card back. She told her daughter that she was waiting for the right time. Her daughter said gently that perhaps the cake was not the point of the card.",
+          },
+          questions: [
+            'What does "for as long as she could remember" suggest about the recipe card?',
+            'What is the difference between "thinking about making the cake" and actually making it?',
+            'Why might she keep "waiting for the right time" every year?',
+            'What does her daughter mean by "perhaps the cake was not the point of the card"?',
+            'What does this story suggest about how we keep people with us through objects?',
+          ],
+          sentenceStructure: {
+            subjects: ['She', 'Her grandmother', 'The card', 'The plum tree', 'Her daughter'],
+            verbs: ['wrote', 'kept', 'waited', 'thought', 'said'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about something you have kept but never used — and what keeping it has meant.',
+            support: {
+              wordBank: ['recipe', 'card', 'handwritten', 'grandmother', 'cake', 'plum', 'waited', 'kept', 'thought', 'point', 'back', 'tree'],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MAVERICK — Level 23 (~8.5 yrs)
+      //  Sentence structure reduced to 4 lines to fit one page.
+      // ────────────────────────────────────────────────────────
+      Maverick: [
+        {
+          reading: {
+            title: 'The Open Door',
+            passage:
+              "She came home to find the front door open. It was open by exactly the width of a hand, no more. She stood on the path for a long time, trying to think whether she might have left it like that herself. She was almost sure she had not. The house behind the door was quiet. Nothing had been disturbed inside — she could see that from where she stood. After ten minutes she walked in. Everything was exactly as it had been when she had left in the morning. She closed the door. She did not feel afraid, but she did feel watched. She never found out what had happened.",
+          },
+          questions: [
+            'Why is the precise measurement — "the width of a hand, no more" — significant?',
+            'Why does she stand on the path for a long time before going in?',
+            'What is the difference between feeling "afraid" and feeling "watched"?',
+            'What does "she never found out what had happened" do to the story\'s ending?',
+            'What does this story suggest about how we live with small, unexplained things?',
+          ],
+          sentenceStructure: {
+            subjects: ['She', 'The door', 'The house', 'The path', 'Nothing'],
+            verbs: ['arrived', 'stood', 'walked', 'closed', 'watched'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about coming back somewhere familiar and finding something small but wrong. What did you notice? What did you do?',
+            support: {
+              wordBank: ['door', 'open', 'home', 'path', 'hand', 'quiet', 'inside', 'closed', 'watched', 'morning', 'found', 'almost'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Lighthouse Keeper\'s Notebook',
+            passage:
+              "He found the notebook in the lighthouse on the cliff. The lighthouse had been automated for forty years and no one had lived in it in that time. The notebook was in a drawer below the lamp, dry but yellowed. The handwriting was neat. Every entry was a single line, a date, and a number. He could not work out what the numbers were. He took the notebook home and looked at it again that night. The numbers did not match the tides, or the weather, or anything he could think of. He decided that they had meant something to the man who wrote them. That, he thought, was probably enough.",
+          },
+          questions: [
+            'What does "the lighthouse had been automated for forty years" tell us about the notebook?',
+            'What does "every entry was a single line, a date, and a number" reveal about the keeper\'s practice?',
+            'Why does the writer try to match the numbers to tides, weather, anything he could think of?',
+            'What does it mean to decide "they had meant something to the man who wrote them"?',
+            'Why is "probably enough" the right ending for this story?',
+          ],
+          sentenceStructure: {
+            subjects: ['He', 'The keeper', 'The notebook', 'The numbers', 'The lighthouse'],
+            verbs: ['found', 'wrote', 'matched', 'decided', 'looked'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about finding a record left behind by someone you never knew. What was it? What did you decide it meant?',
+            support: {
+              wordBank: ['lighthouse', 'notebook', 'keeper', 'drawer', 'date', 'number', 'handwriting', 'matched', 'decided', 'meant', 'forty years', 'enough'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Stopped Clock',
+            passage:
+              "The clock in the hallway had stopped at twenty past four. No one in the house could remember when it had stopped, or which twenty past four it had been — afternoon or early morning. Everyone in the family had walked past it for months without doing anything about it. Eventually the youngest son climbed onto a chair and wound it. The clock began to tick again. Everyone in the house stopped what they were doing. The sound was so familiar that no one had noticed it was missing. They had been living, for some time, in a quietness they had not chosen.",
+          },
+          questions: [
+            'Why does the writer point out that "no one could remember when it had stopped"?',
+            'What does it mean that everyone had walked past it for months "without doing anything about it"?',
+            'Why does everyone stop what they are doing when the clock starts ticking again?',
+            'What is the meaning of "a quietness they had not chosen"?',
+            'What does this story suggest about the sounds, habits, or details we stop noticing?',
+          ],
+          sentenceStructure: {
+            subjects: ['The clock', 'The family', 'The son', 'The sound', 'They'],
+            verbs: ['stopped', 'wound', 'ticked', 'noticed', 'chose'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about something that quietly went missing — a sound, a habit, a presence — without anyone noticing until it came back. What was it?',
+            support: {
+              wordBank: ['clock', 'hallway', 'stopped', 'twenty past four', 'wound', 'tick', 'familiar', 'missing', 'quiet', 'family', 'noticed', 'chosen'],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOCASTA — High level (literary analysis, Year 9+)
+      //  Sentence structure reduced to 3 lines / 4 words to fit one page.
+      // ────────────────────────────────────────────────────────
+      Jocasta: [
+        {
+          reading: {
+            title: 'The Inherited Coat',
+            passage:
+              "The coat had been her aunt's. It came to her, along with a small box of books, four months after her aunt's death. The coat was a deep, unfashionable green and a size too large. She wore it once, on a cold Tuesday in May, walking to the bakery. She did not look like herself in the coat. She did not feel like herself in the coat. But she felt — and this was harder to say — that she looked and felt the way her aunt might have wanted her to. She wore the coat home and hung it in the cupboard. She wears it sometimes, on certain Tuesdays, when she wants to be someone slightly more.",
+          },
+          questions: [
+            'What does the precise detail — "deep, unfashionable green and a size too large" — contribute to our sense of the coat?',
+            'What is the difference between not looking like herself and feeling that her aunt would have wanted her to look this way?',
+            'Why does she wear the coat on "certain Tuesdays" rather than every day?',
+            'What does "someone slightly more" mean? More what?',
+            'What does this story suggest about how we wear other people\'s lives in small, deliberate ways?',
+          ],
+          sentenceStructure: {
+            subjects: ['She', 'Her aunt', 'The coat', 'The cupboard'],
+            verbs: ['wore', 'inherited', 'hung', 'felt'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about an object — clothing, a belonging — you have taken on from someone else. Who were you when you wore or used it?',
+            support: {
+              wordBank: ['coat', 'aunt', 'green', 'cupboard', 'wore', 'felt', 'Tuesday', 'inherited', 'slightly', 'unfashionable', 'someone', 'more'],
+              sentenceStarters: [
+                'I did not look like myself, but I felt that ...',
+                'I wore it only on the days when ...',
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Margin Notes',
+            passage:
+              "She borrowed the book from the library and found that someone else had read it before her, very carefully, and had written in the margins. The notes were in pencil. They were not corrections. They were responses — small arguments, agreements, questions to the author. She had borrowed the book to read it. By the end of the first chapter, she was reading two books: the one the author had written and the one being written in the margins. The second one was, in places, more interesting. She returned the book on time and asked, casually, who had borrowed it before her. The librarian could not say.",
+          },
+          questions: [
+            'Why does the writer carefully distinguish between "corrections" and "responses"?',
+            'What does it mean to be "reading two books" at once — the printed one and the marginal one?',
+            'Why does she find the second book "more interesting" in places?',
+            'What does asking "casually" who had borrowed it suggest about her relationship to the unknown reader?',
+            'What does the librarian\'s inability to say leave the story with?',
+          ],
+          sentenceStructure: {
+            subjects: ['She', 'The reader', 'The notes', 'The library'],
+            verbs: ['borrowed', 'read', 'wrote', 'returned'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about coming across a trace of another person\'s thinking — annotations, notes, marks they left behind. What did you learn from what they wrote?',
+            support: {
+              wordBank: ['borrowed', 'margins', 'pencil', 'responses', 'arguments', 'questions', 'reader', 'interesting', 'returned', 'unknown', 'two', 'casually'],
+              sentenceStarters: [
+                'By the end of the chapter, I realised I was reading ...',
+                'What stayed with me was not what the author said, but ...',
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Unlit Lamp',
+            passage:
+              "There was a lamp in the corner of the room that had never been turned on. It had been bought, brought home, put in place, and never used. It had been a wedding present. The bulb in it had never been replaced because no one knew whether the bulb in it was even the original. The lamp was beautiful. It was the most beautiful thing in the room. She had thought about turning it on perhaps a hundred times over the years. Each time, she had decided that the room would no longer be the room if it were lit. The lamp's beauty was in what it would do, not what it had done.",
+          },
+          questions: [
+            'What does the sequence — "bought, brought home, put in place, and never used" — suggest about how some objects enter our lives?',
+            'Why might no one know whether the bulb is the original?',
+            'What does she fear would change if she turned the lamp on?',
+            'What does "the lamp\'s beauty was in what it would do, not what it had done" mean?',
+            'What does this story suggest about the value of potential — the unrealised — in our lives?',
+          ],
+          sentenceStructure: {
+            subjects: ['She', 'The lamp', 'The room', 'The bulb'],
+            verbs: ['bought', 'kept', 'considered', 'decided'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about something you have kept unused — by choice. What does its potential mean? What would change if you used it?',
+            support: {
+              wordBank: ['lamp', 'corner', 'lit', 'wedding', 'bulb', 'beautiful', 'never', 'decided', 'room', 'potential', 'present', 'turned'],
+              sentenceStarters: [
+                'I had been told I should use it, but ...',
+                'Each time I considered it, I decided ...',
+              ],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  CODY — High level (similar to Jocasta)
+      //  Sentence structure reduced to 3 lines / 4 words to fit one page.
+      // ────────────────────────────────────────────────────────
+      Cody: [
+        {
+          reading: {
+            title: 'The Question Not Asked',
+            passage:
+              "They had been talking for an hour. The conversation had moved easily between small things, the way it always did between them. He had a question he had been carrying for several months — a question he had rehearsed asking, and put off asking, and rehearsed asking again. The right moment came twice during the hour. Both times he let it pass. By the end of the conversation he understood, with a quiet clarity, that he was not going to ask. The question was not the kind that needed asking out loud to be answered. The answer, by now, was that he had not asked.",
+          },
+          questions: [
+            'What does the conversation moving "between small things, the way it always did between them" suggest about their relationship?',
+            'Why does he let the right moment pass not once, but twice?',
+            'What does "the question was not the kind that needed asking out loud to be answered" mean?',
+            'What does the closing line — "the answer, by now, was that he had not asked" — reveal about the nature of his question?',
+            'What does this story suggest about how silence itself can be a form of decision?',
+          ],
+          sentenceStructure: {
+            subjects: ['He', 'The conversation', 'The question', 'The answer'],
+            verbs: ['talked', 'rehearsed', 'passed', 'understood'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about something you decided not to say. What was the silence itself an answer to?',
+            support: {
+              wordBank: ['conversation', 'question', 'rehearsed', 'moment', 'passed', 'answer', 'quietly', 'asked', 'aloud', 'understood', 'silence', 'small'],
+              sentenceStarters: [
+                'I had rehearsed the question for months, and then ...',
+                'By the end of the conversation, I understood ...',
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Bird Feeder',
+            passage:
+              "He filled the bird feeder every Saturday morning. He had done this for eleven years. The birds had come, over time, to know the hour. Some of them waited on the fence. One waited on the window ledge, watching him through the glass. He did not give the birds names. He was not sentimental about them. He did the job because it had become the shape of his Saturday morning — and, he sometimes thought, the shape of him. When he was ill last winter and could not fill the feeder for three weeks, the birds had continued to come. He believed this had mattered to them. He was sure it had mattered to him.",
+          },
+          questions: [
+            'Why does the writer point out that he "did not give the birds names" and was "not sentimental"?',
+            'What does the routine becoming "the shape of him" suggest about the relationship between habit and identity?',
+            'What does it mean that the birds "had continued to come" while he was ill?',
+            'What is the difference between "he believed this had mattered to them" and "he was sure it had mattered to him"?',
+            'What does this story suggest about the small, daily acts that sustain a life?',
+          ],
+          sentenceStructure: {
+            subjects: ['He', 'The birds', 'The feeder', 'The Saturday'],
+            verbs: ['filled', 'waited', 'continued', 'mattered'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about a small, repeated act you carry out — not for its result, but because it has become the shape of something. What does it shape?',
+            support: {
+              wordBank: ['feeder', 'birds', 'Saturday', 'filled', 'waited', 'shape', 'sentimental', 'continued', 'mattered', 'routine', 'identity', 'sustained'],
+              sentenceStarters: [
+                'I did it not because of what it gave me, but because ...',
+                'When I could not do it, I understood that ...',
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'The Final Lesson',
+            passage:
+              "She had taken piano lessons from the same teacher for fourteen years. The last lesson was on a Thursday afternoon in autumn. She knew it would be the last. The teacher did not. The teacher set her exercises for the following week, as always. She wrote them down, as always. At the door, she held the teacher's hand a moment longer than she normally did, and then she left. She had decided not to say goodbye because saying goodbye would have made the teacher carry the weight of it. The weight, she thought, was hers to carry alone. She did not, in the end, write to explain.",
+          },
+          questions: [
+            'What is the significance of the teacher not knowing it was the last lesson?',
+            'Why does the writer note that she "wrote them down, as always"?',
+            'What does holding the teacher\'s hand "a moment longer" reveal?',
+            'What does she mean by "the weight … was hers to carry alone"? Why does she choose to carry it alone?',
+            'What does the closing line — "she did not, in the end, write to explain" — say about her decision?',
+          ],
+          sentenceStructure: {
+            subjects: ['She', 'The teacher', 'The lesson', 'The weight'],
+            verbs: ['took', 'set', 'held', 'left'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about an ending you kept to yourself — a final time you did not name as final. What did your silence protect?',
+            support: {
+              wordBank: ['lessons', 'piano', 'fourteen years', 'last', 'goodbye', 'weight', 'carry', 'door', 'left', 'wrote', 'explain', 'alone'],
+              sentenceStarters: [
+                'I had decided not to say goodbye because ...',
+                'The weight of knowing was, I thought, ...',
+              ],
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
     date: '2026-05-25',
     activities: {
 
