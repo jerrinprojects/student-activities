@@ -410,7 +410,7 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
               "My grandfather was a builder for forty years. When he died he left his toolbox to me. The toolbox is made of wood and has his initials carved into the lid — A.J.W. Inside there are spanners, screwdrivers, a small hammer, and a measuring tape that still works. Dad showed me how to use each tool. Last weekend I tightened a loose hinge on my bedroom door by myself. I think Grandad would have been proud. I am the third person in our family to use those tools.",
           },
           questions: [
-            'What was Grandad's job?',
+            'What was Grandad\'s job?',
             'What are the initials on the toolbox?',
             'What four kinds of tools are inside?',
             'What did the writer fix last weekend?',
