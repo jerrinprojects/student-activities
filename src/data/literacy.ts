@@ -58,6 +58,730 @@ export interface LiteracySession {
 
 export const LITERACY_SESSIONS: LiteracySession[] = [
   {
+    date: '2026-07-20',
+    activities: {
+
+      // ────────────────────────────────────────────────────────
+      //  PHARRELL — Level 7 (~5 yrs)
+      //  Explanation texts. Very short, phonics-friendly.
+      // ────────────────────────────────────────────────────────
+      Pharrell: [
+        {
+          reading: {
+            title: 'How the Sun Helps Plants Grow',
+            passage:
+              'Plants need the sun to grow. The green leaves catch the sun. The sun helps the leaves make food. The food goes down the stem to the roots. The roots take water from the soil. With sun, water, and soil, a plant can grow big. That is why we put plants near a sunny window.',
+          },
+          questions: [
+            'What do plants need to grow?',
+            'What do the green leaves do?',
+            'Where do the roots get water?',
+          ],
+          sentenceStructure: {
+            subjects: ['Plants', 'The sun', 'The leaves', 'Water', 'Roots'],
+            verbs: ['grow', 'help', 'make', 'take', 'need'],
+          },
+          writing: {
+            prompt: 'Explain what a plant needs to grow. What happens if a plant has no sun?',
+            support: {
+              wordBank: ['plant', 'grow', 'sun', 'leaves', 'water', 'soil', 'roots', 'food', 'stem', 'green', 'need', 'window'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'Why We Brush Our Teeth',
+            passage:
+              'We brush our teeth to keep them clean. Small food bits stick to our teeth after we eat. Tiny germs live on the food bits. The germs make holes in our teeth. The brush and the paste sweep the germs away. If we brush at night and in the morning, our teeth stay strong. Clean teeth do not hurt.',
+          },
+          questions: [
+            'Why do we brush our teeth?',
+            'What do germs do to our teeth?',
+            'When should we brush our teeth?',
+          ],
+          sentenceStructure: {
+            subjects: ['We', 'Germs', 'The brush', 'Our teeth', 'Food'],
+            verbs: ['brush', 'clean', 'sweep', 'stick', 'grow'],
+          },
+          writing: {
+            prompt: 'Explain why we need to brush our teeth. What might happen if we forget?',
+            support: {
+              wordBank: ['brush', 'teeth', 'clean', 'germs', 'food', 'holes', 'paste', 'night', 'morning', 'strong', 'sweep', 'hurt'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'How Bees Make Honey',
+            passage:
+              'Bees fly from flower to flower. They drink sweet juice from inside each flower. This juice is called nectar. The bees carry the nectar back to the hive. Inside the hive, the bees turn the nectar into thick honey. They store the honey in small holes made of wax. In winter the bees eat the honey when there are no flowers.',
+          },
+          questions: [
+            'Where do bees get nectar?',
+            'What do bees turn nectar into?',
+            'Why do bees store honey?',
+          ],
+          sentenceStructure: {
+            subjects: ['Bees', 'The nectar', 'The hive', 'Flowers', 'Honey'],
+            verbs: ['fly', 'drink', 'carry', 'store', 'eat'],
+          },
+          writing: {
+            prompt: 'Explain how bees make honey. Why is honey important to bees?',
+            support: {
+              wordBank: ['bees', 'honey', 'flower', 'nectar', 'hive', 'wax', 'sweet', 'drink', 'carry', 'store', 'winter', 'eat'],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JIERRY — Level 10, ESOL (Mandarin)
+      //  Explanation texts. Vocabulary list with Chinese translations.
+      // ────────────────────────────────────────────────────────
+      Jierry: [
+        {
+          reading: {
+            title: 'How Rainbows Are Made',
+            passage:
+              'A rainbow is made when the sun shines through drops of rain. Sunlight looks white to us, but it is actually made of many colours. When the sunlight hits a raindrop, the light bends and splits into all its colours. We then see a curved band of colour in the sky. The order is always the same: red, orange, yellow, green, blue, indigo, and violet. That is why rainbows usually appear after rain, when the sun comes out again.',
+          },
+          questions: [
+            'What two things do you need to make a rainbow?',
+            'What happens to sunlight when it hits a raindrop?',
+            'What are the colours of the rainbow, in order?',
+            'Why do rainbows usually appear after rain?',
+          ],
+          sentenceStructure: {
+            subjects: ['The sun', 'A raindrop', 'Sunlight', 'A rainbow', 'The light'],
+            verbs: ['shines', 'bends', 'splits', 'appears', 'contains'],
+            translations: { 'The sun': '太阳', 'A raindrop': '雨滴', 'Sunlight': '阳光', 'A rainbow': '彩虹', 'The light': '光', 'shines': '照耀', 'bends': '弯曲', 'splits': '分开', 'appears': '出现', 'contains': '包含' },
+          },
+          writing: {
+            prompt: 'Explain how a rainbow is made. What has to happen for us to see one?',
+            promptTranslation: '解释一下彩虹是怎么形成的。为了让我们看到彩虹，需要发生什么？',
+            support: {
+              vocabularyList: [
+                { word: 'rainbow', translation: '彩虹', language: 'Chinese' },
+                { word: 'sunlight', translation: '阳光', language: 'Chinese' },
+                { word: 'raindrop', translation: '雨滴', language: 'Chinese' },
+                { word: 'bend', translation: '弯曲', language: 'Chinese' },
+                { word: 'split', translation: '分开', language: 'Chinese' },
+                { word: 'colour', translation: '颜色', language: 'Chinese' },
+                { word: 'curved', translation: '弯的', language: 'Chinese' },
+                { word: 'appear', translation: '出现', language: 'Chinese' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'Why We Need Sleep',
+            passage:
+              'Sleep is very important for our body and our brain. When we sleep, our body repairs itself. Small muscles that were used during the day get to rest. Our brain also uses sleep to sort the things we learned. This is why students who sleep well often remember things better in class. Children need about ten hours of sleep. Adults need about seven or eight. Without enough sleep we feel grumpy, we forget things, and it becomes harder to think.',
+          },
+          questions: [
+            'What does the body do while we sleep?',
+            'What does the brain do during sleep?',
+            'How many hours of sleep do children need?',
+            'What can happen if you do not sleep enough?',
+          ],
+          sentenceStructure: {
+            subjects: ['Our body', 'Our brain', 'Sleep', 'Children', 'Muscles'],
+            verbs: ['repairs', 'sorts', 'rests', 'needs', 'remembers'],
+            translations: { 'Our body': '我们的身体', 'Our brain': '我们的大脑', 'Sleep': '睡眠', 'Children': '孩子', 'Muscles': '肌肉', 'repairs': '修复', 'sorts': '整理', 'rests': '休息', 'needs': '需要', 'remembers': '记住' },
+          },
+          writing: {
+            prompt: 'Explain why sleep is important. What are two things sleep does for us?',
+            promptTranslation: '解释一下睡眠为什么重要。睡眠为我们做了哪两件事？',
+            support: {
+              vocabularyList: [
+                { word: 'sleep', translation: '睡觉', language: 'Chinese' },
+                { word: 'body', translation: '身体', language: 'Chinese' },
+                { word: 'brain', translation: '大脑', language: 'Chinese' },
+                { word: 'repair', translation: '修复', language: 'Chinese' },
+                { word: 'muscle', translation: '肌肉', language: 'Chinese' },
+                { word: 'memory', translation: '记忆', language: 'Chinese' },
+                { word: 'important', translation: '重要的', language: 'Chinese' },
+                { word: 'grumpy', translation: '暴躁的', language: 'Chinese' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'How the Moon Changes Shape',
+            passage:
+              'The moon does not really change shape. It looks different each night because of the sun. The moon does not make its own light. It only shines because sunlight bounces off its surface. As the moon moves around the earth, we see different amounts of the sunny side. Sometimes we see all of it, which we call a full moon. Sometimes we see none of it, which we call a new moon. In between we see thin curves and half-circles. The full cycle takes about one month.',
+          },
+          questions: [
+            'Does the moon really change shape? Why does it look different?',
+            'Where does the light on the moon come from?',
+            'What do we call it when we see all of the sunny side?',
+            'How long does the full cycle take?',
+          ],
+          sentenceStructure: {
+            subjects: ['The moon', 'The sun', 'The earth', 'Sunlight', 'We'],
+            verbs: ['moves', 'shines', 'bounces', 'appears', 'orbits'],
+            translations: { 'The moon': '月亮', 'The sun': '太阳', 'The earth': '地球', 'Sunlight': '阳光', 'We': '我们', 'moves': '移动', 'shines': '照耀', 'bounces': '反射', 'appears': '出现', 'orbits': '绕行' },
+          },
+          writing: {
+            prompt: 'Explain why the moon looks different each night. Why do we sometimes see a full moon and sometimes only a small curve?',
+            promptTranslation: '解释一下月亮为什么每晚看起来不一样。为什么有时候我们看到满月，有时候只看到一小弯？',
+            support: {
+              vocabularyList: [
+                { word: 'moon', translation: '月亮', language: 'Chinese' },
+                { word: 'sunlight', translation: '阳光', language: 'Chinese' },
+                { word: 'bounce', translation: '反射', language: 'Chinese' },
+                { word: 'surface', translation: '表面', language: 'Chinese' },
+                { word: 'shape', translation: '形状', language: 'Chinese' },
+                { word: 'full moon', translation: '满月', language: 'Chinese' },
+                { word: 'new moon', translation: '新月', language: 'Chinese' },
+                { word: 'cycle', translation: '周期', language: 'Chinese' },
+              ],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  BAO — Level 10, ESOL (Vietnamese)
+      //  Explanation texts. Vocabulary list with Vietnamese translations.
+      // ────────────────────────────────────────────────────────
+      Bao: [
+        {
+          reading: {
+            title: 'How Volcanoes Erupt',
+            passage:
+              'Deep under the ground, rock is so hot that it turns into a thick liquid called magma. This magma sits in large pockets called magma chambers. When the pressure inside a chamber grows too high, the magma pushes upwards through cracks in the earth. If it reaches the surface, it bursts out of a volcano. Once magma comes out of the ground, it is called lava. Lava is glowing hot and slowly cools into hard black rock. New Zealand has many volcanoes because it sits on the edge of two moving plates.',
+          },
+          questions: [
+            'What is magma?',
+            'What causes the magma to push up?',
+            'What is the difference between magma and lava?',
+            'Why does New Zealand have many volcanoes?',
+          ],
+          sentenceStructure: {
+            subjects: ['Magma', 'Pressure', 'A volcano', 'Lava', 'The plates'],
+            verbs: ['rises', 'builds', 'erupts', 'cools', 'moves'],
+            translations: { 'Magma': 'Nham thạch', 'Pressure': 'Áp suất', 'A volcano': 'Núi lửa', 'Lava': 'Dung nham', 'The plates': 'Các mảng', 'rises': 'dâng lên', 'builds': 'tích tụ', 'erupts': 'phun trào', 'cools': 'nguội đi', 'moves': 'di chuyển' },
+          },
+          writing: {
+            prompt: 'Explain how a volcano erupts. Why does the magma come to the surface?',
+            promptTranslation: 'Giải thích núi lửa phun trào như thế nào. Tại sao nham thạch trồi lên mặt đất?',
+            support: {
+              vocabularyList: [
+                { word: 'volcano', translation: 'núi lửa', language: 'Vietnamese' },
+                { word: 'magma', translation: 'nham thạch', language: 'Vietnamese' },
+                { word: 'lava', translation: 'dung nham', language: 'Vietnamese' },
+                { word: 'pressure', translation: 'áp suất', language: 'Vietnamese' },
+                { word: 'chamber', translation: 'khoang', language: 'Vietnamese' },
+                { word: 'crack', translation: 'vết nứt', language: 'Vietnamese' },
+                { word: 'erupt', translation: 'phun trào', language: 'Vietnamese' },
+                { word: 'cool', translation: 'nguội', language: 'Vietnamese' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'Why Cats Purr',
+            passage:
+              'Cats purr for many reasons. The most common reason is that the cat is happy or feels safe. This is why cats often purr when we stroke them. But cats also purr when they are hurt or scared. Scientists think the vibration of a purr may help their bodies to heal. The sound is made when the muscles in the cat throat open and close very fast. This happens both when the cat breathes in and out, so the purr can last a long time. Small cats purr, but big cats such as lions can only roar.',
+          },
+          questions: [
+            'When is the most common time a cat purrs?',
+            'Why do cats sometimes purr when they are hurt?',
+            'How does a cat make the purring sound?',
+            'Which cats cannot purr?',
+          ],
+          sentenceStructure: {
+            subjects: ['A cat', 'The purr', 'The muscles', 'Scientists', 'Lions'],
+            verbs: ['purrs', 'vibrates', 'opens', 'thinks', 'roars'],
+            translations: { 'A cat': 'Con mèo', 'The purr': 'Tiếng kêu rừ rừ', 'The muscles': 'Các cơ', 'Scientists': 'Các nhà khoa học', 'Lions': 'Sư tử', 'purrs': 'kêu rừ rừ', 'vibrates': 'rung', 'opens': 'mở', 'thinks': 'nghĩ', 'roars': 'gầm' },
+          },
+          writing: {
+            prompt: 'Explain why cats purr. Give at least two reasons and how the sound is made.',
+            promptTranslation: 'Giải thích tại sao mèo kêu rừ rừ. Đưa ra ít nhất hai lý do và cách âm thanh được tạo ra.',
+            support: {
+              vocabularyList: [
+                { word: 'purr', translation: 'kêu rừ rừ', language: 'Vietnamese' },
+                { word: 'happy', translation: 'vui', language: 'Vietnamese' },
+                { word: 'safe', translation: 'an toàn', language: 'Vietnamese' },
+                { word: 'vibration', translation: 'sự rung', language: 'Vietnamese' },
+                { word: 'heal', translation: 'lành', language: 'Vietnamese' },
+                { word: 'throat', translation: 'cổ họng', language: 'Vietnamese' },
+                { word: 'breathe', translation: 'thở', language: 'Vietnamese' },
+                { word: 'lion', translation: 'sư tử', language: 'Vietnamese' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'How Bread Rises',
+            passage:
+              'When we make bread, we mix flour, water, salt, and a small living thing called yeast. Yeast is a tiny fungus. Once yeast is mixed with warm water and flour, it starts to eat the sugars in the flour. As it eats, it makes tiny bubbles of gas. These bubbles are trapped inside the sticky dough and slowly push the dough upwards. This is why bread dough gets bigger as it sits. When the bread is baked, the heat kills the yeast and sets the shape. Without yeast, bread would be flat and hard.',
+          },
+          questions: [
+            'What is yeast?',
+            'What does yeast eat in the dough?',
+            'What is inside the tiny bubbles that push the dough up?',
+            'What happens to the yeast when the bread is baked?',
+          ],
+          sentenceStructure: {
+            subjects: ['Yeast', 'Bubbles', 'The dough', 'Heat', 'Flour'],
+            verbs: ['eats', 'makes', 'rises', 'traps', 'bakes'],
+            translations: { 'Yeast': 'Men nở', 'Bubbles': 'Bọt khí', 'The dough': 'Bột nhào', 'Heat': 'Nhiệt', 'Flour': 'Bột', 'eats': 'ăn', 'makes': 'tạo ra', 'rises': 'nở lên', 'traps': 'giữ lại', 'bakes': 'nướng' },
+          },
+          writing: {
+            prompt: 'Explain how bread rises. What is the job of the yeast?',
+            promptTranslation: 'Giải thích bánh mì nở lên như thế nào. Vai trò của men nở là gì?',
+            support: {
+              vocabularyList: [
+                { word: 'yeast', translation: 'men nở', language: 'Vietnamese' },
+                { word: 'flour', translation: 'bột', language: 'Vietnamese' },
+                { word: 'dough', translation: 'bột nhào', language: 'Vietnamese' },
+                { word: 'sugar', translation: 'đường', language: 'Vietnamese' },
+                { word: 'bubble', translation: 'bọt khí', language: 'Vietnamese' },
+                { word: 'gas', translation: 'khí', language: 'Vietnamese' },
+                { word: 'rise', translation: 'nở lên', language: 'Vietnamese' },
+                { word: 'bake', translation: 'nướng', language: 'Vietnamese' },
+              ],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MATT — Level 10
+      //  Explanation texts. Word bank support for writing.
+      // ────────────────────────────────────────────────────────
+      Matt: [
+        {
+          reading: {
+            title: 'How Airplanes Fly',
+            passage:
+              "Airplanes fly because of the shape of their wings. A plane wing is curved on the top and flat on the bottom. When the plane moves forward, air has to travel further over the curved top than the flat bottom. This makes the air on top move faster and press down less than the air below. The stronger push from underneath is called lift, and it holds the plane in the air. The engines at the front pull the plane forward so that this air keeps flowing over the wings. Without forward speed, a plane cannot stay up.",
+          },
+          questions: [
+            'What shape is the top of a plane wing?',
+            'Why does the air on top move faster than the air below?',
+            'What is the upward push under the wing called?',
+            'What would happen if the plane stopped moving forward?',
+          ],
+          sentenceStructure: {
+            subjects: ['The wing', 'The air', 'The engines', 'A plane', 'Lift'],
+            verbs: ['curves', 'flows', 'pulls', 'lifts', 'moves'],
+          },
+          writing: {
+            prompt: 'Explain how airplanes stay in the air. What is the job of the wings and the engines?',
+            support: {
+              wordBank: ['airplane', 'wing', 'curved', 'flat', 'air', 'faster', 'lift', 'engines', 'forward', 'below', 'above', 'flow'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'Why We Get Goosebumps',
+            passage:
+              "Goosebumps are the tiny bumps that appear on our skin when we feel cold or scared. Each hair on our body sits in a small hole called a follicle. Attached to every follicle is a tiny muscle. When we get cold, our brain sends a signal to these muscles. They pull the hair upright, and this pulls the skin up around the hair too, making a small bump. In animals with thick fur, standing hair traps warm air and keeps them warm. Humans do not have much body hair, so goosebumps do not really warm us up. It is a reflex left over from when our ancestors were much hairier.",
+          },
+          questions: [
+            'What causes the small bumps on our skin?',
+            'What sends the signal to the tiny muscles?',
+            'Why do goosebumps warm up furry animals?',
+            'Why do goosebumps not really work for humans?',
+          ],
+          sentenceStructure: {
+            subjects: ['Goosebumps', 'The brain', 'A muscle', 'The hair', 'Skin'],
+            verbs: ['appear', 'signals', 'pulls', 'stands', 'reacts'],
+          },
+          writing: {
+            prompt: 'Explain why we get goosebumps. What is the body trying to do?',
+            support: {
+              wordBank: ['goosebumps', 'skin', 'cold', 'scared', 'hair', 'follicle', 'muscle', 'brain', 'signal', 'reflex', 'warm', 'bump'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'How Echoes Work',
+            passage:
+              "An echo is a sound that we hear twice. It happens because sound travels in waves through the air. When these waves hit a hard flat surface, such as a cliff or a wall, they bounce off it and travel back to our ears. Because sound moves at a set speed, the bounced sound reaches us a moment after the first one. That is what we hear as an echo. Echoes only work well when the surface is far away and hard. Soft things such as trees and curtains absorb the sound instead of bouncing it back, which is why echoes are much weaker inside a house.",
+          },
+          questions: [
+            'What is an echo?',
+            'What has to happen for the sound to come back to us?',
+            'Why do we hear the echo after the first sound?',
+            'Why are echoes weaker inside a house?',
+          ],
+          sentenceStructure: {
+            subjects: ['An echo', 'Sound', 'The waves', 'A cliff', 'Soft surfaces'],
+            verbs: ['bounces', 'travels', 'returns', 'absorbs', 'hits'],
+          },
+          writing: {
+            prompt: 'Explain how an echo is made. Why can you not hear one in your bedroom?',
+            support: {
+              wordBank: ['echo', 'sound', 'wave', 'travel', 'bounce', 'hard', 'surface', 'cliff', 'wall', 'absorb', 'return', 'ear'],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOSHUA — Level 23 (~8.5 yrs)
+      //  Explanation texts. 4 lines for sentence structure.
+      // ────────────────────────────────────────────────────────
+      Joshua: [
+        {
+          reading: {
+            title: 'The Water Cycle',
+            passage:
+              "The water on Earth is never lost. It moves through a repeating process called the water cycle. When the sun heats water in the oceans, lakes, and rivers, some of it turns into invisible water vapour and rises into the sky. This step is called evaporation. High in the cool air, the vapour turns back into tiny droplets that gather to form clouds. This is called condensation. When the droplets in a cloud become heavy enough, they fall as rain, snow, or hail. This is called precipitation. The water then flows over the land and back into the oceans, where the cycle begins again. Every drop of water you drink has been through this cycle many times.",
+          },
+          questions: [
+            'What are the three main stages of the water cycle?',
+            'What causes water to turn from a liquid into vapour?',
+            'What has to happen inside a cloud before rain falls?',
+            'Why does the writer say every drop of water has been through the cycle many times?',
+            'What would happen if evaporation stopped?',
+          ],
+          sentenceStructure: {
+            subjects: ['Water', 'The sun', 'Clouds', 'Vapour', 'Rain'],
+            verbs: ['evaporates', 'condenses', 'falls', 'flows', 'returns'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Explain the water cycle in your own words. Use the words evaporation, condensation, and precipitation.',
+            support: {
+              wordBank: ['water cycle', 'evaporation', 'condensation', 'precipitation', 'vapour', 'droplets', 'cloud', 'ocean', 'sun', 'heat', 'flow', 'repeat'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'Why Some Animals Hibernate',
+            passage:
+              "In cold parts of the world, food becomes very hard to find in winter. Plants stop growing, insects disappear, and small animals stay hidden. Rather than starve, some animals have developed a strategy called hibernation. They eat a great deal in autumn to build up fat in their bodies. When winter arrives, they find a safe den and enter a deep, sleep-like state. Their heart rate slows down, their body temperature drops, and their breathing becomes very shallow. This lets them use very little energy, so the fat they stored can last for months. When spring returns and food is available again, they slowly wake up, thin but alive.",
+          },
+          questions: [
+            'What problem does hibernation solve?',
+            'What do animals do in autumn to prepare?',
+            'What happens to the animal body during hibernation?',
+            'Why is a slow heart rate important during hibernation?',
+            'What signals to the animal that it is time to wake up?',
+          ],
+          sentenceStructure: {
+            subjects: ['Some animals', 'The body', 'Winter', 'Food', 'Fat'],
+            verbs: ['hibernate', 'slows', 'stores', 'disappears', 'wakes'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Explain why some animals hibernate. Describe what happens to their body during hibernation.',
+            support: {
+              wordBank: ['hibernate', 'winter', 'food', 'fat', 'autumn', 'den', 'heart rate', 'temperature', 'shallow', 'energy', 'spring', 'starve'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'How Lightning Forms',
+            passage:
+              "Lightning is a giant spark of electricity between a cloud and either the ground or another cloud. It begins inside a thundercloud, where small pieces of ice and water crash into each other as the air moves up and down. These collisions strip tiny particles called electrons from some pieces and add them to others. Over time, the lighter pieces near the top of the cloud become positively charged, while the heavier pieces near the bottom become negatively charged. When the difference in charge is strong enough, electricity jumps between the two areas to balance out. This flash heats the air around it to a temperature hotter than the surface of the sun, which is why the air expands so quickly that we hear it as thunder.",
+          },
+          questions: [
+            'Where does lightning start?',
+            'What makes the top and bottom of the cloud become oppositely charged?',
+            'What is happening when lightning finally flashes?',
+            'Why do we hear thunder after we see lightning?',
+            'What does it mean that the air near lightning is hotter than the surface of the sun?',
+          ],
+          sentenceStructure: {
+            subjects: ['Lightning', 'Ice', 'The cloud', 'Electrons', 'Thunder'],
+            verbs: ['forms', 'collides', 'charges', 'jumps', 'expands'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Explain how lightning forms. Why do we always hear thunder after we see the flash?',
+            support: {
+              wordBank: ['lightning', 'cloud', 'ice', 'crash', 'electron', 'charge', 'positive', 'negative', 'spark', 'thunder', 'expand', 'flash'],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MAVERICK — Level 23 (~8.5 yrs)
+      //  Explanation texts. 4 lines for sentence structure.
+      // ────────────────────────────────────────────────────────
+      Maverick: [
+        {
+          reading: {
+            title: 'How Bees Communicate: The Waggle Dance',
+            passage:
+              "Honey bees have a remarkable way of telling each other where to find food. When a scout bee returns to the hive after finding a rich patch of flowers, it performs a movement called the waggle dance on the honeycomb. The bee walks in a straight line while shaking its body from side to side, then loops back around and does the walk again. The direction of the straight walk shows the other bees the direction of the flowers in relation to the sun. The length of the waggle shows the distance. A longer waggle means the flowers are further away. Other bees follow the dance closely and then fly out to find the exact patch, without needing a map or spoken words.",
+          },
+          questions: [
+            'Why does the scout bee dance when it returns to the hive?',
+            'What does the direction of the straight walk tell the other bees?',
+            'What does the length of the waggle tell them?',
+            'Why is this method so useful for the whole hive?',
+            'What does the story of the waggle dance suggest about how animals share information?',
+          ],
+          sentenceStructure: {
+            subjects: ['A scout bee', 'The dance', 'The direction', 'Other bees', 'The waggle'],
+            verbs: ['dances', 'shows', 'follows', 'finds', 'signals'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Explain how bees use the waggle dance to share directions. What does the direction and length tell the other bees?',
+            support: {
+              wordBank: ['bee', 'hive', 'scout', 'waggle', 'dance', 'direction', 'distance', 'flowers', 'sun', 'straight', 'loop', 'communicate'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'Why We Have Time Zones',
+            passage:
+              "The Earth spins on its axis once every twenty-four hours. This means that at any moment, half of the planet is facing the sun and is in daytime, while the other half is turned away and is in night. If everyone in the world used the same clock, noon in some places would fall in the middle of the night. To avoid this, the Earth is divided into twenty-four vertical strips called time zones. Countries in each strip set their clocks so that twelve noon lines up with the sun being at its highest point in the sky. That is why when it is nine o'clock in the morning in Auckland, it is one o'clock in the afternoon of the previous day in Los Angeles. Time zones make it easier to plan work, travel, and phone calls between places.",
+          },
+          questions: [
+            'Why is one half of the Earth in daytime while the other half is in night?',
+            'What problem would we have if the whole world used the same clock?',
+            'How many time zones is the Earth divided into?',
+            'Why is Auckland ahead of Los Angeles?',
+            'What does this story suggest about why humans agree on shared systems?',
+          ],
+          sentenceStructure: {
+            subjects: ['The Earth', 'Time zones', 'Noon', 'Clocks', 'The sun'],
+            verbs: ['spins', 'divides', 'aligns', 'rises', 'sets'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Explain why the world has different time zones. What would go wrong without them?',
+            support: {
+              wordBank: ['time zone', 'Earth', 'spin', 'axis', 'daytime', 'night', 'noon', 'clock', 'strip', 'sun', 'ahead', 'behind'],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'How Ocean Waves Form',
+            passage:
+              "Most of the ocean waves we see at the beach are made by the wind. When wind blows across the surface of the water, it drags on the very top layer. This drag builds up small ripples. If the wind keeps blowing in the same direction, these ripples grow into bigger waves. The strength of the waves depends on three things: how fast the wind is blowing, how long it has been blowing, and how far it has been blowing across the water. A wave itself does not carry water forward across the ocean. It carries energy. The water beneath a wave mostly moves in a small circle, staying in roughly the same place, while the energy passes through it. When a wave reaches shallow water near the shore, the bottom drags on the sea floor and slows down, causing the top of the wave to spill forward and break.",
+          },
+          questions: [
+            'What is the main cause of ocean waves?',
+            'What three factors make waves stronger?',
+            'What does a wave actually carry across the ocean?',
+            'Why do waves break as they reach the shore?',
+            'What does the difference between water moving and energy moving tell us about how the ocean works?',
+          ],
+          sentenceStructure: {
+            subjects: ['The wind', 'A wave', 'Water', 'The energy', 'The shore'],
+            verbs: ['blows', 'builds', 'travels', 'breaks', 'slows'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Explain how ocean waves are made and why they break when they reach the shore.',
+            support: {
+              wordBank: ['wave', 'wind', 'ocean', 'surface', 'ripple', 'energy', 'circle', 'shallow', 'shore', 'break', 'drag', 'blow'],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOCASTA — High level (literary analysis, Year 9+)
+      //  Explanation texts. 3 lines / 4 words to fit one page.
+      // ────────────────────────────────────────────────────────
+      Jocasta: [
+        {
+          reading: {
+            title: 'How Photosynthesis Turns Light into Food',
+            passage:
+              "Photosynthesis is the process by which plants make their own food from air, water, and sunlight. It takes place mainly inside the leaves, in small green structures called chloroplasts. The green colour comes from a pigment called chlorophyll, which absorbs the energy from sunlight. This energy is then used to split water molecules pulled up from the roots, and to combine the hydrogen from that water with carbon dioxide taken from the air. The result is glucose, a simple sugar the plant uses for energy and growth. A key by-product of this process is oxygen, which the plant releases back into the air through tiny pores. Almost all of the oxygen we breathe was released by a plant somewhere on Earth. Photosynthesis is therefore not only the way plants feed themselves; it is the reason animal life exists.",
+          },
+          questions: [
+            'What does the pigment chlorophyll do in the photosynthesis process?',
+            'What three things does a plant need in order to make glucose?',
+            'How does photosynthesis link the roots and the air?',
+            'Why is oxygen described as a by-product rather than the main product?',
+            'What does the closing line suggest about the relationship between plant life and animal life?',
+          ],
+          sentenceStructure: {
+            subjects: ['A plant', 'Chlorophyll', 'Sunlight', 'The leaves'],
+            verbs: ['absorbs', 'splits', 'produces', 'releases'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Explain how photosynthesis works. Include the ingredients, the process, and why the oxygen it releases matters to us.',
+            support: {
+              wordBank: ['photosynthesis', 'chlorophyll', 'chloroplast', 'sunlight', 'water', 'carbon dioxide', 'glucose', 'oxygen', 'pore', 'energy', 'by-product', 'plant'],
+              sentenceStarters: [
+                'First, the leaves absorb ...',
+                'The oxygen we breathe exists because ...',
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'Why Languages Change Over Time',
+            passage:
+              "No living language stays the same. Every generation of speakers slowly reshapes the words they inherit. Sounds are simplified when they are difficult to say quickly, so that consonants merge and vowels shift. New words appear when new tools, foods, and ideas arrive and demand a name. Old words fall out of use when the things they described disappear from daily life. When speakers of one language come into regular contact with speakers of another, both languages tend to borrow from each other, taking on new words, phrases, and even sounds. The way a language sounds today is therefore a record of everything its speakers have done, needed, and encountered. Even languages carried across the world by settlers or migrants continue to shift, because the everyday work of speaking always leaves fingerprints on a language.",
+          },
+          questions: [
+            'What are two ways in which sounds within a language change over time?',
+            'Why do new words appear? Why do old ones disappear?',
+            'What happens when speakers of different languages come into regular contact?',
+            'What does the writer mean by describing a language as a record of its speakers\\u2019 lives?',
+            'What does this passage suggest about the relationship between language and history?',
+          ],
+          sentenceStructure: {
+            subjects: ['A language', 'Sounds', 'New words', 'Speakers'],
+            verbs: ['change', 'shift', 'appear', 'borrow'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Explain why languages change over time. Give at least two reasons and one everyday example.',
+            support: {
+              wordBank: ['language', 'change', 'sounds', 'consonants', 'vowels', 'borrow', 'generation', 'contact', 'inherit', 'record', 'shift', 'daily'],
+              sentenceStarters: [
+                'One reason a language changes is that ...',
+                'When two languages meet, both begin to ...',
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'How the Ear Turns Vibrations into Sound',
+            passage:
+              "Sound is nothing more than vibrating air. When something in the world moves quickly enough, it pushes the air around it into waves of pressure. Our hearing depends on the ability of the ear to catch these waves and translate them into signals the brain can read. The outer ear funnels the waves into the ear canal, where they strike a thin membrane called the eardrum. The eardrum vibrates in step with the waves and passes those vibrations to three tiny bones in the middle ear. These bones amplify the movement and hand it on to a fluid-filled spiral in the inner ear called the cochlea. Inside the cochlea, thousands of microscopic hair cells sway with the fluid. The bending of each hair cell releases a tiny electrical pulse along the auditory nerve to the brain, which finally interprets the pulses as a specific sound.",
+          },
+          questions: [
+            'What is the physical nature of sound before it reaches the ear?',
+            'What is the role of the eardrum in the process of hearing?',
+            'Why is it important that the three tiny bones amplify the movement?',
+            'What actually generates the electrical signal that travels to the brain?',
+            'What does this passage suggest about the relationship between physical movement and conscious experience?',
+          ],
+          sentenceStructure: {
+            subjects: ['Sound', 'The eardrum', 'The cochlea', 'The brain'],
+            verbs: ['vibrates', 'amplifies', 'signals', 'interprets'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Explain how the ear turns vibrations in the air into a sound you can recognise. Follow the path from outside the ear to the brain.',
+            support: {
+              wordBank: ['sound', 'vibration', 'ear canal', 'eardrum', 'bones', 'amplify', 'cochlea', 'hair cells', 'nerve', 'brain', 'interpret', 'signal'],
+              sentenceStarters: [
+                'The first thing that happens is ...',
+                'By the time the signal reaches the brain, it has already been ...',
+              ],
+            },
+          },
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  CODY — High level (similar to Jocasta)
+      //  Explanation texts. 3 lines / 4 words to fit one page.
+      // ────────────────────────────────────────────────────────
+      Cody: [
+        {
+          reading: {
+            title: 'How Muscle Memory Works',
+            passage:
+              "Muscle memory is a slightly misleading name, because muscles themselves do not remember anything. The remembering happens in the brain and the nervous system. When you first attempt a skill, such as tying a shoelace or playing a chord, your brain has to send many separate instructions to individual muscles, and you have to pay full attention to each step. With repetition, the neurons involved in each movement begin to fire together more efficiently. The brain builds a shortcut, wrapping the whole sequence into one pattern that can be triggered as a single command. Once this pathway is well worn, you can perform the action without conscious thought. The skill has not been stored in your fingers; it has been stored in the connections between your neurons. This is why long-forgotten skills can return within minutes even after years of not being practised.",
+          },
+          questions: [
+            'Why does the writer say the name muscle memory is misleading?',
+            'What role does repetition play in building this kind of memory?',
+            'What does it mean that the brain wraps the sequence into a single command?',
+            'How does this explanation account for the fact that a forgotten skill can return so quickly?',
+            'What does this passage suggest about the relationship between practice and identity — between what we do and what we become?',
+          ],
+          sentenceStructure: {
+            subjects: ['The brain', 'Neurons', 'A skill', 'Practice'],
+            verbs: ['builds', 'connects', 'triggers', 'stores'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Explain what really happens in the body and brain when we build muscle memory. Why does the name mislead people about where the skill is stored?',
+            support: {
+              wordBank: ['muscle memory', 'brain', 'neurons', 'nervous system', 'repetition', 'pathway', 'shortcut', 'pattern', 'trigger', 'conscious', 'stored', 'connection'],
+              sentenceStarters: [
+                'Contrary to the name, the memory is not stored in ...',
+                'Each time we repeat the movement, the brain ...',
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'Why We Yawn',
+            passage:
+              "Yawning is a familiar behaviour with a surprisingly uncertain cause. Scientists have suggested several explanations, and the current view is that different yawns may have different reasons. One older idea, that we yawn to take in more oxygen when tired, has largely been ruled out by careful testing. A more current theory is that yawning helps regulate the temperature of the brain. A big yawn draws cool air into the mouth and throat and increases blood flow to the head, which may slightly lower brain temperature during moments of drowsiness or stress. Yawning is also strongly social. Watching, hearing, or even reading about yawning can trigger the same behaviour in another person, an effect that is stronger between people who know each other well. This contagious yawning may have originated as a way for a group of animals to synchronise their state of alertness, so that everyone in the group rested or woke up at the same time.",
+          },
+          questions: [
+            'Which older explanation for yawning has been largely rejected?',
+            'What is the current theory about the physical function of yawning?',
+            'What does it mean that yawning is contagious?',
+            'Why might yawning have evolved as a social behaviour?',
+            'What does this passage suggest about scientific explanation when a phenomenon has more than one purpose?',
+          ],
+          sentenceStructure: {
+            subjects: ['A yawn', 'The brain', 'Cool air', 'Yawning'],
+            verbs: ['cools', 'spreads', 'regulates', 'synchronises'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Explain the two most current theories about why we yawn. Why do scientists now think there may be more than one reason?',
+            support: {
+              wordBank: ['yawn', 'oxygen', 'temperature', 'brain', 'cool', 'blood flow', 'contagious', 'social', 'synchronise', 'drowsy', 'group', 'theory'],
+              sentenceStarters: [
+                'The idea that we yawn for more oxygen has been ...',
+                'One reason yawning may be contagious is that ...',
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'How Vaccines Train the Immune System',
+            passage:
+              "A vaccine works by teaching the immune system to recognise a specific disease without ever having to encounter the full version of it. Traditional vaccines contain a small, harmless piece of the germ that causes the disease, or a weakened version of the germ itself. When these enter the body, the immune system treats them as if they were a real threat. It produces specialised proteins called antibodies, which are designed to lock onto a specific feature of the germ, and it also generates memory cells that keep a long-term record of the encounter. If the real disease ever arrives later, the immune system already knows how to fight it. It can produce the right antibodies within hours, rather than the days that a first infection would require. This head start is often the difference between a mild reaction and a serious illness. A vaccine, in this sense, is less a shield than a rehearsal.",
+          },
+          questions: [
+            'What is the essential job of a vaccine?',
+            'What does the immune system do in response to the harmless piece of germ?',
+            'Why are memory cells so important to how a vaccine works?',
+            'What does the writer mean by the head start the immune system gets?',
+            'How does the closing image — a vaccine is less a shield than a rehearsal — reframe what a vaccine actually does?',
+          ],
+          sentenceStructure: {
+            subjects: ['A vaccine', 'The immune system', 'Antibodies', 'Memory cells'],
+            verbs: ['teaches', 'produces', 'remembers', 'protects'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Explain how a vaccine trains the immune system. Include the roles of antibodies and memory cells, and why the second exposure is so much faster.',
+            support: {
+              wordBank: ['vaccine', 'immune system', 'germ', 'weakened', 'antibody', 'memory cell', 'protein', 'threat', 'infection', 'rehearsal', 'record', 'exposure'],
+              sentenceStarters: [
+                'A vaccine works by exposing the body to ...',
+                'The reason the second response is so much faster is that ...',
+              ],
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
     date: '2026-06-30',
     activities: {
 
