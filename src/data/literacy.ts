@@ -7,6 +7,7 @@
 // ─────────────────────────────────────────────────────────────
 
 export const STUDENTS = [
+  'Oday',
   'Pharrell',
   'Jierry',
   'Bao',
@@ -60,6 +61,113 @@ export const LITERACY_SESSIONS: LiteracySession[] = [
   {
     date: '2026-07-20',
     activities: {
+
+      // ────────────────────────────────────────────────────────
+      //  ODAY — Level 3 (~4 yrs), ESOL (Arabic, from Syria)
+      //  Explanation texts. Very short, repeated patterns.
+      //  Vocabulary list with Arabic translations.
+      // ────────────────────────────────────────────────────────
+      Oday: [
+        {
+          reading: {
+            title: 'Why We Need Water',
+            passage:
+              'I drink water. Water is good for me. Water helps me grow. Water helps my body work. I drink water every day.',
+          },
+          questions: [
+            'What does the writer drink?',
+            'What does water help us do?',
+            'How often does the writer drink water?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Water', 'My body'],
+            verbs: ['drink', 'helps', 'grow'],
+            translations: { 'I': 'أنا', 'Water': 'الماء', 'My body': 'جسمي', 'drink': 'أشرب', 'helps': 'يساعد', 'grow': 'أنمو' },
+          },
+          writing: {
+            prompt: 'Explain why we drink water. When do you drink water?',
+            promptTranslation: 'اشرح لماذا نشرب الماء. متى تشرب الماء؟',
+            support: {
+              vocabularyList: [
+                { word: 'water', translation: 'ماء', language: 'Arabic' },
+                { word: 'drink', translation: 'يشرب', language: 'Arabic' },
+                { word: 'good', translation: 'جيد', language: 'Arabic' },
+                { word: 'grow', translation: 'ينمو', language: 'Arabic' },
+                { word: 'body', translation: 'جسم', language: 'Arabic' },
+                { word: 'help', translation: 'يساعد', language: 'Arabic' },
+                { word: 'day', translation: 'يوم', language: 'Arabic' },
+                { word: 'every', translation: 'كل', language: 'Arabic' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'Why We Wash Our Hands',
+            passage:
+              'I wash my hands. I use soap and water. Soap makes the germs go away. Clean hands keep me well. I wash my hands before I eat.',
+          },
+          questions: [
+            'What does the writer use to wash?',
+            'What do soap and water do to germs?',
+            'When does the writer wash their hands?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Soap', 'My hands'],
+            verbs: ['wash', 'clean', 'go'],
+            translations: { 'I': 'أنا', 'Soap': 'الصابون', 'My hands': 'يداي', 'wash': 'أغسل', 'clean': 'ينظف', 'go': 'يذهب' },
+          },
+          writing: {
+            prompt: 'Explain why we wash our hands. When do you wash your hands?',
+            promptTranslation: 'اشرح لماذا نغسل أيدينا. متى تغسل يديك؟',
+            support: {
+              vocabularyList: [
+                { word: 'wash', translation: 'يغسل', language: 'Arabic' },
+                { word: 'hands', translation: 'أيدي', language: 'Arabic' },
+                { word: 'soap', translation: 'صابون', language: 'Arabic' },
+                { word: 'water', translation: 'ماء', language: 'Arabic' },
+                { word: 'germs', translation: 'جراثيم', language: 'Arabic' },
+                { word: 'clean', translation: 'نظيف', language: 'Arabic' },
+                { word: 'eat', translation: 'يأكل', language: 'Arabic' },
+                { word: 'well', translation: 'بصحة جيدة', language: 'Arabic' },
+              ],
+            },
+          },
+        },
+        {
+          reading: {
+            title: 'How the Sun Warms Us',
+            passage:
+              'The sun is up in the sky. The sun is hot. The sun warms the ground. The sun warms me. I feel warm in the sun.',
+          },
+          questions: [
+            'Where is the sun?',
+            'What does the sun warm?',
+            'How does the writer feel in the sun?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The sun', 'The ground'],
+            verbs: ['warms', 'feels', 'shines'],
+            translations: { 'I': 'أنا', 'The sun': 'الشمس', 'The ground': 'الأرض', 'warms': 'يدفئ', 'feels': 'يشعر', 'shines': 'يشرق' },
+          },
+          writing: {
+            prompt: 'Explain how the sun warms us. When do you feel warm from the sun?',
+            promptTranslation: 'اشرح كيف تدفئنا الشمس. متى تشعر بالدفء من الشمس؟',
+            support: {
+              vocabularyList: [
+                { word: 'sun', translation: 'شمس', language: 'Arabic' },
+                { word: 'sky', translation: 'سماء', language: 'Arabic' },
+                { word: 'hot', translation: 'حار', language: 'Arabic' },
+                { word: 'warm', translation: 'دافئ', language: 'Arabic' },
+                { word: 'ground', translation: 'أرض', language: 'Arabic' },
+                { word: 'up', translation: 'فوق', language: 'Arabic' },
+                { word: 'feel', translation: 'يشعر', language: 'Arabic' },
+                { word: 'day', translation: 'يوم', language: 'Arabic' },
+              ],
+            },
+          },
+        },
+      ],
 
       // ────────────────────────────────────────────────────────
       //  PHARRELL — Level 7 (~5 yrs)
