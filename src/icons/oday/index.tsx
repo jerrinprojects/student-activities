@@ -1,9 +1,9 @@
-// Oday icon library — simple line drawings, 2px stroke, black on white.
-// Not baby cartoons. Use `<OdayIcon name="cat" size={60} />`.
+// Oday icon library — recognisable line drawings.
+// Not childish cartoons. Use `<OdayIcon name="cat" size={60} />`.
 
 import React from 'react';
 
-type IconProps = { size?: number; strokeWidth?: number };
+type IconProps = { size?: number };
 
 const S = ({ size = 60, children }: { size?: number; children: React.ReactNode }) => (
   <svg
@@ -12,7 +12,7 @@ const S = ({ size = 60, children }: { size?: number; children: React.ReactNode }
     viewBox="0 0 100 100"
     fill="none"
     stroke="currentColor"
-    strokeWidth={2.2}
+    strokeWidth={2.4}
     strokeLinecap="round"
     strokeLinejoin="round"
   >
@@ -20,204 +20,341 @@ const S = ({ size = 60, children }: { size?: number; children: React.ReactNode }
   </svg>
 );
 
-// ── ALPHABET A–H (Week 1) ──────────────────────────────────────────
+// ── APPLE ─────────────────────────────────────────────────────────
 export const AppleIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <path d="M50 30 C 35 30, 25 45, 30 65 C 33 80, 45 85, 50 82 C 55 85, 67 80, 70 65 C 75 45, 65 30, 50 30 Z" />
-    <path d="M52 30 C 55 22, 60 20, 65 22" />
-    <path d="M55 25 C 55 20, 58 15, 62 15" />
+    {/* apple body with slight top indent */}
+    <path d="M50 30 C 42 27, 32 30, 27 42 C 22 55, 26 78, 42 84 C 47 85, 50 82, 50 82 C 50 82, 53 85, 58 84 C 74 78, 78 55, 73 42 C 68 30, 58 27, 50 30 Z" />
+    {/* small indent between the two halves at top */}
+    <path d="M50 32 L 50 40" />
+    {/* stem */}
+    <path d="M50 30 L 53 20" />
+    {/* leaf */}
+    <path d="M53 22 C 62 17, 68 22, 66 30 C 60 32, 55 28, 53 22 Z" />
   </S>
 );
 
+// ── BALL (soccer ball style) ─────────────────────────────────────
 export const BallIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <circle cx="50" cy="55" r="28" />
-    <path d="M22 55 L 78 55" />
-    <path d="M32 35 C 42 55, 42 60, 32 78" />
-    <path d="M68 35 C 58 55, 58 60, 68 78" />
+    <circle cx="50" cy="52" r="30" />
+    {/* pentagon in centre */}
+    <path d="M50 38 L 62 46 L 58 60 L 42 60 L 38 46 Z" />
+    {/* spokes to edge */}
+    <path d="M50 38 L 50 24" />
+    <path d="M62 46 L 76 42" />
+    <path d="M58 60 L 68 74" />
+    <path d="M42 60 L 32 74" />
+    <path d="M38 46 L 24 42" />
   </S>
 );
 
+// ── CAT ───────────────────────────────────────────────────────────
 export const CatIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <path d="M25 45 L 32 25 L 42 40" />
-    <path d="M75 45 L 68 25 L 58 40" />
-    <ellipse cx="50" cy="58" rx="28" ry="24" />
-    <circle cx="42" cy="55" r="2" fill="currentColor" />
-    <circle cx="58" cy="55" r="2" fill="currentColor" />
-    <path d="M50 62 L 48 66 L 52 66 Z" fill="currentColor" />
-    <path d="M40 70 Q 35 72, 30 70" />
-    <path d="M60 70 Q 65 72, 70 70" />
-    <path d="M42 68 Q 45 72, 50 68" />
-    <path d="M58 68 Q 55 72, 50 68" />
+    {/* left ear */}
+    <path d="M28 45 L 32 22 L 46 40" />
+    {/* right ear */}
+    <path d="M72 45 L 68 22 L 54 40" />
+    {/* inner ears */}
+    <path d="M33 30 L 35 38" />
+    <path d="M67 30 L 65 38" />
+    {/* head */}
+    <ellipse cx="50" cy="58" rx="24" ry="22" />
+    {/* eyes */}
+    <circle cx="41" cy="55" r="3" fill="currentColor" />
+    <circle cx="59" cy="55" r="3" fill="currentColor" />
+    {/* nose */}
+    <path d="M47 64 L 53 64 L 50 68 Z" fill="currentColor" />
+    {/* mouth */}
+    <path d="M50 68 L 50 71" />
+    <path d="M50 71 Q 45 74, 43 71" />
+    <path d="M50 71 Q 55 74, 57 71" />
+    {/* whiskers */}
+    <path d="M28 62 L 40 63" />
+    <path d="M28 66 L 40 66" />
+    <path d="M72 62 L 60 63" />
+    <path d="M72 66 L 60 66" />
   </S>
 );
 
+// ── DOG ───────────────────────────────────────────────────────────
 export const DogIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <ellipse cx="50" cy="60" rx="28" ry="22" />
-    <path d="M28 45 Q 22 40, 24 55" />
-    <path d="M72 45 Q 78 40, 76 55" />
-    <circle cx="42" cy="58" r="2.5" fill="currentColor" />
-    <circle cx="58" cy="58" r="2.5" fill="currentColor" />
-    <ellipse cx="50" cy="68" rx="4" ry="3" fill="currentColor" />
-    <path d="M50 72 Q 46 78, 44 76" />
-    <path d="M50 72 Q 54 78, 56 76" />
+    {/* floppy ears (hanging down) */}
+    <path d="M28 42 Q 20 45, 22 62 Q 25 70, 32 65" />
+    <path d="M72 42 Q 80 45, 78 62 Q 75 70, 68 65" />
+    {/* head */}
+    <ellipse cx="50" cy="55" rx="22" ry="20" />
+    {/* eyes */}
+    <circle cx="42" cy="52" r="3" fill="currentColor" />
+    <circle cx="58" cy="52" r="3" fill="currentColor" />
+    {/* muzzle */}
+    <ellipse cx="50" cy="65" rx="10" ry="8" />
+    {/* nose */}
+    <ellipse cx="50" cy="62" rx="4" ry="3" fill="currentColor" />
+    {/* mouth line */}
+    <path d="M50 66 L 50 70" />
+    {/* tongue */}
+    <path d="M47 71 Q 50 76, 53 71 Q 53 75, 47 75 Z" fill="currentColor" />
   </S>
 );
 
+// ── EGG ───────────────────────────────────────────────────────────
 export const EggIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <path d="M50 15 C 30 20, 22 50, 30 75 C 38 92, 62 92, 70 75 C 78 50, 70 20, 50 15 Z" />
+    <path d="M50 14 C 32 18, 26 42, 28 62 C 30 82, 40 88, 50 88 C 60 88, 70 82, 72 62 C 74 42, 68 18, 50 14 Z" />
   </S>
 );
 
+// ── FISH ──────────────────────────────────────────────────────────
 export const FishIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <path d="M22 50 C 30 30, 60 30, 72 50 C 60 70, 30 70, 22 50 Z" />
-    <path d="M72 50 L 88 35 L 88 65 Z" />
-    <circle cx="34" cy="47" r="2" fill="currentColor" />
-    <path d="M55 42 Q 60 50, 55 58" />
+    {/* body */}
+    <path d="M20 50 C 28 30, 55 30, 72 50 C 55 70, 28 70, 20 50 Z" />
+    {/* tail */}
+    <path d="M72 50 L 90 34 L 90 66 Z" />
+    {/* eye */}
+    <circle cx="34" cy="46" r="3.5" />
+    <circle cx="34" cy="46" r="1.5" fill="currentColor" />
+    {/* gill */}
+    <path d="M46 42 Q 49 50, 46 58" />
+    {/* top fin */}
+    <path d="M50 32 Q 55 22, 62 32" />
+    {/* bottom fin */}
+    <path d="M50 68 Q 55 78, 62 68" />
   </S>
 );
 
+// ── GOAT ──────────────────────────────────────────────────────────
 export const GoatIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <ellipse cx="50" cy="60" rx="24" ry="16" />
-    <ellipse cx="70" cy="45" rx="10" ry="12" />
-    <path d="M64 35 Q 60 26, 65 24" />
-    <path d="M76 35 Q 80 26, 75 24" />
-    <circle cx="74" cy="43" r="1.5" fill="currentColor" />
-    <path d="M78 50 Q 80 52, 76 53" />
-    <path d="M32 74 L 32 82" />
-    <path d="M42 74 L 42 82" />
-    <path d="M58 74 L 58 82" />
-    <path d="M68 74 L 68 82" />
-    <path d="M28 62 Q 22 62, 20 68" />
+    {/* body */}
+    <path d="M20 55 L 20 68 Q 20 74, 26 74 L 60 74 Q 66 74, 66 68 L 66 55 Q 66 46, 55 44 L 30 44 Q 20 46, 20 55 Z" />
+    {/* head */}
+    <path d="M66 60 L 82 58 L 88 50 L 84 42 L 74 42 L 66 48 Z" />
+    {/* horn */}
+    <path d="M78 42 Q 80 34, 76 30" />
+    {/* eye */}
+    <circle cx="80" cy="50" r="1.6" fill="currentColor" />
+    {/* beard */}
+    <path d="M84 56 L 82 62" />
+    {/* ear */}
+    <path d="M74 42 L 71 36" />
+    {/* legs */}
+    <path d="M28 74 L 28 84" />
+    <path d="M38 74 L 38 84" />
+    <path d="M52 74 L 52 84" />
+    <path d="M60 74 L 60 84" />
+    {/* tail */}
+    <path d="M20 55 L 15 52" />
   </S>
 );
 
+// ── HAT (fedora / brimmed hat) ───────────────────────────────────
 export const HatIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <path d="M32 65 L 30 55 Q 30 30, 50 28 Q 70 30, 70 55 L 68 65" />
-    <path d="M20 65 L 80 65 L 80 72 L 20 72 Z" />
-    <path d="M35 55 L 65 55" />
+    {/* dome */}
+    <path d="M30 60 Q 30 30, 50 28 Q 70 30, 70 60" />
+    {/* brim */}
+    <ellipse cx="50" cy="64" rx="34" ry="6" />
+    {/* band */}
+    <path d="M32 55 L 68 55" />
   </S>
 );
 
-// ── PICTURE-WORD / CVC additions (Week 1) ────────────────────────
+// ── SUN ───────────────────────────────────────────────────────────
 export const SunIcon = ({ size }: IconProps) => (
   <S size={size}>
     <circle cx="50" cy="50" r="16" />
-    <path d="M50 20 L 50 28" />
-    <path d="M50 72 L 50 80" />
-    <path d="M20 50 L 28 50" />
-    <path d="M72 50 L 80 50" />
-    <path d="M28 28 L 34 34" />
-    <path d="M72 72 L 66 66" />
-    <path d="M28 72 L 34 66" />
-    <path d="M72 28 L 66 34" />
+    <path d="M50 18 L 50 28" />
+    <path d="M50 72 L 50 82" />
+    <path d="M18 50 L 28 50" />
+    <path d="M72 50 L 82 50" />
+    <path d="M26 26 L 33 33" />
+    <path d="M74 74 L 67 67" />
+    <path d="M26 74 L 33 67" />
+    <path d="M74 26 L 67 33" />
   </S>
 );
 
+// ── BED ───────────────────────────────────────────────────────────
 export const BedIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <path d="M15 55 L 15 78" />
-    <path d="M85 45 L 85 78" />
-    <path d="M15 65 L 85 65" />
-    <path d="M15 78 L 85 78" />
-    <path d="M15 55 L 45 55 L 45 65" />
-    <path d="M30 55 Q 30 48, 38 48 L 42 48 Q 45 48, 45 55" />
+    {/* headboard */}
+    <path d="M12 42 L 12 78" />
+    <path d="M12 42 L 42 42 L 42 62" />
+    {/* frame */}
+    <path d="M12 62 L 88 62 L 88 42" />
+    {/* mattress bottom */}
+    <path d="M12 72 L 88 72" />
+    {/* legs */}
+    <path d="M14 78 L 14 86" />
+    <path d="M86 72 L 86 86" />
+    {/* pillow */}
+    <path d="M18 60 Q 18 52, 26 52 L 36 52 Q 42 52, 42 60" />
   </S>
 );
 
+// ── BAG (backpack) ───────────────────────────────────────────────
 export const BagIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <path d="M25 40 L 75 40 L 78 82 L 22 82 Z" />
-    <path d="M35 40 Q 35 22, 50 22 Q 65 22, 65 40" />
+    {/* body */}
+    <path d="M25 40 L 25 82 Q 25 86, 30 86 L 70 86 Q 75 86, 75 82 L 75 40" />
+    {/* flap top */}
+    <path d="M25 40 Q 25 22, 50 22 Q 75 22, 75 40" />
+    {/* straps on top */}
+    <path d="M40 24 Q 40 15, 46 15" />
+    <path d="M60 24 Q 60 15, 54 15" />
+    {/* front pocket */}
+    <path d="M35 60 L 65 60 L 65 78 L 35 78 Z" />
+    {/* buckle */}
+    <circle cx="50" cy="52" r="3" />
   </S>
 );
 
+// ── PEN ───────────────────────────────────────────────────────────
 export const PenIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <path d="M22 78 L 68 32" />
-    <path d="M28 84 L 74 38" />
-    <path d="M22 78 L 28 84" />
-    <path d="M68 32 L 74 38" />
-    <path d="M68 32 L 78 22 L 82 26 L 74 38" />
-    <path d="M22 78 L 15 85" />
+    {/* body */}
+    <path d="M22 78 L 62 38 L 70 46 L 30 86 Z" />
+    {/* nib (triangle at bottom-left tip) */}
+    <path d="M22 78 L 18 88 L 30 86" fill="currentColor" opacity="0.15" />
+    <path d="M22 78 L 18 88 L 30 86 Z" />
+    {/* cap end */}
+    <path d="M62 38 L 70 30 L 78 38 L 70 46" />
+    {/* pocket clip */}
+    <path d="M70 30 L 75 32 L 75 40" />
   </S>
 );
 
+// ── CUP (mug with steam) ─────────────────────────────────────────
 export const CupIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <path d="M25 32 L 30 78 Q 32 82, 50 82 Q 68 82, 70 78 L 75 32 Z" />
-    <path d="M75 42 Q 88 45, 88 58 Q 88 70, 75 68" />
+    {/* body */}
+    <path d="M25 40 L 30 78 Q 32 82, 50 82 Q 68 82, 70 78 L 75 40 Z" />
+    {/* rim */}
+    <path d="M25 40 L 75 40" />
+    {/* handle */}
+    <path d="M75 48 Q 88 50, 88 60 Q 88 70, 75 68" />
+    {/* steam */}
+    <path d="M42 30 Q 45 25, 42 20 Q 39 15, 42 10" />
+    <path d="M52 30 Q 55 25, 52 20 Q 49 15, 52 10" />
+    <path d="M62 30 Q 65 25, 62 20 Q 59 15, 62 10" />
   </S>
 );
 
+// ── BAT (baseball bat — CVC "bat") ───────────────────────────────
 export const BatIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <path d="M50 20 L 45 55 L 55 55 Z" />
-    <path d="M35 30 L 65 30" />
-    <path d="M45 55 L 40 80" />
-    <path d="M55 55 L 60 80" />
-    <path d="M40 80 L 60 80" />
-    <path d="M50 20 Q 30 25, 25 35" />
-    <path d="M50 20 Q 70 25, 75 35" />
+    {/* baseball bat, diagonal, thick end top-right, grip bottom-left */}
+    <path d="M78 18 L 84 24 L 30 78 Q 22 82, 18 78 Q 22 74, 26 74 Z" />
+    {/* grip lines */}
+    <path d="M22 74 L 24 76" />
+    <path d="M28 78 L 30 80" />
+    {/* knob at end */}
+    <circle cx="20" cy="80" r="3" />
   </S>
 );
 
+// ── MAT (rug with fringe) ────────────────────────────────────────
 export const MatIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <path d="M15 45 L 85 45 L 82 75 L 18 75 Z" />
-    <path d="M22 52 L 78 52" />
-    <path d="M22 60 L 78 60" />
-    <path d="M22 68 L 78 68" />
+    {/* main rectangle */}
+    <path d="M18 42 L 82 42 L 82 76 L 18 76 Z" />
+    {/* pattern lines */}
+    <path d="M18 52 L 82 52" />
+    <path d="M18 66 L 82 66" />
+    {/* fringe top */}
+    <path d="M22 42 L 22 38" />
+    <path d="M30 42 L 30 38" />
+    <path d="M38 42 L 38 38" />
+    <path d="M46 42 L 46 38" />
+    <path d="M54 42 L 54 38" />
+    <path d="M62 42 L 62 38" />
+    <path d="M70 42 L 70 38" />
+    <path d="M78 42 L 78 38" />
+    {/* fringe bottom */}
+    <path d="M22 76 L 22 80" />
+    <path d="M30 76 L 30 80" />
+    <path d="M38 76 L 38 80" />
+    <path d="M46 76 L 46 80" />
+    <path d="M54 76 L 54 80" />
+    <path d="M62 76 L 62 80" />
+    <path d="M70 76 L 70 80" />
+    <path d="M78 76 L 78 80" />
   </S>
 );
 
+// ── RAT ───────────────────────────────────────────────────────────
 export const RatIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <ellipse cx="45" cy="60" rx="28" ry="16" />
-    <circle cx="72" cy="55" r="10" />
-    <circle cx="70" cy="45" r="4" />
-    <circle cx="76" cy="53" r="1.5" fill="currentColor" />
-    <path d="M80 58 L 84 60" />
-    <path d="M17 62 Q 8 68, 5 78" />
+    {/* body */}
+    <ellipse cx="42" cy="60" rx="24" ry="14" />
+    {/* head (circle overlapping right side of body) */}
+    <circle cx="66" cy="55" r="12" />
+    {/* ear */}
+    <circle cx="62" cy="45" r="4.5" />
+    {/* inner ear */}
+    <circle cx="62" cy="45" r="1.8" fill="currentColor" />
+    {/* eye */}
+    <circle cx="72" cy="52" r="1.8" fill="currentColor" />
+    {/* nose */}
+    <circle cx="78" cy="58" r="1.5" fill="currentColor" />
+    {/* whiskers */}
+    <path d="M76 58 L 84 55" />
+    <path d="M76 60 L 84 60" />
+    <path d="M76 62 L 84 65" />
+    {/* tail */}
+    <path d="M18 62 Q 8 66, 6 76 Q 12 82, 18 76" />
+    {/* feet */}
+    <path d="M32 74 L 32 80" />
+    <path d="M50 74 L 50 80" />
   </S>
 );
 
-// Numbers 1–3 for tracing
+// ── NUMBERS 1–3 (thick shapes for tracing) ───────────────────────
 export const OneIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <path d="M40 30 L 50 22 L 50 78" />
-    <path d="M35 78 L 65 78" />
+    <path d="M38 32 L 52 22 L 52 80" />
+    <path d="M32 80 L 68 80" />
   </S>
 );
 
 export const TwoIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <path d="M30 34 Q 34 22, 50 22 Q 66 22, 66 36 Q 66 48, 46 60 Q 32 70, 30 78 L 70 78" />
+    <path d="M28 34 Q 32 20, 50 20 Q 68 20, 68 36 Q 68 48, 46 62 Q 30 72, 28 80 L 72 80" />
   </S>
 );
 
 export const ThreeIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <path d="M30 30 Q 40 20, 55 22 Q 68 24, 68 36 Q 68 46, 55 50 Q 68 52, 68 66 Q 68 78, 55 80 Q 40 82, 30 72" />
+    <path d="M28 30 Q 38 20, 54 22 Q 68 24, 68 36 Q 68 48, 52 50 Q 68 52, 68 66 Q 68 80, 52 80 Q 38 80, 28 70" />
   </S>
 );
 
-// Simple person / boy for "O for Oday" and self-portrait tracing
+// ── BOY (simple person for name page / self drawing) ─────────────
 export const BoyIcon = ({ size }: IconProps) => (
   <S size={size}>
-    <circle cx="50" cy="30" r="12" />
-    <path d="M50 42 L 50 68" />
-    <path d="M50 50 L 32 60" />
-    <path d="M50 50 L 68 60" />
-    <path d="M50 68 L 38 88" />
-    <path d="M50 68 L 62 88" />
+    {/* hair line */}
     <path d="M40 22 L 60 22" />
+    {/* head */}
+    <circle cx="50" cy="28" r="10" />
+    {/* eyes */}
+    <circle cx="46" cy="27" r="1.2" fill="currentColor" />
+    <circle cx="54" cy="27" r="1.2" fill="currentColor" />
+    {/* smile */}
+    <path d="M46 32 Q 50 34, 54 32" />
+    {/* body */}
+    <path d="M38 42 L 62 42 L 62 68 L 38 68 Z" />
+    {/* neck */}
+    <path d="M50 38 L 50 42" />
+    {/* arms */}
+    <path d="M38 46 L 26 60" />
+    <path d="M62 46 L 74 60" />
+    {/* legs */}
+    <path d="M44 68 L 42 88" />
+    <path d="M56 68 L 58 88" />
   </S>
 );
 
