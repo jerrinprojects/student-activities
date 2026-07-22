@@ -17,6 +17,14 @@ const subjects = [
     color: 'bg-blue-100 border-blue-300 hover:bg-blue-200',
     iconBg: 'bg-blue-200',
   },
+  {
+    id: 'oday',
+    label: 'Oday · Pre-Reader',
+    icon: 'Aa',
+    description: 'Alphabet, sight words, CVC — 60 min/day',
+    color: 'bg-stone-100 border-stone-300 hover:bg-stone-200',
+    iconBg: 'bg-stone-800 text-white',
+  },
 ];
 
 export default function Home() {
