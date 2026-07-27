@@ -358,9 +358,175 @@ export const BoyIcon = ({ size }: IconProps) => (
   </S>
 );
 
+// ── WEEK 2 ICONS ──────────────────────────────────────────────────
+
+// I → ink (ink bottle with quill)
+export const InkIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* bottle */}
+    <path d="M35 45 L 35 80 Q 35 85, 40 85 L 60 85 Q 65 85, 65 80 L 65 45 Z" />
+    {/* neck */}
+    <path d="M42 45 L 42 35 L 58 35 L 58 45" />
+    {/* cork/cap */}
+    <path d="M40 35 L 60 35 L 60 30 L 40 30 Z" />
+    {/* ink level line */}
+    <path d="M35 60 L 65 60" />
+    {/* label "INK" */}
+    <text x="50" y="72" textAnchor="middle" fontSize="9" fontFamily="Georgia, serif" fill="currentColor" stroke="none">
+      INK
+    </text>
+  </S>
+);
+
+// J → jam (jar with label)
+export const JamIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* lid */}
+    <path d="M28 32 L 72 32 L 72 40 L 28 40 Z" />
+    {/* jar body */}
+    <path d="M30 40 L 30 82 Q 30 86, 34 86 L 66 86 Q 70 86, 70 82 L 70 40" />
+    {/* label */}
+    <path d="M36 52 L 64 52 L 64 72 L 36 72 Z" />
+    {/* "JAM" */}
+    <text x="50" y="66" textAnchor="middle" fontSize="10" fontFamily="Georgia, serif" fontWeight="bold" fill="currentColor" stroke="none">
+      JAM
+    </text>
+  </S>
+);
+
+// K → kite (diamond with tail)
+export const KiteIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* diamond body */}
+    <path d="M50 15 L 78 42 L 50 78 L 22 42 Z" />
+    {/* cross lines */}
+    <path d="M50 15 L 50 78" />
+    <path d="M22 42 L 78 42" />
+    {/* tail */}
+    <path d="M50 78 Q 46 84, 52 88 Q 46 92, 50 96" />
+    {/* tail bows */}
+    <path d="M46 82 L 54 82" />
+    <path d="M45 88 L 55 88" />
+    <path d="M46 94 L 54 94" />
+  </S>
+);
+
+// L → leaf
+export const LeafIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* leaf shape (pointed at top and bottom) */}
+    <path d="M50 15 Q 78 30, 78 55 Q 78 78, 50 90 Q 22 78, 22 55 Q 22 30, 50 15 Z" />
+    {/* main vein */}
+    <path d="M50 15 L 50 90" />
+    {/* side veins */}
+    <path d="M50 30 L 65 38" />
+    <path d="M50 30 L 35 38" />
+    <path d="M50 45 L 70 52" />
+    <path d="M50 45 L 30 52" />
+    <path d="M50 60 L 68 66" />
+    <path d="M50 60 L 32 66" />
+    <path d="M50 75 L 60 80" />
+    <path d="M50 75 L 40 80" />
+  </S>
+);
+
+// log (wooden log with rings)
+export const LogIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* main log cylinder side view */}
+    <path d="M20 40 L 80 40 L 80 70 L 20 70 Z" />
+    {/* left end circle (ring cross-section) */}
+    <ellipse cx="20" cy="55" rx="6" ry="15" />
+    {/* rings */}
+    <ellipse cx="20" cy="55" rx="3.5" ry="9" />
+    <ellipse cx="20" cy="55" rx="1.5" ry="4" />
+    {/* wood grain lines on log side */}
+    <path d="M28 48 Q 45 45, 78 48" />
+    <path d="M28 60 Q 45 63, 78 60" />
+  </S>
+);
+
+// fog (cloud with wavy lines below)
+export const FogIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* cloud body */}
+    <path d="M30 45 Q 22 45, 22 55 Q 15 55, 15 62 Q 15 70, 25 70 L 75 70 Q 85 70, 85 62 Q 85 55, 78 55 Q 78 42, 65 42 Q 60 35, 50 35 Q 38 35, 33 42 Z" />
+    {/* fog wisps below */}
+    <path d="M18 78 Q 30 76, 40 78 Q 50 80, 60 78 Q 70 76, 82 78" />
+    <path d="M22 85 Q 32 83, 42 85 Q 52 87, 62 85 Q 72 83, 78 85" />
+  </S>
+);
+
+// jog (running stick figure)
+export const JogIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* head */}
+    <circle cx="60" cy="20" r="8" />
+    {/* body leaning forward */}
+    <path d="M60 28 L 52 55" />
+    {/* front arm bent up */}
+    <path d="M56 40 L 68 32 L 72 42" />
+    {/* back arm swung back */}
+    <path d="M56 40 L 42 45 L 38 38" />
+    {/* front leg (right, forward) */}
+    <path d="M52 55 L 70 68 L 78 82" />
+    {/* back leg (left, pushing off) */}
+    <path d="M52 55 L 38 68 L 30 80" />
+    {/* motion lines behind */}
+    <path d="M20 45 L 30 45" />
+    <path d="M18 55 L 28 55" />
+  </S>
+);
+
+// hog (chubby pig)
+export const HogIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* body */}
+    <ellipse cx="45" cy="60" rx="28" ry="18" />
+    {/* head bumped up on right */}
+    <ellipse cx="72" cy="55" rx="12" ry="12" />
+    {/* ear */}
+    <path d="M68 45 L 66 38 L 74 42" />
+    {/* snout (flat) */}
+    <ellipse cx="82" cy="58" rx="5" ry="4" />
+    {/* nostrils */}
+    <circle cx="80" cy="58" r="1" fill="currentColor" />
+    <circle cx="84" cy="58" r="1" fill="currentColor" />
+    {/* eye */}
+    <circle cx="72" cy="52" r="1.5" fill="currentColor" />
+    {/* curly tail */}
+    <path d="M18 58 Q 12 55, 14 50 Q 18 48, 18 52" />
+    {/* legs */}
+    <path d="M30 76 L 30 84" />
+    <path d="M42 78 L 42 86" />
+    <path d="M56 78 L 56 86" />
+    <path d="M65 76 L 65 84" />
+  </S>
+);
+
+// Colour swatches (for colour intro)
+export const RedSwatchIcon = ({ size }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 100 100">
+    <rect x="20" y="20" width="60" height="60" rx="6" fill="#dc2626" stroke="#000" strokeWidth="2" />
+  </svg>
+);
+
+export const BlueSwatchIcon = ({ size }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 100 100">
+    <rect x="20" y="20" width="60" height="60" rx="6" fill="#2563eb" stroke="#000" strokeWidth="2" />
+  </svg>
+);
+
+export const GreenSwatchIcon = ({ size }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 100 100">
+    <rect x="20" y="20" width="60" height="60" rx="6" fill="#16a34a" stroke="#000" strokeWidth="2" />
+  </svg>
+);
+
 // ── LOOKUP ────────────────────────────────────────────────────────
 
 const ICONS: Record<string, React.FC<IconProps>> = {
+  // Week 1
   apple: AppleIcon,
   ball: BallIcon,
   cat: CatIcon,
@@ -381,6 +547,18 @@ const ICONS: Record<string, React.FC<IconProps>> = {
   two: TwoIcon,
   three: ThreeIcon,
   boy: BoyIcon,
+  // Week 2
+  ink: InkIcon,
+  jam: JamIcon,
+  kite: KiteIcon,
+  leaf: LeafIcon,
+  log: LogIcon,
+  fog: FogIcon,
+  jog: JogIcon,
+  hog: HogIcon,
+  red: RedSwatchIcon,
+  blue: BlueSwatchIcon,
+  green: GreenSwatchIcon,
 };
 
 export function OdayIcon({ name, size = 60 }: { name: string; size?: number }) {

@@ -440,9 +440,151 @@ const w1d5: OdayDay = {
     'Friday review. Loosen tracing — ask student to write letters and words unaided where possible. Note which letters/words needed prompting.',
 };
 
+// ── WEEK 2 · Letters I–P · Sight words: am, we, is · CVC: -og ───
+
+const w2d1: OdayDay = {
+  date: '2026-07-27',
+  week: 2,
+  day: 1,
+  focus: 'Letters I–J · Sight word "am" · CVC: dog, log',
+  activities: [
+    {
+      type: 'warmup-trace',
+      title: 'Warm-up · Trace',
+      instr: 'Trace over each shape three times. Say the letter as you write.',
+      words: ['Oday', 'I', 'J'],
+    },
+    {
+      type: 'alphabet-focus',
+      title: 'Letters Today · I J',
+      instr: 'Trace the letter. Say the sound. Look at the picture.',
+      letters: [
+        { letter: 'I', iconKey: 'ink', word: 'ink' },
+        { letter: 'J', iconKey: 'jam', word: 'jam' },
+      ],
+    },
+    {
+      type: 'sight-word',
+      title: 'Sight Word · am',
+      instr: 'Trace five times. Copy five times. Then circle the word am in each sentence.',
+      words: ['am'],
+      circleSentences: ['I am here.', 'I am a boy.', 'I am at school.'],
+    },
+    {
+      type: 'picture-word-match',
+      title: 'Match Picture to Word',
+      instr: 'Draw a line from each picture to the correct word. Then copy each word.',
+      pairs: [
+        { iconKey: 'ink', word: 'ink' },
+        { iconKey: 'jam', word: 'jam' },
+        { iconKey: 'cat', word: 'cat' },
+        { iconKey: 'dog', word: 'dog' },
+        { iconKey: 'apple', word: 'apple' },
+        { iconKey: 'ball', word: 'ball' },
+        { iconKey: 'hat', word: 'hat' },
+        { iconKey: 'sun', word: 'sun' },
+      ],
+    },
+    {
+      type: 'cvc-build',
+      title: 'Build the Word · -og family',
+      instr: 'Look at the picture. Write the missing letter to finish the word.',
+      items: [
+        { iconKey: 'dog', word: 'dog', missing: 1 },
+        { iconKey: 'log', word: 'log', missing: 1 },
+        { iconKey: 'fog', word: 'fog', missing: 1 },
+      ],
+    },
+    {
+      type: 'colour-label',
+      title: 'Colour and Label',
+      instr: 'Colour the picture. Then write the word on the line.',
+      items: [{ iconKey: 'jam', word: 'jam' }],
+    },
+    {
+      type: 'sentence-copy',
+      title: 'Copy the Sentence',
+      instr: 'Read the sentence with your teacher. Copy it on the line below.',
+      sentences: [{ iconKey: 'dog', sentence: 'I am the dog.' }],
+    },
+  ],
+  teacherNote:
+    'First day of Week 2. Introduce letters I and J with distinct sounds. Sight word "am" is new — highlight that it links "I" to a description. -og family follows the same CVC pattern as last week\'s -at.',
+};
+
+const w2d2: OdayDay = {
+  date: '2026-07-28',
+  week: 2,
+  day: 2,
+  focus: 'Letters K–L · Sight word "we" · CVC: jog, hog',
+  activities: [
+    {
+      type: 'warmup-trace',
+      title: 'Warm-up · Trace',
+      instr: 'Trace over each shape three times. Say the letter as you write.',
+      words: ['Oday', 'K', 'L'],
+    },
+    {
+      type: 'alphabet-focus',
+      title: 'Letters Today · K L',
+      instr: 'Trace the letter. Say the sound. Look at the picture.',
+      letters: [
+        { letter: 'K', iconKey: 'kite', word: 'kite' },
+        { letter: 'L', iconKey: 'leaf', word: 'leaf' },
+      ],
+    },
+    {
+      type: 'sight-word',
+      title: 'Sight Word · we',
+      instr: 'Trace five times. Copy five times. Then circle the word we in each sentence.',
+      words: ['we'],
+      circleSentences: ['We can see the sun.', 'We go to bed.', 'We like the cat.'],
+    },
+    {
+      type: 'picture-word-match',
+      title: 'Match Picture to Word',
+      instr: 'Draw a line from each picture to the correct word. Then copy each word.',
+      pairs: [
+        { iconKey: 'kite', word: 'kite' },
+        { iconKey: 'leaf', word: 'leaf' },
+        { iconKey: 'ink', word: 'ink' },
+        { iconKey: 'jam', word: 'jam' },
+        { iconKey: 'dog', word: 'dog' },
+        { iconKey: 'log', word: 'log' },
+        { iconKey: 'fog', word: 'fog' },
+        { iconKey: 'cat', word: 'cat' },
+      ],
+    },
+    {
+      type: 'cvc-build',
+      title: 'Build the Word · -og family',
+      instr: 'Look at the picture. Write the missing letter to finish the word.',
+      items: [
+        { iconKey: 'jog', word: 'jog', missing: 0 },
+        { iconKey: 'hog', word: 'hog', missing: 0 },
+        { iconKey: 'log', word: 'log', missing: 2 },
+      ],
+    },
+    {
+      type: 'colour-label',
+      title: 'Colour and Label',
+      instr: 'Colour the picture. Then write the word on the line.',
+      items: [{ iconKey: 'kite', word: 'kite' }],
+    },
+    {
+      type: 'sentence-copy',
+      title: 'Copy the Sentence',
+      instr: 'Read the sentence with your teacher. Copy it on the line below.',
+      sentences: [{ iconKey: 'kite', sentence: 'We see the kite.' }],
+    },
+  ],
+  teacherNote:
+    'Focus: letters K and L. "we" is the second Week 2 sight word — revise "am" from yesterday. CVC introduces jog and hog, extending the -og family. Missing letter varies (first, middle, last) so student practises each position.',
+};
+
 // ── EXPORT ────────────────────────────────────────────────────────
 
-export const ODAY_SESSIONS: OdayDay[] = [w1d1, w1d2, w1d3, w1d4, w1d5];
+export const ODAY_SESSIONS: OdayDay[] = [w1d1, w1d2, w1d3, w1d4, w1d5, w2d1, w2d2];
 
 export function findOdayDay(date: string): OdayDay | undefined {
   return ODAY_SESSIONS.find((d) => d.date === date);
