@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import { STUDENTS, LITERACY_SESSIONS, type WritingSupport, type SentenceStructure } from '../data/literacy';
+import { STUDENTS, LITERACY_SESSIONS, type WritingSupport, type SentenceStructure, type ReviewWord } from '../data/literacy';
 
 const WRITING_BREAK_STUDENTS = new Set(['Joshua', 'Maverick', 'Jocasta', 'Cody']);
 
@@ -56,7 +56,14 @@ export default function PrintPage() {
             const pageClass = isWritingBreak
               ? 'print-page-flow p-6 max-w-2xl mx-auto print:max-w-none print:p-0'
               : 'print-page p-6 max-w-2xl mx-auto print:max-w-none print:p-0';
-            const writingLines = 8;
+            const writingLines = activity.writingLines ?? 8;
+            // Two word tables plus 10+ writing lines will not fit on one sheet,
+            // so the longer writers get a writing page of their own.
+            const writingOwnPage = !!activity.reviewWords?.length && writingLines >= 10;
+            const page2Class =
+              isWritingBreak || writingOwnPage
+                ? 'print-page-flow p-6 max-w-2xl mx-auto print:max-w-none print:p-0'
+                : 'print-page p-6 max-w-2xl mx-auto print:max-w-none print:p-0';
 
             const studentHeader = (suffix: string) => (
               <div className="flex items-center justify-between mb-4 border-b-2 border-gray-800 pb-3">
@@ -99,39 +106,114 @@ export default function PrintPage() {
                   )}
                 </div>
 
-                {/* Page 2 — Spelling + Writing */}
-                <div className="print-page p-6 max-w-2xl mx-auto print:max-w-none print:p-0">
+                {/* Page 2 — Spelling + Writing. The longer students now carry two
+                    word tables plus a long writing section, so let it flow. */}
+                <div className={page2Class}>
                   {studentHeader('Spelling & Writing')}
 
                   {activity.writing.support && (
                     <PrintWordPracticeTable support={activity.writing.support} />
                   )}
 
-                  <PrintSection number={activity.sentenceStructure ? 4 : 3} title="Writing">
+                  {activity.reviewWords && activity.reviewWords.length > 0 && (
+                    <PrintReviewTable review={activity.reviewWords} />
+                  )}
+
+                  <PrintSection number={activity.sentenceStructure ? 4 : 3} title="Writing" breakBefore={writingOwnPage}>
                     <p className="text-sm text-gray-700 mb-1">{activity.writing.prompt}</p>
                     {activity.writing.promptTranslation && (
                       <p className="text-xs text-gray-400 italic mb-3">{activity.writing.promptTranslation}</p>
                     )}
-                    {activity.writing.support && <PrintSupportBlock support={activity.writing.support} />}
+                    {activity.writing.support && (
+                      <PrintSupportBlock
+                        support={activity.writing.support}
+                        hasReview={!!activity.reviewWords?.length}
+                      />
+                    )}
                     <div className="space-y-3 mt-3">
                       {[...Array(writingLines)].map((_, i) => (
                         <div key={i} className="border-b border-gray-400 h-5" />
                       ))}
                     </div>
                   </PrintSection>
+
+                  {activity.wordCards && activity.wordCards.length > 0 && (
+                    <PrintWordCards cards={activity.wordCards} />
+                  )}
                 </div>
               </React.Fragment>
             );
           });
         })}
+
+        <TeacherSheet session={session} students={studentsWithActivity} />
       </div>
     </div>
   );
 }
 
-function PrintSupportBlock({ support }: { support: WritingSupport }) {
+// Last page of the batch: review-word answers and the note for each set.
+// This is the only page that shows the review words themselves.
+function TeacherSheet({
+  session,
+  students,
+}: {
+  session: (typeof LITERACY_SESSIONS)[number];
+  students: readonly string[];
+}) {
+  const rows = students
+    .map((name) => ({
+      name,
+      sets: (session.activities[name as keyof typeof session.activities] ?? []).filter(
+        (s) => s.reviewWords?.length || s.teacherNote
+      ),
+    }))
+    .filter((r) => r.sets.length > 0);
+
+  if (rows.length === 0) return null;
+
+  return (
+    <div className="print-page-flow p-6 max-w-2xl mx-auto print:max-w-none print:p-0">
+      <div className="mb-4 border-b-2 border-gray-800 pb-3">
+        <h1 className="text-2xl font-bold text-gray-800">Teacher Sheet</h1>
+        <p className="text-sm text-gray-500 mt-0.5">{formatDate(session.date)} · review answers and notes</p>
+      </div>
+
+      {rows.map(({ name, sets }) => (
+        <div key={name} className="mb-4">
+          <h2 className="font-bold text-gray-800 text-sm uppercase tracking-wider mb-1.5">{name}</h2>
+          {sets.map((set, i) => (
+            <div key={i} className="border border-gray-200 rounded-lg p-2.5 mb-2">
+              <p className="text-xs font-semibold text-gray-700 mb-1">
+                Set {i + 1} · {set.reading.title}
+              </p>
+              {set.reviewWords && set.reviewWords.length > 0 && (
+                <p className="text-xs text-gray-600 mb-1">
+                  <span className="font-semibold">Review answers: </span>
+                  {set.reviewWords.map((r) => `${r.word} (${shortDate(r.from)})`).join(' · ')}
+                </p>
+              )}
+              {set.teacherNote && <p className="text-xs text-gray-500 italic">{set.teacherNote}</p>}
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function shortDate(dateStr: string) {
+  return new Date(dateStr + 'T00:00:00').toLocaleDateString('en-NZ', { day: 'numeric', month: 'short' });
+}
+
+function PrintSupportBlock({ support, hasReview }: { support: WritingSupport; hasReview?: boolean }) {
   return (
     <div className="border border-gray-300 rounded-lg p-3 mb-2 bg-gray-50">
+      {hasReview && (
+        <p className="text-xs font-semibold text-gray-700 mb-2 pb-2 border-b border-gray-300">
+          Use at least 2 of the review words from the table above. Circle them in your writing.
+        </p>
+      )}
       {support.wordBank && (
         <div>
           <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Word Bank</p>
@@ -245,14 +327,25 @@ function PrintWordPracticeTable({ support }: { support: WritingSupport }) {
 
   return (
     <div className="mt-4">
-      <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Word Practice</p>
+      <div className="flex items-baseline justify-between mb-1.5">
+        <p className="text-xs font-bold text-gray-500 uppercase tracking-wider">Word Practice — New Words</p>
+        <p className="text-xs text-gray-500">Copy 3 times, then cover the word and write it twice.</p>
+      </div>
       <table className="w-full border-collapse text-xs">
         <thead>
           <tr className="bg-gray-100">
             <th className="border border-gray-300 px-2 py-1 text-left font-semibold">Word</th>
             {hasTranslation && <th className="border border-gray-300 px-2 py-1 text-left font-semibold">Translation</th>}
-            {[1, 2, 3, 4, 5].map((n) => (
-              <th key={n} className="border border-gray-300 px-2 py-1 text-center font-semibold">{n}</th>
+            {['Copy', 'Copy', 'Copy'].map((label, i) => (
+              <th key={i} className="border border-gray-300 px-2 py-1 text-center font-semibold text-gray-500">{label}</th>
+            ))}
+            {['Cover', 'Cover'].map((label, i) => (
+              <th
+                key={i}
+                className={`border border-gray-300 px-2 py-1 text-center font-semibold text-gray-700${i === 0 ? ' border-l-2 border-l-gray-800' : ''}`}
+              >
+                {label}
+              </th>
             ))}
           </tr>
         </thead>
@@ -261,13 +354,77 @@ function PrintWordPracticeTable({ support }: { support: WritingSupport }) {
             <tr key={i}>
               <td className="border border-gray-300 px-2 py-1.5 font-semibold text-gray-800">{w.word}</td>
               {hasTranslation && <td className="border border-gray-300 px-2 py-1.5 text-gray-600">{w.translation}</td>}
-              {[1, 2, 3, 4, 5].map((n) => (
+              {[1, 2, 3].map((n) => (
                 <td key={n} className="border border-gray-300 px-2 py-1.5 min-w-[60px]" />
+              ))}
+              {[4, 5].map((n) => (
+                <td
+                  key={n}
+                  className={`border border-gray-300 px-2 py-1.5 min-w-[60px]${n === 4 ? ' border-l-2 border-l-gray-800' : ''}`}
+                />
               ))}
             </tr>
           ))}
         </tbody>
       </table>
+    </div>
+  );
+}
+
+// Words met in an earlier session. The word is NOT printed — the student reads
+// the clue, remembers the word from the passage, and writes it from memory.
+function PrintReviewTable({ review }: { review: ReviewWord[] }) {
+  const hasLetters = review.some((r) => r.letters);
+  return (
+    <div className="mt-4">
+      <div className="flex items-baseline justify-between mb-1.5">
+        <p className="text-xs font-bold text-gray-500 uppercase tracking-wider">Words You Have Met Before</p>
+        <p className="text-xs text-gray-500">Read the clue. Write the word without looking back.</p>
+      </div>
+      <table className="w-full border-collapse text-xs">
+        <thead>
+          <tr className="bg-gray-100">
+            <th className="border border-gray-300 px-2 py-1 text-left font-semibold">Clue</th>
+            {hasLetters && <th className="border border-gray-300 px-2 py-1 text-left font-semibold">Letters</th>}
+            <th className="border border-gray-300 px-2 py-1 text-center font-semibold">Write the word</th>
+            <th className="border border-gray-300 px-2 py-1 text-center font-semibold">Write it again</th>
+          </tr>
+        </thead>
+        <tbody>
+          {review.map((r, i) => (
+            <tr key={i}>
+              <td className="border border-gray-300 px-2 py-1.5 text-gray-700">{r.clue}</td>
+              {hasLetters && (
+                <td className="border border-gray-300 px-2 py-1.5 font-mono text-gray-500 tracking-widest">{r.letters}</td>
+              )}
+              <td className="border border-gray-300 px-2 py-2 min-w-[110px]" />
+              <td className="border border-gray-300 px-2 py-2 min-w-[110px]" />
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+// Cut-out tiles so the sentence can be built by hand before it is written.
+function PrintWordCards({ cards }: { cards: string[] }) {
+  return (
+    <div className="mt-4">
+      <div className="flex items-baseline justify-between mb-1.5">
+        <p className="text-xs font-bold text-gray-500 uppercase tracking-wider">Word Cards</p>
+        <p className="text-xs text-gray-500">Cut these out. Build the sentence, then write it.</p>
+      </div>
+      <div className="flex flex-wrap gap-2 border-2 border-dashed border-gray-400 rounded-lg p-3">
+        {cards.map((c, i) => (
+          <span
+            key={i}
+            className="border-2 border-dashed border-gray-500 rounded px-3 py-2 text-base font-semibold text-gray-800 bg-white"
+          >
+            {c}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }

@@ -149,27 +149,79 @@ export default function SessionPage() {
           ) : null;
         })()}
 
+        {/* 4b. Review — words from earlier sessions, clue only */}
+        {activity.reviewWords && activity.reviewWords.length > 0 && (
+          <div className="rounded-2xl border-2 border-gray-300 bg-white p-5 mb-4">
+            <h2 className="font-bold text-gray-800 text-base uppercase tracking-wide mb-1">Words You Have Met Before</h2>
+            <p className="text-sm text-gray-600 mb-3">Read the clue. Write the word without looking back.</p>
+            <div className="grid gap-y-1.5">
+              {activity.reviewWords.map((r, i) => (
+                <div key={i} className="grid grid-cols-[1fr_90px_1fr_1fr] gap-2 items-center">
+                  <span className="text-sm text-gray-700">{r.clue}</span>
+                  <span className="font-mono text-sm text-gray-400 tracking-widest">{r.letters ?? ''}</span>
+                  <div className="border-b-2 border-gray-300 h-7" />
+                  <div className="border-b-2 border-gray-300 h-7" />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* 5. Writing */}
         <Section number={activity.sentenceStructure ? 5 : (activity.writing.support?.wordBank || activity.writing.support?.vocabularyList ? 4 : 3)} title="Writing" color="orange">
           <p className="text-gray-700 mb-1">{activity.writing.prompt}</p>
           {activity.writing.promptTranslation && (
             <p className="text-sm text-gray-400 italic mb-4">{activity.writing.promptTranslation}</p>
           )}
-          {activity.writing.support && <SupportBlock support={activity.writing.support} />}
+          {activity.writing.support && (
+            <SupportBlock support={activity.writing.support} hasReview={!!activity.reviewWords?.length} />
+          )}
           <div className="space-y-3 mt-4">
-            {[...Array(6)].map((_, i) => (
+            {[...Array(activity.writingLines ?? 6)].map((_, i) => (
               <div key={i} className="border-b border-gray-300 h-8" />
             ))}
           </div>
         </Section>
+
+        {activity.wordCards && activity.wordCards.length > 0 && (
+          <div className="rounded-2xl border-2 border-dashed border-gray-400 bg-white p-5 mb-4">
+            <h2 className="font-bold text-gray-800 text-base uppercase tracking-wide mb-1">Word Cards</h2>
+            <p className="text-sm text-gray-600 mb-3">Cut these out. Build the sentence, then write it.</p>
+            <div className="flex flex-wrap gap-2">
+              {activity.wordCards.map((c, i) => (
+                <span key={i} className="border-2 border-dashed border-gray-500 rounded px-3 py-2 font-semibold text-gray-800">
+                  {c}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {activity.teacherNote && (
+          <div className="no-print rounded-2xl border-2 border-gray-800 bg-gray-50 p-4 mb-4">
+            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Teacher note</p>
+            <p className="text-sm text-gray-700">{activity.teacherNote}</p>
+            {activity.reviewWords && activity.reviewWords.length > 0 && (
+              <p className="text-sm text-gray-500 mt-2">
+                <span className="font-semibold">Review answers: </span>
+                {activity.reviewWords.map((r) => r.word).join(' · ')}
+              </p>
+            )}
+          </div>
+        )}
       </main>
     </div>
   );
 }
 
-function SupportBlock({ support }: { support: WritingSupport }) {
+function SupportBlock({ support, hasReview }: { support: WritingSupport; hasReview?: boolean }) {
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-4 mb-2">
+      {hasReview && (
+        <p className="text-sm font-semibold text-gray-700 mb-3 pb-3 border-b border-gray-200">
+          Use at least 2 of the review words from the table above. Circle them in your writing.
+        </p>
+      )}
       {support.wordBank && (
         <div className="mb-3">
           <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Word Bank</p>

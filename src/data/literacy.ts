@@ -40,11 +40,26 @@ export interface SentenceStructure {
   lines?: number; // number of writing lines (defaults to 8)
 }
 
+// ── Spiral review ───────────────────────────────────────────
+// A word met in an earlier session, brought back in a NEW passage and a NEW
+// context. The word itself is never printed on the student sheet — only the
+// clue — so the student has to retrieve it rather than copy it.
+export interface ReviewWord {
+  word: string; // the answer; printed on the teacher sheet only
+  clue: string; // printed in place of the word
+  letters?: string; // optional letter frame, e.g. 'b _ _ _ _ _ _'
+  from: string; // date of the session the word was first met
+}
+
 export interface ActivitySet {
   reading: { title: string; passage: string };
   questions: string[];
   sentenceStructure?: SentenceStructure;
   writing: { prompt: string; promptTranslation?: string; support?: WritingSupport };
+  reviewWords?: ReviewWord[]; // spiral review — cover-and-write, answers on the teacher sheet
+  writingLines?: number; // number of writing lines (defaults to 8)
+  wordCards?: string[]; // cut-out word tiles for building a sentence by hand
+  teacherNote?: string; // shown on screen and on the teacher sheet, never on the worksheet
 }
 
 export interface LiteracySession {
@@ -57,6 +72,950 @@ export interface LiteracySession {
 // ADD NEW SESSIONS AT THE TOP of this array.
 
 export const LITERACY_SESSIONS: LiteracySession[] = [
+
+  // ══════════════════════════════════════════════════════════
+  //  29 JULY 2026 — first session built on the spiral pattern.
+  //  Each set: 7 new words (5 for ESOL) + review words carried
+  //  forward from 28 July and 20 July. Review words are met
+  //  again inside a NEW story in a DIFFERENT context, then
+  //  written from a clue with the word covered.
+  // ══════════════════════════════════════════════════════════
+  {
+    date: '2026-07-29',
+    activities: {
+
+      // ────────────────────────────────────────────────────────
+      //  PHARRELL — Level 7 (~5 yrs). Review carries a sound
+      //  pattern as well as meaning.
+      // ────────────────────────────────────────────────────────
+      Pharrell: [
+        {
+          reading: {
+            title: 'The Bug in My Mug',
+            passage:
+              'On Monday a small bug fell into my mug. It could not get out. I did not want to hurt it. I gave the mug a little tug and the bug slid onto the rug. I put the bug on a leaf. Then I let it go out the window. Its wings were wet, so it sat in the sun. Soon it was dry. That night it slept under the mat by the door.',
+          },
+          questions: [
+            'Where did the bug fall?',
+            'What did the writer put the bug on?',
+            'How did the bug get dry?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The bug', 'The mug', 'Mum', 'We'],
+            verbs: ['fell', 'slid', 'sat', 'slept', 'flew'],
+          },
+          writing: {
+            prompt: 'Write about a small animal or insect you have seen. Where was it? What did you do?',
+            support: {
+              wordBank: ['bug', 'mug', 'rug', 'tug', 'mat', 'leaf', 'wing'],
+            },
+          },
+          reviewWords: [
+            { word: 'wet', clue: 'what your shoes are after rain', letters: 'w _ _', from: '2026-07-28' },
+            { word: 'dry', clue: 'not wet', letters: 'd _ _', from: '2026-07-28' },
+            { word: 'slept', clue: 'what you did in bed last night', letters: 's _ _ _ _', from: '2026-07-28' },
+            { word: 'window', clue: 'the glass you look out of', letters: 'w _ _ _ _ _', from: '2026-07-20' },
+            { word: 'hurt', clue: 'to cause pain to something', letters: 'h _ _ _', from: '2026-07-20' },
+          ],
+          wordCards: ['The', 'bug', 'fell', 'into', 'my', 'mug', '.'],
+          writingLines: 5,
+          teacherNote:
+            'Sound focus: -ug (bug, mug, rug, tug). Review words come from 28 July (wet, dry, slept) and 20 July (window, hurt). He meets each one in the passage first, then writes it from the clue with the word covered. Cut the word cards out and let him build the sentence on the desk before he writes it.',
+        },
+        {
+          reading: {
+            title: 'Fish and Chips on Friday',
+            passage:
+              'On Friday night Dad went to the chip shop. He came home with a big paper bag. I had to carry it to the table and it was very hot. We put the chips on a plate. Dad shook salt on top. I like to dip mine in sauce. We ate every single chip. One fell on the mat and left a spot. Fish and chips is my best food.',
+          },
+          questions: [
+            'Where did Dad go on Friday night?',
+            'What did Dad shake on the chips?',
+            'What made the spot on the mat?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Dad', 'The chips', 'The bag', 'We'],
+            verbs: ['went', 'shook', 'ate', 'dipped', 'carried'],
+          },
+          writing: {
+            prompt: 'Write about a meal your family bought or brought home. Who got it? What did you eat?',
+            support: {
+              wordBank: ['chips', 'shop', 'salt', 'dip', 'spot', 'sauce', 'bag'],
+            },
+          },
+          reviewWords: [
+            { word: 'hot', clue: 'not cold', letters: 'h _ _', from: '2026-07-28' },
+            { word: 'plate', clue: 'you put your dinner on it', letters: 'p _ _ _ _', from: '2026-07-28' },
+            { word: 'ate', clue: 'the word for eat when it has already happened', letters: 'a _ _', from: '2026-07-28' },
+            { word: 'carry', clue: 'to hold something and take it somewhere', letters: 'c _ _ _ _', from: '2026-07-20' },
+            { word: 'food', clue: 'what you eat', letters: 'f _ _ _', from: '2026-07-20' },
+          ],
+          wordCards: ['We', 'ate', 'the', 'hot', 'chips', '.'],
+          writingLines: 5,
+          teacherNote:
+            'Sound focus: -ip and -op (chips, dip, shop, spot). Review words: hot, plate, ate from 28 July; carry, food from 20 July. Ask him to find each one in the passage before he tries the covered table.',
+        },
+        {
+          reading: {
+            title: 'The Shell',
+            passage:
+              'On Sunday we walked down the path to the beach. I took off my shoes. The sand was warm from the sun. I found a big shell. It was pink inside and it smelled of the sea. I held it to my ear the way Nan showed me. Then I put the shell in my bag and ran into the water up to my knees.',
+          },
+          questions: [
+            'Where did the family walk to?',
+            'What did the writer find?',
+            'What did the shell smell of?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The shell', 'The sand', 'Nan', 'We'],
+            verbs: ['walked', 'found', 'held', 'ran', 'smelled'],
+          },
+          writing: {
+            prompt: 'Write about a day at the beach or the park. What did you find? What did you do?',
+            support: {
+              wordBank: ['shell', 'sand', 'beach', 'sea', 'smell', 'knee', 'ear'],
+            },
+          },
+          reviewWords: [
+            { word: 'path', clue: 'the narrow way you walk along', letters: 'p _ _ _', from: '2026-07-28' },
+            { word: 'shoes', clue: 'you put these on your feet', letters: 's _ _ _ _', from: '2026-07-28' },
+            { word: 'inside', clue: 'the opposite of outside', letters: 'i _ _ _ _ _', from: '2026-07-28' },
+            { word: 'sun', clue: 'it shines in the sky in the day', letters: 's _ _', from: '2026-07-20' },
+            { word: 'water', clue: 'you drink it and you swim in it', letters: 'w _ _ _ _', from: '2026-07-20' },
+          ],
+          wordCards: ['I', 'found', 'a', 'shell', 'on', 'the', 'sand', '.'],
+          writingLines: 5,
+          teacherNote:
+            'Sound focus: sh (shell, shoes, showed). Review words: path, shoes, inside from 28 July; sun, water from 20 July. If he stalls on the covered column, uncover the first three boxes and keep only the last two hidden.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JIERRY — Level 10, ESOL (Mandarin).
+      //  Review words drop the English and keep only the Chinese,
+      //  so he has to produce the English form from meaning.
+      // ────────────────────────────────────────────────────────
+      Jierry: [
+        {
+          reading: {
+            title: 'The Game in the Rain',
+            passage:
+              'On Saturday morning our netball game was cancelled because of the rain. I was disappointed because I had practised my shooting every day that week. Mum did not notice how quiet I was until we got home. She said one game is not that important, and she offered to help me practise in the garage instead. We hung an old hoop on the wall. I shot forty goals before lunch. By the afternoon I had almost stopped thinking about the game.',
+          },
+          questions: [
+            'Why was the game cancelled?',
+            'How did the writer feel at first?',
+            'What did Mum offer to do?',
+            'Find the word in the story that means 失望.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Mum', 'The game', 'The rain', 'We'],
+            verbs: ['cancelled', 'practised', 'helped', 'shot', 'felt'],
+            translations: { 'I': '我', 'Mum': '妈妈', 'The game': '比赛', 'The rain': '雨', 'We': '我们', 'cancelled': '取消了', 'practised': '练习', 'helped': '帮助', 'shot': '投篮', 'felt': '感觉' },
+          },
+          writing: {
+            prompt: 'Write about a time something you were looking forward to was cancelled. What did you do instead?',
+            promptTranslation: '写一写你期待的事情被取消的一次经历。你后来做了什么？',
+            support: {
+              vocabularyList: [
+                { word: 'cancelled', translation: '取消了', language: 'Chinese' },
+                { word: 'practise', translation: '练习', language: 'Chinese' },
+                { word: 'hoop', translation: '篮筐', language: 'Chinese' },
+                { word: 'goal', translation: '进球', language: 'Chinese' },
+                { word: 'garage', translation: '车库', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'disappointed', clue: '失望', letters: 'd _ _ _ _ _ _ _ _ _ _ _', from: '2026-07-28' },
+            { word: 'notice', clue: '注意到', letters: 'n _ _ _ _ _', from: '2026-07-28' },
+            { word: 'important', clue: '重要的', letters: 'i _ _ _ _ _ _ _ _', from: '2026-07-20' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'The review words appear in the passage before they appear in the table. The Chinese is now the clue and the English is covered, so he has to produce the English, not just recognise it. If he writes the Chinese, send him back to the passage rather than giving the word.',
+        },
+        {
+          reading: {
+            title: 'The School Concert',
+            passage:
+              'Last term our class sang two songs at the school concert. My whole family came, even my grandma, who does not usually go out at night. I was nervous when the lights came on and I could not see past the first row. Ms Patel had told us to find one person and smile at them. I found my mum in the third row. After the last song everyone clapped for a long time. My grandma said we sounded better than the radio. It is a good memory.',
+          },
+          questions: [
+            'What did the class do at the concert?',
+            'Who came to watch?',
+            'What had Ms Patel told them to do?',
+            'Find the word in the story that means 记忆.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My family', 'Ms Patel', 'My grandma', 'We'],
+            verbs: ['sang', 'smiled', 'clapped', 'watched', 'felt'],
+            translations: { 'I': '我', 'My family': '我的家人', 'Ms Patel': '帕特尔老师', 'My grandma': '我奶奶', 'We': '我们', 'sang': '唱歌', 'smiled': '微笑', 'clapped': '鼓掌', 'watched': '观看', 'felt': '感觉' },
+          },
+          writing: {
+            prompt: 'Write about a time you performed or spoke in front of other people. How did you feel before and after?',
+            promptTranslation: '写一写你在别人面前表演或发言的一次经历。之前和之后你的感觉如何？',
+            support: {
+              vocabularyList: [
+                { word: 'concert', translation: '音乐会', language: 'Chinese' },
+                { word: 'nervous', translation: '紧张', language: 'Chinese' },
+                { word: 'row', translation: '排', language: 'Chinese' },
+                { word: 'clapped', translation: '鼓掌', language: 'Chinese' },
+                { word: 'radio', translation: '收音机', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'family', clue: '家人', letters: 'f _ _ _ _ _', from: '2026-07-28' },
+            { word: 'smile', clue: '微笑', letters: 's _ _ _ _', from: '2026-07-28' },
+            { word: 'memory', clue: '记忆', letters: 'm _ _ _ _ _', from: '2026-07-20' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'family and smile come from 28 July, memory from 20 July (the sleep text) and it is now used for a personal memory rather than a brain function. Worth asking him which meaning he met first.',
+        },
+        {
+          reading: {
+            title: 'Cooking Noodles for My Sister',
+            passage:
+              'On Wednesday Mum came home late from work, so I cooked noodles for my little sister. I had watched Mum do it many times, so I tried to copy her. I put the noodles into the boiling water and set the timer for four minutes. I had to follow the packet carefully because I was not sure how much sauce to use. I cut the carrots into small shapes. My sister ate all of hers and asked for more. Mum said the kitchen was messier than usual, but the noodles were good.',
+          },
+          questions: [
+            'Why did the writer cook?',
+            'How did the writer know what to do?',
+            'What did the writer set the timer for?',
+            'Find the word in the story that means 形状.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Mum', 'My sister', 'The noodles', 'We'],
+            verbs: ['cooked', 'copied', 'followed', 'ate', 'helped'],
+            translations: { 'I': '我', 'Mum': '妈妈', 'My sister': '我妹妹', 'The noodles': '面条', 'We': '我们', 'cooked': '做饭', 'copied': '模仿', 'followed': '跟着做', 'ate': '吃了', 'helped': '帮忙' },
+          },
+          writing: {
+            prompt: 'Write about a time you made something for someone else. What did you make? What happened?',
+            promptTranslation: '写一写你为别人做东西的一次经历。你做了什么？发生了什么？',
+            support: {
+              vocabularyList: [
+                { word: 'noodles', translation: '面条', language: 'Chinese' },
+                { word: 'boiling', translation: '沸腾的', language: 'Chinese' },
+                { word: 'timer', translation: '计时器', language: 'Chinese' },
+                { word: 'packet', translation: '包装袋', language: 'Chinese' },
+                { word: 'sauce', translation: '酱汁', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'copy', clue: '模仿', letters: 'c _ _ _', from: '2026-07-28' },
+            { word: 'follow', clue: '跟着做', letters: 'f _ _ _ _ _', from: '2026-07-28' },
+            { word: 'shape', clue: '形状', letters: 's _ _ _ _', from: '2026-07-20' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'copy and follow were about a little cousin imitating him on 28 July; here they describe following a method. Same words, different work. shape comes from the moon text on 20 July.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  BAO — Level 10, ESOL (Vietnamese). Same pattern as
+      //  Jierry: Vietnamese is the clue, English is covered.
+      // ────────────────────────────────────────────────────────
+      Bao: [
+        {
+          reading: {
+            title: 'The Kite on the Hill',
+            passage:
+              'On Sunday my brother and I took our new kite to the park. We had to walk for twenty minutes because Dad was busy with the car. The wind was strongest near the top of the hill. My brother held the string while I ran with the kite until it lifted. It went so high that it looked small. A man told us to move away from the power lines to stay safe. We got home late and my hands were red from the string.',
+          },
+          questions: [
+            'Where did they take the kite?',
+            'Why did they have to walk?',
+            'What did the man tell them?',
+            'Find the word in the story that means an toàn.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My brother', 'The kite', 'The wind', 'We'],
+            verbs: ['walked', 'held', 'ran', 'lifted', 'watched'],
+            translations: { 'I': 'tôi', 'My brother': 'anh trai tôi', 'The kite': 'con diều', 'The wind': 'gió', 'We': 'chúng tôi', 'walked': 'đi bộ', 'held': 'cầm', 'ran': 'chạy', 'lifted': 'bay lên', 'watched': 'ngắm nhìn' },
+          },
+          writing: {
+            prompt: 'Write about a time you played outside with someone in your family. What did you do?',
+            promptTranslation: 'Viết về một lần bạn chơi ngoài trời cùng người thân. Bạn đã làm gì?',
+            support: {
+              vocabularyList: [
+                { word: 'kite', translation: 'con diều', language: 'Vietnamese' },
+                { word: 'string', translation: 'dây', language: 'Vietnamese' },
+                { word: 'wind', translation: 'gió', language: 'Vietnamese' },
+                { word: 'hill', translation: 'đồi', language: 'Vietnamese' },
+                { word: 'lifted', translation: 'bay lên', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'walk', clue: 'đi bộ', letters: 'w _ _ _', from: '2026-07-28' },
+            { word: 'late', clue: 'muộn', letters: 'l _ _ _', from: '2026-07-28' },
+            { word: 'safe', clue: 'an toàn', letters: 's _ _ _', from: '2026-07-20' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'walk and late come from the bus story on 28 July; safe comes from the purring cat text on 20 July, where it described a feeling rather than a warning. Ask him which one is easier to picture.',
+        },
+        {
+          reading: {
+            title: 'The Night the Power Went Out',
+            passage:
+              'On Tuesday night the power went out in the middle of dinner. The whole street was dark. Dad found a torch in the cupboard and Mum lit two candles. I had to carry my plate to the table very slowly so that I did not spill it. The fridge stopped humming and the house felt strange and quiet. Mum had promised us ice cream, but by then it had gone soft. The power came back after two hours. The house was cool by the time we went to bed.',
+          },
+          questions: [
+            'What happened during dinner?',
+            'What did Dad find?',
+            'Why did the writer walk slowly?',
+            'Find the word in the story that means đã hứa.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Dad', 'Mum', 'The power', 'We'],
+            verbs: ['carried', 'found', 'lit', 'waited', 'ate'],
+            translations: { 'I': 'tôi', 'Dad': 'bố', 'Mum': 'mẹ', 'The power': 'điện', 'We': 'chúng tôi', 'carried': 'mang', 'found': 'tìm thấy', 'lit': 'thắp', 'waited': 'chờ', 'ate': 'đã ăn' },
+          },
+          writing: {
+            prompt: 'Write about a night when something unusual happened at home. What did your family do?',
+            promptTranslation: 'Viết về một buổi tối có chuyện lạ xảy ra ở nhà bạn. Gia đình bạn đã làm gì?',
+            support: {
+              vocabularyList: [
+                { word: 'torch', translation: 'đèn pin', language: 'Vietnamese' },
+                { word: 'candle', translation: 'nến', language: 'Vietnamese' },
+                { word: 'spill', translation: 'làm đổ', language: 'Vietnamese' },
+                { word: 'quiet', translation: 'yên tĩnh', language: 'Vietnamese' },
+                { word: 'fridge', translation: 'tủ lạnh', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'carry', clue: 'mang', letters: 'c _ _ _ _', from: '2026-07-28' },
+            { word: 'promised', clue: 'đã hứa', letters: 'p _ _ _ _ _ _ _', from: '2026-07-28' },
+            { word: 'cool', clue: 'mát', letters: 'c _ _ _', from: '2026-07-20' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'cool came from the volcano text on 20 July, where lava cooled. Here it describes a house at night. Point out that the word did not change, only the situation.',
+        },
+        {
+          reading: {
+            title: 'Making Bánh Mì with My Aunty',
+            passage:
+              'On Saturday my aunty showed me how to make bánh mì. We started with the bread that my uncle had baked that morning. She let me use a small knife to cut the cucumber into long strips. We put pork, coriander, carrot and chilli inside. My cousin said mine had too much chilli, but he still ate two of them. Aunty says the bread has to be crisp on the outside and soft inside, or it is not right.',
+          },
+          questions: [
+            'Who showed the writer how to make bánh mì?',
+            'Who baked the bread?',
+            'What did the cousin say?',
+            'Find the word in the story that means dao.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My aunty', 'My uncle', 'My cousin', 'We'],
+            verbs: ['showed', 'baked', 'cut', 'ate', 'made'],
+            translations: { 'I': 'tôi', 'My aunty': 'cô tôi', 'My uncle': 'chú tôi', 'My cousin': 'anh họ tôi', 'We': 'chúng tôi', 'showed': 'chỉ cho', 'baked': 'nướng', 'cut': 'cắt', 'ate': 'đã ăn', 'made': 'làm' },
+          },
+          writing: {
+            prompt: 'Write about a food from your family. Who makes it? How is it made?',
+            promptTranslation: 'Viết về một món ăn của gia đình bạn. Ai làm món đó? Làm như thế nào?',
+            support: {
+              vocabularyList: [
+                { word: 'cucumber', translation: 'dưa chuột', language: 'Vietnamese' },
+                { word: 'strips', translation: 'sợi dài', language: 'Vietnamese' },
+                { word: 'coriander', translation: 'rau mùi', language: 'Vietnamese' },
+                { word: 'chilli', translation: 'ớt', language: 'Vietnamese' },
+                { word: 'crisp', translation: 'giòn', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'knife', clue: 'dao', letters: 'k _ _ _ _', from: '2026-07-28' },
+            { word: 'uncle', clue: 'chú', letters: 'u _ _ _ _', from: '2026-07-28' },
+            { word: 'baked', clue: 'nướng', letters: 'b _ _ _ _', from: '2026-07-20' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'knife and uncle come from 28 July, baked from the bread-rising text on 20 July. The silent k in knife is worth thirty seconds on its own.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MATT — Level 10. Letter frames stay because of spelling.
+      // ────────────────────────────────────────────────────────
+      Matt: [
+        {
+          reading: {
+            title: 'The Night the Tent Leaked',
+            passage:
+              'We went camping at Lake Rotoiti in the holidays. On the second night it rained so hard that water came through the seam of our tent. I woke up at two in the morning with a cold puddle under my sleeping bag. I was shaking by the time I got Dad up. He told me to move everything into the car while he looked for the tarpaulin. We sat in the car with the heater on until we were warm again. In the morning we hung the sleeping bags on a rope between two trees. Dad said that next time we would check the tent before we left. I still had to clean the mud out of the car.',
+          },
+          questions: [
+            'Where did the family go camping?',
+            'What woke the writer up?',
+            'What did Dad go to look for?',
+            'Which word in the story tells you how the writer was when he woke Dad up?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Dad', 'The tent', 'The rain', 'We'],
+            verbs: ['woke', 'shook', 'moved', 'found', 'sat'],
+          },
+          writing: {
+            prompt: 'Write about a night when something went wrong at home or away. What happened, and who sorted it out?',
+            support: {
+              wordBank: ['camping', 'tent', 'seam', 'puddle', 'sleeping bag', 'tarpaulin', 'heater'],
+            },
+          },
+          reviewWords: [
+            { word: 'shaking', clue: 'moving in small quick movements because you are cold or nervous', letters: 's _ _ _ _ _ _', from: '2026-07-28' },
+            { word: 'told', clue: 'the past tense of tell', letters: 't _ _ _', from: '2026-07-28' },
+            { word: 'clean', clue: 'to get the dirt off something', letters: 'c _ _ _ _', from: '2026-07-28' },
+            { word: 'cold', clue: 'the temperature of a puddle at two in the morning', letters: 'c _ _ _', from: '2026-07-20' },
+            { word: 'warm', clue: 'gently hot, the way a heater makes you', letters: 'w _ _ _', from: '2026-07-20' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'shaking, told and clean come from 28 July; cold and warm from the goosebumps text on 20 July, where they were causes rather than feelings. His spelling is the weak point, so mark the two covered columns, not the copied ones.',
+        },
+        {
+          reading: {
+            title: 'Building the Ramp',
+            passage:
+              "My cousin Leo and I built a skateboard ramp in his garage out of an old door and two crates. The first version was too steep and the surface was too rough, so the wheels stuck halfway up. We sanded it down until it was smooth and hard. Leo practised on it every afternoon for a week. My first three tries wobbled badly and I landed on the concrete twice. On Friday I finally got all the way up and back down without putting a foot out. Then Leo's mum made us move the whole thing so she could park the car.",
+          },
+          questions: [
+            'What did the boys use to build the ramp?',
+            'What was wrong with the first version?',
+            'How long did Leo practise?',
+            'Which word in the story means the opposite of rough?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Leo', 'The ramp', 'The wheels', 'We'],
+            verbs: ['built', 'sanded', 'practised', 'wobbled', 'landed'],
+          },
+          writing: {
+            prompt: 'Write about something you have built or fixed. What went wrong first? How did you sort it out?',
+            support: {
+              wordBank: ['ramp', 'crates', 'steep', 'sanded', 'smooth', 'wheels', 'concrete'],
+            },
+          },
+          reviewWords: [
+            { word: 'garage', clue: 'the room where the car is kept', letters: 'g _ _ _ _ _', from: '2026-07-28' },
+            { word: 'practised', clue: 'did something again and again to get better at it', letters: 'p _ _ _ _ _ _ _ _', from: '2026-07-28' },
+            { word: 'wobbled', clue: 'moved from side to side and nearly fell', letters: 'w _ _ _ _ _ _', from: '2026-07-28' },
+            { word: 'hard', clue: 'not soft', letters: 'h _ _ _', from: '2026-07-20' },
+            { word: 'surface', clue: 'the top or outside layer of something', letters: 's _ _ _ _ _ _', from: '2026-07-20' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'hard and surface come from the echo text on 20 July, where a hard surface bounced sound back. Here the same two words describe a skate ramp. Same words, new job.',
+        },
+        {
+          reading: {
+            title: 'The Muddy Final',
+            passage:
+              'Our football team made the final on a field that had been under water most of the week. The referee blew the whistle and within a minute everyone was covered in mud. We had trained every Tuesday since March, mostly in the rain, so nobody complained about it. At half time we were one goal behind. The coach told us to keep the ball on the ground because it would not bounce properly on that surface. I slid about ten metres for a tackle in the second half. We drew two all and shared the trophy. My muscles ached for two days and my boots have not been white since.',
+          },
+          questions: [
+            'What was the field like before the final?',
+            'How often had the team trained?',
+            'What did the coach say at half time?',
+            'Which word in the story means the person who blows the whistle?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The referee', 'Our coach', 'The ball', 'We'],
+            verbs: ['blew', 'trained', 'slid', 'drew', 'shared'],
+          },
+          writing: {
+            prompt: 'Write about a game or competition played in bad conditions. What was hard about it? How did it end?',
+            support: {
+              wordBank: ['final', 'referee', 'mud', 'half time', 'coach', 'tackle', 'trophy'],
+            },
+          },
+          reviewWords: [
+            { word: 'field', clue: 'the grass area you play sport on', letters: 'f _ _ _ _', from: '2026-07-28' },
+            { word: 'whistle', clue: 'the referee blows it', letters: 'w _ _ _ _ _ _', from: '2026-07-28' },
+            { word: 'trained', clue: 'practised regularly for a sport', letters: 't _ _ _ _ _ _', from: '2026-07-28' },
+            { word: 'bounce', clue: 'to hit a surface and come back up', letters: 'b _ _ _ _ _', from: '2026-07-20' },
+            { word: 'muscle', clue: 'the part of your body that pulls a bone to move it', letters: 'm _ _ _ _ _', from: '2026-07-20' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'Third meeting for bounce and muscle: both were explanation-text words on 20 July and are now inside a story. If he gets these two right from the clue alone, they can come out of the rotation.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOSHUA — Level 23 (~8.5 yrs). Letter frames kept for
+      //  spelling; sentence structure stays at 4 lines.
+      // ────────────────────────────────────────────────────────
+      Joshua: [
+        {
+          reading: {
+            title: 'The Bus That Came Early',
+            passage:
+              'The 7:14 bus came at 7:09 on Thursday and I watched it pull away from about thirty metres back. There is another one twenty minutes later, so it was not a disaster, only a small daily order broken. I stood under the shelter and looked at the clock on the dairy across the road. In winter the temperature at that hour makes you notice exactly how long twenty minutes is. An older man was waiting too. He said the driver had been early all week and that he had stopped being annoyed about it on Tuesday. When the next bus did arrive we both got on without saying anything else. I was eleven minutes late to school. Nobody asked why.',
+          },
+          questions: [
+            'What time did the bus actually come?',
+            'Where did the writer wait?',
+            'What did the older man say about the driver?',
+            'How had the older man\'s feelings changed during the week?',
+            'Which word in the story means something that happens every day?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The bus', 'The older man', 'The driver', 'We'],
+            verbs: ['left', 'waited', 'arrived', 'watched', 'said'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about a small thing that went wrong in your day. Explain how you reacted, and whether it still mattered by the end of the day.',
+            support: {
+              wordBank: ['shelter', 'dairy', 'driver', 'annoyed', 'disaster', 'daily', 'metres'],
+            },
+          },
+          reviewWords: [
+            { word: 'clock', clue: 'you look at it to find the time', letters: 'c _ _ _ _', from: '2026-07-28' },
+            { word: 'hour', clue: 'sixty minutes', letters: 'h _ _ _', from: '2026-07-28' },
+            { word: 'arrive', clue: 'to get to the place you were going', letters: 'a _ _ _ _ _', from: '2026-07-28' },
+            { word: 'winter', clue: 'the coldest season', letters: 'w _ _ _ _ _', from: '2026-07-20' },
+            { word: 'temperature', clue: 'how hot or cold something is', letters: 't _ _ _ _ _ _ _ _ _ _', from: '2026-07-20' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'clock, hour and arrive come from the waiting-room text on 28 July, where waiting was the whole subject. winter and temperature come from the hibernation text on 20 July. Ask him to underline all five in the passage before the covered table.',
+        },
+        {
+          reading: {
+            title: 'The Coat on the Chair',
+            passage:
+              "My grandfather's coat has hung on the back of the same chair since March. Nobody in the house has decided anything about it. It is a heavy wool coat, worn through at both elbows, the sort nobody makes any more. In autumn Mum used to tell him to wear something warmer and he would say the coat had lasted forty years and would last another forty. Once, at a family lunch, two strangers from the new neighbours' side of the table asked whose it was, and the room went quiet for a moment before somebody passed the food along. I have taken the coat down twice and put it back both times. It is not in the way. That is what we tell each other.",
+          },
+          questions: [
+            'How long has the coat been on the chair?',
+            'What condition is the coat in?',
+            'What did the grandfather say about the coat?',
+            'Why do you think nobody has moved it?',
+            'Which word in the story means people you do not know?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The coat', 'My grandfather', 'Mum', 'We'],
+            verbs: ['hung', 'wore', 'lasted', 'asked', 'decided'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about an object in your house that nobody has moved or thrown away. Why is it still there?',
+            support: {
+              wordBank: ['grandfather', 'wool', 'elbows', 'lasted', 'neighbours', 'decided', 'quiet'],
+            },
+          },
+          reviewWords: [
+            { word: 'chair', clue: 'you sit on it at a table', letters: 'c _ _ _ _', from: '2026-07-28' },
+            { word: 'worn', clue: 'thin and old from being used for years', letters: 'w _ _ _', from: '2026-07-28' },
+            { word: 'strangers', clue: 'people you do not know', letters: 's _ _ _ _ _ _ _ _', from: '2026-07-28' },
+            { word: 'autumn', clue: 'the season before winter', letters: 'a _ _ _ _ _', from: '2026-07-20' },
+            { word: 'food', clue: 'what gets passed around the table at a meal', letters: 'f _ _ _', from: '2026-07-20' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'worn and strangers were waiting-room words on 28 July and now describe a coat and a lunch table. Question 4 has no single right answer; accept any reading he can support from the text.',
+        },
+        {
+          reading: {
+            title: 'The Radio in the Kitchen',
+            passage:
+              'The radio in our kitchen has been on the same station since we moved in. It is not a good radio. The sound goes thin whenever a truck passes the window, and you have to hit the top of it about once a week. Dad calls it reliable, which is generous. At six the news comes on and the presenter reads the same three stories, then repeats them at half past for anyone who missed them. Mum makes tea during the weather. I have learned the shipping forecast without ever meaning to, the flow of names and numbers running underneath everything else we say. When we finally replace it I think the kitchen will sound wrong for a month.',
+          },
+          questions: [
+            'How long has the radio been on the same station?',
+            'What happens when a truck passes?',
+            'What does Dad call the radio?',
+            'Why does the writer know the shipping forecast?',
+            'Which word in the story means to say or read something a second time?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The radio', 'Mum', 'The presenter', 'We'],
+            verbs: ['played', 'passed', 'read', 'made', 'learned'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about a sound or a routine in your house that you only notice when it stops. What is it? Why does it matter?',
+            support: {
+              wordBank: ['station', 'presenter', 'news', 'forecast', 'generous', 'replace', 'thin'],
+            },
+          },
+          reviewWords: [
+            { word: 'reliable', clue: 'you can depend on it', letters: 'r _ _ _ _ _ _ _', from: '2026-07-28' },
+            { word: 'window', clue: 'the glass a truck passes on the road outside', letters: 'w _ _ _ _ _', from: '2026-07-28' },
+            { word: 'tea', clue: 'Mum makes it during the weather report', letters: 't _ _', from: '2026-07-28' },
+            { word: 'repeat', clue: 'to do or say something again', letters: 'r _ _ _ _ _', from: '2026-07-20' },
+            { word: 'flow', clue: 'a steady stream of something moving', letters: 'f _ _ _', from: '2026-07-20' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'repeat and flow were water-cycle words on 20 July. Here flow describes speech, not water. That jump from concrete to figurative is the main thing to talk about in this set.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MAVERICK — Level 23 (~8.5 yrs). No letter frames.
+      // ────────────────────────────────────────────────────────
+      Maverick: [
+        {
+          reading: {
+            title: 'The Bike on the Fence',
+            passage:
+              "Somebody's bike has been chained to our fence for five weeks. It is a decent bike, or it was, and the chain is worth more than the bike. For the first fortnight we assumed the owner would come back for it. Dad rang the council, who said it was not their problem at that distance from the footpath, which seemed ridiculous to him and reasonable to me. Mum thinks it was lost in the sense that somebody stopped wanting it. I have started to think of it as ours in a way I could not defend if anyone asked. Last Sunday I turned the front wheel so that it faced the other direction, just to see whether anybody would notice. Nobody did. It has been kept for us by nobody at all.",
+          },
+          questions: [
+            'How long has the bike been chained to the fence?',
+            'What did the council say?',
+            'What does Mum think happened to the bike?',
+            'Why did the writer turn the front wheel?',
+            'Which word in the story means two weeks?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The bike', 'Dad', 'The council', 'We'],
+            verbs: ['chained', 'rang', 'waited', 'turned', 'noticed'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about something that has been left where it does not belong. Who does it belong to? Why has nobody dealt with it?',
+            support: {
+              wordBank: ['chained', 'fence', 'fortnight', 'council', 'footpath', 'defend', 'decent'],
+            },
+          },
+          reviewWords: [
+            { word: 'lost', clue: 'no longer where it should be', from: '2026-07-28' },
+            { word: 'kept', clue: 'held on to rather than thrown away', from: '2026-07-28' },
+            { word: 'ridiculous', clue: 'so silly it is hard to take seriously', from: '2026-07-28' },
+            { word: 'distance', clue: 'how far one thing is from another', from: '2026-07-20' },
+            { word: 'direction', clue: 'the way something faces or travels', from: '2026-07-20' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'lost, kept and ridiculous come from the diary text on 28 July. distance and direction come from the waggle-dance text on 20 July, where they were measurements; here they are literal again but about a bike wheel. No letter frames for him.',
+        },
+        {
+          reading: {
+            title: 'The Photograph Nobody Can Name',
+            passage:
+              "There is a photograph in the hallway of four people standing on a shore with a wave breaking behind them. Two of them are my father and his brother, aged about nine. The other two nobody in the house can name. On the back, in handwriting that is not my grandmother's, somebody has written a date and then left the rest of the line empty. My father says there was a summer they went south with another family, and that he can no longer picture their faces separately from this photograph. I have looked at it often enough that the two strangers feel familiar, which is not the same thing as knowing who they are. It has hung there long enough that we have stopped explaining it to visitors.",
+          },
+          questions: [
+            'How many people are in the photograph?',
+            'Which two of them can be named?',
+            'What has been written on the back?',
+            'Why can the father not describe the other family?',
+            'Which word in the story means well known to you?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The photograph', 'My father', 'My grandmother', 'We'],
+            verbs: ['hung', 'stood', 'wrote', 'remembered', 'asked'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about a photograph in your house. Who is in it, and what does nobody know about it?',
+            support: {
+              wordBank: ['photograph', 'hallway', 'brother', 'grandmother', 'familiar', 'visitors', 'breaking'],
+            },
+          },
+          reviewWords: [
+            { word: 'father', clue: 'your male parent', from: '2026-07-28' },
+            { word: 'handwriting', clue: 'the way a particular person forms letters by hand', from: '2026-07-28' },
+            { word: 'empty', clue: 'with nothing written or held in it', from: '2026-07-28' },
+            { word: 'shore', clue: 'the land at the edge of the sea', from: '2026-07-20' },
+            { word: 'wave', clue: 'water rising and breaking as it reaches the shore', from: '2026-07-20' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'This set deliberately reuses the envelope words from 28 July (handwriting, empty, father) in a photograph instead of a letter. shore and wave come from the ocean-waves explanation on 20 July.',
+        },
+        {
+          reading: {
+            title: 'The Clock That Runs Fast',
+            passage:
+              'The clock in the front room runs about four minutes fast and has done for as long as I can remember. Nobody has adjusted it. When we were small it was set forward on purpose so that we would leave the house on time, and then the reason wore off and the four minutes stayed. It sits on the shelf above the chair in the corner where my grandmother used to sit, so touching it feels like a bigger decision than it actually is. At noon on Sundays it chimes early, in the middle of whatever anybody is saying. Guests look at their phones and then at us. We have all learned to subtract without thinking about it.',
+          },
+          questions: [
+            'How fast does the clock run?',
+            'Why was it set forward in the first place?',
+            'Where does the clock sit?',
+            'Why does touching the clock feel like a big decision?',
+            'Which word in the story means to take one number away from another?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The clock', 'My grandmother', 'Guests', 'We'],
+            verbs: ['ran', 'chimed', 'sat', 'adjusted', 'learned'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about a small fault in your house that nobody fixes. How has your family worked around it?',
+            support: {
+              wordBank: ['adjusted', 'purpose', 'shelf', 'chimes', 'guests', 'subtract', 'forward'],
+            },
+          },
+          reviewWords: [
+            { word: 'room', clue: 'a part of a house with its own walls and door', from: '2026-07-28' },
+            { word: 'corner', clue: 'the place where two walls meet', from: '2026-07-28' },
+            { word: 'chair', clue: 'the thing his grandmother used to sit in', from: '2026-07-28' },
+            { word: 'clock', clue: 'you read the time from it', from: '2026-07-20' },
+            { word: 'noon', clue: 'twelve in the middle of the day', from: '2026-07-20' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'room, corner and chair come from the north-facing-room text on 28 July. clock and noon come from the time-zones text on 20 July. Five review words is the ceiling for one set; do not add more.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOCASTA — High level. Sentence starters stay at 2,
+      //  sentence structure at 3 lines, writing extended to 12.
+      // ────────────────────────────────────────────────────────
+      Jocasta: [
+        {
+          reading: {
+            title: 'The Notes in the Margin',
+            passage:
+              "The recipe book in our kitchen is more useful for what is written around the recipes than for the recipes themselves. My great-grandmother's copy passed to my grandmother and then to my mother, and each of them added notes in the margin in pencil. Halve the sugar. Not for guests. Made this the week your father left. The author of the book never intended any of this, and none of the notes actually describe the food. What we inherit is not a method but the record of three women disagreeing quietly with a printed page across sixty years. I have not written anything in it yet. I am aware that whatever I add will be read one day by somebody who does not know why I added it.",
+          },
+          questions: [
+            'Who has owned the recipe book?',
+            'What kind of notes are written in the margin?',
+            'What does the writer say the family actually inherits?',
+            'Why has the writer not written in the book yet?',
+            'Which word in the story means to receive something passed down from those who came before you?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My mother', 'The author', 'The notes', 'We'],
+            verbs: ['inherited', 'added', 'described', 'kept', 'read'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about something handed down in your family that carries more meaning than its use. What does it record?',
+            support: {
+              wordBank: ['recipe', 'margin', 'great-grandmother', 'pencil', 'halve', 'intended', 'printed'],
+              sentenceStarters: [
+                'What is written in the margins tells you more about the writers than about...',
+                'None of these notes were meant to be read by...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'author', clue: 'the person who wrote the book', from: '2026-07-28' },
+            { word: 'useful', clue: 'worth having because it helps you do something', from: '2026-07-28' },
+            { word: 'describe', clue: 'to say what something is like', from: '2026-07-28' },
+            { word: 'inherit', clue: 'to receive something passed down from an earlier generation', from: '2026-07-20' },
+            { word: 'record', clue: 'an account kept so that something is not forgotten', from: '2026-07-20' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'author, useful and describe come from the sewing-machine manual on 28 July, where they were all about instructions. Here they are turned on handwritten notes. inherit and record come from the language-change text on 20 July. She needs the starters to begin, not to finish.',
+        },
+        {
+          reading: {
+            title: 'The Argument Nobody Finished',
+            passage:
+              'My aunt and my mother stopped speaking properly in 2019 over something neither of them will name. There has been no formal argument since, only a politeness so rehearsed that it has become a practice, and it takes more effort than shouting would. Twice a year they make an attempt at contact, usually around a birthday, and each attempt is shorter than the one before. My grandmother believes it is necessary to force them into a room together. My cousin believes the opposite, that the silence is an arrangement they have both agreed to without ever saying so. I notice that my generation is expected to repair this, and that nobody has told us what the original problem was. We are being handed a repair job with no instructions.',
+          },
+          questions: [
+            'When did the two sisters stop speaking properly?',
+            'How often do they make contact?',
+            'What does the grandmother believe should happen?',
+            'What does the cousin believe instead?',
+            'Which word in the story means all the people born at about the same time?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My mother', 'My aunt', 'My grandmother', 'We'],
+            verbs: ['stopped', 'attempted', 'agreed', 'expected', 'noticed'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about a disagreement that was never resolved. What has been passed on to the people who came after it?',
+            support: {
+              wordBank: ['politeness', 'formal', 'silence', 'arrangement', 'expected', 'repair', 'instructions'],
+              sentenceStarters: [
+                'What nobody in the family will say out loud is...',
+                'The silence has lasted long enough that...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'attempt', clue: 'an effort to do something that may not succeed', from: '2026-07-28' },
+            { word: 'necessary', clue: 'needed, not optional', from: '2026-07-28' },
+            { word: 'practice', clue: 'something done so regularly it has become a habit', from: '2026-07-28' },
+            { word: 'generation', clue: 'all the people born at about the same time', from: '2026-07-20' },
+            { word: 'contact', clue: 'communication between people', from: '2026-07-20' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'practice appeared on 28 July as rehearsal for a departure and returns here as a social habit. generation and contact come from the language-change text on 20 July, where they explained how languages shift. Worth naming that move explicitly with her.',
+        },
+        {
+          reading: {
+            title: 'The Word She Will Not Translate',
+            passage:
+              'My friend Rania speaks Arabic at home and English everywhere else, and there is one word she refuses to translate for me. She says the English version would be close enough to be misleading. I have asked three times, in a way I thought was casual, and each time she has shifted the conversation with a skill I admire more than I resent. English is happy to borrow words when it has none of its own, so I do not think the problem is that no word exists. I think the expectation that everything can be carried across is mine, not hers. There is a kind of trust in being told plainly that something will not be explained to you.',
+          },
+          questions: [
+            'What does Rania refuse to do?',
+            'What reason does she give?',
+            'How many times has the writer asked?',
+            'What does the writer decide the real problem is?',
+            'Which word in the story means to take a word from another language and use it as your own?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Rania', 'The word', 'English', 'We'],
+            verbs: ['asked', 'refused', 'shifted', 'borrowed', 'admired'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about something that could not be explained to you. Was the refusal a wall, or a kind of respect?',
+            support: {
+              wordBank: ['translate', 'misleading', 'casual', 'resent', 'admire', 'refuses', 'carried'],
+              sentenceStarters: [
+                'There are things that do not survive being...',
+                'What I first took for stubbornness was actually...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'trust', clue: 'confidence that someone is acting in good faith', from: '2026-07-28' },
+            { word: 'version', clue: 'one form of something that exists in more than one form', from: '2026-07-28' },
+            { word: 'expectation', clue: 'a belief that something will or should happen', from: '2026-07-28' },
+            { word: 'borrow', clue: 'to take a word from another language into your own', from: '2026-07-20' },
+            { word: 'shift', clue: 'to move something to a different position or direction', from: '2026-07-20' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'trust, version and expectation come from the envelope text on 28 July. borrow and shift come from the language-change text on 20 July and are now used for a conversation rather than a language. This is the strongest set for her this week.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  CODY — High level. Same shape as Jocasta.
+      // ────────────────────────────────────────────────────────
+      Cody: [
+        {
+          reading: {
+            title: 'The Route I Cannot Draw',
+            passage:
+              "I have walked the same way to my grandmother's house since I was six, and I could not draw the route on paper if you paid me. My feet know a left turn that my head has no memory of. Somebody asked me for directions there last month and I gave them something confident and wrong. The path exists in me as repetition rather than as a map, laid down before I was conscious of learning it. What I have is not knowledge with any precision, only a pathway that works as long as I do not examine it. I tested this once by trying to describe each corner aloud as I walked. I stopped three streets early and had to start the whole thing again.",
+          },
+          questions: [
+            'How long has the writer walked this route?',
+            'What happened when somebody asked for directions?',
+            'How does the writer say the route is stored?',
+            'What happened during the test?',
+            'Which word in the story means doing the same thing over and over?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My feet', 'The route', 'My grandmother', 'We'],
+            verbs: ['walked', 'turned', 'described', 'tested', 'stopped'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about something you can do but cannot explain. What happens when you try to describe it?',
+            support: {
+              wordBank: ['route', 'directions', 'confident', 'examine', 'aloud', 'corner', 'map'],
+              sentenceStarters: [
+                'What my feet know and what I can explain are...',
+                'The route only works as long as...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'memory', clue: 'something the mind has kept from an earlier time', from: '2026-07-28' },
+            { word: 'precision', clue: 'exactness, with nothing approximate about it', from: '2026-07-28' },
+            { word: 'described', clue: 'said what something was like', from: '2026-07-28' },
+            { word: 'pathway', clue: 'a route the brain lays down through use', from: '2026-07-20' },
+            { word: 'repetition', clue: 'doing the same thing again and again', from: '2026-07-20' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'This set is deliberately the narrative twin of the muscle-memory explanation he read on 20 July. pathway and repetition are the same words doing the same job in a different genre, which is exactly the transfer to check for.',
+        },
+        {
+          reading: {
+            title: 'The Habit That Outlived the Reason',
+            passage:
+              'For two years I checked my phone at 8:40 every morning because a friend used to message me then. She moved to Perth in March and the messages stopped, but the checking did not. The trigger is the same: the walk past the science block, the particular light at that hour. My hand is in my pocket before I have chosen anything. I have read that habits are stored somewhere older than intention, which sounds like an excuse and is probably also true. What bothers me is not the habit but its tone, the small hopeful quality of it, repeated daily at a person who is not there. I have started leaving the phone in my bag instead. It has worked about four times out of thirty.',
+          },
+          questions: [
+            'Why did the writer start checking the phone at 8:40?',
+            'What changed in March?',
+            'What still sets the habit off?',
+            'What bothers the writer most about it?',
+            'Which word in the story means the thing that sets off an automatic response?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My hand', 'The habit', 'My friend', 'We'],
+            verbs: ['checked', 'moved', 'stopped', 'triggered', 'left'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about a habit that carried on after its reason disappeared. What keeps it going?',
+            support: {
+              wordBank: ['habit', 'intention', 'hopeful', 'excuse', 'quality', 'particular', 'bothers'],
+              sentenceStarters: [
+                'The reason ended in March, but...',
+                'What I notice is not the habit itself but...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'stopped', clue: 'came to an end', from: '2026-07-28' },
+            { word: 'chosen', clue: 'decided on, out of more than one option', from: '2026-07-28' },
+            { word: 'tone', clue: 'the feeling carried by the way something is said', from: '2026-07-28' },
+            { word: 'trigger', clue: 'the thing that sets off an automatic response', from: '2026-07-20' },
+            { word: 'stored', clue: 'kept somewhere for later use', from: '2026-07-20' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'tone came from the unsent-reply text on 28 July and is the hardest of the five to pin down. trigger and stored come from muscle memory on 20 July. If he can define tone from the clue alone, that word can be retired.',
+        },
+        {
+          reading: {
+            title: 'The Rehearsal',
+            passage:
+              'Before a difficult conversation I write a draft of it in my head, sometimes for days. I know what I will say and what the other person will say back, and by the time we actually speak I have rehearsed three versions of it. The real conversation never follows any of them. Last week I had to tell my coach I was leaving the squad. I had rehearsed the hard part and he agreed in the first sentence, which left me holding four paragraphs I had nowhere to put. Afterwards I reread the message I had sent him the night before and found it colder than I had meant it to sound. The rehearsal protects me from exposure, but it also means I arrive at every conversation already slightly behind.',
+          },
+          questions: [
+            'What does the writer do before a difficult conversation?',
+            'How did the conversation with the coach actually go?',
+            'What did the writer find when rereading the message?',
+            'What is the cost of rehearsing, according to the writer?',
+            'Which word in the story means a practice run before the real event?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The coach', 'The conversation', 'The message', 'We'],
+            verbs: ['rehearsed', 'agreed', 'sent', 'reread', 'arrived'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about preparing for something that then went differently. What did the preparation actually do for you?',
+            support: {
+              wordBank: ['conversation', 'rehearsed', 'squad', 'paragraphs', 'colder', 'afterwards', 'protects'],
+              sentenceStarters: [
+                'The version I plan and the version that happens are...',
+                'Being ready in advance costs...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'draft', clue: 'an early version, written before the final one', from: '2026-07-28' },
+            { word: 'reread', clue: 'read again', from: '2026-07-28' },
+            { word: 'sent', clue: 'the past tense of send', from: '2026-07-28' },
+            { word: 'rehearsal', clue: 'a practice run before the real event', from: '2026-07-20' },
+            { word: 'exposure', clue: 'being open and unprotected in front of others', from: '2026-07-20' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'draft, reread and sent come straight from the unsent-reply text on 28 July. rehearsal and exposure come from the vaccine explanation on 20 July, where they described the immune system. Moving both to a conversation is the point of this set.',
+        },
+      ],
+    },
+  },
+
   {
     date: '2026-07-28',
     activities: {
