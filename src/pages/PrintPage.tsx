@@ -395,7 +395,7 @@ function PrintReviewTable({ review }: { review: ReviewWord[] }) {
             <tr key={i}>
               <td className="border border-gray-300 px-2 py-1.5 text-gray-700">{r.clue}</td>
               {hasLetters && (
-                <td className="border border-gray-300 px-2 py-1.5 font-mono text-gray-500 tracking-widest">{r.letters}</td>
+                <td className="border border-gray-300 px-2 py-1.5 font-semibold text-gray-600 tracking-widest">{r.letters}</td>
               )}
               <td className="border border-gray-300 px-2 py-2 min-w-[110px]" />
               <td className="border border-gray-300 px-2 py-2 min-w-[110px]" />

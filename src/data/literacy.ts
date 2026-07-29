@@ -74,6 +74,945 @@ export interface LiteracySession {
 export const LITERACY_SESSIONS: LiteracySession[] = [
 
   // ══════════════════════════════════════════════════════════
+  //  30 JULY 2026 — spiral session 2, and a genre switch.
+  //  Every text is an EXPLANATION, not a story. Review words
+  //  therefore cross genres: a word met inside a narrative on
+  //  29 July comes back doing informational work here.
+  //  Each set: 3 words from 29 July (2nd meeting) + 2 words
+  //  that were already reviewed on 29 July (3rd meeting — if
+  //  the student writes these from the clue alone, retire them).
+  // ══════════════════════════════════════════════════════════
+  {
+    date: '2026-07-30',
+    activities: {
+
+      // ────────────────────────────────────────────────────────
+      //  PHARRELL — Level 7 (~5 yrs). Simple information texts.
+      // ────────────────────────────────────────────────────────
+      Pharrell: [
+        {
+          reading: {
+            title: 'How a Butterfly Grows',
+            passage:
+              'A butterfly starts as a tiny egg on a leaf. A small bug comes out of the egg. It eats leaves all day and grows fast. Then it makes a hard case and sleeps inside it for two weeks. When it comes out it has four wings. The wings are wet and soft at first. The butterfly sits in the sun until they are dry. Then it can fly away.',
+          },
+          questions: [
+            'Where does the butterfly lay its egg?',
+            'What does the small bug eat?',
+            'What does the butterfly do until its wings are dry?',
+          ],
+          sentenceStructure: {
+            subjects: ['The egg', 'The bug', 'The case', 'The wings', 'I'],
+            verbs: ['sat', 'ate', 'grew', 'came out', 'flew'],
+          },
+          writing: {
+            prompt: 'Write about an animal that changes as it grows. What does it look like at the start? What does it look like at the end?',
+            support: {
+              wordBank: ['butterfly', 'egg', 'case', 'grow', 'week', 'fly', 'soft'],
+            },
+          },
+          reviewWords: [
+            { word: 'bug', clue: 'a very small animal with legs', letters: 'b _ _', from: '2026-07-29' },
+            { word: 'leaf', clue: 'the flat green part of a plant', letters: 'l _ _ _', from: '2026-07-29' },
+            { word: 'wing', clue: 'a bird or a butterfly uses two of these to fly', letters: 'w _ _ _', from: '2026-07-29' },
+            { word: 'wet', clue: 'covered in water, not dry', letters: 'w _ _', from: '2026-07-28' },
+            { word: 'dry', clue: 'not wet', letters: 'd _ _', from: '2026-07-28' },
+          ],
+          wordCards: ['The', 'bug', 'sat', 'on', 'a', 'leaf', '.'],
+          writingLines: 5,
+          teacherNote:
+            'Sound focus: ea and ee (leaf, eats, weeks, sleeps). bug, leaf and wing were story words yesterday and are doing information work today. wet and dry are on their third meeting: if he writes both from the clue with no help, drop them from the rotation.',
+        },
+        {
+          reading: {
+            title: 'Where Salt Comes From',
+            passage:
+              'Salt comes from the sea. People let sea water sit in big flat beds. The sun is hot and the water goes up into the air. The salt is left behind on the ground. Workers rake it into piles and let it dry. Then they put the salt into a bag and send it to the shop. We put a little salt on our food to give it more taste.',
+          },
+          questions: [
+            'Where does salt come from?',
+            'What does the sun do to the water?',
+            'What do workers do with the salt?',
+          ],
+          sentenceStructure: {
+            subjects: ['The salt', 'The sun', 'The water', 'A worker', 'We'],
+            verbs: ['sat', 'went up', 'raked', 'sent', 'ate'],
+          },
+          writing: {
+            prompt: 'Write about food you like. Where does it come from? Who makes it?',
+            support: {
+              wordBank: ['air', 'flat', 'rake', 'pile', 'taste', 'worker', 'behind'],
+            },
+          },
+          reviewWords: [
+            { word: 'salt', clue: 'white grains we put on food', letters: 's _ _ _', from: '2026-07-29' },
+            { word: 'shop', clue: 'the place you buy things from', letters: 's _ _ _', from: '2026-07-29' },
+            { word: 'bag', clue: 'you carry things home in it', letters: 'b _ _', from: '2026-07-29' },
+            { word: 'hot', clue: 'not cold', letters: 'h _ _', from: '2026-07-28' },
+            { word: 'food', clue: 'what you eat', letters: 'f _ _ _', from: '2026-07-20' },
+          ],
+          wordCards: ['The', 'salt', 'is', 'in', 'a', 'bag', '.'],
+          writingLines: 5,
+          teacherNote:
+            'Sound focus: a_e (rake, taste, made). salt, shop and bag come from the fish and chips story yesterday. hot and food are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'How Crabs Live',
+            passage:
+              'A crab lives by the sea. It has a hard shell on its back. The shell keeps the soft parts inside it safe. A crab walks on the sand with eight legs. It walks to the side, not to the front. When a crab grows too big for its shell it climbs out and finds a new one. Small crabs hide under stones on the path down to the water.',
+          },
+          questions: [
+            'Where does a crab live?',
+            'How many legs does a crab have?',
+            'What does a crab do when it grows too big for its shell?',
+          ],
+          sentenceStructure: {
+            subjects: ['The crab', 'The shell', 'Its legs', 'A stone', 'I'],
+            verbs: ['lived', 'kept', 'walked', 'climbed', 'hid'],
+          },
+          writing: {
+            prompt: 'Write about an animal that lives near water. Where does it live? How does it move?',
+            support: {
+              wordBank: ['crab', 'back', 'legs', 'side', 'front', 'hide', 'stone'],
+            },
+          },
+          reviewWords: [
+            { word: 'shell', clue: 'the hard cover on a crab or a snail', letters: 's _ _ _ _', from: '2026-07-29' },
+            { word: 'sand', clue: 'what a beach is made of', letters: 's _ _ _', from: '2026-07-29' },
+            { word: 'sea', clue: 'the big salty water', letters: 's _ _', from: '2026-07-29' },
+            { word: 'path', clue: 'the narrow way you walk along', letters: 'p _ _ _', from: '2026-07-28' },
+            { word: 'inside', clue: 'the opposite of outside', letters: 'i _ _ _ _ _', from: '2026-07-28' },
+          ],
+          wordCards: ['A', 'crab', 'walks', 'on', 'the', 'sand', '.'],
+          writingLines: 5,
+          teacherNote:
+            'Sound focus: blends cr and st (crab, climbs, stone, stones). shell, sand and sea come from yesterday. path and inside are on their third meeting and should now be automatic.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JIERRY — Level 10, ESOL (Mandarin). Explanation texts.
+      // ────────────────────────────────────────────────────────
+      Jierry: [
+        {
+          reading: {
+            title: 'Why We Warm Up Before Sport',
+            passage:
+              'Before a game or a practice, players run and stretch for about ten minutes. This is called a warm-up. It sends more blood to the muscles so that they are ready to move quickly. A cold muscle tears more easily than a warm one. Players who practise the warm-up properly can run faster in the first few minutes, when many goals are scored. A coach also uses the warm-up to check that nobody is hurt. If a player has a sore leg it is important to find out before the game starts, not after.',
+          },
+          questions: [
+            'How long does a warm-up usually take?',
+            'What does the warm-up send to the muscles?',
+            'Why does a coach watch players during the warm-up?',
+            'Find the word in the text that means 重要的.',
+          ],
+          sentenceStructure: {
+            subjects: ['The players', 'The coach', 'A cold muscle', 'The warm-up', 'We'],
+            verbs: ['stretched', 'practised', 'checked', 'scored', 'started'],
+            translations: { 'The players': '球员', 'The coach': '教练', 'A cold muscle': '冷的肌肉', 'The warm-up': '热身', 'We': '我们', 'stretched': '拉伸', 'practised': '练习', 'checked': '检查', 'scored': '得分', 'started': '开始' },
+          },
+          writing: {
+            prompt: 'Explain how you get ready for something you do often: a sport, a test, or a performance. What do you do first?',
+            promptTranslation: '解释你为经常做的事情做准备的方法：运动、考试或表演。你先做什么？',
+            support: {
+              vocabularyList: [
+                { word: 'warm-up', translation: '热身', language: 'Chinese' },
+                { word: 'stretch', translation: '拉伸', language: 'Chinese' },
+                { word: 'blood', translation: '血液', language: 'Chinese' },
+                { word: 'quickly', translation: '很快', language: 'Chinese' },
+                { word: 'coach', translation: '教练', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'practise', clue: '练习', letters: 'p _ _ _ _ _ _ _', from: '2026-07-29' },
+            { word: 'goal', clue: '进球', letters: 'g _ _ _', from: '2026-07-29' },
+            { word: 'important', clue: '重要的', letters: 'i _ _ _ _ _ _ _ _', from: '2026-07-20' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'Genre change: this is an explanation, not a story. practise and goal were narrative words yesterday. important is on its third meeting and can be retired if he produces it from the Chinese alone.',
+        },
+        {
+          reading: {
+            title: 'Why We Get Nervous',
+            passage:
+              'Before a concert or a test, many people feel nervous. The body sends out a chemical called adrenaline. Your heart beats faster and your hands may shake a little. This is the body getting ready to act quickly, not a sign that something is wrong. Actors and singers say the feeling never goes away completely, but that it becomes easier to use. A small amount of nerves can even sharpen your memory on stage, because the body is paying close attention to everything around it.',
+          },
+          questions: [
+            'What does the body send out when you are nervous?',
+            'What happens to your heart?',
+            'What do actors and singers say about the feeling?',
+            'Find the word in the text that means 记忆.',
+          ],
+          sentenceStructure: {
+            subjects: ['The body', 'Your heart', 'Actors', 'The feeling', 'I'],
+            verbs: ['sent', 'beat', 'shook', 'helped', 'felt'],
+            translations: { 'The body': '身体', 'Your heart': '你的心脏', 'Actors': '演员', 'The feeling': '这种感觉', 'I': '我', 'sent': '送出', 'beat': '跳动', 'shook': '发抖', 'helped': '帮助', 'felt': '感觉' },
+          },
+          writing: {
+            prompt: 'Explain what happens to your body when you are nervous. What do you notice first?',
+            promptTranslation: '解释你紧张时身体会发生什么变化。你最先注意到什么？',
+            support: {
+              vocabularyList: [
+                { word: 'adrenaline', translation: '肾上腺素', language: 'Chinese' },
+                { word: 'chemical', translation: '化学物质', language: 'Chinese' },
+                { word: 'heart', translation: '心脏', language: 'Chinese' },
+                { word: 'shake', translation: '发抖', language: 'Chinese' },
+                { word: 'stage', translation: '舞台', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'concert', clue: '音乐会', letters: 'c _ _ _ _ _ _', from: '2026-07-29' },
+            { word: 'nervous', clue: '紧张', letters: 'n _ _ _ _ _ _', from: '2026-07-29' },
+            { word: 'memory', clue: '记忆', letters: 'm _ _ _ _ _', from: '2026-07-20' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'Yesterday he wrote about being nervous at a concert; today the same two words explain why it happens. memory is on its third meeting, in its third different sense.',
+        },
+        {
+          reading: {
+            title: 'Why Water Boils',
+            passage:
+              'When you heat water, the heat makes the tiny parts inside it move faster and faster. At one hundred degrees the water starts boiling and turns into steam. Steam takes up far more space than water does, which is why a lid rattles on top of a pot. Noodles cook faster in boiling water because the heat reaches the food from every side at once. If you set a timer instead of guessing, you can copy the same result every time you cook.',
+          },
+          questions: [
+            'What does heat do to the tiny parts inside water?',
+            'At what temperature does water boil?',
+            'Why does a lid rattle on a pot?',
+            'Find the word in the text that means 模仿.',
+          ],
+          sentenceStructure: {
+            subjects: ['The water', 'The heat', 'The steam', 'The lid', 'I'],
+            verbs: ['boiled', 'moved', 'turned', 'rattled', 'cooked'],
+            translations: { 'The water': '水', 'The heat': '热', 'The steam': '蒸汽', 'The lid': '锅盖', 'I': '我', 'boiled': '沸腾', 'moved': '移动', 'turned': '变成', 'rattled': '咔哒响', 'cooked': '煮' },
+          },
+          writing: {
+            prompt: 'Explain how to cook something simple, step by step. What has to happen first?',
+            promptTranslation: '一步一步解释怎么做一道简单的菜。要先做什么？',
+            support: {
+              vocabularyList: [
+                { word: 'heat', translation: '加热', language: 'Chinese' },
+                { word: 'degrees', translation: '度', language: 'Chinese' },
+                { word: 'steam', translation: '蒸汽', language: 'Chinese' },
+                { word: 'lid', translation: '锅盖', language: 'Chinese' },
+                { word: 'space', translation: '空间', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'boiling', clue: '沸腾的', letters: 'b _ _ _ _ _ _', from: '2026-07-29' },
+            { word: 'noodles', clue: '面条', letters: 'n _ _ _ _ _ _', from: '2026-07-29' },
+            { word: 'copy', clue: '模仿', letters: 'c _ _ _', from: '2026-07-28' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'copy is on its third meeting: it began as copying a person, then copying a method, and here it is copying a result. Same word, three jobs.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  BAO — Level 10, ESOL (Vietnamese). Explanation texts.
+      // ────────────────────────────────────────────────────────
+      Bao: [
+        {
+          reading: {
+            title: 'How a Kite Stays Up',
+            passage:
+              'A kite stays up because of the wind. When the wind hits the flat face of the kite, it pushes the kite up and back at the same time. The string stops the kite from flying away and holds it against the wind, which is what keeps it in the air. A kite has to be light, so most kites are made of thin cloth or paper over a light frame. It is safe to fly a kite in an open field, far away from trees and power lines. On top of a hill the wind is stronger, so a kite is lifted more easily there.',
+          },
+          questions: [
+            'What makes a kite stay up?',
+            'What does the string do?',
+            'Where is it safe to fly a kite?',
+            'Find the word in the text that means an toàn.',
+          ],
+          sentenceStructure: {
+            subjects: ['The kite', 'The wind', 'The string', 'A hill', 'We'],
+            verbs: ['pushed', 'held', 'lifted', 'flew', 'stopped'],
+            translations: { 'The kite': 'con diều', 'The wind': 'gió', 'The string': 'dây', 'A hill': 'ngọn đồi', 'We': 'chúng tôi', 'pushed': 'đẩy', 'held': 'giữ', 'lifted': 'nâng lên', 'flew': 'bay', 'stopped': 'ngăn lại' },
+          },
+          writing: {
+            prompt: 'Explain how something you have played with works. What makes it move?',
+            promptTranslation: 'Giải thích cách hoạt động của một món đồ chơi bạn từng chơi. Điều gì làm nó chuyển động?',
+            support: {
+              vocabularyList: [
+                { word: 'push', translation: 'đẩy', language: 'Vietnamese' },
+                { word: 'flat', translation: 'phẳng', language: 'Vietnamese' },
+                { word: 'light', translation: 'nhẹ', language: 'Vietnamese' },
+                { word: 'frame', translation: 'khung', language: 'Vietnamese' },
+                { word: 'against', translation: 'ngược lại', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'wind', clue: 'gió', letters: 'w _ _ _', from: '2026-07-29' },
+            { word: 'lifted', clue: 'nâng lên', letters: 'l _ _ _ _ _', from: '2026-07-29' },
+            { word: 'safe', clue: 'an toàn', letters: 's _ _ _', from: '2026-07-20' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'Same subject as yesterday but a different kind of text: yesterday told what happened, today explains why. safe is on its third meeting.',
+        },
+        {
+          reading: {
+            title: 'Why a Fridge Keeps Food Cold',
+            passage:
+              'A fridge does not make cold. It takes heat out. A gas runs through pipes at the back and carries the heat from inside the fridge into the room, which is why the back of a fridge feels warm when you touch it. A fridge is quiet most of the time, but the motor hums whenever it is working. Food goes off more slowly in the cold because the tiny living things that spoil food grow more slowly when they are cool. If the power goes out, a closed fridge stays cold for about four hours.',
+          },
+          questions: [
+            'What does a fridge take out?',
+            'Why is the back of a fridge warm?',
+            'How long does a closed fridge stay cold?',
+            'Find the word in the text that means mang.',
+          ],
+          sentenceStructure: {
+            subjects: ['The fridge', 'The gas', 'The motor', 'The food', 'We'],
+            verbs: ['took out', 'carried', 'hummed', 'spoiled', 'stayed'],
+            translations: { 'The fridge': 'tủ lạnh', 'The gas': 'khí', 'The motor': 'động cơ', 'The food': 'thức ăn', 'We': 'chúng tôi', 'took out': 'lấy ra', 'carried': 'mang', 'hummed': 'kêu ù ù', 'spoiled': 'hỏng', 'stayed': 'giữ nguyên' },
+          },
+          writing: {
+            prompt: 'Explain how something in your kitchen works. What does it do, and what happens if it stops?',
+            promptTranslation: 'Giải thích cách hoạt động của một thứ trong bếp nhà bạn. Nó làm gì, và chuyện gì xảy ra nếu nó ngừng hoạt động?',
+            support: {
+              vocabularyList: [
+                { word: 'gas', translation: 'khí', language: 'Vietnamese' },
+                { word: 'pipes', translation: 'ống', language: 'Vietnamese' },
+                { word: 'heat', translation: 'nhiệt', language: 'Vietnamese' },
+                { word: 'spoil', translation: 'hỏng', language: 'Vietnamese' },
+                { word: 'motor', translation: 'động cơ', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'fridge', clue: 'tủ lạnh', letters: 'f _ _ _ _ _', from: '2026-07-29' },
+            { word: 'quiet', clue: 'yên tĩnh', letters: 'q _ _ _ _', from: '2026-07-29' },
+            { word: 'carry', clue: 'mang', letters: 'c _ _ _ _', from: '2026-07-28' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'Yesterday the fridge stopped humming in a power cut; today the same fridge is explained. carry is on its third meeting and has moved from a plate to a gas carrying heat.',
+        },
+        {
+          reading: {
+            title: 'Why Chilli Feels Hot',
+            passage:
+              'Chilli is not really hot. It holds a chemical called capsaicin. This chemical touches the same nerves in your mouth that tell your brain about heat, so the brain thinks your mouth is burning. Water does not help much, because the chemical does not mix with water. Milk works better. People who eat chilli often feel it less over time, because those nerves stop reacting so strongly. Cut a chilli with a knife rather than your fingers, and wash your hands afterwards, because the chemical stays on your skin. Crisp cold cucumber on the side helps as well.',
+          },
+          questions: [
+            'What chemical is in chilli?',
+            'Why does water not help?',
+            'What works better than water?',
+            'Find the word in the text that means dao.',
+          ],
+          sentenceStructure: {
+            subjects: ['The chilli', 'The chemical', 'Your brain', 'Milk', 'We'],
+            verbs: ['touched', 'burned', 'helped', 'washed', 'ate'],
+            translations: { 'The chilli': 'quả ớt', 'The chemical': 'hóa chất', 'Your brain': 'não bạn', 'Milk': 'sữa', 'We': 'chúng tôi', 'touched': 'chạm', 'burned': 'bỏng rát', 'helped': 'giúp', 'washed': 'rửa', 'ate': 'đã ăn' },
+          },
+          writing: {
+            prompt: 'Explain how a food tastes and what it does to your mouth. Who in your family likes it?',
+            promptTranslation: 'Giải thích một món ăn có vị như thế nào và nó làm gì với miệng bạn. Ai trong gia đình bạn thích món đó?',
+            support: {
+              vocabularyList: [
+                { word: 'chemical', translation: 'hóa chất', language: 'Vietnamese' },
+                { word: 'nerves', translation: 'dây thần kinh', language: 'Vietnamese' },
+                { word: 'brain', translation: 'não', language: 'Vietnamese' },
+                { word: 'burning', translation: 'bỏng rát', language: 'Vietnamese' },
+                { word: 'milk', translation: 'sữa', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'chilli', clue: 'ớt', letters: 'c _ _ _ _ _', from: '2026-07-29' },
+            { word: 'crisp', clue: 'giòn', letters: 'c _ _ _ _', from: '2026-07-29' },
+            { word: 'knife', clue: 'dao', letters: 'k _ _ _ _', from: '2026-07-28' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'knife is on its third meeting. The silent k has come up twice already, so ask him for the spelling before he looks at the letter frame.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MATT — Level 10. Explanations of yesterday's subjects.
+      // ────────────────────────────────────────────────────────
+      Matt: [
+        {
+          reading: {
+            title: 'Why a Tent Keeps You Dry',
+            passage:
+              'A tent works because of surface tension. The tightly woven fabric holds raindrops on the outside instead of letting them soak through, but only while the fabric is not touched. If you press a finger against the wall of a tent in the rain, water will follow your finger through and drip from that spot all night. A seam has to be sealed with tape, because a line of stitching is full of tiny holes. A tarpaulin stretched over the top gives a second layer. A sleeping mat matters as much as the tent itself: it traps a layer of air that keeps you warm, and cold rises through fabric that is pressed flat.',
+          },
+          questions: [
+            'What holds the raindrops on the outside of a tent?',
+            'What happens if you press the tent wall in the rain?',
+            'Why does a seam need tape or glue?',
+            'Which word in the text means the outside layer of something?',
+          ],
+          sentenceStructure: {
+            subjects: ['The tent', 'The fabric', 'A raindrop', 'The seam', 'We'],
+            verbs: ['held', 'soaked', 'sealed', 'stretched', 'trapped'],
+          },
+          writing: {
+            prompt: 'Explain how a piece of gear you own actually works. What is the part most people get wrong about it?',
+            support: {
+              wordBank: ['fabric', 'tension', 'raindrops', 'sealed', 'stitching', 'layer', 'sleeping mat'],
+            },
+          },
+          reviewWords: [
+            { word: 'tent', clue: 'you sleep in it when you camp', letters: 't _ _ _', from: '2026-07-29' },
+            { word: 'seam', clue: 'the line where two pieces of fabric are joined', letters: 's _ _ _', from: '2026-07-29' },
+            { word: 'tarpaulin', clue: 'a big waterproof sheet you can stretch over a tent', letters: 't _ _ _ _ _ _ _ _', from: '2026-07-29' },
+            { word: 'cold', clue: 'the opposite of warm', letters: 'c _ _ _', from: '2026-07-20' },
+            { word: 'warm', clue: 'gently hot, the way trapped air keeps you', letters: 'w _ _ _', from: '2026-07-20' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'Yesterday he read the story of the leaking tent; today he reads why it leaked. cold and warm are on their third meeting, having gone from goosebumps to a wet night to an explanation of trapped air.',
+        },
+        {
+          reading: {
+            title: 'Why Skateboard Wheels Are Not All the Same',
+            passage:
+              'Skateboard wheels are made of a plastic called urethane, and how hard that plastic is changes the way the board rides. Soft wheels grip a rough footpath and absorb the bumps, but they are slow. Hard wheels are fast on smooth concrete and they slide more easily, which is what you want on a ramp. Bigger wheels roll over cracks better, while smaller wheels start turning more quickly. Bearings matter as much as the wheels themselves: a dirty bearing will slow a good wheel down further than a rough surface ever will, and it costs a few dollars to replace.',
+          },
+          questions: [
+            'What are skateboard wheels made of?',
+            'What are soft wheels good for?',
+            'What is the advantage of bigger wheels?',
+            'Which word in the text means the part that lets a wheel spin freely?',
+          ],
+          sentenceStructure: {
+            subjects: ['The wheels', 'The bearing', 'Soft wheels', 'The board', 'I'],
+            verbs: ['rolled', 'gripped', 'absorbed', 'slid', 'replaced'],
+          },
+          writing: {
+            prompt: 'Explain how choosing the right equipment changes how something works. What would you tell a beginner to buy?',
+            support: {
+              wordBank: ['urethane', 'grip', 'absorb', 'bumps', 'cracks', 'bearings', 'dirty'],
+            },
+          },
+          reviewWords: [
+            { word: 'wheels', clue: 'they turn so the board can roll', letters: 'w _ _ _ _ _', from: '2026-07-29' },
+            { word: 'smooth', clue: 'the opposite of rough', letters: 's _ _ _ _ _', from: '2026-07-29' },
+            { word: 'concrete', clue: 'the grey hard material a footpath is made of', letters: 'c _ _ _ _ _ _ _', from: '2026-07-29' },
+            { word: 'hard', clue: 'not soft', letters: 'h _ _ _', from: '2026-07-20' },
+            { word: 'surface', clue: 'the top or outside layer of something', letters: 's _ _ _ _ _ _', from: '2026-07-20' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'hard and surface are on their third meeting: an echo bouncing, a sanded ramp, and now a wheel choice. If he writes both from the clue alone, retire them.',
+        },
+        {
+          reading: {
+            title: 'Why Mud Slows a Game Down',
+            passage:
+              'On a wet field the ball behaves completely differently. Mud holds the ball where it lands instead of letting it bounce, so passes along the ground stop early and players have to hit them much harder. Studs are made to cut into soft ground and give grip; on dry ground the same studs give almost none. Running in mud also uses far more energy, because every step has to pull the foot out of the ground as well as push the body forward. That is why teams that have trained on heavy ground often last longer in the second half, and why a coach who knows the surface will tell players at half time to shoot early rather than pass the ball across goal.',
+          },
+          questions: [
+            'What does mud do to the ball?',
+            'What are studs made to do?',
+            'Why does running in mud use more energy?',
+            'Which word in the text means the way something acts?',
+          ],
+          sentenceStructure: {
+            subjects: ['The ball', 'The mud', 'The studs', 'The players', 'We'],
+            verbs: ['bounced', 'stopped', 'gripped', 'trained', 'shot'],
+          },
+          writing: {
+            prompt: 'Explain how the weather or the ground changes a sport you play. What has to change about how you play?',
+            support: {
+              wordBank: ['studs', 'grip', 'energy', 'step', 'heavy', 'behaves', 'passes'],
+            },
+          },
+          reviewWords: [
+            { word: 'mud', clue: 'wet soft ground that sticks to your boots', letters: 'm _ _', from: '2026-07-29' },
+            { word: 'half time', clue: 'the break in the middle of a game', letters: 'h _ _ _  t _ _ _', from: '2026-07-29' },
+            { word: 'coach', clue: 'the person who trains the team', letters: 'c _ _ _ _', from: '2026-07-29' },
+            { word: 'field', clue: 'the grass area you play sport on', letters: 'f _ _ _ _', from: '2026-07-28' },
+            { word: 'trained', clue: 'practised regularly for a sport', letters: 't _ _ _ _ _ _', from: '2026-07-28' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'Yesterday he read the story of the muddy final; today he reads why mud changes the game. field and trained are on their third meeting.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOSHUA — Level 23 (~8.5 yrs). Explanation texts.
+      // ────────────────────────────────────────────────────────
+      Joshua: [
+        {
+          reading: {
+            title: 'Why Buses Bunch Together',
+            passage:
+              'A bus timetable assumes every stop takes the same time, which is never true. If one bus is slightly late, more people have gathered at the next shelter, so it takes longer to load, and it falls further behind. The bus behind then finds fewer people waiting, moves faster, and catches up. Within an hour two buses can be running nose to tail with a long gap in front of them. Drivers call this bunching, and passengers usually get annoyed with the driver who is least at fault. Some cities fix it by holding an early bus at a stop for a minute, which feels wrong to anybody standing there but keeps the whole line even. A timetable is a promise about an average, not about the bus that will actually arrive in front of you.',
+          },
+          questions: [
+            'What does a bus timetable assume?',
+            'Why does a late bus get later?',
+            'What do drivers call this?',
+            'How do some cities fix it?',
+            'Which word in the text means a middle figure worked out from many numbers?',
+          ],
+          sentenceStructure: {
+            subjects: ['The bus', 'The driver', 'The passengers', 'The timetable', 'We'],
+            verbs: ['waited', 'loaded', 'caught up', 'held', 'arrived'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Explain something that goes wrong on its own, without anybody making a mistake. Why does it happen?',
+            support: {
+              wordBank: ['timetable', 'gathered', 'load', 'bunching', 'average', 'gap', 'promise'],
+            },
+          },
+          reviewWords: [
+            { word: 'shelter', clue: 'the covered place you wait for a bus in', from: '2026-07-29' },
+            { word: 'driver', clue: 'the person at the wheel of the bus', from: '2026-07-29' },
+            { word: 'annoyed', clue: 'mildly angry about something small', from: '2026-07-29' },
+            { word: 'hour', clue: 'sixty minutes', from: '2026-07-28' },
+            { word: 'arrive', clue: 'to get to the place you were going', from: '2026-07-28' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'Yesterday he read a story about one early bus; today he reads the system behind it. hour and arrive are on their third meeting. Question 5 (average) is the vocabulary question.',
+        },
+        {
+          reading: {
+            title: 'Why Wool Keeps You Warm When It Is Wet',
+            passage:
+              'Wool fibres are crimped rather than straight, so they trap air between them, and it is the still air rather than the fibre itself that holds the heat. Each fibre also has a waxy outer coat that pushes water away, while the inside can absorb up to a third of its own weight in moisture before it even feels damp. That is why a wool coat still works in rain when a cotton one has given up, and why a wool jumper is worth wearing in winter even after a soaking. Wool goes worn at the elbows first, because that is where the fibres are bent and rubbed most. A coat that has lasted forty years was almost certainly washed rarely and dried flat, which is the opposite of what most people do to it.',
+          },
+          questions: [
+            'What actually holds the heat in wool?',
+            'What does the waxy outer coat of a fibre do?',
+            'Why does wool wear at the elbows first?',
+            'How should wool be washed and dried?',
+            'Which word in the text means water held inside something?',
+          ],
+          sentenceStructure: {
+            subjects: ['The fibres', 'The air', 'A wool coat', 'The elbows', 'We'],
+            verbs: ['trapped', 'absorbed', 'pushed', 'lasted', 'dried'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Explain why one material is better than another for a particular job. What is the property that matters?',
+            support: {
+              wordBank: ['fibres', 'crimped', 'trap', 'waxy', 'moisture', 'cotton', 'decades'],
+            },
+          },
+          reviewWords: [
+            { word: 'wool', clue: 'the fibre that comes off a sheep', from: '2026-07-29' },
+            { word: 'elbows', clue: 'the joints in the middle of your arms', from: '2026-07-29' },
+            { word: 'lasted', clue: 'carried on existing for a long time', from: '2026-07-29' },
+            { word: 'worn', clue: 'thin and old from being used for years', from: '2026-07-28' },
+            { word: 'winter', clue: 'the coldest season', from: '2026-07-20' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'The coat on the chair yesterday becomes the physics of wool today. worn and winter are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'How a Weather Forecast Is Made',
+            passage:
+              'A forecast starts with millions of measurements: temperature, pressure, wind and moisture, taken from stations on the ground, from balloons, ships and satellites. Those numbers are fed into a model that divides the atmosphere into boxes and works out what each box will do to the one beside it. The model repeats that calculation forward in small steps, which is why a forecast for tomorrow is far more reliable than one for next Friday: every step carries forward the errors of the step before it. Presenters on the news then have to turn all of that into thirty seconds, so what you hear is already a summary of a summary, and the percentage is doing more work than the words around it.',
+          },
+          questions: [
+            'What kinds of measurements go into a forecast?',
+            'What does the model do with the atmosphere?',
+            'Why is tomorrow more reliable than next Friday?',
+            'What do presenters have to do with all of it?',
+            'Which word in the text means a shorter version of something longer?',
+          ],
+          sentenceStructure: {
+            subjects: ['The forecast', 'The model', 'The satellites', 'The presenter', 'We'],
+            verbs: ['measured', 'divided', 'repeated', 'carried', 'summarised'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Explain how something you hear every day is put together before it reaches you. What gets left out?',
+            support: {
+              wordBank: ['measurements', 'pressure', 'satellites', 'model', 'atmosphere', 'calculation', 'summary'],
+            },
+          },
+          reviewWords: [
+            { word: 'forecast', clue: 'a statement about what the weather will do', from: '2026-07-29' },
+            { word: 'presenter', clue: 'the person who reads the news on air', from: '2026-07-29' },
+            { word: 'news', clue: 'the report of what has happened today', from: '2026-07-29' },
+            { word: 'reliable', clue: 'you can depend on it', from: '2026-07-28' },
+            { word: 'repeat', clue: 'to do or say something again', from: '2026-07-20' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'The kitchen radio yesterday, the machinery behind the forecast today. reliable and repeat are on their third meeting; repeat has moved from the water cycle to a news bulletin to a calculation.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MAVERICK — Level 23 (~8.5 yrs). No letter frames.
+      // ────────────────────────────────────────────────────────
+      Maverick: [
+        {
+          reading: {
+            title: 'Why Bike Locks Are Rated',
+            passage:
+              'A bike lock is sold with a rating, and that rating measures time rather than strength. It tells you roughly how long a thief with common tools would need to get through it. Nothing chained to a fence is safe from an angle grinder; the point of a good lock is to be slower to cut than the bike beside yours. Insurers set their own ratings and will refuse a claim if the lock does not match the policy, which is worth reading before you have to defend one. Police advice is to lock through the frame rather than the wheel, and to keep the lock off the footpath, because a lock resting on concrete can be hit against it. A claim is then settled on paperwork kept at home: a bike recorded as lost rather than stolen is usually not covered.',
+          },
+          questions: [
+            'What does a lock rating actually measure?',
+            'Why is no lock completely safe?',
+            'What will an insurer do if the lock does not match the policy?',
+            'Why should a lock be kept off the footpath?',
+            'Which word in the text means the request for money you make after a loss?',
+          ],
+          sentenceStructure: {
+            subjects: ['The lock', 'The thief', 'The insurer', 'The police', 'We'],
+            verbs: ['rated', 'chained', 'refused', 'advised', 'recorded'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Explain how people try to protect something valuable, and why the protection is never complete.',
+            support: {
+              wordBank: ['rating', 'thief', 'grinder', 'insurer', 'claim', 'frame', 'receipt'],
+            },
+          },
+          reviewWords: [
+            { word: 'chained', clue: 'fastened with a chain', from: '2026-07-29' },
+            { word: 'fence', clue: 'the barrier around the edge of a property', from: '2026-07-29' },
+            { word: 'footpath', clue: 'the paved strip people walk along beside a road', from: '2026-07-29' },
+            { word: 'lost', clue: 'no longer where it should be, with nobody to blame', from: '2026-07-28' },
+            { word: 'kept', clue: 'held on to rather than thrown away', from: '2026-07-28' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'Yesterday the abandoned bike was a story about nobody deciding anything; today the same objects are explained through insurance and policing. lost and kept are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'Why Old Photographs Fade',
+            passage:
+              'A colour photograph fades because the dyes that make up the image are broken apart by light, and by heat and damp when the light is gone. The three dyes do not fail at the same rate, which is why an old photograph in a hallway drifts towards orange: the blue layer goes first. A corner of the print that the frame has always covered will stay noticeably darker than the rest. Black and white prints last far longer, because the image is made of silver rather than dye. Anything familiar hanging on the wall of a sunny room is being lost slowly in front of you. Archives keep prints flat, in the dark, at a steady temperature, and they make a copy early rather than waiting until the original has started breaking up.',
+          },
+          questions: [
+            'What breaks the dyes apart?',
+            'Why do old photographs drift towards orange?',
+            'Why do black and white prints last longer?',
+            'What do archives do differently from most families?',
+            'Which word in the text means slightly wet?',
+          ],
+          sentenceStructure: {
+            subjects: ['The photograph', 'The dyes', 'The light', 'The archive', 'We'],
+            verbs: ['faded', 'broke', 'drifted', 'copied', 'kept'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Explain how something in a house is slowly changing without anybody noticing. What would slow it down?',
+            support: {
+              wordBank: ['dyes', 'image', 'damp', 'silver', 'prints', 'archives', 'steady'],
+            },
+          },
+          reviewWords: [
+            { word: 'photograph', clue: 'a picture made with a camera', from: '2026-07-29' },
+            { word: 'hallway', clue: 'the passage inside a house that other rooms open off', from: '2026-07-29' },
+            { word: 'familiar', clue: 'well known to you because you have seen it often', from: '2026-07-29' },
+            { word: 'room', clue: 'a part of a house with its own walls and door', from: '2026-07-28' },
+            { word: 'corner', clue: 'the place where two edges or walls meet', from: '2026-07-28' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'The unnamed photograph yesterday, the chemistry of fading today. room and corner are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'Why Clocks Chime',
+            passage:
+              'Before clocks were common in houses, a chime was the only way most people knew the time. A bell carried much further than a clock face could be seen, so towers rang on the hour and at noon, and work in the fields was set by the sound. Mechanical clocks in houses kept the habit long after it had stopped being useful. A striking clock has a second train of gears, wound separately from the first, that is released each hour; that is also why the strike drifts out of step with the hands if only one side has been adjusted. Guests notice a chiming clock immediately. The family stopped hearing it years ago.',
+          },
+          questions: [
+            'How did most people know the time before house clocks?',
+            'Why did a bell work better than a clock face?',
+            'What does a striking clock have that a plain one does not?',
+            'Why does the strike drift out of step with the hands?',
+            'Which word in the text means turned tight by hand?',
+          ],
+          sentenceStructure: {
+            subjects: ['The clock', 'The bell', 'The tower', 'The guests', 'We'],
+            verbs: ['rang', 'chimed', 'struck', 'wound', 'noticed'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Explain a habit or a design that has outlived the reason it was invented for. Why has nobody changed it?',
+            support: {
+              wordBank: ['bell', 'tower', 'mechanical', 'gears', 'wound', 'strike', 'released'],
+            },
+          },
+          reviewWords: [
+            { word: 'chimes', clue: 'the sound a clock makes on the hour', from: '2026-07-29' },
+            { word: 'adjusted', clue: 'changed slightly to make it right', from: '2026-07-29' },
+            { word: 'guests', clue: 'people visiting your house', from: '2026-07-29' },
+            { word: 'clock', clue: 'you read the time from it', from: '2026-07-20' },
+            { word: 'noon', clue: 'twelve in the middle of the day', from: '2026-07-20' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'This is the direct pair to yesterday\'s fast clock: the story first, the mechanism second. clock and noon are on their third meeting and should be retired after this.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOCASTA — High level. Explanation and analysis.
+      // ────────────────────────────────────────────────────────
+      Jocasta: [
+        {
+          reading: {
+            title: 'Why Recipes Are Written the Way They Are',
+            passage:
+              'A printed recipe is a compromise between two readers: the one who has made the dish before and the one who has not. The first wants a list; the second wants a reason. Most published recipes serve the first, which is why they are so easy to follow and so hard to learn from. The order is not arbitrary either. Ingredients are listed in the order they are used, quantities are given before the verb, and anything that has to happen early is printed in bold or set in the margin, because the writer knows the reader will not read to the end first. What a recipe cannot record is judgement: how the dough should feel, when to stop. It can describe a temperature but never a texture. That is why a book with nothing written in it by hand is usually a book nobody has cooked from.',
+          },
+          questions: [
+            'Which two readers is a recipe trying to serve at once?',
+            'Why are most published recipes hard to learn from?',
+            'Why are ingredients listed in the order they are used?',
+            'What can a recipe not pass on?',
+            'Which word in the text means not chosen for any particular reason?',
+          ],
+          sentenceStructure: {
+            subjects: ['A recipe', 'The writer', 'The reader', 'The margin', 'We'],
+            verbs: ['listed', 'printed', 'described', 'recorded', 'assumed'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Explain why a set of written instructions can never fully replace being shown. What is always lost?',
+            support: {
+              wordBank: ['compromise', 'ingredients', 'quantities', 'arbitrary', 'bold', 'judgement', 'texture'],
+              sentenceStarters: [
+                'What a written instruction can carry, and what it cannot, are...',
+                'The book that has been used most is usually the one that...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'recipe', clue: 'a written set of instructions for cooking a dish', from: '2026-07-29' },
+            { word: 'printed', clue: 'produced by a machine rather than written by hand', from: '2026-07-29' },
+            { word: 'margin', clue: 'the blank strip down the side of a page', from: '2026-07-29' },
+            { word: 'record', clue: 'an account kept so that something is not forgotten', from: '2026-07-20' },
+            { word: 'describe', clue: 'to say what something is like', from: '2026-07-28' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'Yesterday she read the notes in the margin as a family record; today the same three words explain how instructions are designed. record and describe are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'How Silence Works in a Negotiation',
+            passage:
+              'In a formal negotiation, silence is a tool rather than a gap. Trained negotiators leave a long pause after making an offer, because most people cannot tolerate an unfilled space and will bid against themselves simply to end it. The instructions given to new staff in some firms are explicit: make the offer, then say nothing at all. What looks like politeness is often technique, and it is a practice that has to be taught, because holding a silence is not natural. The same silence functions completely differently between people who know each other well, where it can be an arrangement both sides have agreed to without ever discussing it. In both cases the meaning is supplied by the listener, which is exactly what makes silence useful and exactly what makes it easy to misread.',
+          },
+          questions: [
+            'What is silence used as in a negotiation?',
+            'Why does a pause after an offer work?',
+            'What instructions do some firms give new staff?',
+            'How is silence different between people who know each other well?',
+            'Which word in the text means to put up with something uncomfortable?',
+          ],
+          sentenceStructure: {
+            subjects: ['The negotiator', 'The silence', 'The listener', 'The offer', 'We'],
+            verbs: ['paused', 'tolerated', 'supplied', 'taught', 'misread'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Explain how the same behaviour can read as respect in one setting and as pressure in another.',
+            support: {
+              wordBank: ['negotiation', 'pause', 'offer', 'tolerate', 'technique', 'functions', 'listener'],
+              sentenceStarters: [
+                'A pause reads as respect or as pressure depending on...',
+                'What a silence means is decided not by the speaker but by...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'formal', clue: 'following official rules rather than being relaxed', from: '2026-07-29' },
+            { word: 'silence', clue: 'the absence of any speech or sound', from: '2026-07-29' },
+            { word: 'politeness', clue: 'good manners shown towards other people', from: '2026-07-29' },
+            { word: 'useful', clue: 'worth having because it helps you do something', from: '2026-07-28' },
+            { word: 'practice', clue: 'something done so regularly it has become a habit', from: '2026-07-28' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'The family silence yesterday was unexplained; this one is deliberate and taught. That contrast is the discussion. useful and practice are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'Why Some Words Do Not Translate',
+            passage:
+              'Every language carries distinctions that other languages do not bother to mark. A word is hardest to translate when it names something a culture has decided is worth naming once: a specific kind of obligation, a shade of light, a relationship. An English version is available in almost every case, but it arrives as a phrase rather than a word, and a phrase asks the listener to assemble something that the original hands over whole. Translators talk about loss as a matter of course; the argument is only ever about which loss is acceptable. English borrows heavily, which hides the problem rather than solving it, because a borrowed word carried across without its context keeps the shape and drops the weight. A confident translation is often more misleading than an awkward one, because it stops the reader asking what is missing.',
+          },
+          questions: [
+            'What makes a word hardest to translate?',
+            'Why is a phrase not the same as a word?',
+            'What do translators argue about?',
+            'Why does borrowing hide the problem rather than solving it?',
+            'Which word in the text means a duty you owe to somebody?',
+          ],
+          sentenceStructure: {
+            subjects: ['A language', 'The translator', 'A borrowed word', 'The reader', 'We'],
+            verbs: ['marked', 'translated', 'borrowed', 'carried', 'lost'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Explain what is lost when something is moved from one language, form or medium into another.',
+            support: {
+              wordBank: ['distinctions', 'obligation', 'shade', 'assemble', 'translators', 'loss', 'context'],
+              sentenceStarters: [
+                'What survives the crossing is the shape, but what is lost is...',
+                'A confident translation can be worse than an awkward one because...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'translate', clue: 'to put something into another language', from: '2026-07-29' },
+            { word: 'carried', clue: 'taken across from one place to another', from: '2026-07-29' },
+            { word: 'misleading', clue: 'giving a false impression while seeming correct', from: '2026-07-29' },
+            { word: 'borrow', clue: 'to take a word from another language into your own', from: '2026-07-20' },
+            { word: 'version', clue: 'one form of something that exists in more than one form', from: '2026-07-28' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'Yesterday Rania refused to translate a word; today the reason is set out formally. borrow and version are on their third meeting. This set closes the pair deliberately.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  CODY — High level. Same shape as Jocasta.
+      // ────────────────────────────────────────────────────────
+      Cody: [
+        {
+          reading: {
+            title: 'Why Directions Given Once Do Not Work',
+            passage:
+              'Directions given aloud fail for a structural reason: speech delivers a route in a single fixed order, while memory stores it as a set of separate turns with no reliable way of checking which one comes next. A map is worse for some people and better for others, because it hands over the whole route at once and asks the reader to convert it. What works better than either is a landmark at every decision point, since a landmark is checked by recognition rather than by recall, and recognition survives interruption in a way that recall does not. This is also why people who can drive a route confidently often cannot describe it: the pathway was built by repetition, and repetition does not produce a description.',
+          },
+          questions: [
+            'Why do spoken directions fail?',
+            'What does a map ask the reader to do?',
+            'Why do landmarks work better than turns?',
+            'Why can confident drivers not describe their own route?',
+            'Which word in the text means knowing something again when you see it?',
+          ],
+          sentenceStructure: {
+            subjects: ['Directions', 'A map', 'A landmark', 'The pathway', 'We'],
+            verbs: ['failed', 'converted', 'recognised', 'survived', 'described'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Explain why one way of storing knowledge works better than another for a task you know well.',
+            support: {
+              wordBank: ['structural', 'landmark', 'decision point', 'recognition', 'recall', 'interruption', 'convert'],
+              sentenceStarters: [
+                'What can be followed and what can be explained are...',
+                'Recognition survives interruption in a way that recall...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'directions', clue: 'instructions telling somebody how to get somewhere', from: '2026-07-29' },
+            { word: 'aloud', clue: 'out loud, so it can be heard', from: '2026-07-29' },
+            { word: 'map', clue: 'a drawing of an area seen from above', from: '2026-07-29' },
+            { word: 'pathway', clue: 'a route the brain lays down through use', from: '2026-07-20' },
+            { word: 'repetition', clue: 'doing the same thing again and again', from: '2026-07-20' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'Yesterday he wrote about a route he could not draw; today the same phenomenon is explained. pathway and repetition are on their third meeting and can be retired.',
+        },
+        {
+          reading: {
+            title: 'How Habits Are Actually Broken',
+            passage:
+              'The research on habits is consistent about one thing: intention is the weakest tool available. A habit runs from a trigger, and the trigger is usually a place or a time rather than a decision. Removing the trigger works better than resisting the response, which is why people who move house find it easier to stop something they have stopped trying to stop for years. Where the trigger cannot be removed, the reliable method is substitution: keep the cue, change what follows it. Willpower is not useless, but it is a quality that runs down over the course of a day, and anything that depends on it tends to fail in the evening. Most people who have stopped something did not out-argue the habit. They changed the room it lived in.',
+          },
+          questions: [
+            'What does the research say about intention?',
+            'What does a habit run from?',
+            'Why do people who move house find it easier to stop?',
+            'What is the reliable method when the trigger cannot be removed?',
+            'Which word in the text means putting one thing in the place of another?',
+          ],
+          sentenceStructure: {
+            subjects: ['The habit', 'The trigger', 'Willpower', 'The research', 'We'],
+            verbs: ['ran', 'stopped', 'resisted', 'substituted', 'changed'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Explain why changing a situation works better than trying harder. Use something you have actually tried to change.',
+            support: {
+              wordBank: ['research', 'consistent', 'resisting', 'substitution', 'cue', 'willpower', 'response'],
+              sentenceStarters: [
+                'The part of a habit that can actually be changed is...',
+                'Anything that depends on willpower fails in the evening because...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'habit', clue: 'something done so often it happens without deciding', from: '2026-07-29' },
+            { word: 'intention', clue: 'what you mean to do', from: '2026-07-29' },
+            { word: 'quality', clue: 'a feature or characteristic of something', from: '2026-07-29' },
+            { word: 'trigger', clue: 'the thing that sets off an automatic response', from: '2026-07-20' },
+            { word: 'stopped', clue: 'came to an end', from: '2026-07-28' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'Yesterday he described his own 8:40 habit; today the mechanism is general. trigger and stopped are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'Why Rehearsing a Conversation Rarely Helps',
+            passage:
+              'A rehearsed conversation assumes the other person will follow the script, and the value of the rehearsal collapses the moment they do not. What preparation reliably does is lower the cost of exposure: knowing roughly what you want makes the first sentence possible, and the first sentence is where most difficult conversations are lost. Beyond that point, rehearsal starts to cost something. A speaker working from a draft in their head listens less, because attention is being spent checking the script against what is actually being said. Writers know the equivalent problem: a message reread too many times stops sounding like anybody at all. Preparation protects the first sentence and almost nothing after it, so the useful version is a single line and a decision about what you will not say.',
+          },
+          questions: [
+            'What does a rehearsed conversation assume?',
+            'What does preparation reliably do?',
+            'Why does a rehearsed speaker listen less?',
+            'What equivalent problem do writers have?',
+            'Which word in the text means equal in value or effect?',
+          ],
+          sentenceStructure: {
+            subjects: ['The rehearsal', 'The script', 'The speaker', 'Preparation', 'We'],
+            verbs: ['collapsed', 'protected', 'listened', 'reread', 'decided'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Explain the point at which preparing for something stops helping and starts getting in the way.',
+            support: {
+              wordBank: ['script', 'collapses', 'preparation', 'attention', 'equivalent', 'sentence', 'decision'],
+              sentenceStarters: [
+                'Preparation helps up to the first sentence, after which...',
+                'A message read too many times stops...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'rehearsed', clue: 'practised in advance before the real event', from: '2026-07-29' },
+            { word: 'conversation', clue: 'a talk between two or more people', from: '2026-07-29' },
+            { word: 'protects', clue: 'keeps something safe from harm or cost', from: '2026-07-29' },
+            { word: 'draft', clue: 'an early version, written before the final one', from: '2026-07-28' },
+            { word: 'reread', clue: 'read again', from: '2026-07-28' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'This is the analytical version of yesterday\'s narrative about the coach. draft and reread are on their third meeting; both can come out of the rotation if he writes them from the clue.',
+        },
+      ],
+    },
+  },
+
+  // ══════════════════════════════════════════════════════════
   //  29 JULY 2026 — first session built on the spiral pattern.
   //  Each set: 7 new words (5 for ESOL) + review words carried
   //  forward from 28 July and 20 July. Review words are met

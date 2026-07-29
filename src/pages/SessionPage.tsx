@@ -158,7 +158,7 @@ export default function SessionPage() {
               {activity.reviewWords.map((r, i) => (
                 <div key={i} className="grid grid-cols-[1fr_90px_1fr_1fr] gap-2 items-center">
                   <span className="text-sm text-gray-700">{r.clue}</span>
-                  <span className="font-mono text-sm text-gray-400 tracking-widest">{r.letters ?? ''}</span>
+                  <span className="text-sm font-semibold text-gray-500 tracking-widest">{r.letters ?? ''}</span>
                   <div className="border-b-2 border-gray-300 h-7" />
                   <div className="border-b-2 border-gray-300 h-7" />
                 </div>
