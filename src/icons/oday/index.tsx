@@ -504,6 +504,43 @@ export const HogIcon = ({ size }: IconProps) => (
   </S>
 );
 
+// mouse — NOT REGISTERED. At worksheet size (54px) this silhouette reads as a
+// fish or a bird, not a mouse, so M uses the existing `mat` picture instead.
+// Do not wire this into ICONS until it is redrawn and checked at 54px.
+export const MouseIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* one outline: rounded rear on the left tapering to a snout on the right */}
+    <path d="M90 64 C 80 50, 64 44, 48 46 C 30 48, 20 56, 20 64 C 20 73, 34 78, 52 77 C 70 76, 84 72, 90 64 Z" />
+    {/* big round ear, clearly clear of the back line */}
+    <circle cx="56" cy="40" r="11" />
+    {/* eye */}
+    <circle cx="78" cy="60" r="1.8" fill="currentColor" />
+    {/* nose */}
+    <circle cx="88" cy="64" r="2" fill="currentColor" />
+    {/* long thin tail sweeping away to the left */}
+    <path d="M20 66 C 12 74, 2 70, 5 60" />
+    {/* legs */}
+    <path d="M38 77 L 38 85" />
+    <path d="M60 76 L 60 84" />
+  </S>
+);
+
+// nut (acorn — cap with hatching, rounded shell)
+export const NutIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* stalk */}
+    <path d="M50 28 L 50 20" />
+    {/* cap */}
+    <path d="M28 44 Q 50 24, 72 44 Z" />
+    {/* cap hatching */}
+    <path d="M38 40 L 42 45" />
+    <path d="M50 36 L 50 44" />
+    <path d="M62 40 L 58 45" />
+    {/* shell */}
+    <path d="M28 44 C 28 68, 38 84, 50 84 C 62 84, 72 68, 72 44" />
+  </S>
+);
+
 // Colour swatches (for colour intro)
 export const RedSwatchIcon = ({ size }: IconProps) => (
   <svg width={size} height={size} viewBox="0 0 100 100">
@@ -556,6 +593,7 @@ const ICONS: Record<string, React.FC<IconProps>> = {
   fog: FogIcon,
   jog: JogIcon,
   hog: HogIcon,
+  nut: NutIcon,
   red: RedSwatchIcon,
   blue: BlueSwatchIcon,
   green: GreenSwatchIcon,

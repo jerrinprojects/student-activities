@@ -582,9 +582,81 @@ const w2d2: OdayDay = {
     'Focus: letters K and L. "we" is the second Week 2 sight word — revise "am" from yesterday. CVC introduces jog and hog, extending the -og family. Missing letter varies (first, middle, last) so student practises each position.',
 };
 
+// Week 2 Days 3–5 were not built while the class was on other work, so this
+// picks the sequence up where Day 2 left off rather than jumping to Week 3.
+const w2d3: OdayDay = {
+  date: '2026-08-03',
+  week: 2,
+  day: 3,
+  focus: 'Letters M–N · Sight word "is" · CVC: dog, hog, log',
+  activities: [
+    {
+      type: 'warmup-trace',
+      title: 'Warm-up · Trace',
+      instr: 'Trace over each shape three times. Say the letter as you write.',
+      words: ['Oday', 'M', 'N'],
+    },
+    {
+      type: 'alphabet-focus',
+      title: 'Letters Today · M N',
+      instr: 'Trace the letter. Say the sound. Look at the picture.',
+      letters: [
+        { letter: 'M', iconKey: 'mat', word: 'mat' },
+        { letter: 'N', iconKey: 'nut', word: 'nut' },
+      ],
+    },
+    {
+      type: 'sight-word',
+      title: 'Sight Word · is',
+      instr: 'Trace five times. Copy five times. Then circle the word is in each sentence.',
+      words: ['is'],
+      circleSentences: ['The dog is big.', 'It is a nut.', 'The sun is hot.'],
+    },
+    {
+      type: 'picture-word-match',
+      title: 'Match Picture to Word',
+      instr: 'Draw a line from each picture to the correct word. Then copy each word.',
+      pairs: [
+        { iconKey: 'mat', word: 'mat' },
+        { iconKey: 'nut', word: 'nut' },
+        { iconKey: 'kite', word: 'kite' },
+        { iconKey: 'leaf', word: 'leaf' },
+        { iconKey: 'ink', word: 'ink' },
+        { iconKey: 'jam', word: 'jam' },
+        { iconKey: 'hog', word: 'hog' },
+        { iconKey: 'jog', word: 'jog' },
+      ],
+    },
+    {
+      type: 'cvc-build',
+      title: 'Build the Word · -og family',
+      instr: 'Look at the picture. Write the missing letter to finish the word.',
+      items: [
+        { iconKey: 'log', word: 'log', missing: 0 },
+        { iconKey: 'hog', word: 'hog', missing: 1 },
+        { iconKey: 'dog', word: 'dog', missing: 2 },
+      ],
+    },
+    {
+      type: 'colour-label',
+      title: 'Colour and Label',
+      instr: 'Colour the picture. Then write the word on the line.',
+      items: [{ iconKey: 'nut', word: 'nut' }],
+    },
+    {
+      type: 'sentence-copy',
+      title: 'Copy the Sentence',
+      instr: 'Read the sentence with your teacher. Copy it on the line below.',
+      sentences: [{ iconKey: 'nut', sentence: 'The nut is on the mat.' }],
+    },
+  ],
+  teacherNote:
+    'Letters M and N. M uses the mat picture he already knows from the -at family in Week 1, which makes this a revision as well; N has a new picture (nut). "is" is the third Week 2 sight word — revise "am" and "we" first, then show that "is" goes with one thing (the dog is) while "am" goes with I. The -og family is revision now, so the missing letter moves through all three positions: first, middle, last. Note that Week 2 Days 3-5 were not run last week, so this follows straight on from Day 2 rather than starting Week 3.',
+};
+
 // ── EXPORT ────────────────────────────────────────────────────────
 
-export const ODAY_SESSIONS: OdayDay[] = [w1d1, w1d2, w1d3, w1d4, w1d5, w2d1, w2d2];
+export const ODAY_SESSIONS: OdayDay[] = [w1d1, w1d2, w1d3, w1d4, w1d5, w2d1, w2d2, w2d3];
 
 export function findOdayDay(date: string): OdayDay | undefined {
   return ODAY_SESSIONS.find((d) => d.date === date);
