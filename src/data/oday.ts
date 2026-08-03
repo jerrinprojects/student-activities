@@ -654,9 +654,79 @@ const w2d3: OdayDay = {
     'Letters M and N. M uses the mat picture he already knows from the -at family in Week 1, which makes this a revision as well; N has a new picture (nut). "is" is the third Week 2 sight word — revise "am" and "we" first, then show that "is" goes with one thing (the dog is) while "am" goes with I. The -og family is revision now, so the missing letter moves through all three positions: first, middle, last. Note that Week 2 Days 3-5 were not run last week, so this follows straight on from Day 2 rather than starting Week 3.',
 };
 
+const w2d4: OdayDay = {
+  date: '2026-08-04',
+  week: 2,
+  day: 4,
+  focus: 'Letters O–P · All Week 2 sight words · CVC review + write',
+  activities: [
+    {
+      type: 'warmup-trace',
+      title: 'Warm-up · Trace',
+      instr: 'Trace over each shape three times. Say the letter as you write.',
+      words: ['Oday', 'O', 'P'],
+    },
+    {
+      type: 'alphabet-focus',
+      title: 'Letters Today · O P',
+      instr: 'Trace the letter. Say the sound. Look at the picture.',
+      letters: [
+        { letter: 'O', iconKey: 'octopus', word: 'octopus' },
+        { letter: 'P', iconKey: 'pen', word: 'pen' },
+      ],
+    },
+    {
+      type: 'sight-word',
+      title: 'Sight Words · am · we · is',
+      instr: 'Trace each word three times. Then circle the sight word in each sentence.',
+      words: ['am', 'we', 'is'],
+      circleSentences: ['I am at school.', 'We can see the sun.', 'The pen is red.'],
+    },
+    {
+      type: 'picture-word-match',
+      title: 'Match Picture to Word',
+      instr: 'Draw a line from each picture to the correct word. Then copy each word.',
+      pairs: [
+        { iconKey: 'octopus', word: 'octopus' },
+        { iconKey: 'pen', word: 'pen' },
+        { iconKey: 'nut', word: 'nut' },
+        { iconKey: 'mat', word: 'mat' },
+        { iconKey: 'kite', word: 'kite' },
+        { iconKey: 'leaf', word: 'leaf' },
+        { iconKey: 'ink', word: 'ink' },
+        { iconKey: 'jam', word: 'jam' },
+      ],
+    },
+    {
+      type: 'cvc-build',
+      title: 'Build the Word · Write the whole word',
+      instr: 'Look at the picture. Write the whole word underneath.',
+      items: [
+        { iconKey: 'dog', word: 'dog', missing: -1 },
+        { iconKey: 'log', word: 'log', missing: -1 },
+        { iconKey: 'hog', word: 'hog', missing: -1 },
+      ],
+    },
+    {
+      type: 'colour-label',
+      title: 'Colour and Label',
+      instr: 'Colour the picture. Then write the word on the line.',
+      items: [{ iconKey: 'octopus', word: 'octopus' }],
+    },
+    {
+      type: 'sentence-copy',
+      title: 'Copy the Sentence',
+      instr: 'Read the sentence with your teacher. Copy it on the line below.',
+      sentences: [{ iconKey: 'pen', sentence: 'The pen is red.' }],
+    },
+  ],
+  teacherNote:
+    'Letters O and P, and a consolidation day for all three Week 2 sight words (am, we, is). O uses a new octopus picture; P uses the pen he already knows from Week 1. The CVC task is now the whole word with no letters shown (missing: -1), which is the same step up Week 1 took on its Day 4. "The pen is red" carries the colour work as well as the sight word.',
+};
+
 // ── EXPORT ────────────────────────────────────────────────────────
 
-export const ODAY_SESSIONS: OdayDay[] = [w1d1, w1d2, w1d3, w1d4, w1d5, w2d1, w2d2, w2d3];
+export const ODAY_SESSIONS: OdayDay[] = [w1d1, w1d2, w1d3, w1d4, w1d5, w2d1, w2d2, w2d3, w2d4];
 
 export function findOdayDay(date: string): OdayDay | undefined {
   return ODAY_SESSIONS.find((d) => d.date === date);

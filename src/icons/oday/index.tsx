@@ -541,6 +541,24 @@ export const NutIcon = ({ size }: IconProps) => (
   </S>
 );
 
+// octopus (dome head, two eyes, eight curling arms)
+export const OctopusIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* head */}
+    <path d="M26 50 C 26 28, 74 28, 74 50 C 74 58, 63 63, 50 63 C 37 63, 26 58, 26 50 Z" />
+    {/* eyes */}
+    <circle cx="41" cy="46" r="2.4" fill="currentColor" />
+    <circle cx="59" cy="46" r="2.4" fill="currentColor" />
+    {/* arms */}
+    <path d="M28 58 C 22 68, 16 72, 12 82" />
+    <path d="M36 62 C 32 72, 28 78, 24 88" />
+    <path d="M45 63 C 44 73, 42 80, 40 90" />
+    <path d="M55 63 C 56 73, 58 80, 60 90" />
+    <path d="M64 62 C 68 72, 72 78, 76 88" />
+    <path d="M72 58 C 78 68, 84 72, 88 82" />
+  </S>
+);
+
 // Colour swatches (for colour intro)
 export const RedSwatchIcon = ({ size }: IconProps) => (
   <svg width={size} height={size} viewBox="0 0 100 100">
@@ -594,6 +612,7 @@ const ICONS: Record<string, React.FC<IconProps>> = {
   jog: JogIcon,
   hog: HogIcon,
   nut: NutIcon,
+  octopus: OctopusIcon,
   red: RedSwatchIcon,
   blue: BlueSwatchIcon,
   green: GreenSwatchIcon,

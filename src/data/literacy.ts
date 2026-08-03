@@ -74,6 +74,943 @@ export interface LiteracySession {
 export const LITERACY_SESSIONS: LiteracySession[] = [
 
   // ══════════════════════════════════════════════════════════
+  //  4 AUGUST 2026 — spiral session 4. Third text type: this
+  //  session is OPINION / ARGUMENT. The juniors give a reason
+  //  ("I think X because Y"); the seniors concede a point
+  //  before answering it. Every set is written about the same
+  //  material the student has already read as a story and as
+  //  an explanation, so the words are old and only the moves
+  //  are new.
+  //  Each set: 3 words from 3 August + 2 on their 3rd meeting.
+  // ══════════════════════════════════════════════════════════
+  {
+    date: '2026-08-04',
+    activities: {
+
+      // ────────────────────────────────────────────────────────
+      //  PHARRELL — Level 7 (~5 yrs). "I think ... because ..."
+      // ────────────────────────────────────────────────────────
+      Pharrell: [
+        {
+          reading: {
+            title: 'Why I Like Birds',
+            passage:
+              'I think birds are the best animals to watch. You do not have to feed them or clean up after them. In our garden there is a nest in the hedge. The baby birds open their beak wide when Mum bird comes back. Their feathers are soft and grey. Last week I found an egg shell on the grass under it. I like birds because you can watch them all day and they do not cost anything.',
+          },
+          questions: [
+            'What does the writer think is the best animal to watch?',
+            'Where is the nest?',
+            'Why does the writer like birds?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The birds', 'Mum bird', 'The nest', 'We'],
+            verbs: ['like', 'watched', 'found', 'came back', 'cost'],
+          },
+          writing: {
+            prompt: 'Write about an animal you like best. Say why you like it.',
+            support: {
+              wordBank: ['birds', 'best', 'watch', 'feed', 'feathers', 'garden', 'because'],
+            },
+          },
+          reviewWords: [
+            { word: 'nest', clue: 'a bird builds this to keep its eggs in', letters: 'n _ _ _', from: '2026-08-03' },
+            { word: 'beak', clue: 'a bird opens this to eat', letters: 'b _ _ _', from: '2026-08-03' },
+            { word: 'baby', clue: 'a very young child or animal', letters: 'b _ _ _', from: '2026-08-03' },
+            { word: 'egg', clue: 'a bird comes out of this', letters: 'e _ _', from: '2026-07-30' },
+            { word: 'soft', clue: 'not hard, nice to touch', letters: 's _ _ _', from: '2026-07-30' },
+          ],
+          wordCards: ['I', 'like', 'birds', 'because', 'they', 'are', 'soft', '.'],
+          writingLines: 5,
+          teacherNote:
+            'New text type: an opinion with a reason. The word to teach today is "because" — it is on the word card strip so he can physically put the reason after it. egg and soft are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'Food Tastes Better Outside',
+            passage:
+              'I think food tastes better when you eat it outside. At a barbecue you can smell the meat before you get any. You can hold your plate on your knees and nobody tells you to sit up. My favourite is sweetcorn with butter on it. Dad puts a pile of it on the table and we all take one. Inside, the same food does not taste the same to me. That is why I like the summer best.',
+          },
+          questions: [
+            'What does the writer think about food outside?',
+            'What is the writer\'s favourite?',
+            'Why does the writer like summer best?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Dad', 'The meat', 'The sweetcorn', 'We'],
+            verbs: ['ate', 'smelled', 'held', 'liked', 'took'],
+          },
+          writing: {
+            prompt: 'Write about food you like best. Where do you like to eat it? Say why.',
+            support: {
+              wordBank: ['better', 'smell', 'knees', 'favourite', 'butter', 'summer', 'nobody'],
+            },
+          },
+          reviewWords: [
+            { word: 'outside', clue: 'not indoors', letters: 'o _ _ _ _ _ _', from: '2026-08-03' },
+            { word: 'meat', clue: 'the part of an animal that we eat', letters: 'm _ _ _', from: '2026-08-03' },
+            { word: 'sweetcorn', clue: 'yellow seeds on a cob that you eat with butter', letters: 's _ _ _ _ _ _ _ _', from: '2026-08-03' },
+            { word: 'taste', clue: 'you do this with your tongue', letters: 't _ _ _ _', from: '2026-07-30' },
+            { word: 'pile', clue: 'a lot of things on top of each other', letters: 'p _ _ _', from: '2026-07-30' },
+          ],
+          wordCards: ['Food', 'tastes', 'better', 'outside', '.'],
+          writingLines: 5,
+          teacherNote:
+            'Sound focus: double letters in the middle (butter, summer, better, nobody). taste and pile are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'The Beach Is Better Than the Pool',
+            passage:
+              'I think the beach is better than the pool. At the pool you just swim up and down. At the beach the tide comes in and goes out, so it is different every time you go. You can hold a crab in your hand if you are careful. You can look under a stone to see what likes to hide there. The water is cold at first but you get used to it. The best part is that nobody tells you to get out.',
+          },
+          questions: [
+            'What does the writer think is better?',
+            'What can you hold in your hand?',
+            'What is the best part?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The tide', 'A crab', 'The water', 'We'],
+            verbs: ['swam', 'held', 'looked', 'hid', 'liked'],
+          },
+          writing: {
+            prompt: 'Write about a place you like better than another place. Say why you like it.',
+            support: {
+              wordBank: ['pool', 'swim', 'different', 'careful', 'cold', 'used', 'part'],
+            },
+          },
+          reviewWords: [
+            { word: 'tide', clue: 'the sea coming in and going out', letters: 't _ _ _', from: '2026-08-03' },
+            { word: 'hold', clue: 'to keep something in your hand', letters: 'h _ _ _', from: '2026-08-03' },
+            { word: 'hand', clue: 'you have five fingers on it', letters: 'h _ _ _', from: '2026-08-03' },
+            { word: 'stone', clue: 'a small hard rock', letters: 's _ _ _ _', from: '2026-07-30' },
+            { word: 'hide', clue: 'to go where nobody can see you', letters: 'h _ _ _', from: '2026-07-30' },
+          ],
+          wordCards: ['The', 'beach', 'is', 'better', 'than', 'the', 'pool', '.'],
+          writingLines: 5,
+          teacherNote:
+            'Sound focus: oo (pool, look). "better than" is the comparing phrase to teach here. stone and hide are on their third meeting.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JIERRY — Level 10, ESOL (Mandarin)
+      // ────────────────────────────────────────────────────────
+      Jierry: [
+        {
+          reading: {
+            title: 'Everyone Should Have a Turn in Goal',
+            passage:
+              'I think every player should have a turn in goal. Before Thursday I thought the keeper had the easiest job on the field, because you stand still for most of the game. That is not true. You have to watch the ball the whole time, and when you have missed one, everybody in the ground sees it. Now when our keeper lets a goal in, I do not say anything to him. Our coach says a team where everyone has played in goal argues less. I think he is right.',
+          },
+          questions: [
+            'What did the writer think before Thursday?',
+            'Why is being a keeper hard?',
+            'What does the coach say?',
+            'Find the word in the text that means 教练.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The keeper', 'The coach', 'The team', 'We'],
+            verbs: ['played', 'watched', 'missed', 'said', 'argued'],
+            translations: { 'I': '我', 'The keeper': '守门员', 'The coach': '教练', 'The team': '球队', 'We': '我们', 'played': '打', 'watched': '看', 'missed': '错过', 'said': '说', 'argued': '争吵' },
+          },
+          writing: {
+            prompt: 'Write about a job in a team or a class that people think is easy. Say why you think it is not.',
+            promptTranslation: '写一写团队或班级里大家觉得很轻松的一个角色。说说你为什么认为它并不轻松。',
+            support: {
+              vocabularyList: [
+                { word: 'turn', translation: '轮流', language: 'Chinese' },
+                { word: 'easiest', translation: '最容易的', language: 'Chinese' },
+                { word: 'still', translation: '不动', language: 'Chinese' },
+                { word: 'argues', translation: '争吵', language: 'Chinese' },
+                { word: 'right', translation: '对的', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'keeper', clue: '守门员', letters: 'k _ _ _ _ _', from: '2026-08-03' },
+            { word: 'missed', clue: '错过', letters: 'm _ _ _ _ _', from: '2026-08-03' },
+            { word: 'coach', clue: '教练', letters: 'c _ _ _ _', from: '2026-07-30' },
+            ],
+          writingLines: 6,
+          teacherNote:
+            'New text type: opinion. The move to teach is "I thought X. That is not true." — stating the wrong idea first, then correcting it. coach is on its third meeting.',
+        },
+        {
+          reading: {
+            title: 'Everyone Should Read Out Loud Once',
+            passage:
+              'I think everybody should read something out loud in front of the class at least once a year. It is not fun. My hands shake and my heart goes fast and I want to sit down again. But after you have done it once, the next time is smaller. When I read my poem I read slowly, and I found out that the class was not waiting for me to fail. They clapped. If you never stand up there you never find that out. That is why I think it should be everybody, not only the people who want to.',
+          },
+          questions: [
+            'What does the writer think everybody should do?',
+            'What happens to the writer\'s hands?',
+            'What did the writer find out?',
+            'Find the word in the text that means 心脏.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My hands', 'The class', 'My poem', 'We'],
+            verbs: ['read', 'shook', 'clapped', 'waited', 'found out'],
+            translations: { 'I': '我', 'My hands': '我的手', 'The class': '全班', 'My poem': '我的诗', 'We': '我们', 'read': '读', 'shook': '发抖', 'clapped': '鼓掌', 'waited': '等', 'found out': '发现' },
+          },
+          writing: {
+            prompt: 'Write about something you think everybody should try once, even if it is frightening. Say why.',
+            promptTranslation: '写一写你认为每个人都该尝试一次的事情，即使它让人害怕。说明理由。',
+            support: {
+              vocabularyList: [
+                { word: 'loud', translation: '大声', language: 'Chinese' },
+                { word: 'once', translation: '一次', language: 'Chinese' },
+                { word: 'fail', translation: '失败', language: 'Chinese' },
+                { word: 'everybody', translation: '每个人', language: 'Chinese' },
+                { word: 'year', translation: '年', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'poem', clue: '诗', letters: 'p _ _ _', from: '2026-08-03' },
+            { word: 'slowly', clue: '慢慢地', letters: 's _ _ _ _ _', from: '2026-08-03' },
+            { word: 'heart', clue: '心脏', letters: 'h _ _ _ _', from: '2026-07-30' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'heart has now been a body part in an explanation, a feeling in a story, and a reason in an argument. Third meeting: retire it if he writes it from the Chinese.',
+        },
+        {
+          reading: {
+            title: 'Making It Yourself Is Worth the Time',
+            passage:
+              'Making dumplings takes two hours and eating them takes ten minutes. My cousin says that is a bad deal and that we should buy them frozen. I do not agree. When you make the filling yourself you can put in what you like, and you know exactly what is in it. There is another reason too. Nobody talks in our kitchen when the television is on, but everybody talks while we are folding. Then the lid goes on and we all sit down together. Frozen ones do not do that part.',
+          },
+          questions: [
+            'How long does it take to make dumplings?',
+            'What does the cousin say?',
+            'What are the writer\'s two reasons for disagreeing?',
+            'Find the word in the text that means 锅盖.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My cousin', 'The dumplings', 'My family', 'We'],
+            verbs: ['made', 'folded', 'talked', 'disagreed', 'ate'],
+            translations: { 'I': '我', 'My cousin': '我表哥', 'The dumplings': '饺子', 'My family': '我的家人', 'We': '我们', 'made': '做', 'folded': '包', 'talked': '聊天', 'disagreed': '不同意', 'ate': '吃了' },
+          },
+          writing: {
+            prompt: 'Write about something that takes a long time but is worth doing. Give two reasons.',
+            promptTranslation: '写一写一件很花时间但值得做的事。给出两个理由。',
+            support: {
+              vocabularyList: [
+                { word: 'hours', translation: '小时', language: 'Chinese' },
+                { word: 'frozen', translation: '冷冻的', language: 'Chinese' },
+                { word: 'agree', translation: '同意', language: 'Chinese' },
+                { word: 'television', translation: '电视', language: 'Chinese' },
+                { word: 'together', translation: '一起', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'dumplings', clue: '饺子', letters: 'd _ _ _ _ _ _ _ _', from: '2026-08-03' },
+            { word: 'filling', clue: '馅', letters: 'f _ _ _ _ _ _', from: '2026-08-03' },
+            { word: 'lid', clue: '锅盖', letters: 'l _ _', from: '2026-07-30' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'Question 3 asks for two reasons, which is the structure he then has to use in his own writing. Point out "There is another reason too" as the joining sentence.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  BAO — Level 10, ESOL (Vietnamese)
+      // ────────────────────────────────────────────────────────
+      Bao: [
+        {
+          reading: {
+            title: 'An Old Bike Is Better Than a New One',
+            passage:
+              'I think an old bike is better than a new one. Nobody wants to take an old bike, so you can leave it outside the shop without worrying. If you scratch it, it does not matter. My cousin gave me his old one and Dad put the seat down for me. The tyre goes flat sometimes, but the petrol station has a pump you can use for nothing. A new bike would be faster, but I would worry about it all day. I would rather push an old bike up a hill than worry about a new one.',
+          },
+          questions: [
+            'What does the writer think is better?',
+            'Why can you leave an old bike outside a shop?',
+            'What would the writer worry about?',
+            'Find the word in the text that means đẩy.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My cousin', 'The old bike', 'Dad', 'We'],
+            verbs: ['gave', 'left', 'scratched', 'pushed', 'worried'],
+            translations: { 'I': 'tôi', 'My cousin': 'anh họ tôi', 'The old bike': 'chiếc xe cũ', 'Dad': 'bố', 'We': 'chúng tôi', 'gave': 'đã cho', 'left': 'để lại', 'scratched': 'làm trầy', 'pushed': 'đẩy', 'worried': 'lo lắng' },
+          },
+          writing: {
+            prompt: 'Write about something old you would keep instead of buying a new one. Say why.',
+            promptTranslation: 'Viết về một món đồ cũ bạn muốn giữ thay vì mua mới. Giải thích lý do.',
+            support: {
+              vocabularyList: [
+                { word: 'scratch', translation: 'làm trầy', language: 'Vietnamese' },
+                { word: 'matter', translation: 'quan trọng', language: 'Vietnamese' },
+                { word: 'worry', translation: 'lo lắng', language: 'Vietnamese' },
+                { word: 'rather', translation: 'thà', language: 'Vietnamese' },
+                { word: 'pump', translation: 'máy bơm', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'seat', clue: 'yên xe', letters: 's _ _ _', from: '2026-08-03' },
+            { word: 'tyre', clue: 'lốp xe', letters: 't _ _ _', from: '2026-08-03' },
+            { word: 'push', clue: 'đẩy', letters: 'p _ _ _', from: '2026-07-30' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'New text type: opinion. The move to teach is the concession — "A new bike would be faster, but..." — admitting the other side before answering it. push is on its third meeting.',
+        },
+        {
+          reading: {
+            title: 'Every House Needs a Torch by the Door',
+            passage:
+              'Every house should keep a torch in the same place, where everybody can find it. When our power went out we looked for ours for ten minutes in the dark. The fridge stopped and there was no noise at all in the house, which felt strange. Mum lit candles, but you cannot carry a candle up the stairs safely. Everything in the fridge started to spoil by the morning. Our neighbour had a torch by her door and she came over with it. Now ours lives in the drawer by the front door and we all know that.',
+          },
+          questions: [
+            'What should every house keep in the same place?',
+            'What happened when the power went out?',
+            'Who came over with a torch?',
+            'Find the word in the text that means hỏng.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The power', 'Mum', 'Our neighbour', 'We'],
+            verbs: ['went out', 'looked', 'lit', 'came', 'kept'],
+            translations: { 'I': 'tôi', 'The power': 'điện', 'Mum': 'mẹ', 'Our neighbour': 'hàng xóm', 'We': 'chúng tôi', 'went out': 'mất điện', 'looked': 'tìm', 'lit': 'thắp', 'came': 'đến', 'kept': 'giữ' },
+          },
+          writing: {
+            prompt: 'Write about something every family should keep ready at home. Say what happened to make you think so.',
+            promptTranslation: 'Viết về một thứ mọi gia đình nên chuẩn bị sẵn ở nhà. Kể chuyện gì khiến bạn nghĩ vậy.',
+            support: {
+              vocabularyList: [
+                { word: 'dark', translation: 'tối', language: 'Vietnamese' },
+                { word: 'stairs', translation: 'cầu thang', language: 'Vietnamese' },
+                { word: 'strange', translation: 'lạ', language: 'Vietnamese' },
+                { word: 'safely', translation: 'an toàn', language: 'Vietnamese' },
+                { word: 'minutes', translation: 'phút', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'noise', clue: 'tiếng ồn', letters: 'n _ _ _ _', from: '2026-08-03' },
+            { word: 'neighbour', clue: 'hàng xóm', letters: 'n _ _ _ _ _ _ _ _', from: '2026-08-03' },
+            { word: 'spoil', clue: 'hỏng', letters: 's _ _ _ _', from: '2026-07-30' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'spoil is on its third meeting: it explained why cold slows bacteria, then happened to the milk, and now it is a reason in an argument.',
+        },
+        {
+          reading: {
+            title: 'Taste It Before You Give It to Somebody',
+            passage:
+              'My brother put too much chilli in the noodles and my sister could not eat any of it. I think you should always taste your own food before you give it to somebody else. It takes two bites and ten seconds. My brother said he knew it was fine because he had made it, but he had not actually tried any. In the end he ate the whole pot himself and drank a lot of milk with it. Now he tastes everything first. He laughed about it later, but he did not laugh that night.',
+          },
+          questions: [
+            'What did the brother do wrong?',
+            'What does the writer think you should always do?',
+            'What happened to the brother in the end?',
+            'Find the word in the text that means sữa.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My brother', 'My sister', 'The noodles', 'We'],
+            verbs: ['cooked', 'tasted', 'ate', 'drank', 'laughed'],
+            translations: { 'I': 'tôi', 'My brother': 'anh trai tôi', 'My sister': 'em gái tôi', 'The noodles': 'mì', 'We': 'chúng tôi', 'cooked': 'nấu', 'tasted': 'nếm', 'ate': 'đã ăn', 'drank': 'uống', 'laughed': 'cười' },
+          },
+          writing: {
+            prompt: 'Write a rule you think people should follow, and tell the story that made you believe it.',
+            promptTranslation: 'Viết một quy tắc bạn nghĩ mọi người nên theo, và kể câu chuyện khiến bạn tin vào nó.',
+            support: {
+              vocabularyList: [
+                { word: 'taste', translation: 'nếm', language: 'Vietnamese' },
+                { word: 'always', translation: 'luôn luôn', language: 'Vietnamese' },
+                { word: 'tried', translation: 'đã thử', language: 'Vietnamese' },
+                { word: 'whole', translation: 'cả', language: 'Vietnamese' },
+                { word: 'later', translation: 'sau đó', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'bites', clue: 'miếng', letters: 'b _ _ _ _', from: '2026-08-03' },
+            { word: 'pot', clue: 'nồi', letters: 'p _ _', from: '2026-08-03' },
+            { word: 'milk', clue: 'sữa', letters: 'm _ _ _', from: '2026-07-30' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'milk is on its third meeting. This set gives him a rule plus the story behind it, which is the shape his own writing should take.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MATT — Level 10
+      // ────────────────────────────────────────────────────────
+      Matt: [
+        {
+          reading: {
+            title: 'Camping Beats a Motel',
+            passage:
+              'People say camping is uncomfortable, and the first night usually is. But a motel room is the same room in every town in the country. At a campsite you wake up when it gets light instead of when an alarm goes off, and what you hear is raindrops on the tarpaulin instead of a car park. Yes, you have to dry a towel on a rope and everything you own ends up smelling like smoke. My sleeping mat rolls up smaller than a loaf of bread. I would rather carry that than pay two hundred dollars for a room with a kettle in it.',
+          },
+          questions: [
+            'What do people say about camping?',
+            'What does the writer say is wrong with a motel room?',
+            'What does the writer admit is true about camping?',
+            'Which word in the text means not comfortable?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The campsite', 'A motel room', 'The rain', 'We'],
+            verbs: ['woke', 'carried', 'dried', 'paid', 'preferred'],
+          },
+          writing: {
+            prompt: 'Write about something people call uncomfortable that you would still choose. Admit what is bad about it first.',
+            support: {
+              wordBank: ['uncomfortable', 'motel', 'alarm', 'smoke', 'rope', 'kettle', 'loaf'],
+            },
+          },
+          reviewWords: [
+            { word: 'campsite', clue: 'the place where you pitch a tent', letters: 'c _ _ _ _ _ _ _', from: '2026-08-03' },
+            { word: 'towel', clue: 'you dry yourself with it', letters: 't _ _ _ _', from: '2026-08-03' },
+            { word: 'rolls', clue: 'what a mat does when you wind it up', letters: 'r _ _ _ _', from: '2026-08-03' },
+            { word: 'sleeping mat', clue: 'you put this under you so the cold does not come up', letters: 's _ _ _ _ _ _ _  m _ _', from: '2026-07-30' },
+            { word: 'raindrops', clue: 'the single drops of water that fall from a cloud', letters: 'r _ _ _ _ _ _ _ _', from: '2026-07-30' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'New text type: opinion. The move to teach is "Yes, ... But ..." — giving the other side a real point before answering it. Fourth tent text; sleeping mat and raindrops are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'Find Out What Is Actually Wrong',
+            passage:
+              'Everyone in my class buys new wheels when their board starts to slow down. Nine times out of ten the wheels are fine and the bearings are dirty. It takes twenty minutes and a jar of white spirit to clean them, and it costs nothing at all if somebody shows you how once. Leo showed me. Now I can do it myself, and I know what old grease looks like when it has stopped working. I am not saying never buy anything. I am saying find out what is actually wrong first, because most of the time the answer is grit.',
+          },
+          questions: [
+            'What does everyone in the class do?',
+            'What is usually actually wrong?',
+            'How long does cleaning them take?',
+            'Which word in the text means dirt in small hard pieces?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Leo', 'The bearings', 'The wheels', 'We'],
+            verbs: ['bought', 'cleaned', 'showed', 'slowed', 'found out'],
+          },
+          writing: {
+            prompt: 'Write about something people replace when they could fix it. Explain what is usually actually wrong.',
+            support: {
+              wordBank: ['buys', 'slows', 'twenty', 'costs', 'nothing', 'actually', 'answer'],
+            },
+          },
+          reviewWords: [
+            { word: 'spirit', clue: 'the clear liquid used to wash grease off parts', letters: 's _ _ _ _ _', from: '2026-08-03' },
+            { word: 'grease', clue: 'the thick oil inside a bearing', letters: 'g _ _ _ _ _', from: '2026-08-03' },
+            { word: 'grit', clue: 'dirt in small hard pieces', letters: 'g _ _ _', from: '2026-08-03' },
+            { word: 'bearings', clue: 'the small rings that let a wheel spin freely', letters: 'b _ _ _ _ _ _ _', from: '2026-07-30' },
+            { word: 'dirty', clue: 'covered in dirt', letters: 'd _ _ _ _', from: '2026-07-30' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            '"I am not saying X. I am saying Y." is the sentence pattern to lift out of this one. bearings and dirty are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'Play the Season Out',
+            passage:
+              'Half our team wanted to pull out after we lost five games in a row in the middle of winter. I am glad we did not. Nobody has energy in the middle of winter and heavy ground makes it worse, so of course we were losing. The last game of the season was on the driest field we had played on all year and we won four one. If we had stopped in July we would have finished on a two nil loss in the mud, and that would have been the whole season for us. A bad score in bad conditions is not a fair test of a team.',
+          },
+          questions: [
+            'What did half the team want to do?',
+            'Why does the writer say they were losing?',
+            'What happened in the last game?',
+            'Which word in the text means a proper way of judging something?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Our team', 'The ground', 'The season', 'We'],
+            verbs: ['lost', 'stopped', 'won', 'finished', 'stayed'],
+          },
+          writing: {
+            prompt: 'Write about a time it was worth carrying on with something that was going badly. What would you have missed?',
+            support: {
+              wordBank: ['pull out', 'row', 'glad', 'loss', 'conditions', 'fair', 'test'],
+            },
+          },
+          reviewWords: [
+            { word: 'season', clue: 'the run of games from the first to the last', letters: 's _ _ _ _ _', from: '2026-08-03' },
+            { word: 'driest', clue: 'the opposite of the wettest', letters: 'd _ _ _ _ _', from: '2026-08-03' },
+            { word: 'score', clue: 'the number of goals each side has', letters: 's _ _ _ _', from: '2026-08-03' },
+            { word: 'energy', clue: 'what you run out of at the end of a game', letters: 'e _ _ _ _ _', from: '2026-07-30' },
+            { word: 'heavy', clue: 'hard to move through, like wet ground', letters: 'h _ _ _ _', from: '2026-07-30' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'energy and heavy are on their third meeting and can be retired. This is the fourth and last text about the football season.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOSHUA — Level 23 (~8.5 yrs)
+      // ────────────────────────────────────────────────────────
+      Joshua: [
+        {
+          reading: {
+            title: 'In Defence of Complaining',
+            passage:
+              'The new timetable is better, and I still think the complaining was worth something. For two years the people at that stop complained to each other every morning, and the complaint was accurate: the bus left early. For a fortnight after the new one went up nothing changed, and then it did, and I do not believe those two things are unconnected. What is now being called a permanent change was, for a long time, eleven people saying the same thing to a driver who could not fix it himself. The promise on the poster came last, not first. Complaining gets treated as the opposite of doing something. Sometimes it is the only available form of it.',
+          },
+          questions: [
+            'What does the writer think about the complaining?',
+            'What was the complaint?',
+            'How long did nothing change for?',
+            'How does the writer say complaining is usually treated?',
+            'Which word in the text means correct in every detail?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The people', 'The complaint', 'The driver', 'We'],
+            verbs: ['complained', 'changed', 'waited', 'treated', 'believed'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write in defence of something people look down on. Give the strongest case you can for it.',
+            support: {
+              wordBank: ['accurate', 'unconnected', 'available', 'treated', 'opposite', 'eleven', 'form'],
+            },
+          },
+          reviewWords: [
+            { word: 'permanent', clue: 'meant to last for good', from: '2026-08-03' },
+            { word: 'complain', clue: 'to say out loud that something is wrong', from: '2026-08-03' },
+            { word: 'fortnight', clue: 'two weeks', from: '2026-08-03' },
+            { word: 'timetable', clue: 'the printed list of when each service runs', from: '2026-07-30' },
+            { word: 'promise', clue: 'a statement that something will definitely happen', from: '2026-07-30' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'New text type: argument. This one concedes the opposing point in the first sentence and then argues anyway, which is the harder version. timetable and promise are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'Mend It',
+            passage:
+              'The coat has been at the menders for three weeks and it will cost more than a new coat from the warehouse. My father thinks this is absurd. He is right about the arithmetic and wrong about everything else. The new coat would be cotton, it would hold moisture at the shoulders in exactly the same way, and it would be in a bin in four years. This one has already done forty, and the wool in it is better than anything on sale now. Repairing something is not sentimental. It is a bet that the object is better than whatever would replace it, and with this coat that bet is easy to make.',
+          },
+          questions: [
+            'How long has the coat been at the menders?',
+            'What is the father right about?',
+            'What does the writer say would happen to a new coat?',
+            'What does the writer say repairing actually is?',
+            'Which word in the text means completely ridiculous?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The coat', 'My father', 'The wool', 'We'],
+            verbs: ['mended', 'cost', 'argued', 'replaced', 'kept'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Argue for repairing something rather than replacing it, when repairing costs more. Answer the money argument.',
+            support: {
+              wordBank: ['warehouse', 'absurd', 'arithmetic', 'bin', 'sentimental', 'bet', 'replace'],
+            },
+          },
+          reviewWords: [
+            { word: 'repairing', clue: 'putting something broken back into working order', from: '2026-08-03' },
+            { word: 'shoulders', clue: 'where your arms join your body', from: '2026-08-03' },
+            { word: 'mended', clue: 'repaired', from: '2026-08-03' },
+            { word: 'cotton', clue: 'the plant fibre most shirts are made of', from: '2026-07-30' },
+            { word: 'moisture', clue: 'water held inside something', from: '2026-07-30' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            '"He is right about the arithmetic and wrong about everything else" is the sentence to study: it concedes precisely, not vaguely. cotton and moisture are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'Read the Percentage, Not the Word',
+            passage:
+              'People argue about whether the forecast was wrong, when what they actually disagree about is what thirty percent means. It does not mean that it will rain for thirty percent of the day. It means that on thirty days out of a hundred like this one, it rained. My uncle taps his barometer and says the needle is more honest, and he has a point: the needle measures pressure directly, which the summary on the news does not. But a needle cannot tell you anything about tomorrow. The percentage is the only part of a forecast that is trying to be precise, and it is the part everybody ignores.',
+          },
+          questions: [
+            'What do people actually disagree about?',
+            'What does thirty percent really mean?',
+            'What point does the writer allow the uncle?',
+            'What can a barometer needle not do?',
+            'Which word in the text means exact?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The forecast', 'My uncle', 'The needle', 'We'],
+            verbs: ['argued', 'measured', 'ignored', 'meant', 'tapped'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about something that is misread because people do not know what the number means. Explain it.',
+            support: {
+              wordBank: ['argue', 'disagree', 'hundred', 'honest', 'directly', 'precise', 'ignores'],
+            },
+          },
+          reviewWords: [
+            { word: 'percent', clue: 'parts in every hundred', from: '2026-08-03' },
+            { word: 'barometer', clue: 'the instrument that measures air pressure', from: '2026-08-03' },
+            { word: 'needle', clue: 'the pointer on a dial', from: '2026-08-03' },
+            { word: 'pressure', clue: 'the force of the air, measured to predict weather', from: '2026-07-30' },
+            { word: 'summary', clue: 'a shorter version of something longer', from: '2026-07-30' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            '"He has a point" is the concession move. pressure and summary are on their third meeting, closing the weather run.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MAVERICK — easier band (second session on it).
+      // ────────────────────────────────────────────────────────
+      Maverick: [
+        {
+          reading: {
+            title: 'Write Your Bike Number Down',
+            passage:
+              'I think everyone should write down the number on their bike frame. When my bike was gone, the police asked for that number first. Dad had the receipt in a drawer at home, so we found it. A boy down our road lost his bike too. He did not have the number and the police could not help him. It takes one minute to write it on a card. Then you put the card in a drawer. A thief cannot rub a number off a frame.',
+          },
+          questions: [
+            'What does the writer think everyone should write down?',
+            'What did the police ask for first?',
+            'Why could the police not help the boy?',
+            'How long does it take to write the number down?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Dad', 'The police', 'The boy', 'We'],
+            verbs: ['wrote', 'asked', 'found', 'lost', 'helped'],
+            lines: 5,
+          },
+          writing: {
+            prompt: 'Write about something you think people should do to keep their things safe. Say why.',
+            support: {
+              wordBank: ['write', 'everyone', 'card', 'minute', 'road', 'rub', 'lost'],
+            },
+          },
+          reviewWords: [
+            { word: 'bike', clue: 'you ride it with two wheels', letters: 'b _ _ _', from: '2026-08-03' },
+            { word: 'number', clue: 'a figure like 7 or 20', letters: 'n _ _ _ _ _', from: '2026-08-03' },
+            { word: 'police', clue: 'you ring them when something is stolen', letters: 'p _ _ _ _ _', from: '2026-08-03' },
+            { word: 'frame', clue: 'the metal bars a bike is built on', letters: 'f _ _ _ _', from: '2026-07-30' },
+            { word: 'receipt', clue: 'the paper the shop gives you when you pay', letters: 'r _ _ _ _ _ _', from: '2026-07-30' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'Second session on the easier band. New text type for him too: an opinion with a reason, kept to plain sentences. frame and receipt are on their third meeting. Check whether he finished inside the lesson this time.',
+        },
+        {
+          reading: {
+            title: 'Photos Should Go on the Wall',
+            passage:
+              'I think old photos should go on the wall, not in a box. The prints in Nan\'s box were damp and had stuck together. Nobody had looked at them for years. We picked ten of them and put them up. Now Dad stops and looks at them when he walks past. My little sister asks who everybody is. A photo in a box is the same as no photo at all. It costs nothing to put one on the wall.',
+          },
+          questions: [
+            'Where does the writer think old photos should go?',
+            'What was wrong with the prints in the box?',
+            'What does Dad do now?',
+            'What does the little sister ask?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Nan', 'Dad', 'My sister', 'We'],
+            verbs: ['found', 'picked', 'looked', 'asked', 'put up'],
+            lines: 5,
+          },
+          writing: {
+            prompt: 'Write about something in your house that should be out where people can see it. Say why.',
+            support: {
+              wordBank: ['wall', 'photos', 'picked', 'years', 'asks', 'costs', 'nothing'],
+            },
+          },
+          reviewWords: [
+            { word: 'box', clue: 'you keep things in it and put a lid on', letters: 'b _ _', from: '2026-08-03' },
+            { word: 'stuck', clue: 'joined together and hard to pull apart', letters: 's _ _ _ _', from: '2026-08-03' },
+            { word: 'past', clue: 'you walk this when you go by something', letters: 'p _ _ _', from: '2026-08-03' },
+            { word: 'prints', clue: 'photos printed on paper', letters: 'p _ _ _ _ _', from: '2026-07-30' },
+            { word: 'damp', clue: 'a little bit wet', letters: 'd _ _ _', from: '2026-07-30' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'prints and damp are on their third meeting. The last two sentences are the opinion; ask him to point to them before he writes his own.',
+        },
+        {
+          reading: {
+            title: 'Fix It Before You Buy a New One',
+            passage:
+              'Our school bell stopped last term. Some people said we should buy a new one. A man came in a van and fixed the old one in an hour. It only needed oil and a clean. The gears inside were full of dust, and that was all that was wrong. A new bell would have cost a lot more than that. Now the bell rings again and it sounds the same as it always did. I think we should try to fix things before we buy new ones.',
+          },
+          questions: [
+            'What stopped last term?',
+            'What did some people say the school should do?',
+            'What did the bell actually need?',
+            'What does the writer think we should do?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The bell', 'The man', 'The gears', 'We'],
+            verbs: ['stopped', 'came', 'fixed', 'cost', 'rang'],
+            lines: 5,
+          },
+          writing: {
+            prompt: 'Write about something that was fixed instead of thrown away. Say why that was the better choice.',
+            support: {
+              wordBank: ['fixed', 'hour', 'needed', 'clean', 'cost', 'rings', 'sounds'],
+            },
+          },
+          reviewWords: [
+            { word: 'van', clue: 'a small truck for carrying tools', letters: 'v _ _', from: '2026-08-03' },
+            { word: 'oil', clue: 'you put it on gears so they turn', letters: 'o _ _', from: '2026-08-03' },
+            { word: 'term', clue: 'one part of the school year', letters: 't _ _ _', from: '2026-08-03' },
+            { word: 'gears', clue: 'the toothed wheels inside a machine', letters: 'g _ _ _ _', from: '2026-07-30' },
+            { word: 'bell', clue: 'it rings to tell you the time', letters: 'b _ _ _', from: '2026-07-30' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'gears and bell are on their third meeting. If he writes all five review words from the clues today, this band is comfortable and the passages can grow by about ten words next week.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOCASTA — High level
+      // ────────────────────────────────────────────────────────
+      Jocasta: [
+        {
+          reading: {
+            title: 'Write It Down Anyway',
+            passage:
+              'The argument that judgement cannot be written down is made too easily, usually by people who have not tried. It is true that no recipe can name the exact moment the dough stops being warm enough to work in the bowl. It is also true that nobody has ever attempted the sentence. My great-grandmother could have written stop before it looks finished, which is what my mother said out loud in about four words, and she did not, because she assumed the next person would be standing beside her. That assumption is the thing that failed. A written instruction that is only ninety percent right is worth more than a texture nobody alive can demonstrate.',
+          },
+          questions: [
+            'What argument does the writer say is made too easily?',
+            'What does the writer accept is true?',
+            'What could the great-grandmother have written?',
+            'Which assumption failed?',
+            'Which word in the text means to show somebody how something is done?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The recipe', 'My great-grandmother', 'The assumption', 'We'],
+            verbs: ['assumed', 'attempted', 'failed', 'wrote', 'demonstrated'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Argue against the idea that something you know cannot be explained. What would you actually write down?',
+            support: {
+              wordBank: ['argument', 'attempted', 'assumed', 'assumption', 'demonstrate', 'alive', 'exact'],
+              sentenceStarters: [
+                'The claim that something cannot be written down is usually made by...',
+                'An instruction that is only partly right still beats...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'warm', clue: 'gently hot', from: '2026-08-03' },
+            { word: 'bowl', clue: 'the round dish you mix in', from: '2026-08-03' },
+            { word: 'finished', clue: 'completed, with nothing left to do', from: '2026-08-03' },
+            { word: 'judgement', clue: 'the sense of when something is right, not a rule you can follow', from: '2026-07-30' },
+            { word: 'texture', clue: 'the way something feels rather than how it tastes', from: '2026-07-30' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'This set argues against the position she was given on 3 August, using the same material. Ask her which version she actually believes. judgement and texture are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'Learn the Pause',
+            passage:
+              'The obvious lesson from my father losing four hundred dollars is that you should never fill a silence. I think the better lesson is that you should learn to use one. Bargaining is not a moral contest, and taking a neutral position inside it is not actually neutral: it just means the other person sets the terms. My father does not want to become the sort of man who waits after making an offer. That is a fair thing to not want. But he could learn to wait for six seconds twice a year, at the two moments in a decade when a pause is worth several hundred dollars to him.',
+          },
+          questions: [
+            'What is the obvious lesson?',
+            'What does the writer say the better lesson is?',
+            'What happens if you take a neutral position?',
+            'What does the writer suggest her father could do instead?',
+            'Which word in the text means the conditions somebody sets?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My father', 'The buyer', 'A pause', 'We'],
+            verbs: ['waited', 'learned', 'set', 'lost', 'used'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Argue that refusing to use a technique is itself a choice. What does the refusal cost?',
+            support: {
+              wordBank: ['obvious', 'lesson', 'moral', 'contest', 'terms', 'seconds', 'decade'],
+              sentenceStarters: [
+                'Refusing to use a technique is not neutral, it just...',
+                'The obvious lesson is X, but the more useful one is...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'bargaining', clue: 'arguing over a price until both sides agree', from: '2026-08-03' },
+            { word: 'neutral', clue: 'not taking either side', from: '2026-08-03' },
+            { word: 'position', clue: 'the stance somebody takes in an argument', from: '2026-08-03' },
+            { word: 'pause', clue: 'a short deliberate stop in speech', from: '2026-07-30' },
+            { word: 'offer', clue: 'a price somebody states they will pay', from: '2026-07-30' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            '"That is a fair thing to not want" is the concession. pause and offer are on their third meeting, closing the negotiation run.',
+        },
+        {
+          reading: {
+            title: 'The Half I Lose',
+            passage:
+              'I have decided to learn to read Korean properly, which is a strange decision to arrive at from a phone call about whether I had eaten. The argument against it is reasonable: my grandmother and I already manage, and the obligation I feel is probably guilt rather than a real duty to anybody. The argument for it is smaller and harder to dismiss. Every year the half I lose gets larger, because the context I would need is exactly the part that stops being explained once everybody assumes you understand. The phrase I could not translate was not the problem. It was the notice. There is no third option where I keep the closeness and skip the work.',
+          },
+          questions: [
+            'What has the writer decided?',
+            'What is the argument against it?',
+            'Why does the argument for it get stronger every year?',
+            'What does the writer say the untranslatable phrase actually was?',
+            'Which word in the text means to reject an idea without properly considering it?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My grandmother', 'The phrase', 'The obligation', 'We'],
+            verbs: ['decided', 'managed', 'lost', 'assumed', 'understood'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Argue yourself into doing something difficult. Give the case against it first, honestly.',
+            support: {
+              wordBank: ['decided', 'properly', 'strange', 'manage', 'guilt', 'dismiss', 'closeness'],
+              sentenceStarters: [
+                'The case against is easy to make, and it is...',
+                'What gets lost is not the words but...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'Korean', clue: 'the language spoken in Korea', from: '2026-08-03' },
+            { word: 'third', clue: 'the one after the second', from: '2026-08-03' },
+            { word: 'phrase', clue: 'a small group of words used together', from: '2026-08-03' },
+            { word: 'obligation', clue: 'a duty you owe to somebody', from: '2026-07-30' },
+            { word: 'context', clue: 'everything around the words that gives them meaning', from: '2026-07-30' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'Fourth text in this run and the one that decides something. obligation and context are on their third meeting.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  CODY — High level
+      // ────────────────────────────────────────────────────────
+      Cody: [
+        {
+          reading: {
+            title: 'Stop Asking People How They Do It',
+            passage:
+              'The standard advice is to ask an expert how they do the thing they are good at. I now think that question is close to useless. What somebody can produce on demand is a story about their method, not the method itself. The route my feet know cannot be handed over in words, and when I tried, under the mild interruption of a friend standing there waiting, I got two of the three turns wrong. Recognition is not available for inspection. If you want what somebody knows, watch them do it twice and skip the interview.',
+          },
+          questions: [
+            'What is the standard advice?',
+            'What does the writer think you actually get when you ask?',
+            'What happened when the writer tried to explain?',
+            'What does the writer suggest doing instead?',
+            'Which word in the text means examining something closely?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The expert', 'The method', 'My friend', 'We'],
+            verbs: ['asked', 'produced', 'watched', 'explained', 'failed'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Argue that the usual way of learning from somebody does not work. What would you do instead?',
+            support: {
+              wordBank: ['standard', 'advice', 'expert', 'demand', 'method', 'inspection', 'interview'],
+              sentenceStarters: [
+                'What an expert can put into words is...',
+                'If you want what somebody knows, the useful move is...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'produce', clue: 'to bring something out when it is asked for', from: '2026-08-03' },
+            { word: 'turns', clue: 'the points where a route changes direction', from: '2026-08-03' },
+            { word: 'route', clue: 'the way you go from one place to another', from: '2026-08-03' },
+            { word: 'recognition', clue: 'knowing something again when you see it', from: '2026-07-30' },
+            { word: 'interruption', clue: 'being stopped part way through something', from: '2026-07-30' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'New text type: argument. recognition and interruption are on their third meeting, closing the route run.',
+        },
+        {
+          reading: {
+            title: 'Design the Room, Not the Person',
+            passage:
+              'Nine days of not checking my phone at 8:40 has convinced me that most advice about discipline is aimed at the wrong object. I did not become a more serious person over the weekend. I replaced one physical action with another one and the moment passed without me in it. The cue never went away and it did not need to, and none of it cost any willpower. That sounds ridiculous next to two months of deciding to stop, and that is exactly the point: the deciding was the part that did nothing. If a habit lives in a place and a time, then a person is not where the work should be done.',
+          },
+          questions: [
+            'What have nine days convinced the writer of?',
+            'What did the writer not become?',
+            'What happened to the cue?',
+            'Where does the writer say the work should be done?',
+            'Which word in the text means the effort of forcing yourself?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The habit', 'The cue', 'The deciding', 'We'],
+            verbs: ['replaced', 'passed', 'cost', 'lived', 'stopped'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Argue that changing a situation beats changing yourself. Use something you have actually changed.',
+            support: {
+              wordBank: ['convinced', 'discipline', 'aimed', 'object', 'serious', 'deciding', 'lives'],
+              sentenceStarters: [
+                'Most advice about discipline is aimed at...',
+                'The deciding was the part that...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'replaced', clue: 'put something else in its place', from: '2026-08-03' },
+            { word: 'physical', clue: 'to do with the body rather than the mind', from: '2026-08-03' },
+            { word: 'ridiculous', clue: 'so silly it is hard to take seriously', from: '2026-08-03' },
+            { word: 'cue', clue: 'the signal that starts a response', from: '2026-07-30' },
+            { word: 'willpower', clue: 'the effort of forcing yourself to do something', from: '2026-07-30' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'cue and willpower are on their third meeting. Four texts on the same habit, ending with a general claim drawn from it.',
+        },
+        {
+          reading: {
+            title: 'One Sentence Is Enough',
+            passage:
+              'Ninety seconds is what the conversation took, and I had prepared one sentence for it. I used to prepare for an evening. The case for heavy preparation is that you will not be caught out, and it is true that I was not caught out. What is also true is that I have never once used the fourth paragraph. The rest of it goes on being ready in a corner of my attention while somebody is actually talking to me. A single deliberate sentence, plus a decision about what I will not say, has replaced all of it, and I arrive on time now instead of arriving already behind.',
+          },
+          questions: [
+            'How long did the conversation take?',
+            'What is the case for heavy preparation?',
+            'What has the writer never once used?',
+            'What has replaced all of it?',
+            'Which word in the text means done on purpose?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The conversation', 'The preparation', 'My attention', 'We'],
+            verbs: ['prepared', 'took', 'replaced', 'arrived', 'listened'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Argue that less preparation is better. Concede what the other side gets right before you answer it.',
+            support: {
+              wordBank: ['caught', 'fourth', 'paragraph', 'corner', 'single', 'arrive', 'ready'],
+              sentenceStarters: [
+                'The case for preparing heavily is true, and it is also...',
+                'What preparation costs is not time but...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'ninety', clue: 'the number after eighty-nine', from: '2026-08-03' },
+            { word: 'prepared', clue: 'got ready in advance', from: '2026-08-03' },
+            { word: 'deliberate', clue: 'done on purpose', from: '2026-08-03' },
+            { word: 'preparation', clue: 'the work done in advance', from: '2026-07-30' },
+            { word: 'attention', clue: 'what you are actively noticing', from: '2026-07-30' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'preparation and attention are on their third meeting. "It is true that... What is also true is..." is the concession pattern to lift out.',
+        },
+      ],
+    },
+  },
+
+  // ══════════════════════════════════════════════════════════
   //  3 AUGUST 2026 — spiral session 3, back to narrative.
   //  Words that were explained in an information text on
   //  30 July now turn up inside a story, which is the return
