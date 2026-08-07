@@ -200,31 +200,37 @@ function WarmupTrace({ act }: { act: WarmupTraceActivity }) {
 // ── 2. ALPHABET FOCUS ────────────────────────────────────────────
 
 function AlphabetFocus({ act }: { act: AlphabetFocusActivity }) {
+  // Review days list all eight letters of the week. At the normal row height
+  // the last one falls onto a page of its own, so tighten up once there are
+  // more than four.
+  const dense = act.letters.length > 4;
   return (
-    <div className="pl-9 space-y-6">
+    <div className={`pl-9 ${dense ? 'space-y-1' : 'space-y-6'}`}>
       {act.letters.map((l) => (
         <div
           key={l.letter}
-          className="grid grid-cols-[80px_1fr_100px_1fr] items-center gap-4 py-2 border-b border-stone-200 last:border-b-0"
+          className={`grid grid-cols-[80px_1fr_100px_1fr] items-center gap-4 border-b border-stone-200 last:border-b-0 ${
+            dense ? 'py-0.5' : 'py-2'
+          }`}
         >
           {/* Picture */}
           <div className="flex flex-col items-center">
-            <OdayIcon name={l.iconKey} size={72} />
+            <OdayIcon name={l.iconKey} size={dense ? 46 : 72} />
             <span className="text-xs text-stone-500 mt-1">{l.word}</span>
           </div>
           {/* Trace uppercase & lowercase */}
           <div className="flex items-center gap-2">
-            <TraceWord text={l.letter} size={44} />
-            <TraceWord text={l.letter.toLowerCase()} size={44} />
-            <TraceWord text={l.letter} size={44} />
-            <TraceWord text={l.letter.toLowerCase()} size={44} />
+            <TraceWord text={l.letter} size={dense ? 32 : 44} />
+            <TraceWord text={l.letter.toLowerCase()} size={dense ? 32 : 44} />
+            <TraceWord text={l.letter} size={dense ? 32 : 44} />
+            <TraceWord text={l.letter.toLowerCase()} size={dense ? 32 : 44} />
           </div>
           {/* Match label */}
           <div className="text-xs text-stone-500 text-right pr-2">
             Copy on line →
           </div>
           {/* Blank line for practice */}
-          <div className="border-b-2 border-stone-500 h-10" />
+          <div className={`border-b-2 border-stone-500 ${dense ? 'h-7' : 'h-10'}`} />
         </div>
       ))}
     </div>

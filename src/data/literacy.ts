@@ -74,6 +74,942 @@ export interface LiteracySession {
 export const LITERACY_SESSIONS: LiteracySession[] = [
 
   // ══════════════════════════════════════════════════════════
+  //  10 AUGUST 2026 — spiral session 5. Fourth text type:
+  //  INSTRUCTIONS. Every text tells the reader how to do the
+  //  thing they have already read about as a story, as an
+  //  explanation and as an opinion. Same material, fourth
+  //  angle, so the vocabulary is now well known and the
+  //  demand is on sequence and imperative verbs.
+  //  Each set: 3 words from 4 August + 2 on their 3rd meeting.
+  // ══════════════════════════════════════════════════════════
+  {
+    date: '2026-08-10',
+    activities: {
+
+      // ────────────────────────────────────────────────────────
+      //  PHARRELL — Level 7 (~5 yrs). First / Next / Then.
+      // ────────────────────────────────────────────────────────
+      Pharrell: [
+        {
+          reading: {
+            title: 'How to Watch Birds',
+            passage:
+              'You do not need anything to watch birds. First, sit still near a tree in the garden. Do not talk. Wait. Soon the birds will forget that you are there. Look up into the tree for a nest. If you can hear a baby bird you are very close to it. Do not put your hand near the nest. You can feed birds with a little bread, but only a little. Then sit down again and watch.',
+          },
+          questions: [
+            'What do you need to watch birds?',
+            'What must you not do?',
+            'How do you know a baby bird is close?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The birds', 'The baby bird', 'The tree', 'We'],
+            verbs: ['sat', 'waited', 'watched', 'forgot', 'fed'],
+          },
+          writing: {
+            prompt: 'Write how to do something outside. Say what to do first, then next.',
+            support: {
+              wordBank: ['still', 'wait', 'forget', 'tree', 'close', 'bread', 'little'],
+            },
+          },
+          reviewWords: [
+            { word: 'watch', clue: 'to look at something for a long time', letters: 'w _ _ _ _', from: '2026-08-04' },
+            { word: 'feed', clue: 'to give food to an animal', letters: 'f _ _ _', from: '2026-08-04' },
+            { word: 'garden', clue: 'the grass and plants outside your house', letters: 'g _ _ _ _ _', from: '2026-08-04' },
+            { word: 'nest', clue: 'a bird builds this to keep its eggs in', letters: 'n _ _ _', from: '2026-08-03' },
+            { word: 'baby', clue: 'a very young child or animal', letters: 'b _ _ _', from: '2026-08-03' },
+          ],
+          wordCards: ['Sit', 'still', 'and', 'watch', 'the', 'birds', '.'],
+          writingLines: 5,
+          teacherNote:
+            'New text type: instructions. The words to teach are First, Then and Do not. Sound focus: ee (tree, feed, need). nest and baby are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'How to Cook Sweetcorn',
+            passage:
+              'Here is how to cook sweetcorn. First, pull the green leaves off it. Put the corn in a pot of water. Ask a grown up to put the pot on the hot ring. Wait ten minutes. You will smell it when it is ready. Take it out with tongs, not with your hand. Put butter on it while it is hot. My favourite way to eat it is outside at the table.',
+          },
+          questions: [
+            'What do you pull off first?',
+            'How do you know it is ready?',
+            'What do you take it out with?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The corn', 'The pot', 'A grown up', 'We'],
+            verbs: ['pulled', 'put', 'waited', 'smelled', 'ate'],
+          },
+          writing: {
+            prompt: 'Write how to cook or make something. Say what to do first, then next.',
+            support: {
+              wordBank: ['pull', 'green', 'pot', 'grown up', 'ring', 'tongs', 'ready'],
+            },
+          },
+          reviewWords: [
+            { word: 'butter', clue: 'yellow, made from milk, you put it on bread', letters: 'b _ _ _ _ _', from: '2026-08-04' },
+            { word: 'smell', clue: 'you do this with your nose', letters: 's _ _ _ _', from: '2026-08-04' },
+            { word: 'favourite', clue: 'the one you like best of all', letters: 'f _ _ _ _ _ _ _ _', from: '2026-08-04' },
+            { word: 'outside', clue: 'not indoors', letters: 'o _ _ _ _ _ _', from: '2026-08-03' },
+            { word: 'sweetcorn', clue: 'yellow seeds on a cob that you eat with butter', letters: 's _ _ _ _ _ _ _ _', from: '2026-08-03' },
+          ],
+          wordCards: ['Put', 'butter', 'on', 'the', 'sweetcorn', '.'],
+          writingLines: 5,
+          teacherNote:
+            'Sound focus: short o (pot, hot, on). Point out that every instruction sentence starts with the verb. outside and sweetcorn are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'How to Go in the Sea',
+            passage:
+              'The sea is not the same as a pool, so you must be careful. First, look at the water. Ask a grown up if it is safe to swim there. Go in slowly. The water is cold at first but you get used to it. Hold the hand of a big person if the waves are strong. Look back at the beach to see how far the tide has come in. When you get out, dry your feet.',
+          },
+          questions: [
+            'What must you ask a grown up?',
+            'How should you go in?',
+            'What do you do when you get out?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The sea', 'The waves', 'The tide', 'We'],
+            verbs: ['looked', 'swam', 'held', 'walked', 'dried'],
+          },
+          writing: {
+            prompt: 'Write how to stay safe somewhere. Say what to do first, then next.',
+            support: {
+              wordBank: ['sea', 'safe', 'slowly', 'waves', 'strong', 'dry', 'feet'],
+            },
+          },
+          reviewWords: [
+            { word: 'careful', clue: 'taking care so you do not get hurt', letters: 'c _ _ _ _ _ _', from: '2026-08-04' },
+            { word: 'cold', clue: 'not warm', letters: 'c _ _ _', from: '2026-08-04' },
+            { word: 'swim', clue: 'to move through water', letters: 's _ _ _', from: '2026-08-04' },
+            { word: 'tide', clue: 'the sea coming in and going out', letters: 't _ _ _', from: '2026-08-03' },
+            { word: 'hold', clue: 'to keep something in your hand', letters: 'h _ _ _', from: '2026-08-03' },
+          ],
+          wordCards: ['Hold', 'my', 'hand', 'in', 'the', 'sea', '.'],
+          writingLines: 5,
+          teacherNote:
+            'Sound focus: ea (sea, beach). tide and hold are on their third meeting. This is the fourth text about the beach; ask him what he already knows before he reads it.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JIERRY — Level 10, ESOL (Mandarin)
+      // ────────────────────────────────────────────────────────
+      Jierry: [
+        {
+          reading: {
+            title: 'How to Take Your Turn in Goal',
+            passage:
+              'If it is your turn in goal, here is what to do. Stand on the line, not in front of it. Keep your hands up and your feet apart. Watch the ball, not the player who has it. When the ball comes along the ground, go down on one knee behind your hands. Shout so that your defenders know where you are. If you have missed one, forget it before the next one comes. The keeper who argues with his team after a goal is the one who lets in the second.',
+          },
+          questions: [
+            'Where should you stand?',
+            'What should you watch?',
+            'What should you do after you have missed one?',
+            'Find the word in the text that means 错过.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The keeper', 'The ball', 'My team', 'We'],
+            verbs: ['stood', 'watched', 'shouted', 'missed', 'forgot'],
+            translations: { 'I': '我', 'The keeper': '守门员', 'The ball': '球', 'My team': '我的球队', 'We': '我们', 'stood': '站', 'watched': '看', 'shouted': '喊', 'missed': '错过', 'forgot': '忘记' },
+          },
+          writing: {
+            prompt: 'Write instructions for a job in a game or a class. Tell somebody what to do, step by step.',
+            promptTranslation: '写下比赛或课堂里某个角色的做法。一步一步告诉别人该怎么做。',
+            support: {
+              vocabularyList: [
+                { word: 'line', translation: '线', language: 'Chinese' },
+                { word: 'apart', translation: '分开', language: 'Chinese' },
+                { word: 'knee', translation: '膝盖', language: 'Chinese' },
+                { word: 'shout', translation: '喊', language: 'Chinese' },
+                { word: 'defenders', translation: '后卫', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'turn', clue: '轮流', letters: 't _ _ _', from: '2026-08-04' },
+            { word: 'argues', clue: '争吵', letters: 'a _ _ _ _ _', from: '2026-08-04' },
+            { word: 'missed', clue: '错过', letters: 'm _ _ _ _ _', from: '2026-08-03' },
+            ],
+          writingLines: 6,
+          teacherNote:
+            'New text type: instructions. Every sentence begins with the verb, which is a useful contrast with Chinese word order. missed is on its third meeting.',
+        },
+        {
+          reading: {
+            title: 'How to Read Out Loud to a Class',
+            passage:
+              'Reading out loud is easier if you do these things. Choose a piece you have read before. Practise it at home once out loud, not in your head, because they are not the same. Before you start, look up at the class for two seconds. Then read slowly. If you read fast nobody can follow you and you will feel worse afterwards. When you make a mistake, do not stop and say sorry. Keep going. Everybody in the room has made the same mistake and everybody forgets it by lunchtime.',
+          },
+          questions: [
+            'What kind of piece should you choose?',
+            'What should you do before you start?',
+            'What should you do when you make a mistake?',
+            'Find the word in the text that means 慢慢地.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The class', 'My voice', 'A mistake', 'We'],
+            verbs: ['chose', 'practised', 'read', 'stopped', 'followed'],
+            translations: { 'I': '我', 'The class': '全班', 'My voice': '我的声音', 'A mistake': '一个错误', 'We': '我们', 'chose': '选择', 'practised': '练习', 'read': '读', 'stopped': '停', 'followed': '跟上' },
+          },
+          writing: {
+            prompt: 'Write instructions for something that makes people nervous. Tell them what to do step by step.',
+            promptTranslation: '为一件让人紧张的事写下步骤。一步一步告诉别人怎么做。',
+            support: {
+              vocabularyList: [
+                { word: 'choose', translation: '选择', language: 'Chinese' },
+                { word: 'piece', translation: '一段', language: 'Chinese' },
+                { word: 'mistake', translation: '错误', language: 'Chinese' },
+                { word: 'follow', translation: '跟上', language: 'Chinese' },
+                { word: 'sorry', translation: '对不起', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'loud', clue: '大声', letters: 'l _ _ _', from: '2026-08-04' },
+            { word: 'everybody', clue: '每个人', letters: 'e _ _ _ _ _ _ _ _', from: '2026-08-04' },
+            { word: 'slowly', clue: '慢慢地', letters: 's _ _ _ _ _', from: '2026-08-03' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'slowly is on its third meeting. Fourth text on reading aloud: story, opinion, and now the method. Ask him which one helped him most.',
+        },
+        {
+          reading: {
+            title: 'How to Fold a Dumpling',
+            passage:
+              'Making dumplings takes hours, but folding one takes about ten seconds once you know how. Put one spoon of filling in the middle of the wrapper. Do not put in more, or it will open in the water. Wet the edge with your finger. Fold it in half and press the edge shut. Then make three small folds along one side. Put it on a tray with flour underneath so that it does not stick. Do them all together and cook them at the end.',
+          },
+          questions: [
+            'How long does folding one take?',
+            'What happens if you put in too much filling?',
+            'Why do you put flour underneath?',
+            'Find the word in the text that means 馅.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The filling', 'The wrapper', 'My aunt', 'We'],
+            verbs: ['folded', 'pressed', 'wet', 'cooked', 'made'],
+            translations: { 'I': '我', 'The filling': '馅', 'The wrapper': '饺子皮', 'My aunt': '我阿姨', 'We': '我们', 'folded': '包', 'pressed': '按', 'wet': '沾湿', 'cooked': '煮', 'made': '做' },
+          },
+          writing: {
+            prompt: 'Write instructions for making a food from your family. Give the steps in order.',
+            promptTranslation: '写下做一道家常菜的步骤，按顺序写。',
+            support: {
+              vocabularyList: [
+                { word: 'spoon', translation: '勺', language: 'Chinese' },
+                { word: 'wrapper', translation: '饺子皮', language: 'Chinese' },
+                { word: 'edge', translation: '边', language: 'Chinese' },
+                { word: 'press', translation: '按', language: 'Chinese' },
+                { word: 'flour', translation: '面粉', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'hours', clue: '小时', letters: 'h _ _ _ _', from: '2026-08-04' },
+            { word: 'together', clue: '一起', letters: 't _ _ _ _ _ _ _', from: '2026-08-04' },
+            { word: 'filling', clue: '馅', letters: 'f _ _ _ _ _ _', from: '2026-08-03' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'filling is on its third meeting. This is the most technical text he has had; check he can follow the order before he writes his own.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  BAO — Level 10, ESOL (Vietnamese)
+      // ────────────────────────────────────────────────────────
+      Bao: [
+        {
+          reading: {
+            title: 'How to Pump Up a Bike Tyre',
+            passage:
+              'A flat tyre takes five minutes to fix. First, find the valve on the wheel and take the little cap off it. Put the pump head on the valve and push the lever down to lock it on. Now pump. Do not worry if it feels hard at the start. Stop and press the tyre with your thumb. If it does not move, it is full. Take the pump off quickly and put the cap back on. Then check that the seat is still tight before you ride away.',
+          },
+          questions: [
+            'How long does it take to fix a flat tyre?',
+            'What do you take off first?',
+            'How do you know the tyre is full?',
+            'Find the word in the text that means lốp xe.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The tyre', 'The pump', 'My thumb', 'We'],
+            verbs: ['found', 'pushed', 'pumped', 'pressed', 'checked'],
+            translations: { 'I': 'tôi', 'The tyre': 'lốp xe', 'The pump': 'máy bơm', 'My thumb': 'ngón cái', 'We': 'chúng tôi', 'found': 'tìm', 'pushed': 'đẩy', 'pumped': 'bơm', 'pressed': 'ấn', 'checked': 'kiểm tra' },
+          },
+          writing: {
+            prompt: 'Write instructions for fixing something small. Give the steps in order.',
+            promptTranslation: 'Viết các bước sửa một thứ nhỏ. Viết theo thứ tự.',
+            support: {
+              vocabularyList: [
+                { word: 'valve', translation: 'van xe', language: 'Vietnamese' },
+                { word: 'cap', translation: 'nắp', language: 'Vietnamese' },
+                { word: 'lever', translation: 'cần gạt', language: 'Vietnamese' },
+                { word: 'thumb', translation: 'ngón cái', language: 'Vietnamese' },
+                { word: 'tight', translation: 'chặt', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'pump', clue: 'máy bơm', letters: 'p _ _ _', from: '2026-08-04' },
+            { word: 'worry', clue: 'lo lắng', letters: 'w _ _ _ _', from: '2026-08-04' },
+            { word: 'tyre', clue: 'lốp xe', letters: 't _ _ _', from: '2026-08-03' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'New text type: instructions. tyre is on its third meeting. Fourth bike text, so the vocabulary should be easy and the order is the new demand.',
+        },
+        {
+          reading: {
+            title: 'How to Get Ready for a Power Cut',
+            passage:
+              'Do these things before the power goes out, not after. Put a torch in the same drawer every time and tell everybody in the house where that drawer is. Keep a bottle of water in the cupboard as well. If the power goes out at night, walk slowly and hold the rail on the stairs so that you move safely in the dark. Do not open the fridge. Every time you open it the cold comes out and the food goes off faster. Listen for the noise of the fridge starting again. That is how you know the power is back.',
+          },
+          questions: [
+            'When should you do these things?',
+            'What should you hold on the stairs?',
+            'Why should you not open the fridge?',
+            'Find the word in the text that means tiếng ồn.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The torch', 'The fridge', 'My family', 'We'],
+            verbs: ['kept', 'walked', 'held', 'listened', 'waited'],
+            translations: { 'I': 'tôi', 'The torch': 'đèn pin', 'The fridge': 'tủ lạnh', 'My family': 'gia đình tôi', 'We': 'chúng tôi', 'kept': 'giữ', 'walked': 'đi', 'held': 'nắm', 'listened': 'lắng nghe', 'waited': 'chờ' },
+          },
+          writing: {
+            prompt: 'Write instructions for getting ready for something that might go wrong at home.',
+            promptTranslation: 'Viết các bước chuẩn bị cho một sự cố có thể xảy ra ở nhà.',
+            support: {
+              vocabularyList: [
+                { word: 'rail', translation: 'tay vịn', language: 'Vietnamese' },
+                { word: 'bottle', translation: 'chai', language: 'Vietnamese' },
+                { word: 'cupboard', translation: 'tủ', language: 'Vietnamese' },
+                { word: 'listen', translation: 'lắng nghe', language: 'Vietnamese' },
+                { word: 'back', translation: 'trở lại', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'stairs', clue: 'cầu thang', letters: 's _ _ _ _ _', from: '2026-08-04' },
+            { word: 'safely', clue: 'an toàn', letters: 's _ _ _ _ _', from: '2026-08-04' },
+            { word: 'noise', clue: 'tiếng ồn', letters: 'n _ _ _ _', from: '2026-08-03' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'noise is on its third meeting. The instruction "before, not after" is the idea to draw out: preparation happens at the wrong time to feel useful.',
+        },
+        {
+          reading: {
+            title: 'How to Cook with Chilli',
+            passage:
+              'Chilli is easy to get wrong. Cut a small piece first and taste it, because two chillies are never the same. Always put in half of what you think you need. You can add more later but you cannot take it out again. Cook it in oil at the start, not at the end. Wash your hands after you cut it and do not touch your eyes. If the pot is already too hot for everybody, do not throw it away. Serve it with rice and with milk on the table.',
+          },
+          questions: [
+            'What should you do before you use a chilli?',
+            'How much should you put in?',
+            'What should you do after cutting it?',
+            'Find the word in the text that means nồi.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The chilli', 'My brother', 'The pot', 'We'],
+            verbs: ['cut', 'tasted', 'added', 'washed', 'served'],
+            translations: { 'I': 'tôi', 'The chilli': 'quả ớt', 'My brother': 'anh trai tôi', 'The pot': 'nồi', 'We': 'chúng tôi', 'cut': 'cắt', 'tasted': 'nếm', 'added': 'thêm', 'washed': 'rửa', 'served': 'dọn ra' },
+          },
+          writing: {
+            prompt: 'Write instructions for cooking something that is easy to get wrong. Warn the reader what not to do.',
+            promptTranslation: 'Viết các bước nấu một món dễ hỏng. Nhắc người đọc điều không nên làm.',
+            support: {
+              vocabularyList: [
+                { word: 'piece', translation: 'miếng', language: 'Vietnamese' },
+                { word: 'add', translation: 'thêm', language: 'Vietnamese' },
+                { word: 'oil', translation: 'dầu', language: 'Vietnamese' },
+                { word: 'wash', translation: 'rửa', language: 'Vietnamese' },
+                { word: 'serve', translation: 'dọn ra', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'taste', clue: 'nếm', letters: 't _ _ _ _', from: '2026-08-04' },
+            { word: 'later', clue: 'sau đó', letters: 'l _ _ _ _', from: '2026-08-04' },
+            { word: 'pot', clue: 'nồi', letters: 'p _ _', from: '2026-08-03' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'pot is on its third meeting. Fourth chilli text and the last one: story, explanation, rule, and now the method.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MATT — Level 10
+      // ────────────────────────────────────────────────────────
+      Matt: [
+        {
+          reading: {
+            title: 'How to Set Up Camp in the Rain',
+            passage:
+              'Put the tarpaulin up first, before anything else. Find two trees about four metres apart and run a rope between them at head height. Throw the tarpaulin over the rope and peg the four corners out wide, so that the water runs off instead of sitting in the middle. Pitch the tent underneath it. Keep one dry towel in a plastic bag and do not use it for anything until the end of the day. Unroll your mat inside the tent, never on wet ground: it rolls up again in ten seconds and it is the only thing keeping the cold off you at two in the morning. Then put the kettle on. Everything after that is uncomfortable rather than serious.',
+          },
+          questions: [
+            'What should you put up first?',
+            'Why do you peg the corners out wide?',
+            'What should you keep in a plastic bag?',
+            'Which word in the text means to put up a tent?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The tarpaulin', 'The rope', 'The mat', 'We'],
+            verbs: ['pitched', 'pegged', 'threw', 'unrolled', 'kept'],
+          },
+          writing: {
+            prompt: 'Write instructions for setting something up in bad conditions. Say what has to be done first and why.',
+            support: {
+              wordBank: ['pitch', 'peg', 'corners', 'metres', 'height', 'unroll', 'plastic'],
+            },
+          },
+          reviewWords: [
+            { word: 'rope', clue: 'thick cord you tie between two trees', letters: 'r _ _ _', from: '2026-08-04' },
+            { word: 'kettle', clue: 'you boil water in it', letters: 'k _ _ _ _ _', from: '2026-08-04' },
+            { word: 'uncomfortable', clue: 'not comfortable', letters: 'u _ _ _ _ _ _ _ _ _ _ _ _', from: '2026-08-04' },
+            { word: 'towel', clue: 'you dry yourself with it', letters: 't _ _ _ _', from: '2026-08-03' },
+            { word: 'rolls', clue: 'what a mat does when you wind it up', letters: 'r _ _ _ _', from: '2026-08-03' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'New text type: instructions. Note the order rule in the first sentence: the thing that protects everything else goes first. towel and rolls are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'How to Clean Your Bearings',
+            passage:
+              'You need white spirit, a jar with a lid, a pin and twenty minutes. Take the wheels off and lay them out in a row so that you do not lose the spacers. Prise the shield off each bearing with the pin, working from the inside edge. Drop all eight bearings into the jar, put the lid on and shake it for a minute. The spirit turns black, and that is the old grease and the grit coming out. Lay them on a rag until they are properly dry, then put one drop of oil in each. Do not use more than one. More oil actually slows the wheel down.',
+          },
+          questions: [
+            'What do you need?',
+            'Why do you lay the wheels out in a row?',
+            'What does the black in the spirit mean?',
+            'Which word in the text means the cover on the side of a bearing?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The bearings', 'The spirit', 'The oil', 'We'],
+            verbs: ['prised', 'shook', 'dried', 'oiled', 'lost'],
+          },
+          writing: {
+            prompt: 'Write instructions for cleaning or servicing something. Include the mistake people usually make.',
+            support: {
+              wordBank: ['jar', 'pin', 'spacers', 'shield', 'shake', 'rag', 'drop'],
+            },
+          },
+          reviewWords: [
+            { word: 'twenty', clue: 'the number after nineteen', letters: 't _ _ _ _ _', from: '2026-08-04' },
+            { word: 'actually', clue: 'in fact, really', letters: 'a _ _ _ _ _ _ _', from: '2026-08-04' },
+            { word: 'slows', clue: 'makes something go less quickly', letters: 's _ _ _ _', from: '2026-08-04' },
+            { word: 'spirit', clue: 'the clear liquid used to wash grease off parts', letters: 's _ _ _ _ _', from: '2026-08-03' },
+            { word: 'grit', clue: 'dirt in small hard pieces', letters: 'g _ _ _', from: '2026-08-03' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'spirit and grit are on their third meeting. He has now read this job as a story, as an argument and as a procedure; he should be able to do it without the sheet.',
+        },
+        {
+          reading: {
+            title: 'How to Get Through a Bad Run of Games',
+            passage:
+              'Losing five in a row does not mean the team is bad. Usually it means the conditions have changed. Do not pull out in the middle of the season. Change one thing at training, not five, so that you can tell afterwards which one worked. Play the ball on the ground when the field is heavy and in the air when it is dry. Write the score down with the weather next to it every week. After eight games you will be able to see which losses were a fair test of the team and which ones were mud. Judge the team then, not in July.',
+          },
+          questions: [
+            'What does losing five in a row usually mean?',
+            'How many things should you change at training?',
+            'What should you write next to the score?',
+            'Which word in the text means to form an opinion about something?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The team', 'The ground', 'The coach', 'We'],
+            verbs: ['lost', 'changed', 'trained', 'recorded', 'judged'],
+          },
+          writing: {
+            prompt: 'Write instructions for getting through a bad run at something. Tell the reader what not to do first.',
+            support: {
+              wordBank: ['training', 'worked', 'ground', 'air', 'weather', 'judge', 'eight'],
+            },
+          },
+          reviewWords: [
+            { word: 'pull out', clue: 'to leave a competition before it ends', letters: 'p _ _ _  o _ _', from: '2026-08-04' },
+            { word: 'conditions', clue: 'what the weather and the ground are like', letters: 'c _ _ _ _ _ _ _ _ _', from: '2026-08-04' },
+            { word: 'fair', clue: 'giving everybody the same chance', letters: 'f _ _ _', from: '2026-08-04' },
+            { word: 'season', clue: 'the run of games from the first to the last', letters: 's _ _ _ _ _', from: '2026-08-03' },
+            { word: 'score', clue: 'the number of goals each side has', letters: 's _ _ _ _', from: '2026-08-03' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'season and score are on their third meeting. Change one thing at a time, so you can tell which one worked, is the transferable idea here.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOSHUA — Level 23 (~8.5 yrs)
+      // ────────────────────────────────────────────────────────
+      Joshua: [
+        {
+          reading: {
+            title: 'How to Make a Complaint That Works',
+            passage:
+              'Complain to the person who can change it, not to the person standing in front of you. A driver cannot rewrite a timetable. Find out which office holds that job and put it in writing, because a written complaint has to be answered and a spoken one does not. Be accurate: give the date, the time and what happened, and leave out how it made you feel. One sentence about the effect is enough. Find out what remedies are available and ask for a specific one rather than an apology. Then send it again a fortnight later if nobody replies, because the second letter is usually the one that gets treated as real.',
+          },
+          questions: [
+            'Who should you complain to?',
+            'Why should you put it in writing?',
+            'What should you leave out?',
+            'What should you do if nobody replies?',
+            'Which word in the text means naming exactly what you want?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The office', 'The letter', 'The driver', 'We'],
+            verbs: ['wrote', 'answered', 'asked', 'sent', 'replied'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write instructions for making a complaint about something real. Say what to include and what to leave out.',
+            support: {
+              wordBank: ['rewrite', 'office', 'spoken', 'effect', 'specific', 'apology', 'remedy'],
+            },
+          },
+          reviewWords: [
+            { word: 'accurate', clue: 'correct in every detail', from: '2026-08-04' },
+            { word: 'treated', clue: 'dealt with in a particular way', from: '2026-08-04' },
+            { word: 'available', clue: 'able to be had or used', from: '2026-08-04' },
+            { word: 'complain', clue: 'to say out loud that something is wrong', from: '2026-08-03' },
+            { word: 'fortnight', clue: 'two weeks', from: '2026-08-03' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'New text type: instructions. This is the practical version of the argument he read on 4 August. complain and fortnight are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'How to Decide Whether to Mend Something',
+            passage:
+              'Work out the arithmetic first and then ignore half of it. Ask what the replacement would actually be: not the idea of a new one, but the specific thing you would buy from the warehouse this month. Ask how long the original has already lasted, because a coat that has done forty years has proved something a new one has not. Then look at where the fault is. If it is at the shoulders, where every coat goes first, and the material itself is sound, mend it. If the material has gone, do not be sentimental about it. It belongs in the bin and you have already had your money out of it.',
+          },
+          questions: [
+            'What should you work out first?',
+            'What does the writer say the replacement actually is?',
+            'What do forty years prove?',
+            'When should you not mend something?',
+            'Which word in the text means in good condition?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The coat', 'The material', 'The warehouse', 'We'],
+            verbs: ['mended', 'lasted', 'proved', 'replaced', 'decided'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write instructions for deciding whether to repair or replace something. Give the tests in order.',
+            support: {
+              wordBank: ['replacement', 'original', 'proved', 'fault', 'material', 'sound', 'belongs'],
+            },
+          },
+          reviewWords: [
+            { word: 'arithmetic', clue: 'working with numbers', from: '2026-08-04' },
+            { word: 'warehouse', clue: 'a very large shop or store building', from: '2026-08-04' },
+            { word: 'sentimental', clue: 'keeping something for feelings rather than use', from: '2026-08-04' },
+            { word: 'shoulders', clue: 'where your arms join your body', from: '2026-08-03' },
+            { word: 'mended', clue: 'repaired', from: '2026-08-03' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'shoulders and mended are on their third meeting, closing the coat run. Four texts from one object: the story, the fibre, the argument, the decision procedure.',
+        },
+        {
+          reading: {
+            title: 'How to Read a Forecast',
+            passage:
+              'Read the number first, then the words. Thirty percent means that it rained on thirty days out of a hundred that looked like this one. It does not mean light rain. Look at what the number is attached to, because rain in the next six hours is a completely different claim from rain tomorrow. Check when the forecast was issued: one from this morning has had four fewer hours in which to go wrong. Ignore the adjectives. Unsettled means the model cannot decide, which is honest but not useful to you. If you want something you can read directly, a barometer needle falling fast tells you more than any of the words do.',
+          },
+          questions: [
+            'What should you read first?',
+            'What does thirty percent actually mean?',
+            'Why does it matter when a forecast was issued?',
+            'What does unsettled mean?',
+            'Which word in the text means describing words?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The forecast', 'The number', 'The needle', 'We'],
+            verbs: ['read', 'checked', 'issued', 'ignored', 'measured'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write instructions for reading something most people misread. Tell them which part to look at first.',
+            support: {
+              wordBank: ['attached', 'claim', 'issued', 'adjectives', 'falling', 'fewer', 'useful'],
+            },
+          },
+          reviewWords: [
+            { word: 'hundred', clue: 'ten times ten', from: '2026-08-04' },
+            { word: 'honest', clue: 'truthful, not hiding anything', from: '2026-08-04' },
+            { word: 'directly', clue: 'without anything in between', from: '2026-08-04' },
+            { word: 'percent', clue: 'parts in every hundred', from: '2026-08-03' },
+            { word: 'needle', clue: 'the pointer on a dial', from: '2026-08-03' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'percent and needle are on their third meeting. This closes the weather run: the trip, the machinery, the argument, the method.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MAVERICK — easier band, third session on it.
+      // ────────────────────────────────────────────────────────
+      Maverick: [
+        {
+          reading: {
+            title: 'How to Keep Your Bike Safe',
+            passage:
+              'Here is how to keep your bike safe. First, write the number from the frame on a card. Put the card in a drawer at home. Next, always lock your bike to something, not just to itself. Lock it in a busy place near the road, not round the back of a shop. If your bike is lost, ring the police and give them the number. It takes one minute to do the card. It takes a lot longer to get a bike back without it.',
+          },
+          questions: [
+            'What should you write on the card?',
+            'Where should you put the card?',
+            'Where should you lock your bike?',
+            'Who do you ring if your bike is lost?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My bike', 'The card', 'The police', 'We'],
+            verbs: ['wrote', 'locked', 'rang', 'lost', 'kept'],
+            lines: 5,
+          },
+          writing: {
+            prompt: 'Write how to look after something of yours. Say what to do first, then next.',
+            support: {
+              wordBank: ['safe', 'lock', 'busy', 'itself', 'drawer', 'longer', 'back'],
+            },
+          },
+          reviewWords: [
+            { word: 'write', clue: 'you do this with a pen', letters: 'w _ _ _ _', from: '2026-08-04' },
+            { word: 'card', clue: 'a small stiff piece of paper', letters: 'c _ _ _', from: '2026-08-04' },
+            { word: 'road', clue: 'cars drive along it', letters: 'r _ _ _', from: '2026-08-04' },
+            { word: 'number', clue: 'a figure like 7 or 20', letters: 'n _ _ _ _ _', from: '2026-08-03' },
+            { word: 'police', clue: 'you ring them when something is stolen', letters: 'p _ _ _ _ _', from: '2026-08-03' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'Third session on the easier band, and a new text type for him: instructions. number and police are on their third meeting. If he writes all five review words from the clues again this week, add about ten words to his passages next time.',
+        },
+        {
+          reading: {
+            title: 'How to Put Up Old Photos',
+            passage:
+              'You do not need frames to put up old photos. First, take them out of the box. If they are stuck together, do not pull them apart. Put them in the sun for an hour and they will come apart on their own. Pick ten that you like best. Use tape that comes off the wall later without marking it. Put them at eye height in a place you walk past every day. It costs nothing and everybody stops to look at them.',
+          },
+          questions: [
+            'What do you not need?',
+            'What should you do if the photos are stuck together?',
+            'How many should you pick?',
+            'Where should you put them?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The photos', 'The sun', 'The tape', 'We'],
+            verbs: ['picked', 'stuck', 'dried', 'put up', 'looked'],
+            lines: 5,
+          },
+          writing: {
+            prompt: 'Write how to put something up or set something out at home. Give the steps in order.',
+            support: {
+              wordBank: ['frames', 'apart', 'sun', 'tape', 'eye', 'height', 'walk'],
+            },
+          },
+          reviewWords: [
+            { word: 'wall', clue: 'the side of a room', letters: 'w _ _ _', from: '2026-08-04' },
+            { word: 'photos', clue: 'pictures taken with a camera', letters: 'p _ _ _ _ _', from: '2026-08-04' },
+            { word: 'costs', clue: 'what you have to pay for something', letters: 'c _ _ _ _', from: '2026-08-04' },
+            { word: 'box', clue: 'you keep things in it and put a lid on', letters: 'b _ _', from: '2026-08-03' },
+            { word: 'stuck', clue: 'joined together and hard to pull apart', letters: 's _ _ _ _', from: '2026-08-03' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'box and stuck are on their third meeting. The sentence about the sun is the one worth checking he understood: it solves the problem by waiting rather than by pulling.',
+        },
+        {
+          reading: {
+            title: 'How to Get Something Fixed',
+            passage:
+              'Do not throw a thing away until you have asked about it. First, look at it and work out what is wrong. Is it dirty, or is it broken? A lot of things only need oil and a clean. Ask at school, or ask a man with a van who fixes things for people. Ask what it will cost before he starts, not after. Our school bell only needed an hour and some oil, and now it rings again. A new bell would have cost a lot more than that.',
+          },
+          questions: [
+            'What should you do before you throw something away?',
+            'What do a lot of things only need?',
+            'What should you ask before he starts?',
+            'What did the school bell need?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The bell', 'The man', 'The van', 'We'],
+            verbs: ['asked', 'looked', 'fixed', 'cost', 'rang'],
+            lines: 5,
+          },
+          writing: {
+            prompt: 'Write how to get something fixed instead of buying a new one. Say what to ask.',
+            support: {
+              wordBank: ['throw', 'away', 'broken', 'dirty', 'asked', 'starts', 'more'],
+            },
+          },
+          reviewWords: [
+            { word: 'hour', clue: 'sixty minutes', letters: 'h _ _ _', from: '2026-08-04' },
+            { word: 'needed', clue: 'had to have', letters: 'n _ _ _ _ _', from: '2026-08-04' },
+            { word: 'rings', clue: 'what a bell does', letters: 'r _ _ _ _', from: '2026-08-04' },
+            { word: 'van', clue: 'a small truck for carrying tools', letters: 'v _ _', from: '2026-08-03' },
+            { word: 'oil', clue: 'you put it on gears so they turn', letters: 'o _ _', from: '2026-08-03' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'van and oil are on their third meeting, closing the school bell run. "Ask what it will cost before he starts" is the practical line to make sure he takes away.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOCASTA — High level
+      // ────────────────────────────────────────────────────────
+      Jocasta: [
+        {
+          reading: {
+            title: 'How to Write Down Something You Only Know by Feel',
+            passage:
+              'Start by doing the thing and narrating it out loud to somebody who is writing it down. You will say things you did not know you knew. Next, find the moments where you said just or until it feels right, and stop there, because those are the places the knowledge is actually hiding. For each one, ask what you would have to see, hear or feel in order to be sure. Stop while the dough still feels warm and looks not quite finished is a real instruction. It is not exact, but it is not nothing either. You are trying to replace a demonstration with a sentence, and every instruction carries an assumption, so write that down as well. Finally, hand the draft to somebody who has never made it and watch where they stop. Their questions are the rest of the recipe.',
+          },
+          questions: [
+            'What is the first step?',
+            'Which moments should you look for, and why?',
+            'What should you ask about each one?',
+            'What is the last step, and what does it give you?',
+            'Which word in the text means to show somebody how something is done?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The instruction', 'The draft', 'The reader', 'We'],
+            verbs: ['narrated', 'wrote', 'assumed', 'demonstrated', 'asked'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write instructions for capturing something that is normally only taught by being shown.',
+            support: {
+              wordBank: ['narrating', 'hiding', 'knowledge', 'draft', 'sure', 'replace', 'rest'],
+              sentenceStarters: [
+                'The places where the knowledge is hiding are the ones where...',
+                'An instruction does not have to be exact to be...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'exact', clue: 'correct to the smallest detail', from: '2026-08-04' },
+            { word: 'demonstrate', clue: 'to show somebody how something is done', from: '2026-08-04' },
+            { word: 'assumption', clue: 'something taken as true without being checked', from: '2026-08-04' },
+            { word: 'warm', clue: 'gently hot', from: '2026-08-03' },
+            { word: 'finished', clue: 'completed, with nothing left to do', from: '2026-08-03' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'She argued for this on 4 August; today she is given the method. warm and finished are on their third meeting, closing the shortbread run.',
+        },
+        {
+          reading: {
+            title: 'How to Hold a Silence',
+            passage:
+              'Decide your number before you go in and write it down, because the technique works on people who are still deciding once they are in the room. Make your offer in one sentence and stop. Count six seconds in your head. Do not fill the gap with a reason: a reason invites bargaining. If they say nothing back, you are allowed to say nothing for longer than they can. When they move, do not celebrate it out loud. Take a neutral tone and repeat the number once. It is not a moral contest and you are not being rude. If you cannot bear the silence at all, agree the terms you will not go past in advance, and let the number do the waiting for you.',
+          },
+          questions: [
+            'What should you decide before you go in?',
+            'Why should you not give a reason?',
+            'What should you do when they move?',
+            'What should you do if you cannot bear the silence?',
+            'Which word in the text means asking for something without saying so directly?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The buyer', 'The silence', 'The number', 'We'],
+            verbs: ['decided', 'offered', 'waited', 'repeated', 'agreed'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write instructions for doing something socially uncomfortable on purpose. Include the way out for somebody who cannot.',
+            support: {
+              wordBank: ['invites', 'celebrate', 'repeat', 'advance', 'allowed', 'rude', 'gap'],
+              sentenceStarters: [
+                'The technique only works on people who...',
+                'If you cannot hold the silence yourself, the way round it is...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'seconds', clue: 'sixty of these make a minute', from: '2026-08-04' },
+            { word: 'terms', clue: 'the conditions somebody sets', from: '2026-08-04' },
+            { word: 'contest', clue: 'a competition between two sides', from: '2026-08-04' },
+            { word: 'bargaining', clue: 'arguing over a price until both sides agree', from: '2026-08-03' },
+            { word: 'neutral', clue: 'not taking either side', from: '2026-08-03' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'bargaining and neutral are on their third meeting, closing the negotiation run. The last sentence gives a route for somebody who cannot do the main technique, which is a useful move in instructions.',
+        },
+        {
+          reading: {
+            title: 'How to Start Learning a Language You Half Know',
+            passage:
+              'Do not start with an app. Start with the twenty phrases your family actually says to you, written down properly in the script, because you already know what they mean and you are only learning the shapes. Read them until you can hear them in your grandmother\'s voice. Next, learn the alphabet, which in Korean takes about two days rather than two months. Then read one message a day and let yourself understand a third of it without looking anything up. Do not translate as you go. Dismiss any method that begins with grammar you have never heard spoken aloud. You have already decided the hard part. You are not learning a language from nothing; you are labelling something you already have.',
+          },
+          questions: [
+            'What should you not start with?',
+            'Why start with the twenty phrases?',
+            'How long does the alphabet take?',
+            'What kind of method should you dismiss?',
+            'What does the writer say she is actually doing?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My grandmother', 'The alphabet', 'The phrases', 'We'],
+            verbs: ['learned', 'read', 'heard', 'dismissed', 'labelled'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write instructions for starting something you are already half inside. What would you tell somebody to skip?',
+            support: {
+              wordBank: ['app', 'script', 'shapes', 'voice', 'alphabet', 'message', 'labelling'],
+              sentenceStarters: [
+                'The reason to start with what you already hear is...',
+                'You are not learning from nothing, you are...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'properly', clue: 'in the correct or full way', from: '2026-08-04' },
+            { word: 'dismiss', clue: 'to reject an idea without properly considering it', from: '2026-08-04' },
+            { word: 'decided', clue: 'made a choice and settled it', from: '2026-08-04' },
+            { word: 'Korean', clue: 'the language spoken in Korea', from: '2026-08-03' },
+            { word: 'third', clue: 'the one after the second', from: '2026-08-03' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'Korean and third are on their third meeting. This is the plan that follows the decision she made on 4 August, so the run ends with something she could actually act on.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  CODY — High level
+      // ────────────────────────────────────────────────────────
+      Cody: [
+        {
+          reading: {
+            title: 'How to Learn From Somebody Who Cannot Explain It',
+            passage:
+              'Do not open with the interview. Watch them do the whole thing twice without asking anything, and write down only the physical part: what they do with their hands and where they are looking. On the third time, ask about one moment. Not how do you do this, but what were you looking at just then. That question can be answered; the general one cannot. What somebody can produce on demand is a summary of their method, and the summary is always missing a step they do not know they take. Find that step by trying it yourself badly in front of them, because they will correct you instantly even though they could not have told you in advance.',
+          },
+          questions: [
+            'What should you not open with?',
+            'What should you write down?',
+            'Which question can actually be answered?',
+            'How do you find the missing step?',
+            'Which word in the text means immediately?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The expert', 'The method', 'The missing step', 'We'],
+            verbs: ['watched', 'asked', 'produced', 'corrected', 'tried'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write instructions for learning something from a person rather than from a book.',
+            support: {
+              wordBank: ['instantly', 'correct', 'badly', 'general', 'missing', 'step', 'moment'],
+              sentenceStarters: [
+                'The general question cannot be answered because...',
+                'What they cannot tell you in advance they will...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'interview', clue: 'a meeting where one person asks the questions', from: '2026-08-04' },
+            { word: 'method', clue: 'the way something is done', from: '2026-08-04' },
+            { word: 'demand', clue: 'a firm request that something be done now', from: '2026-08-04' },
+            { word: 'produce', clue: 'to bring something out when it is asked for', from: '2026-08-03' },
+            { word: 'physical', clue: 'to do with the body rather than the mind', from: '2026-08-03' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'New text type: instructions. He argued this on 4 August; here is the procedure. produce and physical are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'How to Break a Habit Without Discipline',
+            passage:
+              'Write down where you are and what time it is when it happens, every day for one week, and nothing else. You are looking for the object and the hour, not the reason. Then change one physical thing: walk on the other side of the corridor, leave the phone in the bag, move the chair. Do not try to want it less, because deciding to stop is the part that does nothing. If the cue cannot be removed, replace what follows it with something that takes about the same ten seconds. Expect it to feel ridiculous, because the size of the fix will not match the size of the problem you have been carrying. That mismatch is not evidence that it is wrong. None of this needs discipline, which is the point.',
+          },
+          questions: [
+            'What should you write down for a week?',
+            'What are you looking for in what you wrote?',
+            'What should you change?',
+            'Why will the fix feel ridiculous?',
+            'Which word in the text means proof that something is true?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The habit', 'The cue', 'The fix', 'We'],
+            verbs: ['recorded', 'changed', 'replaced', 'removed', 'expected'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write instructions for changing a behaviour by changing a situation. Say what not to bother with.',
+            support: {
+              wordBank: ['corridor', 'mismatch', 'evidence', 'size', 'removed', 'week', 'carrying'],
+              sentenceStarters: [
+                'You are not looking for the reason, you are looking for...',
+                'The size of the fix not matching the size of the problem is...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'object', clue: 'a thing you can see and touch', from: '2026-08-04' },
+            { word: 'discipline', clue: 'making yourself do what you decided to do', from: '2026-08-04' },
+            { word: 'deciding', clue: 'making up your mind', from: '2026-08-04' },
+            { word: 'replaced', clue: 'put something else in its place', from: '2026-08-03' },
+            { word: 'ridiculous', clue: 'so silly it is hard to take seriously', from: '2026-08-03' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'replaced and ridiculous are on their third meeting, closing the habit run. Four texts: the habit, the research, the argument, the procedure.',
+        },
+        {
+          reading: {
+            title: 'How to Prepare for a Hard Conversation',
+            passage:
+              'Write one sentence and stop. It should be the thing you would say if you only got five seconds, and it should be true rather than well made. Next, decide the one thing you will not say however the conversation goes, because that decision does more work than any amount of rehearsal. Do not write a fourth paragraph. If you find yourself drafting their replies, you are building a script that you will spend the whole conversation checking against their face. Arrive early enough to be calm and late enough that you cannot keep preparing. Ninety seconds of the real thing will teach you more than an evening of the prepared version.',
+          },
+          questions: [
+            'How long should the first sentence be?',
+            'What should that sentence be?',
+            'Which decision does more work than rehearsal?',
+            'What is the sign that you are building a script?',
+            'Which word in the text means quiet and in control?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The sentence', 'The script', 'The conversation', 'We'],
+            verbs: ['wrote', 'decided', 'drafted', 'arrived', 'listened'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write instructions for preparing for something difficult. Say where preparing stops helping.',
+            support: {
+              wordBank: ['drafting', 'replies', 'script', 'calm', 'decision', 'teach', 'version'],
+              sentenceStarters: [
+                'The sentence should be true rather than...',
+                'Arriving too early costs you...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'fourth', clue: 'the one after the third', from: '2026-08-04' },
+            { word: 'paragraph', clue: 'a block of sentences on one idea', from: '2026-08-04' },
+            { word: 'arrive', clue: 'to get to the place you were going', from: '2026-08-04' },
+            { word: 'ninety', clue: 'the number after eighty-nine', from: '2026-08-03' },
+            { word: 'prepared', clue: 'got ready in advance', from: '2026-08-03' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'ninety and prepared are on their third meeting, closing the conversation run. He has now had this material as narrative, explanation, argument and procedure.',
+        },
+      ],
+    },
+  },
+
+  // ══════════════════════════════════════════════════════════
   //  4 AUGUST 2026 — spiral session 4. Third text type: this
   //  session is OPINION / ARGUMENT. The juniors give a reason
   //  ("I think X because Y"); the seniors concede a point

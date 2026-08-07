@@ -724,9 +724,93 @@ const w2d4: OdayDay = {
     'Letters O and P, and a consolidation day for all three Week 2 sight words (am, we, is). O uses a new octopus picture; P uses the pen he already knows from Week 1. The CVC task is now the whole word with no letters shown (missing: -1), which is the same step up Week 1 took on its Day 4. "The pen is red" carries the colour work as well as the sight word.',
 };
 
+const w2d5: OdayDay = {
+  date: '2026-08-10',
+  week: 2,
+  day: 5,
+  focus: 'Week 2 review · I–P · am/we/is · -og family · Free colour',
+  activities: [
+    {
+      type: 'warmup-trace',
+      title: 'Warm-up · My name',
+      instr: 'Trace your name three times. Then write your name on the last line by yourself.',
+      words: ['Oday'],
+    },
+    {
+      type: 'alphabet-focus',
+      title: 'Letter Review · I J K L M N O P',
+      instr: 'Trace each letter. Say the sound and the word. Circle the letters you know well.',
+      letters: [
+        { letter: 'I', iconKey: 'ink', word: 'ink' },
+        { letter: 'J', iconKey: 'jam', word: 'jam' },
+        { letter: 'K', iconKey: 'kite', word: 'kite' },
+        { letter: 'L', iconKey: 'leaf', word: 'leaf' },
+        { letter: 'M', iconKey: 'mat', word: 'mat' },
+        { letter: 'N', iconKey: 'nut', word: 'nut' },
+        { letter: 'O', iconKey: 'octopus', word: 'octopus' },
+        { letter: 'P', iconKey: 'pen', word: 'pen' },
+      ],
+    },
+    {
+      type: 'sight-word',
+      title: 'Sight Word Review · am · we · is',
+      instr: 'Write each word three times without tracing.',
+      words: ['am', 'we', 'is'],
+    },
+    {
+      type: 'picture-word-match',
+      title: 'Match Picture to Word',
+      instr: 'Draw a line from each picture to the correct word. Then copy each word.',
+      pairs: [
+        { iconKey: 'ink', word: 'ink' },
+        { iconKey: 'jam', word: 'jam' },
+        { iconKey: 'kite', word: 'kite' },
+        { iconKey: 'leaf', word: 'leaf' },
+        { iconKey: 'mat', word: 'mat' },
+        { iconKey: 'nut', word: 'nut' },
+        { iconKey: 'octopus', word: 'octopus' },
+        { iconKey: 'pen', word: 'pen' },
+      ],
+    },
+    {
+      type: 'cvc-build',
+      title: 'Build the Word · -og family review',
+      instr: 'Look at the picture. Write the whole word.',
+      items: [
+        { iconKey: 'dog', word: 'dog', missing: -1 },
+        { iconKey: 'log', word: 'log', missing: -1 },
+        { iconKey: 'fog', word: 'fog', missing: -1 },
+        { iconKey: 'jog', word: 'jog', missing: -1 },
+        { iconKey: 'hog', word: 'hog', missing: -1 },
+      ],
+    },
+    {
+      type: 'colour-label',
+      title: 'Free Colour',
+      instr: 'Choose one picture. Colour it. Then write the word.',
+      items: [
+        { iconKey: 'octopus', word: 'octopus' },
+        { iconKey: 'kite', word: 'kite' },
+        { iconKey: 'nut', word: 'nut' },
+      ],
+    },
+    {
+      type: 'sentence-copy',
+      title: 'Copy the Sentence',
+      instr: 'Read each sentence with your teacher. Copy it on the line below.',
+      sentences: [
+        { iconKey: 'dog', sentence: 'We can see the dog.' },
+        { iconKey: 'nut', sentence: 'It is a nut.' },
+      ],
+    },
+  ],
+  teacherNote:
+    'Week 2 review day, in the same shape as the Week 1 review. Loosen the tracing: ask him to write letters and words unaided wherever he can, and note which ones needed prompting. All eight Week 2 letters are here (I to P) and the -og family is now whole-word with no letters shown. Two sentences today rather than one, so that "we" and "is" both get used. If the letter review is solid, Week 3 can start on Q R S T with the -un family.',
+};
+
 // ── EXPORT ────────────────────────────────────────────────────────
 
-export const ODAY_SESSIONS: OdayDay[] = [w1d1, w1d2, w1d3, w1d4, w1d5, w2d1, w2d2, w2d3, w2d4];
+export const ODAY_SESSIONS: OdayDay[] = [w1d1, w1d2, w1d3, w1d4, w1d5, w2d1, w2d2, w2d3, w2d4, w2d5];
 
 export function findOdayDay(date: string): OdayDay | undefined {
   return ODAY_SESSIONS.find((d) => d.date === date);
