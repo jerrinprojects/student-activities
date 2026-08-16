@@ -74,6 +74,944 @@ export interface LiteracySession {
 export const LITERACY_SESSIONS: LiteracySession[] = [
 
   // ══════════════════════════════════════════════════════════
+  //  17 AUGUST 2026 — non-fiction unit: GARDENING AND PLANTS.
+  //  Every text is non-fiction, and each student gets the three
+  //  non-fiction shapes in turn: an explanation (why), a
+  //  procedure (how to) and a report (about one thing).
+  //  The spiral survives the topic change: the review words
+  //  chosen from 10 August are the ones that carry into a
+  //  garden without being forced (ground, air, weather, tight,
+  //  piece, sun, pot, green ...), so the recycling continues.
+  //  Each set: 3 words from 10 August + 2 on their 3rd meeting.
+  // ══════════════════════════════════════════════════════════
+  {
+    date: '2026-08-17',
+    activities: {
+
+      // ────────────────────────────────────────────────────────
+      //  PHARRELL — Level 7 (~5 yrs)
+      // ────────────────────────────────────────────────────────
+      Pharrell: [
+        {
+          reading: {
+            title: 'What a Seed Needs',
+            passage:
+              'A seed is very little, but it has all it needs to start. Put it in soil in a pot. Give it water, but not too much. Put the pot where the sun can get to it. Then you wait. Do not pull the seed up to look at it. In about ten days you will see two green leaves. Watch it every day and it will grow strong. A garden starts with one seed like this.',
+          },
+          questions: [
+            'What do you put the seed in?',
+            'What must you not do?',
+            'What will you see in about ten days?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The seed', 'The pot', 'The sun', 'We'],
+            verbs: ['grew', 'waited', 'watered', 'watched', 'started'],
+          },
+          writing: {
+            prompt: 'Write about a plant you have seen grow. What did it need?',
+            support: {
+              wordBank: ['seed', 'soil', 'water', 'days', 'leaves', 'grow', 'strong'],
+            },
+          },
+          reviewWords: [
+            { word: 'little', clue: 'not big', letters: 'l _ _ _ _ _', from: '2026-08-10' },
+            { word: 'pot', clue: 'you put a plant in it', letters: 'p _ _', from: '2026-08-10' },
+            { word: 'green', clue: 'the colour of leaves', letters: 'g _ _ _ _', from: '2026-08-10' },
+            { word: 'watch', clue: 'to look at something for a long time', letters: 'w _ _ _ _', from: '2026-08-04' },
+            { word: 'garden', clue: 'the grass and plants outside your house', letters: 'g _ _ _ _ _', from: '2026-08-04' },
+          ],
+          wordCards: ['The', 'seed', 'is', 'in', 'the', 'pot', '.'],
+          writingLines: 5,
+          teacherNote:
+            'New topic: gardening. This one is an explanation. Sound focus: ee (seed, needs, green, see). watch and garden are on their third meeting and came from the bird text, so the words are old even though the subject is new.',
+        },
+        {
+          reading: {
+            title: 'How to Plant a Bean',
+            passage:
+              'Here is how to plant a bean. First, fill a pot with soil. Make a hole in the middle with your finger. Put one bean in and cover it over. Water it slowly so the soil does not wash away. Put it on a windowsill. Do not let the soil get dry. In about a week a green shoot will come up. When it is ready you can feed it once a month. Be careful when you move it.',
+          },
+          questions: [
+            'What do you make with your finger?',
+            'Why do you water it slowly?',
+            'What will come up in about a week?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The bean', 'The soil', 'The shoot', 'We'],
+            verbs: ['filled', 'covered', 'watered', 'waited', 'moved'],
+          },
+          writing: {
+            prompt: 'Write how to plant something. Say what to do first, then next.',
+            support: {
+              wordBank: ['plant', 'bean', 'fill', 'hole', 'cover', 'windowsill', 'shoot'],
+            },
+          },
+          reviewWords: [
+            { word: 'slowly', clue: 'not fast', letters: 's _ _ _ _ _', from: '2026-08-10' },
+            { word: 'dry', clue: 'with no water in it', letters: 'd _ _', from: '2026-08-10' },
+            { word: 'ready', clue: 'finished getting prepared', letters: 'r _ _ _ _', from: '2026-08-10' },
+            { word: 'feed', clue: 'to give food to something', letters: 'f _ _ _', from: '2026-08-04' },
+            { word: 'careful', clue: 'taking care so nothing gets broken', letters: 'c _ _ _ _ _ _', from: '2026-08-04' },
+          ],
+          wordCards: ['Put', 'the', 'bean', 'in', 'the', 'soil', '.'],
+          writingLines: 5,
+          teacherNote:
+            'A procedure. Sound focus: sh (shoot, wash). feed and careful are on their third meeting; both came from the bird text and now mean something slightly different.',
+        },
+        {
+          reading: {
+            title: 'Snails in the Garden',
+            passage:
+              'Snails come out at night and after rain. They like it cold and wet. A snail has a soft body and a hard shell, and it has no legs at all. It moves slowly on one foot and leaves a shiny line behind it. They find food by smell. Snails eat young leaves, so they can spoil a garden. If you keep still you can watch one move. Do not pull the plants up. Take the snails to a tree far away.',
+          },
+          questions: [
+            'When do snails come out?',
+            'How does a snail move?',
+            'What do snails eat?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The snail', 'Its shell', 'The leaves', 'We'],
+            verbs: ['came out', 'moved', 'ate', 'found', 'carried'],
+          },
+          writing: {
+            prompt: 'Write about a small animal that lives in a garden. What does it do?',
+            support: {
+              wordBank: ['snails', 'night', 'body', 'shiny', 'young', 'spoil', 'far'],
+            },
+          },
+          reviewWords: [
+            { word: 'pull', clue: 'the opposite of push', letters: 'p _ _ _', from: '2026-08-10' },
+            { word: 'tree', clue: 'a big plant with a trunk and branches', letters: 't _ _ _', from: '2026-08-10' },
+            { word: 'still', clue: 'not moving at all', letters: 's _ _ _ _', from: '2026-08-10' },
+            { word: 'cold', clue: 'not warm', letters: 'c _ _ _', from: '2026-08-04' },
+            { word: 'smell', clue: 'you do this with your nose', letters: 's _ _ _ _', from: '2026-08-04' },
+          ],
+          wordCards: ['The', 'snail', 'is', 'on', 'the', 'leaf', '.'],
+          writingLines: 5,
+          teacherNote:
+            'A report about one animal. Sound focus: ai (snail, rain). cold and smell are on their third meeting. He met a snail in a story on 28 July; this is the same animal as information.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JIERRY — Level 10, ESOL (Mandarin)
+      // ────────────────────────────────────────────────────────
+      Jierry: [
+        {
+          reading: {
+            title: 'How a Plant Drinks',
+            passage:
+              'A plant drinks through its roots, not through its leaves. The water goes up a line of very thin tubes inside the stem, all the way to the edge of every leaf. If you stand a white flower in water with red food colouring in it, you can follow the colour up the stem and see it appear at the edge of the petals in a few hours. That is why a plant with cut roots dies even if you water it every day.',
+          },
+          questions: [
+            'Where does a plant drink from?',
+            'What happens if you stand a flower in coloured water?',
+            'Why does a plant with cut roots die?',
+            'Find the word in the text that means 小时.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The plant', 'The water', 'The flower', 'We'],
+            verbs: ['drank', 'followed', 'appeared', 'watered', 'died'],
+            translations: { 'I': '我', 'The plant': '植物', 'The water': '水', 'The flower': '花', 'We': '我们', 'drank': '喝', 'followed': '跟着', 'appeared': '出现', 'watered': '浇水', 'died': '死了' },
+          },
+          writing: {
+            prompt: 'Explain how a part of a plant works. Use what you saw or what you have read.',
+            promptTranslation: '解释植物某个部分是怎么运作的。写你看到的或读到的内容。',
+            support: {
+              vocabularyList: [
+                { word: 'roots', translation: '根', language: 'Chinese' },
+                { word: 'tubes', translation: '管', language: 'Chinese' },
+                { word: 'stem', translation: '茎', language: 'Chinese' },
+                { word: 'colouring', translation: '色素', language: 'Chinese' },
+                { word: 'petals', translation: '花瓣', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'line', clue: '一条线', letters: 'l _ _ _', from: '2026-08-10' },
+            { word: 'follow', clue: '跟着', letters: 'f _ _ _ _ _', from: '2026-08-10' },
+            { word: 'hours', clue: '小时', letters: 'h _ _ _ _', from: '2026-08-04' },
+            ],
+          writingLines: 6,
+          teacherNote:
+            'New topic: gardening, and this text is an explanation. The experiment with the coloured flower is worth doing on the windowsill if there is time. hours is on its third meeting.',
+        },
+        {
+          reading: {
+            title: 'How to Grow Spring Onions Again',
+            passage:
+              'Do not throw away the white root end of a spring onion. Cut it about three centimetres from the bottom. Choose a small glass and stand the pieces in it with the roots pointing down. Add water until it just covers the roots, not the whole piece. Put the glass on a windowsill where it gets light. The water will turn cloudy, so change it every two days. In about a week the green part will have grown back and you can cut it and use it again.',
+          },
+          questions: [
+            'What should you not throw away?',
+            'How much water should you add?',
+            'Why do you change the water?',
+            'Find the word in the text that means 变成.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The roots', 'The water', 'The green part', 'We'],
+            verbs: ['cut', 'stood', 'added', 'changed', 'grew'],
+            translations: { 'I': '我', 'The roots': '根', 'The water': '水', 'The green part': '绿色部分', 'We': '我们', 'cut': '切', 'stood': '立', 'added': '加', 'changed': '换', 'grew': '长' },
+          },
+          writing: {
+            prompt: 'Write instructions for growing something in your kitchen. Give the steps in order.',
+            promptTranslation: '写下在厨房里种东西的步骤，按顺序写。',
+            support: {
+              vocabularyList: [
+                { word: 'spring onion', translation: '葱', language: 'Chinese' },
+                { word: 'centimetres', translation: '厘米', language: 'Chinese' },
+                { word: 'glass', translation: '玻璃杯', language: 'Chinese' },
+                { word: 'cloudy', translation: '浑浊的', language: 'Chinese' },
+                { word: 'again', translation: '再一次', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'choose', clue: '选择', letters: 'c _ _ _ _ _', from: '2026-08-10' },
+            { word: 'piece', clue: '一段', letters: 'p _ _ _ _', from: '2026-08-10' },
+            { word: 'turn', clue: '变成', letters: 't _ _ _', from: '2026-08-04' },
+            ],
+          writingLines: 6,
+          teacherNote:
+            'A procedure, and one he can actually do at home this week. turn is on its third meeting and has changed sense each time: a turn in goal, then to turn cloudy.',
+        },
+        {
+          reading: {
+            title: 'The Tomato',
+            passage:
+              'A tomato is not a vegetable. It grows out of a flower and it holds the seeds of the plant inside it, so a botanist calls it a fruit. In New Zealand most tomatoes are grown in glasshouses, because the plant does not like cold nights. A tomato plant needs a stake, because the stem cannot hold the weight of the fruit on its own. Press the fruit gently with your thumb, and if it gives a little it is ripe. A mistake everybody makes is putting them in the fridge, which stops the taste developing.',
+          },
+          questions: [
+            'Why is a tomato called a fruit?',
+            'Why does a tomato plant need a stake?',
+            'How do you know a tomato is ripe?',
+            'Find the word in the text that means 每个人.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The tomato', 'The plant', 'The stake', 'We'],
+            verbs: ['grew', 'held', 'pressed', 'picked', 'ate'],
+            translations: { 'I': '我', 'The tomato': '番茄', 'The plant': '植物', 'The stake': '支撑杆', 'We': '我们', 'grew': '长', 'held': '撑住', 'pressed': '按', 'picked': '摘', 'ate': '吃' },
+          },
+          writing: {
+            prompt: 'Write about a fruit or vegetable your family eats. Where does it grow and how do you know it is ready?',
+            promptTranslation: '写一写你家常吃的水果或蔬菜。它长在哪里？怎么知道它熟了？',
+            support: {
+              vocabularyList: [
+                { word: 'vegetable', translation: '蔬菜', language: 'Chinese' },
+                { word: 'botanist', translation: '植物学家', language: 'Chinese' },
+                { word: 'glasshouse', translation: '温室', language: 'Chinese' },
+                { word: 'stake', translation: '支撑杆', language: 'Chinese' },
+                { word: 'ripe', translation: '熟的', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'press', clue: '按', letters: 'p _ _ _ _', from: '2026-08-10' },
+            { word: 'mistake', clue: '错误', letters: 'm _ _ _ _ _ _', from: '2026-08-10' },
+            { word: 'everybody', clue: '每个人', letters: 'e _ _ _ _ _ _ _ _', from: '2026-08-04' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'A report on one plant. everybody is on its third meeting. The fruit-or-vegetable question is a good one to argue about before he writes.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  BAO — Level 10, ESOL (Vietnamese)
+      // ────────────────────────────────────────────────────────
+      Bao: [
+        {
+          reading: {
+            title: 'Why Roots Need Air',
+            passage:
+              'Everybody knows that a plant needs water, but the roots need air as well. Soil that is packed too tight has no space between the pieces, so the roots cannot breathe and they start to rot. That is why a pot must have a hole in the bottom of it. If you water a plant every single day it can drown, even when nothing looks dry. Push your finger into the soil first. If the soil sticks to your finger, wait until later.',
+          },
+          questions: [
+            'What do roots need as well as water?',
+            'Why must a pot have a hole in the bottom?',
+            'How do you check the soil before watering?',
+            'Find the word in the text that means sau đó.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The roots', 'The soil', 'The water', 'We'],
+            verbs: ['needed', 'breathed', 'rotted', 'checked', 'waited'],
+            translations: { 'I': 'tôi', 'The roots': 'rễ cây', 'The soil': 'đất', 'The water': 'nước', 'We': 'chúng tôi', 'needed': 'cần', 'breathed': 'thở', 'rotted': 'thối', 'checked': 'kiểm tra', 'waited': 'chờ' },
+          },
+          writing: {
+            prompt: 'Explain something a plant needs that people forget about. Say what happens without it.',
+            promptTranslation: 'Giải thích một thứ cây cần mà người ta hay quên. Không có nó thì sao?',
+            support: {
+              vocabularyList: [
+                { word: 'air', translation: 'không khí', language: 'Vietnamese' },
+                { word: 'packed', translation: 'nén chặt', language: 'Vietnamese' },
+                { word: 'breathe', translation: 'thở', language: 'Vietnamese' },
+                { word: 'rot', translation: 'thối', language: 'Vietnamese' },
+                { word: 'drown', translation: 'chết úng', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'tight', clue: 'chặt', letters: 't _ _ _ _', from: '2026-08-10' },
+            { word: 'piece', clue: 'miếng, mảnh', letters: 'p _ _ _ _', from: '2026-08-10' },
+            { word: 'later', clue: 'sau đó', letters: 'l _ _ _ _', from: '2026-08-04' },
+            ],
+          writingLines: 6,
+          teacherNote:
+            'New topic: gardening, and this is an explanation. later is on its third meeting. tight came from a bike tyre and now describes soil.',
+        },
+        {
+          reading: {
+            title: 'How to Grow Herbs in a Bottle',
+            passage:
+              'Cut a large plastic bottle in half. Keep the top part with the cap still on it. Fill the bottom part with soil and plant the seeds. Add a little water. Put the top part over the soil like a small glasshouse, and take the cap off during the day so that the air can move. Do not leave it in the sun all day or the plants will cook. Wash the bottle first if it had juice in it. Do not worry if the seeds take two weeks.',
+          },
+          questions: [
+            'What do you do with the large bottle?',
+            'Why do you take the cap off during the day?',
+            'What should you do if the bottle had juice in it?',
+            'Find the word in the text that means lo lắng.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The bottle', 'The seeds', 'The air', 'We'],
+            verbs: ['cut', 'filled', 'planted', 'washed', 'waited'],
+            translations: { 'I': 'tôi', 'The bottle': 'chai', 'The seeds': 'hạt giống', 'The air': 'không khí', 'We': 'chúng tôi', 'cut': 'cắt', 'filled': 'đổ đầy', 'planted': 'trồng', 'washed': 'rửa', 'waited': 'chờ' },
+          },
+          writing: {
+            prompt: 'Write instructions for growing something using what you already have at home.',
+            promptTranslation: 'Viết các bước trồng cây bằng đồ có sẵn ở nhà.',
+            support: {
+              vocabularyList: [
+                { word: 'herbs', translation: 'rau thơm', language: 'Vietnamese' },
+                { word: 'half', translation: 'một nửa', language: 'Vietnamese' },
+                { word: 'seeds', translation: 'hạt giống', language: 'Vietnamese' },
+                { word: 'glasshouse', translation: 'nhà kính', language: 'Vietnamese' },
+                { word: 'cook', translation: 'bị nóng chín', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'bottle', clue: 'chai', letters: 'b _ _ _ _ _', from: '2026-08-10' },
+            { word: 'cap', clue: 'nắp', letters: 'c _ _', from: '2026-08-10' },
+            { word: 'worry', clue: 'lo lắng', letters: 'w _ _ _ _', from: '2026-08-04' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'A procedure. bottle and cap came from the bike pump text last week and are doing a completely different job here. worry is on its third meeting.',
+        },
+        {
+          reading: {
+            title: 'Mint',
+            passage:
+              'Mint is the easiest herb to grow and the hardest one to stop. It spreads underneath the soil, so if you plant it in a garden bed it will take the whole bed in two summers. Grow it in its own pot instead. Mint likes water and it does not mind shade. Pick the leaves from the top, not the bottom, and the plant will grow back thicker. The taste is strongest just before the plant flowers. Wash the leaves and serve them with cold water and ice on a hot day.',
+          },
+          questions: [
+            'Why should you grow mint in its own pot?',
+            'Where should you pick the leaves from?',
+            'When is the taste strongest?',
+            'Find the word in the text that means nếm, vị.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The mint', 'The leaves', 'The pot', 'We'],
+            verbs: ['spread', 'grew', 'picked', 'washed', 'served'],
+            translations: { 'I': 'tôi', 'The mint': 'bạc hà', 'The leaves': 'lá', 'The pot': 'chậu', 'We': 'chúng tôi', 'spread': 'lan ra', 'grew': 'mọc', 'picked': 'hái', 'washed': 'rửa', 'served': 'dọn ra' },
+          },
+          writing: {
+            prompt: 'Write about a plant your family uses in cooking. How does it grow and how do you use it?',
+            promptTranslation: 'Viết về một loại cây gia đình bạn dùng để nấu ăn. Nó mọc thế nào và bạn dùng ra sao?',
+            support: {
+              vocabularyList: [
+                { word: 'mint', translation: 'bạc hà', language: 'Vietnamese' },
+                { word: 'spreads', translation: 'lan ra', language: 'Vietnamese' },
+                { word: 'shade', translation: 'bóng râm', language: 'Vietnamese' },
+                { word: 'thicker', translation: 'dày hơn', language: 'Vietnamese' },
+                { word: 'flowers', translation: 'ra hoa', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'wash', clue: 'rửa', letters: 'w _ _ _', from: '2026-08-10' },
+            { word: 'serve', clue: 'dọn ra', letters: 's _ _ _ _', from: '2026-08-10' },
+            { word: 'taste', clue: 'nếm, vị', letters: 't _ _ _ _', from: '2026-08-04' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'A report on one plant. taste is on its third meeting, from the chilli texts. If there is mint at school, pick a leaf and crush it before he reads.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MATT — Level 10
+      // ────────────────────────────────────────────────────────
+      Matt: [
+        {
+          reading: {
+            title: 'Why Plants Die in a Frost',
+            passage:
+              'Frost does not freeze a plant from the outside in. It freezes the water inside the cells, and ice takes up more room than water does, so the cell walls burst. That is why a frosted leaf goes black and limp within a day. Plants from warmer conditions have thinner cell walls and go first. Ground frost forms on clear still nights, because cloud acts like a blanket and holds the day\'s heat near the ground, and cold air pools at the bottom of a slope. Frost also slows a plant down even when it does not kill it. A weather forecast warns of ground frost when the sky will stay clear, and a tree shelters what is under it for the same reason a cloud does.',
+          },
+          questions: [
+            'What does frost actually freeze?',
+            'Why does a frosted leaf go black?',
+            'Why does frost form on clear nights?',
+            'Which word in the text means to break open suddenly?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The frost', 'The cells', 'A cloud', 'We'],
+            verbs: ['froze', 'burst', 'formed', 'sheltered', 'covered'],
+          },
+          writing: {
+            prompt: 'Explain why something goes wrong in cold weather. Say what is actually happening.',
+            support: {
+              wordBank: ['frost', 'freeze', 'cells', 'burst', 'limp', 'blanket', 'shelter'],
+            },
+          },
+          reviewWords: [
+            { word: 'ground', clue: 'the surface of the earth you stand on', letters: 'g _ _ _ _ _', from: '2026-08-10' },
+            { word: 'air', clue: 'what you breathe', letters: 'a _ _', from: '2026-08-10' },
+            { word: 'weather', clue: 'rain, sun, wind and frost', letters: 'w _ _ _ _ _ _', from: '2026-08-10' },
+            { word: 'conditions', clue: 'what the weather and the ground are like', letters: 'c _ _ _ _ _ _ _ _ _', from: '2026-08-04' },
+            { word: 'slows', clue: 'makes something go less quickly', letters: 's _ _ _ _', from: '2026-08-04' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'New topic: gardening. This one is an explanation, and it reuses ground, air and weather straight from the football texts. conditions and slows are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'How to Take a Cutting',
+            passage:
+              'You can grow a whole new plant from one stem. Cut a piece about eight centimetres long, just below a leaf joint, using a clean blade rather than scissors, which crush the stem instead of slicing it. Pull off the lower leaves so that only two are left at the top. Dip the cut end in rooting powder if you have any. Push it into damp sand in a jar, then cover the jar with a plastic bag held on with a rubber band. The bag is what actually matters: it stops the cutting drying out before it can make roots. Keep it out of direct sun. In about twenty days a gentle pull will meet some resistance, and that means roots.',
+          },
+          questions: [
+            'Where exactly do you cut the stem?',
+            'Why use a blade rather than scissors?',
+            'Why do you cover the jar with a bag?',
+            'Which word in the text means the point where a leaf joins the stem?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The cutting', 'The bag', 'The roots', 'We'],
+            verbs: ['cut', 'dipped', 'covered', 'waited', 'pulled'],
+          },
+          writing: {
+            prompt: 'Write instructions for making one thing into two. Include the step people get wrong.',
+            support: {
+              wordBank: ['cutting', 'joint', 'blade', 'crush', 'dip', 'powder', 'resistance'],
+            },
+          },
+          reviewWords: [
+            { word: 'jar', clue: 'a glass container with a wide mouth', letters: 'j _ _', from: '2026-08-10' },
+            { word: 'plastic', clue: 'what a drink bottle is made of', letters: 'p _ _ _ _ _ _', from: '2026-08-10' },
+            { word: 'eight', clue: 'the number after seven', letters: 'e _ _ _ _', from: '2026-08-10' },
+            { word: 'twenty', clue: 'the number after nineteen', letters: 't _ _ _ _ _', from: '2026-08-04' },
+            { word: 'actually', clue: 'in fact, really', letters: 'a _ _ _ _ _ _ _', from: '2026-08-04' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'A procedure. jar and plastic came from the bearings text and are doing garden work here. twenty and actually are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'Aphids',
+            passage:
+              'Aphids are the small green or black insects that cluster on new growth. They pierce the stem and drink the sap, which curls the leaves and holds the plant back. A single aphid can produce forty young in a week without mating, so a few become a colony fast. Shake the stem over a sheet of white paper to judge how many there are before you do anything. Do not reach for a spray first. A hard jet of water knocks most of them off, and ladybirds eat about fifty a day. Pull out badly infested annuals rather than treating them. A fair test is to leave one plant alone and check what worked a week later.',
+          },
+          questions: [
+            'Where do aphids cluster?',
+            'What do they do to the plant?',
+            'How can you judge how many there are?',
+            'Which word in the text means a group living together?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The aphids', 'The sap', 'A ladybird', 'We'],
+            verbs: ['clustered', 'pierced', 'shook', 'sprayed', 'checked'],
+          },
+          writing: {
+            prompt: 'Write a report on a pest or a problem you have seen. What is it, and what actually works?',
+            support: {
+              wordBank: ['aphids', 'cluster', 'pierce', 'sap', 'colony', 'jet', 'ladybirds'],
+            },
+          },
+          reviewWords: [
+            { word: 'shake', clue: 'to move something quickly to and fro', letters: 's _ _ _ _', from: '2026-08-10' },
+            { word: 'judge', clue: 'to work out how much or how many', letters: 'j _ _ _ _', from: '2026-08-10' },
+            { word: 'worked', clue: 'did what it was supposed to do', letters: 'w _ _ _ _ _', from: '2026-08-10' },
+            { word: 'pull out', clue: 'to take something out and remove it completely', letters: 'p _ _ _  o _ _', from: '2026-08-04' },
+            { word: 'fair', clue: 'giving everything the same chance', letters: 'f _ _ _', from: '2026-08-04' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'A report. "A fair test is to leave one plant alone" is the science idea worth pulling out: change one thing and keep a control. pull out and fair are on their third meeting.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOSHUA — Level 23 (~8.5 yrs)
+      // ────────────────────────────────────────────────────────
+      Joshua: [
+        {
+          reading: {
+            title: 'Why a Compost Heap Gets Hot',
+            passage:
+              'A compost heap heats up because of what is living in it. Bacteria break the material down and give off heat as they work, and a heap bigger than about a cubic metre holds that heat instead of losing it to the air. A working heap sits between fifty and sixty-five degrees, which is hot enough to kill most weed seeds. A thermometer pushed into the middle gives you an accurate reading; guessing with your hand does not. If it is not heating, the fault is usually one of three things: too dry, too little nitrogen, or packed so tight that no air gets in. Nitrogen has to be available, not just present. The remedy for all three is the same: turn it.',
+          },
+          questions: [
+            'Why does a compost heap heat up?',
+            'How hot does a working heap get?',
+            'What are the three usual faults?',
+            'What is the remedy for all three?',
+            'Which word in the text means able to be used, not just there?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The heap', 'The bacteria', 'The nitrogen', 'We'],
+            verbs: ['heated', 'turned', 'measured', 'killed', 'checked'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Explain why something heats up, breaks down or changes on its own. Name what is doing the work.',
+            support: {
+              wordBank: ['compost', 'heap', 'bacteria', 'nitrogen', 'degrees', 'thermometer', 'cubic'],
+            },
+          },
+          reviewWords: [
+            { word: 'material', clue: 'what something is made of', from: '2026-08-10' },
+            { word: 'fault', clue: 'the thing that is wrong', from: '2026-08-10' },
+            { word: 'remedy', clue: 'the thing that puts it right', from: '2026-08-10' },
+            { word: 'accurate', clue: 'correct in every detail', from: '2026-08-04' },
+            { word: 'available', clue: 'able to be had or used', from: '2026-08-04' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'New topic: gardening. fault, remedy and material came from the complaint and coat texts and transfer intact. accurate and available are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'How to Prune a Fruit Tree',
+            passage:
+              'Prune in late winter, when the tree is bare and you can actually see the shape of it. Take out the three D\'s first: dead, damaged and diseased wood, cutting back to sound wood every time. Then remove any branch growing inwards across the middle, because a tree needs light and air through the centre. Each cut has a specific job. Cut just outside the collar, the slight swelling where the branch meets the trunk, and never directly against the trunk, because the collar is the part that seals the wound. The wound does not need to be treated with paint. Take out no more than a quarter of the crown in one year: the effect of a hard prune shows up a year later as a mass of useless upright growth.',
+          },
+          questions: [
+            'When should you prune, and why then?',
+            'What are the three D\'s?',
+            'Why do you cut outside the collar?',
+            'How much should you take out in one year?',
+            'Which word in the text means the swollen ring where a branch meets the trunk?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The tree', 'The branch', 'The collar', 'We'],
+            verbs: ['pruned', 'removed', 'cut', 'sealed', 'grew'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write instructions for a job with an order that matters. Say what to do first and what never to do.',
+            support: {
+              wordBank: ['prune', 'damaged', 'diseased', 'collar', 'swelling', 'crown', 'upright'],
+            },
+          },
+          reviewWords: [
+            { word: 'sound', clue: 'in good condition, not rotten', from: '2026-08-10' },
+            { word: 'specific', clue: 'exactly this one and no other', from: '2026-08-10' },
+            { word: 'effect', clue: 'what something causes to happen', from: '2026-08-10' },
+            { word: 'directly', clue: 'without anything in between', from: '2026-08-04' },
+            { word: 'treated', clue: 'dealt with in a particular way', from: '2026-08-04' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'A procedure with a strict order. directly and treated are on their third meeting. Note that sound here means healthy wood, not noise: worth checking he caught that.',
+        },
+        {
+          reading: {
+            title: 'The Kūmara',
+            passage:
+              'The kūmara is not a potato and is not related to one. It is a swollen root, where a potato is a swollen stem, and it belongs to the same family as bindweed. It came to New Zealand with Māori settlers from tropical Polynesia, and that is the interesting part: a tropical crop was made to grow in a temperate country, and the original plants would not have survived a frost. The arithmetic of a short season is simple, because you need every warm day you can get. Growers built raised beds of sand and gravel to hold the day\'s heat, and stored the tubers over winter in pits lined with fern. Pits like those were still in use a hundred years ago. Modern varieties are hardier, but the method proved the point centuries before anyone wrote it down.',
+          },
+          questions: [
+            'How is a kūmara different from a potato?',
+            'Where did it come from?',
+            'Why did growers build raised beds of sand and gravel?',
+            'How were the tubers stored over winter?',
+            'Which word in the text means a mild climate, neither tropical nor cold?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The kūmara', 'The growers', 'The beds', 'We'],
+            verbs: ['grew', 'stored', 'built', 'travelled', 'proved'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write a report on a food plant that had to be adapted to where it is grown now.',
+            support: {
+              wordBank: ['kūmara', 'swollen', 'tubers', 'temperate', 'gravel', 'pits', 'varieties'],
+            },
+          },
+          reviewWords: [
+            { word: 'original', clue: 'the first one, before any changes', from: '2026-08-10' },
+            { word: 'proved', clue: 'showed beyond doubt that it was true', from: '2026-08-10' },
+            { word: 'belongs', clue: 'is part of a particular group', from: '2026-08-10' },
+            { word: 'hundred', clue: 'ten times ten', from: '2026-08-04' },
+            { word: 'arithmetic', clue: 'working with numbers', from: '2026-08-04' },
+          ],
+          writingLines: 10,
+          teacherNote:
+            'A report, and the one with the most New Zealand content this term. hundred and arithmetic are on their third meeting. The raised beds are worth a diagram on the whiteboard.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MAVERICK — easier band, fourth session on it.
+      // ────────────────────────────────────────────────────────
+      Maverick: [
+        {
+          reading: {
+            title: 'Why Plants Need the Sun',
+            passage:
+              'A plant needs the sun to make its own food. It cannot eat the way we do. The leaves take in light and the plant makes the food itself. Water alone is not enough. Light is needed too. That is why a plant on a dark shelf goes yellow and thin. Turn the pot every week or the plant will lean to one side. A plant by a wall gets sun for only half the day, so it grows more slowly.',
+          },
+          questions: [
+            'What does a plant need to make food?',
+            'What happens to a plant on a dark shelf?',
+            'Why should you turn the pot every week?',
+            'Why does a plant by a wall grow slowly?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The plant', 'The leaves', 'The sun', 'We'],
+            verbs: ['grew', 'turned', 'leaned', 'needed', 'made'],
+            lines: 5,
+          },
+          writing: {
+            prompt: 'Write about what a plant needs. Say what happens when it does not get it.',
+            support: {
+              wordBank: ['plant', 'food', 'leaves', 'light', 'dark', 'yellow', 'lean'],
+            },
+          },
+          reviewWords: [
+            { word: 'sun', clue: 'it shines in the sky in the day', letters: 's _ _', from: '2026-08-10' },
+            { word: 'itself', clue: 'on its own, with no help', letters: 'i _ _ _ _ _', from: '2026-08-10' },
+            { word: 'more', clue: 'a bigger amount', letters: 'm _ _ _', from: '2026-08-10' },
+            { word: 'wall', clue: 'the side of a room or a building', letters: 'w _ _ _', from: '2026-08-04' },
+            { word: 'needed', clue: 'had to have', letters: 'n _ _ _ _ _', from: '2026-08-04' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'New topic: gardening, on the easier band. Fourth session at this level. wall and needed are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'How to Plant a Seed in a Pot',
+            passage:
+              'First, find a pot with a hole in the bottom. Fill it with soil up to two centimetres from the top. Make a small hole with your finger. Drop one seed in and cover it over. Plant the seeds well apart so they have room to grow. Water it until you see water come out of the hole at the bottom. Put the pot in the sun. Do not throw the packet away, because it tells you how deep to plant. Write the name on a card and push it into the soil.',
+          },
+          questions: [
+            'What kind of pot do you need?',
+            'How much water do you give it?',
+            'Why should you keep the packet?',
+            'Why do you write the name on a card?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The pot', 'The seed', 'The water', 'We'],
+            verbs: ['filled', 'planted', 'covered', 'watered', 'wrote'],
+            lines: 5,
+          },
+          writing: {
+            prompt: 'Write how to plant a seed. Say what to do first, then next.',
+            support: {
+              wordBank: ['pot', 'soil', 'hole', 'seed', 'cover', 'centimetres', 'packet'],
+            },
+          },
+          reviewWords: [
+            { word: 'apart', clue: 'away from each other', letters: 'a _ _ _ _', from: '2026-08-10' },
+            { word: 'throw', clue: 'to send something through the air', letters: 't _ _ _ _', from: '2026-08-10' },
+            { word: 'away', clue: 'to another place, not here', letters: 'a _ _ _', from: '2026-08-10' },
+            { word: 'write', clue: 'you do this with a pen', letters: 'w _ _ _ _', from: '2026-08-04' },
+            { word: 'card', clue: 'a small stiff piece of paper', letters: 'c _ _ _', from: '2026-08-04' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'A procedure. write and card are on their third meeting, from the bike number text. Same two words, completely different job.',
+        },
+        {
+          reading: {
+            title: 'Weeds',
+            passage:
+              'A weed is just a plant growing where you do not want it. Weeds grow fast and take the water and food from the plants you want. Weeding is dirty work. Pull them out when the soil is wet. Then they come out with the root and they do not grow back. If you leave the root in, it starts again in a week. One hour of weeding in spring costs you a day of work in summer. Do not put weeds with seeds on the compost. Put those in the bin.',
+          },
+          questions: [
+            'What is a weed?',
+            'When is the best time to pull weeds?',
+            'What happens if you leave the root in?',
+            'Where should you put weeds that have seeds on them?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The weed', 'The root', 'The soil', 'We'],
+            verbs: ['grew', 'pulled', 'started', 'took', 'left'],
+            lines: 5,
+          },
+          writing: {
+            prompt: 'Write about a job that is easier if you do it early. Say what happens if you leave it.',
+            support: {
+              wordBank: ['weed', 'fast', 'root', 'wet', 'seeds', 'compost', 'bin'],
+            },
+          },
+          reviewWords: [
+            { word: 'starts', clue: 'begins',  letters: 's _ _ _ _ _', from: '2026-08-10' },
+            { word: 'back', clue: 'to the place it was before', letters: 'b _ _ _', from: '2026-08-10' },
+            { word: 'dirty', clue: 'covered in dirt', letters: 'd _ _ _ _', from: '2026-08-10' },
+            { word: 'hour', clue: 'sixty minutes', letters: 'h _ _ _', from: '2026-08-04' },
+            { word: 'costs', clue: 'what you have to give up for something', letters: 'c _ _ _ _', from: '2026-08-04' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'A report. hour and costs are on their third meeting. If he writes all five review words from the clues again, grow his passages by about ten words next session, as noted last week.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOCASTA — High level
+      // ────────────────────────────────────────────────────────
+      Jocasta: [
+        {
+          reading: {
+            title: 'Why a Plant Knows Which Way Is Up',
+            passage:
+              'A seed planted upside down still sends its root down and its shoot up, which means the plant is reading something other than light. Inside certain cells are grains of starch heavy enough to settle to the bottom, and where they settle tells the cell which way gravity is pulling. The plant then moves a hormone to the lower side of the shoot, which grows faster on that side and bends the tip upward. Nobody was sure how the cell measured it until the starch grains were found, and this is old knowledge: Darwin wrote about it. You can repeat the whole thing at home with damp seeds in a jar turned on its side. The assumption that plants simply grow towards the light is not exact. Light steers the shoot once it is out, but the first decision is made in the dark.',
+          },
+          questions: [
+            'What does a seed planted upside down do?',
+            'What settles inside the cells, and what does it tell them?',
+            'What does the plant do with the hormone?',
+            'Why is the assumption about light not exact?',
+            'Which word in the text means the force pulling things down?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The seed', 'The starch', 'The hormone', 'We'],
+            verbs: ['settled', 'bent', 'measured', 'repeated', 'grew'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Explain something that looks like a response to the obvious cause but is not. What is really doing the work?',
+            support: {
+              wordBank: ['gravity', 'starch', 'grains', 'settle', 'hormone', 'bends', 'upside'],
+              sentenceStarters: [
+                'The first decision is made before...',
+                'What looks like a response to light is actually...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'repeat', clue: 'to do the same thing again', from: '2026-08-10' },
+            { word: 'knowledge', clue: 'what is known about something', from: '2026-08-10' },
+            { word: 'sure', clue: 'certain, with no doubt', from: '2026-08-10' },
+            { word: 'assumption', clue: 'something taken as true without being checked', from: '2026-08-04' },
+            { word: 'exact', clue: 'correct to the smallest detail', from: '2026-08-04' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'New topic: gardening. This is an explanation and the most technical text she has had. assumption and exact are on their third meeting and are doing the same work here as they did about recipes.',
+        },
+        {
+          reading: {
+            title: 'How to Save Seed From a Plant',
+            passage:
+              'Choose the plant you would actually want again, not the one that finished first. Let the pods dry on the plant until they rattle, then cut the whole head into a paper bag rather than picking pod by pod. Leave the bag somewhere airy for a fortnight; anything sealed in advance of proper drying will go mouldy. Rub the pods between your palms over a bowl and let the chaff blow off. Keep the best and compost the rest. Labelling the bag with the name and the year in the same terms every time is the step people skip, because a jar of unlabelled seed is a jar you will dismiss next spring.',
+          },
+          questions: [
+            'Which plant should you choose to save seed from?',
+            'How do you know the pods are ready?',
+            'Why should you not seal the bag early?',
+            'Why does labelling matter so much?',
+            'Which word in the text means the light husks that blow away?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The pods', 'The seed', 'The bag', 'We'],
+            verbs: ['chose', 'dried', 'rubbed', 'labelled', 'kept'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write instructions for something whose value only shows up much later. Say which step people skip.',
+            support: {
+              wordBank: ['pods', 'rattle', 'airy', 'mouldy', 'palms', 'chaff', 'unlabelled'],
+              sentenceStarters: [
+                'The plant worth saving seed from is not...',
+                'A jar without a label is...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'advance', clue: 'ahead of time', from: '2026-08-10' },
+            { word: 'labelling', clue: 'writing on something to say what it is', from: '2026-08-10' },
+            { word: 'rest', clue: 'everything that is left over', from: '2026-08-10' },
+            { word: 'terms', clue: 'the words and conditions used', from: '2026-08-04' },
+            { word: 'dismiss', clue: 'to reject something without properly considering it', from: '2026-08-04' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'A procedure. terms and dismiss are on their third meeting, both from the negotiation and language texts. The last sentence is the one that carries the point.',
+        },
+        {
+          reading: {
+            title: 'The Monoculture Problem',
+            passage:
+              'A garden bed planted with one crop is easier to manage and easier to lose. A single crop invites the pest that specialises in it, and a disease that arrives has nothing in the way to slow it down. Predatory insects also need somewhere to be hiding between meals, and a bare bed of one thing gives them none. The counter-argument is that mixed planting is harder to weed properly, harder to water and considerably harder to harvest, and that argument is honest. What tips it is the year you lose everything at once. Commercial growers can accept that risk because they can replace a crop with money. A home garden cannot, and nothing about a home garden is decided by yield alone, so the sensible strategy at home is to spread the risk rather than the yield.',
+          },
+          questions: [
+            'What makes a single-crop bed easy to lose?',
+            'What is the counter-argument for one crop per bed?',
+            'Why can commercial growers accept the risk?',
+            'What is the sensible strategy for a home garden?',
+            'Which word in the text means the amount a crop produces?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The crop', 'The pest', 'A home garden', 'We'],
+            verbs: ['planted', 'spread', 'lost', 'replaced', 'decided'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write a report on a choice between efficiency and safety. Give the honest case for both.',
+            support: {
+              wordBank: ['monoculture', 'specialises', 'counter-argument', 'harvest', 'commercial', 'risk', 'yield'],
+              sentenceStarters: [
+                'The argument against mixed planting is honest, and it is...',
+                'What a home garden cannot do is...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'replace', clue: 'to put something else in its place', from: '2026-08-10' },
+            { word: 'invites', clue: 'makes something more likely to come', from: '2026-08-10' },
+            { word: 'hiding', clue: 'staying where nobody can see you', from: '2026-08-10' },
+            { word: 'decided', clue: 'settled, chosen', from: '2026-08-04' },
+            { word: 'properly', clue: 'in the correct or full way', from: '2026-08-04' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'A report that argues. decided and properly are on their third meeting. This is the same risk-and-yield shape as the negotiation text, applied to soil.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  CODY — High level
+      // ────────────────────────────────────────────────────────
+      Cody: [
+        {
+          reading: {
+            title: 'Why Watering a Little Every Day Is the Wrong Method',
+            passage:
+              'Frequent shallow watering trains a plant badly. Roots grow towards water, so a plant watered lightly every morning builds its root mass in the top two centimetres of soil, which is exactly where the sun reaches first. Water it deeply twice a week instead and the roots follow the water down, and root depth is the only thing that carries a plant through a dry fortnight. The evidence is easy to see for yourself: pull up two plants grown both ways and the difference is obvious. The method that feels most careful is the one that does the damage. The general rule is to water less often and for longer, and to check the soil rather than the calendar before deciding.',
+          },
+          questions: [
+            'What does frequent shallow watering do to the roots?',
+            'Why is that a problem?',
+            'What should you do instead?',
+            'How can you see the evidence for yourself?',
+            'Which word in the text means happening often?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The roots', 'The water', 'The soil', 'We'],
+            verbs: ['watered', 'grew', 'followed', 'checked', 'compared'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Explain why the more attentive-looking habit is the worse one. Use something you have done.',
+            support: {
+              wordBank: ['frequent', 'shallow', 'deeply', 'mass', 'depth', 'calendar', 'obvious'],
+              sentenceStarters: [
+                'The habit that feels most attentive is often...',
+                'What carries a plant through a dry spell is not...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'badly', clue: 'not well', from: '2026-08-10' },
+            { word: 'evidence', clue: 'proof that something is true', from: '2026-08-10' },
+            { word: 'general', clue: 'true in most cases rather than all', from: '2026-08-10' },
+            { word: 'method', clue: 'the way something is done', from: '2026-08-04' },
+            { word: 'deciding', clue: 'making up your mind', from: '2026-08-04' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'New topic: gardening. This is the same shape as his habit texts — the small daily action that feels responsible and is not — applied to watering. method and deciding are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'How to Test a Soil You Have Never Tested',
+            passage:
+              'Do the jar test before you buy anything. Take soil from four places in the bed, remove the stones, and put two centimetres of the mixture into a straight-sided jar with water and a drop of detergent. Shake it hard, then leave it undisturbed for a day. Sand settles first, then silt, then clay, and the depth of each band gives you the rough proportions. The next step is the one most people skip: whatever the result turns out to be, the remedy is the same, and it is compost. Sand needs it to hold water and clay needs it to open up. There is no correct soil, only soil you have not fed yet. Buying nothing else for a season takes some discipline, and clay and sand demand the same answer anyway.',
+          },
+          questions: [
+            'What should you do before you buy anything?',
+            'What settles first in the jar?',
+            'What does the depth of each band tell you?',
+            'What is the remedy whatever the result is?',
+            'Which word in the text means left alone without being moved?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The soil', 'The jar', 'The compost', 'We'],
+            verbs: ['tested', 'shook', 'settled', 'measured', 'fed'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write instructions for a cheap test that saves money. Say what people buy instead of testing.',
+            support: {
+              wordBank: ['detergent', 'undisturbed', 'silt', 'clay', 'bands', 'proportions', 'season'],
+              sentenceStarters: [
+                'The test that costs nothing is the one that...',
+                'Whatever the answer turns out to be, the action is...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'step', clue: 'one action in a set of instructions', from: '2026-08-10' },
+            { word: 'removed', clue: 'taken away', from: '2026-08-10' },
+            { word: 'correct', clue: 'right, with no error', from: '2026-08-10' },
+            { word: 'discipline', clue: 'making yourself do what you decided to do', from: '2026-08-04' },
+            { word: 'demand', clue: 'a firm requirement', from: '2026-08-04' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'A procedure. discipline and demand are on their third meeting. The jar test is genuinely worth doing; it takes a day and costs nothing.',
+        },
+        {
+          reading: {
+            title: 'Companion Planting',
+            passage:
+              'Companion planting is the claim that certain plants help each other, and it is a mixture of tested effect and inherited folklore. Some of it holds up. A tall crop shades a cool-season one, legumes leave nitrogen behind them, and strong-smelling herbs do genuinely confuse an insect that hunts by scent. Some of it does not, and the version repeated most often is usually the one with the least behind it. The honest position is that the size of most companion effects is small compared with soil, water and timing. The object is a garden that is more robust, not one that is more complicated. Treat it as a free bonus rather than a system, change one pairing at a time, and you will teach yourself what actually worked. Most gardeners arrive at their own short list after a few seasons.',
+          },
+          questions: [
+            'What is companion planting?',
+            'Give two examples the writer says hold up.',
+            'Which version of a claim is usually the weakest?',
+            'What is the honest position on the size of the effects?',
+            'Which word in the text means beliefs passed down without being tested?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The claim', 'The herbs', 'The gardener', 'We'],
+            verbs: ['planted', 'confused', 'tested', 'repeated', 'learned'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write a report on a mixed claim: part tested, part folklore. Separate the two honestly.',
+            support: {
+              wordBank: ['companion', 'folklore', 'legumes', 'confuse', 'scent', 'pairing', 'timing'],
+              sentenceStarters: [
+                'The claim that gets repeated most is often...',
+                'Compared with soil and water, the size of these effects is...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'version', clue: 'one form of something that exists in several forms', from: '2026-08-10' },
+            { word: 'size', clue: 'how big something is', from: '2026-08-10' },
+            { word: 'teach', clue: 'to help somebody learn', from: '2026-08-10' },
+            { word: 'object', clue: 'the aim or purpose', from: '2026-08-04' },
+            { word: 'arrive', clue: 'to reach a place or a conclusion', from: '2026-08-04' },
+          ],
+          writingLines: 12,
+          teacherNote:
+            'A report. object here means purpose, not a thing you can touch: that is the third sense he has met and worth naming. object and arrive are on their third meeting.',
+        },
+      ],
+    },
+  },
+
+  // ══════════════════════════════════════════════════════════
   //  10 AUGUST 2026 — spiral session 5. Fourth text type:
   //  INSTRUCTIONS. Every text tells the reader how to do the
   //  thing they have already read about as a story, as an

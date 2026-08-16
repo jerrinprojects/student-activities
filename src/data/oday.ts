@@ -808,9 +808,83 @@ const w2d5: OdayDay = {
     'Week 2 review day, in the same shape as the Week 1 review. Loosen the tracing: ask him to write letters and words unaided wherever he can, and note which ones needed prompting. All eight Week 2 letters are here (I to P) and the -og family is now whole-word with no letters shown. Two sentences today rather than one, so that "we" and "is" both get used. If the letter review is solid, Week 3 can start on Q R S T with the -un family.',
 };
 
+// ── WEEK 3 · Letters Q–T · Sight word: go · CVC: -un ────────────
+
+const w3d1: OdayDay = {
+  date: '2026-08-17',
+  week: 3,
+  day: 1,
+  focus: 'Letters Q–T · Sight word "go" · CVC: sun, run, bun',
+  activities: [
+    {
+      type: 'warmup-trace',
+      title: 'Warm-up · Trace',
+      instr: 'Trace over each shape three times. Say the letter as you write.',
+      words: ['Oday', 'Q', 'R', 'S', 'T'],
+    },
+    {
+      type: 'alphabet-focus',
+      title: 'Letters Today · Q R S T',
+      instr: 'Trace the letter. Say the sound. Look at the picture.',
+      letters: [
+        { letter: 'Q', iconKey: 'queen', word: 'queen' },
+        { letter: 'R', iconKey: 'rat', word: 'rat' },
+        { letter: 'S', iconKey: 'sun', word: 'sun' },
+        { letter: 'T', iconKey: 'tree', word: 'tree' },
+      ],
+    },
+    {
+      type: 'sight-word',
+      title: 'Sight Word · go',
+      instr: 'Trace five times. Copy five times. Then circle the word go in each sentence.',
+      words: ['go'],
+      circleSentences: ['We go to school.', 'I go up the hill.', 'Go and see the tree.'],
+    },
+    {
+      type: 'picture-word-match',
+      title: 'Match Picture to Word',
+      instr: 'Draw a line from each picture to the correct word. Then copy each word.',
+      pairs: [
+        { iconKey: 'queen', word: 'queen' },
+        { iconKey: 'rat', word: 'rat' },
+        { iconKey: 'tree', word: 'tree' },
+        { iconKey: 'bun', word: 'bun' },
+        { iconKey: 'octopus', word: 'octopus' },
+        { iconKey: 'pen', word: 'pen' },
+        { iconKey: 'nut', word: 'nut' },
+        { iconKey: 'mat', word: 'mat' },
+      ],
+    },
+    {
+      type: 'cvc-build',
+      title: 'Build the Word · -un family',
+      instr: 'Look at the picture. Write the missing letter to finish the word.',
+      items: [
+        { iconKey: 'sun', word: 'sun', missing: 1 },
+        { iconKey: 'jog', word: 'run', missing: 1 },
+        { iconKey: 'bun', word: 'bun', missing: 1 },
+      ],
+    },
+    {
+      type: 'colour-label',
+      title: 'Colour and Label',
+      instr: 'Colour the picture. Then write the word on the line.',
+      items: [{ iconKey: 'tree', word: 'tree' }],
+    },
+    {
+      type: 'sentence-copy',
+      title: 'Copy the Sentence',
+      instr: 'Read the sentence with your teacher. Copy it on the line below.',
+      sentences: [{ iconKey: 'tree', sentence: 'We go to the tree.' }],
+    },
+  ],
+  teacherNote:
+    'Start of Week 3. Four letters today rather than two, because Q R S T are quick: R and S both use pictures he already knows (rat, sun). Q is a crown, so say "queen" and point at it; he will not get that from the picture alone. T is a tree, which links to the plant work the rest of the class is doing this week. New sight word "go" and a new CVC family, -un, with the vowel missing each time so the u is the focus. The running figure is the jog picture from Week 2, used here for run.',
+};
+
 // ── EXPORT ────────────────────────────────────────────────────────
 
-export const ODAY_SESSIONS: OdayDay[] = [w1d1, w1d2, w1d3, w1d4, w1d5, w2d1, w2d2, w2d3, w2d4, w2d5];
+export const ODAY_SESSIONS: OdayDay[] = [w1d1, w1d2, w1d3, w1d4, w1d5, w2d1, w2d2, w2d3, w2d4, w2d5, w3d1];
 
 export function findOdayDay(date: string): OdayDay | undefined {
   return ODAY_SESSIONS.find((d) => d.date === date);

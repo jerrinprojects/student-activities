@@ -559,6 +559,49 @@ export const OctopusIcon = ({ size }: IconProps) => (
   </S>
 );
 
+// queen (crown — the standard picture for the letter Q)
+export const QueenIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* crown body with three points */}
+    <path d="M22 68 L 18 34 L 34 48 L 50 26 L 66 48 L 82 34 L 78 68 Z" />
+    {/* base band */}
+    <path d="M22 68 L 78 68" />
+    <path d="M22 76 L 78 76" />
+    <path d="M22 68 L 22 76" />
+    <path d="M78 68 L 78 76" />
+    {/* jewels on the points */}
+    <circle cx="18" cy="34" r="3.5" fill="currentColor" />
+    <circle cx="50" cy="26" r="4" fill="currentColor" />
+    <circle cx="82" cy="34" r="3.5" fill="currentColor" />
+  </S>
+);
+
+// tree (round canopy on a straight trunk)
+export const TreeIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* canopy */}
+    <path d="M50 16 C 30 16, 18 30, 22 44 C 12 52, 18 66, 32 66 L 68 66 C 82 66, 88 52, 78 44 C 82 30, 70 16, 50 16 Z" />
+    {/* trunk */}
+    <path d="M44 66 L 44 86" />
+    <path d="M56 66 L 56 86" />
+    {/* ground line */}
+    <path d="M30 86 L 70 86" />
+  </S>
+);
+
+// bun (round bread roll with a slash on top)
+export const BunIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* roll */}
+    <path d="M18 66 C 18 40, 34 28, 50 28 C 66 28, 82 40, 82 66 Z" />
+    {/* base */}
+    <path d="M16 66 L 84 66" />
+    {/* slash marks on top */}
+    <path d="M38 44 L 46 38" />
+    <path d="M52 44 L 60 38" />
+  </S>
+);
+
 // Colour swatches (for colour intro)
 export const RedSwatchIcon = ({ size }: IconProps) => (
   <svg width={size} height={size} viewBox="0 0 100 100">
@@ -613,6 +656,10 @@ const ICONS: Record<string, React.FC<IconProps>> = {
   hog: HogIcon,
   nut: NutIcon,
   octopus: OctopusIcon,
+  // Week 3
+  queen: QueenIcon,
+  tree: TreeIcon,
+  bun: BunIcon,
   red: RedSwatchIcon,
   blue: BlueSwatchIcon,
   green: GreenSwatchIcon,
