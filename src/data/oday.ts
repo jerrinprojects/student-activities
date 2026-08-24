@@ -882,9 +882,80 @@ const w3d1: OdayDay = {
     'Start of Week 3. Four letters today rather than two, because Q R S T are quick: R and S both use pictures he already knows (rat, sun). Q is a crown, so say "queen" and point at it; he will not get that from the picture alone. T is a tree, which links to the plant work the rest of the class is doing this week. New sight word "go" and a new CVC family, -un, with the vowel missing each time so the u is the focus. The running figure is the jog picture from Week 2, used here for run.',
 };
 
+const w3d2: OdayDay = {
+  date: '2026-08-25',
+  week: 3,
+  day: 2,
+  focus: 'Letters U–W · Sight word "on" · CVC: sun, run, bun',
+  activities: [
+    {
+      type: 'warmup-trace',
+      title: 'Warm-up · Trace',
+      instr: 'Trace over each shape three times. Say the letter as you write.',
+      words: ['Oday', 'U', 'V', 'W'],
+    },
+    {
+      type: 'alphabet-focus',
+      title: 'Letters Today · U V W',
+      instr: 'Trace the letter. Say the sound. Look at the picture.',
+      letters: [
+        { letter: 'U', iconKey: 'umbrella', word: 'umbrella' },
+        { letter: 'V', iconKey: 'van', word: 'van' },
+        { letter: 'W', iconKey: 'web', word: 'web' },
+      ],
+    },
+    {
+      type: 'sight-word',
+      title: 'Sight Word · on',
+      instr: 'Trace five times. Copy five times. Then circle the word on in each sentence.',
+      words: ['on'],
+      circleSentences: ['The nut is on the mat.', 'We go on the bus.', 'The pen is on the bed.'],
+    },
+    {
+      type: 'picture-word-match',
+      title: 'Match Picture to Word',
+      instr: 'Draw a line from each picture to the correct word. Then copy each word.',
+      pairs: [
+        { iconKey: 'umbrella', word: 'umbrella' },
+        { iconKey: 'van', word: 'van' },
+        { iconKey: 'web', word: 'web' },
+        { iconKey: 'queen', word: 'queen' },
+        { iconKey: 'tree', word: 'tree' },
+        { iconKey: 'bun', word: 'bun' },
+        { iconKey: 'rat', word: 'rat' },
+        { iconKey: 'sun', word: 'sun' },
+      ],
+    },
+    {
+      type: 'cvc-build',
+      title: 'Build the Word · -un family',
+      instr: 'Look at the picture. Write the missing letter to finish the word.',
+      items: [
+        { iconKey: 'sun', word: 'sun', missing: 2 },
+        { iconKey: 'jog', word: 'run', missing: 0 },
+        { iconKey: 'bun', word: 'bun', missing: 0 },
+      ],
+    },
+    {
+      type: 'colour-label',
+      title: 'Colour and Label',
+      instr: 'Colour the picture. Then write the word on the line.',
+      items: [{ iconKey: 'umbrella', word: 'umbrella' }],
+    },
+    {
+      type: 'sentence-copy',
+      title: 'Copy the Sentence',
+      instr: 'Read the sentence with your teacher. Copy it on the line below.',
+      sentences: [{ iconKey: 'bun', sentence: 'The bun is on the mat.' }],
+    },
+  ],
+  teacherNote:
+    'Letters U, V and W, with three new pictures. W uses a spider web rather than a whale: the whale drawing kept reading as a fish at this size. New sight word "on" — it is short and he will want to rush it, so watch that the n does not turn into an m. In the -un family the missing letter is now the first one for run and bun, so he has to hear the difference between r and b rather than fill in the vowel again. Yesterday he wrote the vowel; today he writes the consonant.',
+};
+
 // ── EXPORT ────────────────────────────────────────────────────────
 
-export const ODAY_SESSIONS: OdayDay[] = [w1d1, w1d2, w1d3, w1d4, w1d5, w2d1, w2d2, w2d3, w2d4, w2d5, w3d1];
+export const ODAY_SESSIONS: OdayDay[] = [w1d1, w1d2, w1d3, w1d4, w1d5, w2d1, w2d2, w2d3, w2d4, w2d5, w3d1, w3d2];
 
 export function findOdayDay(date: string): OdayDay | undefined {
   return ODAY_SESSIONS.find((d) => d.date === date);

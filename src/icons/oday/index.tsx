@@ -602,6 +602,73 @@ export const BunIcon = ({ size }: IconProps) => (
   </S>
 );
 
+// umbrella (scalloped canopy, straight shaft, hooked handle)
+export const UmbrellaIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* canopy */}
+    <path d="M12 52 C 12 28, 88 28, 88 52" />
+    {/* scalloped edge */}
+    <path d="M12 52 Q 24 44, 37 52 Q 50 44, 63 52 Q 76 44, 88 52" />
+    {/* shaft */}
+    <path d="M50 28 L 50 76" />
+    {/* hooked handle */}
+    <path d="M50 76 C 50 85, 37 85, 37 76" />
+    {/* top knob */}
+    <circle cx="50" cy="27" r="2.5" fill="currentColor" />
+  </S>
+);
+
+// van (box body, short bonnet, two wheels)
+export const VanIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* body */}
+    <path d="M10 60 L 10 30 L 60 30 L 60 60 Z" />
+    {/* bonnet */}
+    <path d="M60 60 L 60 40 L 76 40 L 88 52 L 88 60 Z" />
+    {/* windscreen */}
+    <path d="M64 44 L 75 44 L 82 52 L 64 52 Z" />
+    {/* side window */}
+    <path d="M18 38 L 36 38 L 36 48 L 18 48 Z" />
+    {/* wheels */}
+    <circle cx="28" cy="64" r="7" />
+    <circle cx="72" cy="64" r="7" />
+  </S>
+);
+
+// spider web (radial spokes and arcs — used for W)
+export const WebIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* spokes */}
+    <path d="M50 12 L 50 88" />
+    <path d="M12 50 L 88 50" />
+    <path d="M23 23 L 77 77" />
+    <path d="M77 23 L 23 77" />
+    {/* one big ring, sagging between the spokes */}
+    <path d="M50 22 Q 36 28, 30 30 Q 28 36, 22 50 Q 28 64, 30 70 Q 36 72, 50 78 Q 64 72, 70 70 Q 72 64, 78 50 Q 72 36, 70 30 Q 64 28, 50 22" />
+  </S>
+);
+
+// whale — NOT REGISTERED. Drawn twice and still reads as a fish at
+// worksheet size (54px), so W uses the web picture instead.
+// Do not wire this into ICONS until it is redrawn and checked at 54px.
+export const WhaleIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* big rounded body filling most of the frame */}
+    <path d="M8 60 C 8 42, 28 32, 50 32 C 68 32, 80 42, 82 56 C 83 62, 80 70, 70 74 C 56 79, 30 78, 18 72 C 11 68, 8 64, 8 60 Z" />
+    {/* horizontal tail fluke — the cue that says whale, not fish */}
+    <path d="M80 60 C 86 54, 94 52, 96 50 C 94 58, 94 64, 96 70 C 92 68, 84 66, 80 63" />
+    {/* blowhole spout, two strong jets */}
+    <path d="M34 32 C 31 24, 26 20, 23 16" />
+    <path d="M37 32 C 37 23, 40 19, 42 15" />
+    {/* eye */}
+    <circle cx="24" cy="52" r="2" fill="currentColor" />
+    {/* mouth line */}
+    <path d="M9 63 C 18 69, 30 70, 40 68" />
+    {/* flipper */}
+    <path d="M40 70 C 44 76, 52 78, 58 76" />
+  </S>
+);
+
 // Colour swatches (for colour intro)
 export const RedSwatchIcon = ({ size }: IconProps) => (
   <svg width={size} height={size} viewBox="0 0 100 100">
@@ -660,6 +727,9 @@ const ICONS: Record<string, React.FC<IconProps>> = {
   queen: QueenIcon,
   tree: TreeIcon,
   bun: BunIcon,
+  umbrella: UmbrellaIcon,
+  van: VanIcon,
+  web: WebIcon,
   red: RedSwatchIcon,
   blue: BlueSwatchIcon,
   green: GreenSwatchIcon,
