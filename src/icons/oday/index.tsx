@@ -669,6 +669,45 @@ export const WhaleIcon = ({ size }: IconProps) => (
   </S>
 );
 
+// box (cardboard carton, open flaps) — used for X
+export const BoxIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* front face */}
+    <path d="M22 44 L 22 80 L 78 80 L 78 44 Z" />
+    {/* lid line */}
+    <path d="M22 44 L 78 44" />
+    {/* open flaps */}
+    <path d="M22 44 L 34 32 L 62 32 L 78 44" />
+    <path d="M34 32 L 34 44" />
+    <path d="M62 32 L 62 44" />
+    {/* tape down the front */}
+    <path d="M50 44 L 50 80" />
+  </S>
+);
+
+// zip (two wide tapes of teeth, slider and pull tab) — used for Z
+export const ZipIcon = ({ size }: IconProps) => (
+  <S size={size}>
+    {/* tapes */}
+    <path d="M26 10 L 26 54" />
+    <path d="M74 10 L 74 54" />
+    {/* teeth, meeting in the middle */}
+    <path d="M30 16 L 50 16" />
+    <path d="M50 16 L 70 16" />
+    <path d="M30 25 L 50 25" />
+    <path d="M50 25 L 70 25" />
+    <path d="M30 34 L 50 34" />
+    <path d="M50 34 L 70 34" />
+    <path d="M30 43 L 50 43" />
+    <path d="M50 43 L 70 43" />
+    {/* slider */}
+    <path d="M28 54 L 72 54 L 64 68 L 36 68 Z" />
+    {/* pull tab */}
+    <path d="M50 68 L 50 74" />
+    <path d="M40 74 L 60 74 L 60 90 L 40 90 Z" />
+  </S>
+);
+
 // Colour swatches (for colour intro)
 export const RedSwatchIcon = ({ size }: IconProps) => (
   <svg width={size} height={size} viewBox="0 0 100 100">
@@ -679,6 +718,12 @@ export const RedSwatchIcon = ({ size }: IconProps) => (
 export const BlueSwatchIcon = ({ size }: IconProps) => (
   <svg width={size} height={size} viewBox="0 0 100 100">
     <rect x="20" y="20" width="60" height="60" rx="6" fill="#2563eb" stroke="#000" strokeWidth="2" />
+  </svg>
+);
+
+export const YellowSwatchIcon = ({ size }: IconProps) => (
+  <svg width={size} height={size} viewBox="0 0 100 100">
+    <rect x="20" y="20" width="60" height="60" rx="6" fill="#eab308" stroke="#000" strokeWidth="2" />
   </svg>
 );
 
@@ -730,6 +775,9 @@ const ICONS: Record<string, React.FC<IconProps>> = {
   umbrella: UmbrellaIcon,
   van: VanIcon,
   web: WebIcon,
+  box: BoxIcon,
+  zip: ZipIcon,
+  yellow: YellowSwatchIcon,
   red: RedSwatchIcon,
   blue: BlueSwatchIcon,
   green: GreenSwatchIcon,

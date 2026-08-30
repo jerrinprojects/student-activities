@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { STUDENTS, LITERACY_SESSIONS, type WritingSupport, type SentenceStructure, type ReviewWord } from '../data/literacy';
 
-const WRITING_BREAK_STUDENTS = new Set(['Joshua', 'Maverick', 'Jocasta', 'Cody']);
-
 export default function PrintPage() {
   const navigate = useNavigate();
   const session = LITERACY_SESSIONS[0];
@@ -52,18 +50,16 @@ export default function PrintPage() {
           return sets.map((activity, setIdx) => {
             pageCounter += 1;
             const currentPage = pageCounter;
-            const isWritingBreak = WRITING_BREAK_STUDENTS.has(name);
-            const pageClass = isWritingBreak
-              ? 'print-page-flow p-6 max-w-2xl mx-auto print:max-w-none print:p-0'
-              : 'print-page p-6 max-w-2xl mx-auto print:max-w-none print:p-0';
+            const pageClass = 'print-page p-6 max-w-2xl mx-auto print:max-w-none print:p-0';
             const writingLines = activity.writingLines ?? 8;
-            // Two word tables plus 10+ writing lines will not fit on one sheet,
-            // so the longer writers get a writing page of their own.
-            const writingOwnPage = !!activity.reviewWords?.length && writingLines >= 10;
-            const page2Class =
-              isWritingBreak || writingOwnPage
-                ? 'print-page-flow p-6 max-w-2xl mx-auto print:max-w-none print:p-0'
-                : 'print-page p-6 max-w-2xl mx-auto print:max-w-none print:p-0';
+            // DUPLEX RULE: the teacher prints double-sided, so a sheet must
+            // never carry one student on the front and another on the back.
+            // Every set is therefore exactly two pages — reading on the front,
+            // spelling and writing on the back — which makes one sheet one set
+            // for one student, and every student an even number of pages.
+            // Keep writingLines at 8 or fewer so page two does not overflow.
+            const writingOwnPage = false;
+            const page2Class = 'print-page p-6 max-w-2xl mx-auto print:max-w-none print:p-0';
 
             const studentHeader = (suffix: string) => (
               <div className="flex items-center justify-between mb-4 border-b-2 border-gray-800 pb-3">

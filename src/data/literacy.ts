@@ -74,6 +74,954 @@ export interface LiteracySession {
 export const LITERACY_SESSIONS: LiteracySession[] = [
 
   // ══════════════════════════════════════════════════════════
+  //  31 AUGUST 2026 — FICTION, and easier across the board.
+  //
+  //  Three changes this session:
+  //  1. Fiction. Stories with people in them, not information
+  //     texts. They are still set in gardens, homes and school
+  //     so the garden vocabulary of the last fortnight keeps
+  //     being used.
+  //  2. Easier. Passages are 20-25% shorter, sentences are
+  //     shorter, questions are mostly literal, letter frames are
+  //     now on every review word for every student including
+  //     the top group, and writing lines are capped at 8.
+  //  3. Duplex printing. Every set is exactly two pages, so one
+  //     sheet is one set for one student and no sheet ever has
+  //     two different students on it. Keep writingLines <= 8.
+  //
+  //  Each set: 3 words from 25 August + 2 on their 3rd meeting.
+  // ══════════════════════════════════════════════════════════
+  {
+    date: '2026-08-31',
+    activities: {
+
+      // ────────────────────────────────────────────────────────
+      //  PHARRELL — Level 7 (~5 yrs)
+      // ────────────────────────────────────────────────────────
+      Pharrell: [
+        {
+          reading: {
+            title: 'The Bean Race',
+            passage:
+              'Sam and I each planted a bean on the windowsill. We wanted to see whose bean would be taller. For two weeks mine was in front. Then one morning Sam moved his pot into the sun by the door. Now his shoot is taller than mine. I moved my pot as well. Dad says they will both need a stick soon.',
+          },
+          questions: [
+            'What did Sam and the writer plant?',
+            'What did Sam do one morning?',
+            'What will the plants need soon?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Sam', 'My bean', 'The pot', 'We'],
+            verbs: ['planted', 'moved', 'grew', 'waited', 'looked'],
+          },
+          writing: {
+            prompt: 'Write about a time you and a friend did the same thing. Who did it best?',
+            support: {
+              wordBank: ['Sam', 'race', 'front', 'moved', 'sun', 'stick', 'both'],
+            },
+          },
+          reviewWords: [
+            { word: 'planted', clue: 'put a seed into the soil', letters: 'p _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'taller', clue: 'higher than something else', letters: 't _ _ _ _ _', from: '2026-08-25' },
+            { word: 'morning', clue: 'the first part of the day', letters: 'm _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'windowsill', clue: 'the flat shelf under a window', letters: 'w _ _ _ _ _ _ _ _ _', from: '2026-08-17' },
+            { word: 'shoot', clue: 'the first green part that comes up', letters: 's _ _ _ _', from: '2026-08-17' },
+          ],
+          wordCards: ['My', 'bean', 'is', 'on', 'the', 'windowsill', '.'],
+          writingLines: 5,
+          teacherNote:
+            'Fiction from today: there are people in the story now. Sound focus: ee (see, week, been). windowsill and shoot are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'The Dusty Leaves',
+            passage:
+              'Nan gave me a plant for my room. After a month it did not grow at all. Mum said there was a reason and told me to look at the leaves. They had dust on them. I took a wet cloth and wiped every leaf. There are little holes under a leaf and dust can block them. Two weeks later there was a new leaf.',
+          },
+          questions: [
+            'Who gave the writer the plant?',
+            'What was on the leaves?',
+            'What happened two weeks later?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Nan', 'Mum', 'The plant', 'We'],
+            verbs: ['gave', 'looked', 'wiped', 'grew', 'waited'],
+          },
+          writing: {
+            prompt: 'Write about a time somebody showed you what was wrong. What did you do about it?',
+            support: {
+              wordBank: ['Nan', 'room', 'month', 'wiped', 'block', 'later', 'new'],
+            },
+          },
+          reviewWords: [
+            { word: 'dust', clue: 'the grey powder that settles on things', letters: 'd _ _ _', from: '2026-08-25' },
+            { word: 'cloth', clue: 'a piece of fabric you wipe with', letters: 'c _ _ _ _', from: '2026-08-25' },
+            { word: 'reason', clue: 'why something happens', letters: 'r _ _ _ _ _', from: '2026-08-25' },
+            { word: 'grow', clue: 'to get bigger', letters: 'g _ _ _', from: '2026-08-17' },
+            { word: 'hole', clue: 'a gap or an opening', letters: 'h _ _ _', from: '2026-08-17' },
+          ],
+          wordCards: ['I', 'wiped', 'the', 'leaves', '.'],
+          writingLines: 5,
+          teacherNote:
+            'Sound focus: w (wet, wiped, week). grow and hole are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'The Snail in the Class Garden',
+            passage:
+              'Our class made a garden by the door. It is not much work. On Monday two bean plants were gone. Mia found a snail under a leaf. We put it in a jar and took it to the far end of the field. On Friday two more plants were gone. There must be more snails than we thought. Now we look every day after lunch.',
+          },
+          questions: [
+            'Where did the class make the garden?',
+            'What did Mia find?',
+            'What does the class do every day now?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Mia', 'The snail', 'Our class', 'We'],
+            verbs: ['made', 'found', 'took', 'looked', 'thought'],
+          },
+          writing: {
+            prompt: 'Write about something that went missing. Who found out what happened?',
+            support: {
+              wordBank: ['Mia', 'jar', 'field', 'gone', 'Friday', 'lunch', 'must'],
+            },
+          },
+          reviewWords: [
+            { word: 'class', clue: 'the group of children you learn with', letters: 'c _ _ _ _', from: '2026-08-25' },
+            { word: 'door', clue: 'you open it to go into a room', letters: 'd _ _ _', from: '2026-08-25' },
+            { word: 'work', clue: 'a job that has to be done', letters: 'w _ _ _', from: '2026-08-25' },
+            { word: 'snails', clue: 'they have a shell and eat young leaves', letters: 's _ _ _ _ _', from: '2026-08-17' },
+            { word: 'bean', clue: 'it grows on a vine and you can eat it', letters: 'b _ _ _', from: '2026-08-17' },
+          ],
+          wordCards: ['We', 'found', 'a', 'snail', '.'],
+          writingLines: 5,
+          teacherNote:
+            'Sound focus: oo (look, took, food). snails and bean are on their third meeting.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JIERRY — Level 10, ESOL (Mandarin)
+      // ────────────────────────────────────────────────────────
+      Jierry: [
+        {
+          reading: {
+            title: 'The Flower on the Table',
+            passage:
+              'My aunt was sick, so we took her a flower. I had made it myself, with colouring in the water, and by the second day it had gone pink at the edges. My aunt did not believe I had done it. She asked me to show her how, so we cut a stem across and looked inside it together. She kept the flower on her table for a week.',
+          },
+          questions: [
+            'Why did they take a flower to the aunt?',
+            'What had happened by the second day?',
+            'What did the aunt ask the writer to do?',
+            'Find the word in the story that means 色素.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My aunt', 'The flower', 'The water', 'We'],
+            verbs: ['took', 'made', 'showed', 'cut', 'kept'],
+            translations: { 'I': '我', 'My aunt': '我阿姨', 'The flower': '花', 'The water': '水', 'We': '我们', 'took': '带', 'made': '做', 'showed': '展示', 'cut': '切', 'kept': '留着' },
+          },
+          writing: {
+            prompt: 'Write about a time you showed somebody something you had made. What did they say?',
+            promptTranslation: '写一写你把自己做的东西给别人看的经历。他们说了什么？',
+            support: {
+              vocabularyList: [
+                { word: 'aunt', translation: '阿姨', language: 'Chinese' },
+                { word: 'sick', translation: '生病', language: 'Chinese' },
+                { word: 'believe', translation: '相信', language: 'Chinese' },
+                { word: 'show', translation: '给…看', language: 'Chinese' },
+                { word: 'table', translation: '桌子', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'pink', clue: '粉色', letters: 'p _ _ _', from: '2026-08-25' },
+            { word: 'second', clue: '第二', letters: 's _ _ _ _ _', from: '2026-08-25' },
+            { word: 'colouring', clue: '色素', letters: 'c _ _ _ _ _ _ _ _', from: '2026-08-17' },
+            ],
+          writingLines: 6,
+          teacherNote:
+            'Fiction from today. The experiment he read about twice is now something a character does for somebody. colouring is on its third meeting.',
+        },
+        {
+          reading: {
+            title: 'One Saturday in the Glasshouse',
+            passage:
+              'My uncle works for a grower in Pukekohe. In September he asked me to come for one Saturday. It was hot inside the glasshouse, hotter than it was outside. My job was to look under the leaves for insects. I found eleven. My uncle said the good insects eat the bad ones, so I had to learn which was which. He gave me twenty dollars and a bag of cucumbers.',
+          },
+          questions: [
+            'Where does the uncle work?',
+            'What was the writer\'s job?',
+            'What did the uncle say about the good insects?',
+            'Find the word in the story that means 温室.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My uncle', 'The insects', 'The leaves', 'We'],
+            verbs: ['worked', 'asked', 'looked', 'found', 'learned'],
+            translations: { 'I': '我', 'My uncle': '我叔叔', 'The insects': '昆虫', 'The leaves': '叶子', 'We': '我们', 'worked': '工作', 'asked': '请求', 'looked': '找', 'found': '找到', 'learned': '学会' },
+          },
+          writing: {
+            prompt: 'Write about a day you helped somebody with their work. What did you have to do?',
+            promptTranslation: '写一写你帮别人干活的一天。你要做什么？',
+            support: {
+              vocabularyList: [
+                { word: 'uncle', translation: '叔叔', language: 'Chinese' },
+                { word: 'job', translation: '工作', language: 'Chinese' },
+                { word: 'hotter', translation: '更热', language: 'Chinese' },
+                { word: 'eleven', translation: '十一', language: 'Chinese' },
+                { word: 'dollars', translation: '元', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'insects', clue: '昆虫', letters: 'i _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'September', clue: '九月', letters: 'S _ _ _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'glasshouse', clue: '温室', letters: 'g _ _ _ _ _ _ _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'glasshouse is on its third meeting. Ask him whether he has seen the glasshouses on the way south.',
+        },
+        {
+          reading: {
+            title: 'My Sister Said It Would Not Work',
+            passage:
+              'In July I put the white end of a spring onion in a glass of water. My sister said it would not work. It was slow at the start, but after two months the green part had grown back three times. Now Mum cuts it for noodles and we do not buy any. My sister has started one of her own. She is throwing away nothing this month.',
+          },
+          questions: [
+            'What did the writer put in the water?',
+            'What did the sister say at first?',
+            'What has the sister done now?',
+            'Find the word in the story that means 葱.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My sister', 'Mum', 'The spring onion', 'We'],
+            verbs: ['put', 'said', 'grew', 'cut', 'started'],
+            translations: { 'I': '我', 'My sister': '我姐姐', 'Mum': '妈妈', 'The spring onion': '葱', 'We': '我们', 'put': '放', 'said': '说', 'grew': '长', 'cut': '剪', 'started': '开始' },
+          },
+          writing: {
+            prompt: 'Write about a time somebody said something would not work and it did. What happened?',
+            promptTranslation: '写一写别人说做不成、结果做成了的一次经历。发生了什么？',
+            support: {
+              vocabularyList: [
+                { word: 'sister', translation: '姐姐', language: 'Chinese' },
+                { word: 'glass', translation: '玻璃杯', language: 'Chinese' },
+                { word: 'back', translation: '回来', language: 'Chinese' },
+                { word: 'buy', translation: '买', language: 'Chinese' },
+                { word: 'own', translation: '自己的', language: 'Chinese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'slow', clue: '慢', letters: 's _ _ _', from: '2026-08-25' },
+            { word: 'months', clue: '月', letters: 'm _ _ _ _ _', from: '2026-08-25' },
+            { word: 'spring onion', clue: '葱', letters: 's _ _ _ _ _  o _ _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'spring onion is on its third meeting. The story has a small turn in it at the end, which is worth pointing out.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  BAO — Level 10, ESOL (Vietnamese)
+      // ────────────────────────────────────────────────────────
+      Bao: [
+        {
+          reading: {
+            title: 'Too Much Water',
+            passage:
+              'We had planted the seeds in half a bottle in July. My little brother watered them every night, because he wanted the shoots to come up faster. On Thursday the soil was full of water and I had to tip some out. Two of the seven shoots went soft and died. Dad told my brother that a plant can drown. Now he waters it on Monday and Thursday only.',
+          },
+          questions: [
+            'What did the brother do every night?',
+            'What happened on Thursday?',
+            'What does the brother do now?',
+            'Find the word in the story that means hạt giống.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My brother', 'The shoots', 'Dad', 'We'],
+            verbs: ['planted', 'watered', 'died', 'told', 'waited'],
+            translations: { 'I': 'tôi', 'My brother': 'em trai tôi', 'The shoots': 'mầm cây', 'Dad': 'bố', 'We': 'chúng tôi', 'planted': 'trồng', 'watered': 'tưới', 'died': 'chết', 'told': 'bảo', 'waited': 'chờ' },
+          },
+          writing: {
+            prompt: 'Write about a time somebody in your family tried too hard to help. What happened?',
+            promptTranslation: 'Viết về một lần người nhà bạn cố giúp quá mức. Chuyện gì đã xảy ra?',
+            support: {
+              vocabularyList: [
+                { word: 'brother', translation: 'em trai', language: 'Vietnamese' },
+                { word: 'faster', translation: 'nhanh hơn', language: 'Vietnamese' },
+                { word: 'drown', translation: 'chết úng', language: 'Vietnamese' },
+                { word: 'only', translation: 'chỉ', language: 'Vietnamese' },
+                { word: 'died', translation: 'chết', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'shoots', clue: 'mầm cây', letters: 's _ _ _ _ _', from: '2026-08-25' },
+            { word: 'seven', clue: 'bảy', letters: 's _ _ _ _', from: '2026-08-25' },
+            { word: 'seeds', clue: 'hạt giống', letters: 's _ _ _ _', from: '2026-08-17' },
+            ],
+          writingLines: 6,
+          teacherNote:
+            'Fiction from today. seeds is on its third meeting. The idea that a plant can drown was the explanation two weeks ago; here it happens to somebody.',
+        },
+        {
+          reading: {
+            title: 'The Plant That Burnt',
+            passage:
+              'Aunty gave Mum a plant with big thin leaves. Mum put it on the step where the sun is full all afternoon. In one week the edges went brown and dry. Aunty said the plant had come from under the trees in a forest, and that it wanted shade. We moved it to the side of the house. The new leaves are fine, but the burnt ones will not come back.',
+          },
+          questions: [
+            'Where did Mum put the plant?',
+            'What happened in one week?',
+            'What did Aunty say the plant wanted?',
+            'Find the word in the story that means bóng râm.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Aunty', 'Mum', 'The plant', 'We'],
+            verbs: ['gave', 'put', 'burnt', 'moved', 'grew'],
+            translations: { 'I': 'tôi', 'Aunty': 'cô', 'Mum': 'mẹ', 'The plant': 'cây', 'We': 'chúng tôi', 'gave': 'cho', 'put': 'đặt', 'burnt': 'cháy', 'moved': 'chuyển', 'grew': 'mọc' },
+          },
+          writing: {
+            prompt: 'Write about a gift that needed looking after. What went wrong or right?',
+            promptTranslation: 'Viết về một món quà cần được chăm sóc. Chuyện gì đã xảy ra?',
+            support: {
+              vocabularyList: [
+                { word: 'aunty', translation: 'cô', language: 'Vietnamese' },
+                { word: 'step', translation: 'bậc thềm', language: 'Vietnamese' },
+                { word: 'brown', translation: 'nâu', language: 'Vietnamese' },
+                { word: 'edges', translation: 'mép', language: 'Vietnamese' },
+                { word: 'fine', translation: 'ổn', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'full', clue: 'đầy đủ', letters: 'f _ _ _', from: '2026-08-25' },
+            { word: 'forest', clue: 'rừng', letters: 'f _ _ _ _ _', from: '2026-08-25' },
+            { word: 'shade', clue: 'bóng râm', letters: 's _ _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'shade is on its third meeting. Note the last sentence: some damage does not undo, which is a small idea worth talking about.',
+        },
+        {
+          reading: {
+            title: 'The Mint That Took the Bed',
+            passage:
+              'Two years ago we put one small mint plant straight into the garden bed. Nobody thought about it again. This spring there was mint along the whole bed and under the path as well. Dad dug it all out on Saturday and it took him four hours. He has put a new one in a pot on the concrete. He says mint is only a problem if you trust it.',
+          },
+          questions: [
+            'What did they plant two years ago?',
+            'What did Dad do on Saturday?',
+            'Where is the new mint plant?',
+            'Find the word in the story that means bạc hà.',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The mint', 'Dad', 'The garden bed', 'We'],
+            verbs: ['planted', 'spread', 'dug', 'moved', 'trusted'],
+            translations: { 'I': 'tôi', 'The mint': 'bạc hà', 'Dad': 'bố', 'The garden bed': 'luống', 'We': 'chúng tôi', 'planted': 'trồng', 'spread': 'lan ra', 'dug': 'đào', 'moved': 'chuyển', 'trusted': 'tin' },
+          },
+          writing: {
+            prompt: 'Write about something small that became a big problem. How was it fixed?',
+            promptTranslation: 'Viết về một chuyện nhỏ đã trở thành vấn đề lớn. Nó được giải quyết thế nào?',
+            support: {
+              vocabularyList: [
+                { word: 'dug', translation: 'đào', language: 'Vietnamese' },
+                { word: 'hours', translation: 'giờ', language: 'Vietnamese' },
+                { word: 'concrete', translation: 'bê tông', language: 'Vietnamese' },
+                { word: 'spring', translation: 'mùa xuân', language: 'Vietnamese' },
+                { word: 'trust', translation: 'tin', language: 'Vietnamese' },
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'straight', clue: 'thẳng', letters: 's _ _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'path', clue: 'lối đi', letters: 'p _ _ _', from: '2026-08-25' },
+            { word: 'mint', clue: 'bạc hà', letters: 'm _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'mint is on its third meeting, closing the run. The last line is a joke; check he heard it as one.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MATT — Level 10
+      // ────────────────────────────────────────────────────────
+      Matt: [
+        {
+          reading: {
+            title: 'The One That Lived',
+            passage:
+              'Nan gave me twelve cuttings in July and I was sure I would kill them all. Six went black in the first fortnight. Two more went limp after a frost. By August there were four left, and only three of those held on when I gave them a gentle pull. Nan said that was normal, and better than her first go. I have given her two back. The biggest one is on my windowsill and it has three new leaves.',
+          },
+          questions: [
+            'How many cuttings did Nan give the writer?',
+            'What happened to two of them after the frost?',
+            'How did the writer test whether they had rooted?',
+            'Which word in the story means moving slowly and carefully?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Nan', 'The cuttings', 'The frost', 'We'],
+            verbs: ['gave', 'died', 'held on', 'tested', 'kept'],
+          },
+          writing: {
+            prompt: 'Write about something you tried where only part of it worked. What did you keep?',
+            support: {
+              wordBank: ['Nan', 'kill', 'fortnight', 'August', 'held', 'back', 'leaves'],
+            },
+          },
+          reviewWords: [
+            { word: 'twelve', clue: 'the number after eleven', letters: 't _ _ _ _ _', from: '2026-08-25' },
+            { word: 'gentle', clue: 'soft and careful, not rough', letters: 'g _ _ _ _ _', from: '2026-08-25' },
+            { word: 'biggest', clue: 'the largest of them all', letters: 'b _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'limp', clue: 'soft and drooping, with no stiffness', letters: 'l _ _ _', from: '2026-08-17' },
+            { word: 'frost', clue: 'ice that forms on a cold clear night', letters: 'f _ _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'Fiction from today, and shorter than his last few. limp and frost are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'The Bag That Cooked',
+            passage:
+              'I put a bag over my last two cuttings and left them on the sill in the afternoon sun. When I came back from football they were flat and brown. The bag traps the air, which is what you want, but in direct sun it cooks everything inside it. The bag is a blanket for damp air, not for heat. Leo said I had built a glasshouse for two plants and then left them in it. The last one is in the shade by the shed, which is the shelter it actually needed.',
+          },
+          questions: [
+            'Where did the writer leave the cuttings?',
+            'What did they look like when he came back?',
+            'What does the bag do that you want it to do?',
+            'Which word in the story means holds something so it cannot get out?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The bag', 'The sun', 'Leo', 'We'],
+            verbs: ['left', 'trapped', 'cooked', 'moved', 'said'],
+          },
+          writing: {
+            prompt: 'Write about a time the right idea went wrong because of where you put it.',
+            support: {
+              wordBank: ['sill', 'football', 'flat', 'brown', 'Leo', 'shed', 'damp'],
+            },
+          },
+          reviewWords: [
+            { word: 'traps', clue: 'holds something so it cannot get out', letters: 't _ _ _ _', from: '2026-08-25' },
+            { word: 'direct', clue: 'straight, with nothing in the way', letters: 'd _ _ _ _ _', from: '2026-08-25' },
+            { word: 'cooks', clue: 'heats until it is done, or ruined', letters: 'c _ _ _ _', from: '2026-08-25' },
+            { word: 'shelter', clue: 'protection from sun, wind or rain', letters: 's _ _ _ _ _ _', from: '2026-08-17' },
+            { word: 'blanket', clue: 'you put it over a bed to keep warm', letters: 'b _ _ _ _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'blanket is used as a comparison here, not a real blanket, which is worth checking he noticed. shelter and blanket are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'The Spray I Did Not Buy',
+            passage:
+              'There were aphids all over the new growth on Mum\'s roses and I was going to buy a spray. Leo\'s dad said to wait a week and count them first. I shook a stem over paper on the Monday and there were about forty. On the Friday there were fewer than ten, and I found six ladybirds on the same plant. A spray kills the ladybirds too, and then the aphids come back with nothing to stop them.',
+          },
+          questions: [
+            'What was on the roses?',
+            'What did Leo\'s dad say to do?',
+            'What did the writer find on the Friday?',
+            'Which word in the story means a smaller number than before?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The aphids', 'The ladybirds', 'Leo\'s dad', 'We'],
+            verbs: ['counted', 'shook', 'waited', 'found', 'stopped'],
+          },
+          writing: {
+            prompt: 'Write about a time waiting turned out to be better than acting. What changed?',
+            support: {
+              wordBank: ['roses', 'growth', 'count', 'shook', 'forty', 'paper', 'stop'],
+            },
+          },
+          reviewWords: [
+            { word: 'spray', clue: 'liquid you squirt onto a plant', letters: 's _ _ _ _', from: '2026-08-25' },
+            { word: 'kills', clue: 'makes something die', letters: 'k _ _ _ _', from: '2026-08-25' },
+            { word: 'fewer', clue: 'a smaller number than before', letters: 'f _ _ _ _', from: '2026-08-25' },
+            { word: 'aphids', clue: 'small insects that cluster on new growth', letters: 'a _ _ _ _ _', from: '2026-08-17' },
+            { word: 'ladybirds', clue: 'red beetles with black spots that eat aphids', letters: 'l _ _ _ _ _ _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'aphids and ladybirds are on their third meeting, closing that run. The argument from last week is now a story with numbers in it.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOSHUA — Level 23. Shorter than usual, and letter
+      //  frames on the review words for the first time.
+      // ────────────────────────────────────────────────────────
+      Joshua: [
+        {
+          reading: {
+            title: 'Fifty-Two',
+            passage:
+              'Dad said the heap would never heat up and I said it would. We put the thermometer in on the Monday and the reading was twenty-four degrees, which is barely warmer than the air. On the Saturday I turned the whole thing and mixed in two bins of lawn clippings. On Sunday I went out before breakfast. It was fifty-two. I took a photo of the thermometer and left it on the kitchen table where Dad would find it.',
+          },
+          questions: [
+            'What did Dad say about the heap?',
+            'What was the reading on the Monday?',
+            'What did the writer mix in on the Saturday?',
+            'What did the writer leave on the kitchen table?',
+            'Which word in the story means only just, hardly at all?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Dad', 'The heap', 'The thermometer', 'We'],
+            verbs: ['said', 'turned', 'mixed', 'heated', 'found'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about a time you were right and somebody older was wrong. How did you show them?',
+            support: {
+              wordBank: ['bins', 'Sunday', 'breakfast', 'photo', 'kitchen', 'twenty-four', 'fifty-two'],
+            },
+          },
+          reviewWords: [
+            { word: 'clippings', clue: 'the bits cut off when you mow', letters: 'c _ _ _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'barely', clue: 'only just, hardly at all', letters: 'b _ _ _ _ _', from: '2026-08-25' },
+            { word: 'reading', clue: 'the number an instrument shows', letters: 'r _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'heap', clue: 'a pile of material', letters: 'h _ _ _', from: '2026-08-17' },
+            { word: 'thermometer', clue: 'the instrument that measures temperature', letters: 't _ _ _ _ _ _ _ _ _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'Fiction, and shorter than he has been getting. Letter frames are on his review words for the first time — check whether he still needs them next week. heap and thermometer are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'The Branch That Did Not Heal',
+            passage:
+              'There is a hole in the plum tree by the fence, about the size of a fist. Grandad cut that branch off twenty years ago and he cut it flush with the trunk. A tree does not heal a wound; it seals it over. Mr Patel next door cut one the same year but left the collar, the swelling at the base of the branch, and you cannot see where his was. Grandad says he knew, and did it anyway, because it looked tidier.',
+          },
+          questions: [
+            'How big is the hole in the plum tree?',
+            'What did Grandad do when he cut the branch?',
+            'What did Mr Patel do differently?',
+            'Why did Grandad do it his way?',
+            'Which word in the story means to close a wound over?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Grandad', 'The tree', 'Mr Patel', 'We'],
+            verbs: ['cut', 'sealed', 'healed', 'left', 'knew'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about somebody who did something the wrong way on purpose. Was it worth it?',
+            support: {
+              wordBank: ['plum', 'fist', 'Grandad', 'flush', 'trunk', 'tidier', 'next door'],
+            },
+          },
+          reviewWords: [
+            { word: 'heal', clue: 'to get better after being hurt', letters: 'h _ _ _', from: '2026-08-25' },
+            { word: 'wound', clue: 'a cut or an injury', letters: 'w _ _ _ _', from: '2026-08-25' },
+            { word: 'seals', clue: 'closes something over completely', letters: 's _ _ _ _', from: '2026-08-25' },
+            { word: 'collar', clue: 'the swollen ring where a branch meets the trunk', letters: 'c _ _ _ _ _', from: '2026-08-17' },
+            { word: 'swelling', clue: 'a part that has grown thicker than the rest', letters: 's _ _ _ _ _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'collar and swelling are on their third meeting. The two neighbours doing the same job differently is the whole point of the story.',
+        },
+        {
+          reading: {
+            title: 'The Apples Nobody Buys',
+            passage:
+              'There is an old apple tree at the back of the school field that nobody planted on purpose. Nobody has pruned it either. The apples are small and they bruise if you look at them, so you would never see them in a supermarket, where every apple has to be identical and survive a truck. But they taste better than anything in the shop, and they crop for six weeks instead of one. Mr Reid says varieties like this one have been here for eighty years.',
+          },
+          questions: [
+            'Where is the apple tree?',
+            'What is wrong with the apples for a shop?',
+            'What has to be true of a supermarket apple?',
+            'What are these apples better at?',
+            'Which word in the story means exactly the same as each other?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The tree', 'The apples', 'Mr Reid', 'We'],
+            verbs: ['grew', 'bruised', 'tasted', 'cropped', 'picked'],
+            lines: 4,
+          },
+          writing: {
+            prompt: 'Write about something old that is better than the new version. Say what the new one is better at.',
+            support: {
+              wordBank: ['purpose', 'survive', 'truck', 'taste', 'crop', 'Mr Reid', 'eighty'],
+            },
+          },
+          reviewWords: [
+            { word: 'supermarket', clue: 'the big shop where most food is bought', letters: 's _ _ _ _ _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'identical', clue: 'exactly the same as each other', letters: 'i _ _ _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'bruise', clue: 'to get marked and soft from being knocked', letters: 'b _ _ _ _ _', from: '2026-08-25' },
+            { word: 'varieties', clue: 'different kinds of the same plant', letters: 'v _ _ _ _ _ _ _ _', from: '2026-08-17' },
+            { word: 'prune', clue: 'to cut back a plant on purpose', letters: 'p _ _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 8,
+          teacherNote:
+            'varieties and prune are on their third meeting. This is last week\'s argument told as a story about one tree.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  MAVERICK — easier band, sixth session on it.
+      // ────────────────────────────────────────────────────────
+      Maverick: [
+        {
+          reading: {
+            title: 'I Thought It Was Dead',
+            passage:
+              'I planted a seed in a cup and put it on the shelf by the window. For a week nothing came up. I told Mum it was dead. She said to leave it one more week. On the Tuesday there was a small green shoot. Now it has six leaves. I turn the cup every few days so that it does not lean over to one side.',
+          },
+          questions: [
+            'Where did the writer put the cup?',
+            'What did the writer tell Mum?',
+            'What came up on the Tuesday?',
+            'Why does the writer turn the cup?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The seed', 'Mum', 'The shoot', 'We'],
+            verbs: ['planted', 'waited', 'told', 'grew', 'turned'],
+            lines: 5,
+          },
+          writing: {
+            prompt: 'Write about a time you gave up on something too soon. What happened next?',
+            support: {
+              wordBank: ['seed', 'window', 'week', 'Tuesday', 'green', 'six', 'days'],
+            },
+          },
+          reviewWords: [
+            { word: 'cup', clue: 'you drink out of it', letters: 'c _ _', from: '2026-08-25' },
+            { word: 'shelf', clue: 'a flat board on a wall to put things on', letters: 's _ _ _ _', from: '2026-08-25' },
+            { word: 'dead', clue: 'not alive any more', letters: 'd _ _ _', from: '2026-08-25' },
+            { word: 'leaves', clue: 'the flat green parts of a plant', letters: 'l _ _ _ _ _', from: '2026-08-17' },
+            { word: 'lean', clue: 'to bend over to one side', letters: 'l _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'Sixth session on this band. leaves and lean are on their third meeting. If all five come from the clue again, his passages can grow by ten words next week.',
+        },
+        {
+          reading: {
+            title: 'The Saucer',
+            passage:
+              'Nan gave me a pot with a hole in the bottom of it. She gave me a saucer to stand it on so the water would not go on the floor. I gave the plant a lot of water and it ran out into the saucer. An hour later the saucer was still full. Nan said to tip it out. If the pot sits in water the roots go soft and the plant dies.',
+          },
+          questions: [
+            'What did Nan give the writer?',
+            'What was the saucer for?',
+            'What did Nan say to do with the water?',
+            'What happens if the pot sits in water?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Nan', 'The pot', 'The water', 'We'],
+            verbs: ['gave', 'stood', 'ran out', 'tipped', 'waited'],
+            lines: 5,
+          },
+          writing: {
+            prompt: 'Write about something somebody taught you to do properly. What did they say?',
+            support: {
+              wordBank: ['Nan', 'pot', 'floor', 'water', 'tip', 'full', 'dies'],
+            },
+          },
+          reviewWords: [
+            { word: 'bottom', clue: 'the lowest part of something', letters: 'b _ _ _ _ _', from: '2026-08-25' },
+            { word: 'saucer', clue: 'the small dish a cup or pot stands on', letters: 's _ _ _ _ _', from: '2026-08-25' },
+            { word: 'hour', clue: 'sixty minutes', letters: 'h _ _ _', from: '2026-08-25' },
+            { word: 'hole', clue: 'a gap or an opening', letters: 'h _ _ _', from: '2026-08-17' },
+            { word: 'root', clue: 'the part of a plant under the ground', letters: 'r _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'hole and root are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'Ten Minutes on Saturday',
+            passage:
+              'Dad and I do the weeds for ten minutes every Saturday. It is not much work. A small weed comes out with one hand. If you leave it a year it takes both hands and the root stays in the ground. It is easier after it rains. We put the weeds in the compost, but not the ones with seeds on them. Those go in the bin.',
+          },
+          questions: [
+            'How long do they weed for?',
+            'What happens if you leave a weed for a year?',
+            'When is weeding easier?',
+            'Which weeds go in the bin?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'Dad', 'The weed', 'The root', 'We'],
+            verbs: ['pulled', 'left', 'stayed', 'rained', 'put'],
+            lines: 5,
+          },
+          writing: {
+            prompt: 'Write about a job you do with somebody every week. What makes it easier?',
+            support: {
+              wordBank: ['Dad', 'work', 'small', 'easier', 'bin', 'both', 'leave'],
+            },
+          },
+          reviewWords: [
+            { word: 'minutes', clue: 'sixty of these make an hour', letters: 'm _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'Saturday', clue: 'the day after Friday', letters: 'S _ _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'hands', clue: 'you have two, with five fingers each', letters: 'h _ _ _ _', from: '2026-08-25' },
+            { word: 'weed', clue: 'a plant growing where you do not want it', letters: 'w _ _ _', from: '2026-08-17' },
+            { word: 'compost', clue: 'rotted plant material you put back on the garden', letters: 'c _ _ _ _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 6,
+          teacherNote:
+            'weed and compost are on their third meeting, closing that run.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  JOCASTA — shorter than usual, writing down to 8 lines,
+      //  and letter frames added.
+      // ────────────────────────────────────────────────────────
+      Jocasta: [
+        {
+          reading: {
+            title: 'The Unlabelled Jar',
+            passage:
+              'In August my mother found an unlabelled jar of brown seed at the back of the cupboard and asked whose it was. It was mine. I had been sure I would remember, because I had handled those pods for an hour and the seed was distinctive. It was not distinctive at all. She planted a row of it anyway, in the good bed, and what came up was the one thing neither of us had wanted. She has not mentioned it since, which is worse.',
+          },
+          questions: [
+            'What did the mother find, and where?',
+            'Why had the writer not labelled the jar?',
+            'What did the mother do with the seed?',
+            'What came up?',
+            'Which word in the story means easy to tell apart from others?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My mother', 'The jar', 'The seed', 'We'],
+            verbs: ['saved', 'found', 'planted', 'forgot', 'mentioned'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about something you were certain you would remember and did not.',
+            support: {
+              wordBank: ['mother', 'remember', 'planted', 'bed', 'mentioned', 'worse', 'anyway'],
+              sentenceStarters: [
+                'What I was certain I would remember...',
+                'The thing she has not said is...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'cupboard', clue: 'a cabinet with a door for storing things', letters: 'c _ _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'handled', clue: 'held and worked with by hand', letters: 'h _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'distinctive', clue: 'easy to tell apart from others', letters: 'd _ _ _ _ _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'unlabelled', clue: 'with nothing written on it to say what it is', letters: 'u _ _ _ _ _ _ _ _ _', from: '2026-08-17' },
+            { word: 'pods', clue: 'the cases that hold seeds', letters: 'p _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 7,
+          teacherNote:
+            'Fiction from today, and shorter. Letter frames on her review words for the first time; drop them again if she does not look at them. unlabelled and pods are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'The Oven',
+            passage:
+              'My grandmother dried her seed in the oven once, on the lowest setting, because the spare room was cold and the packets kept going mouldy. Every seed was dead by spring and she never told anybody why the beans did not come up. She told me forty years later, in one sentence, while I was spreading mine out on a tray in the airy end of the shed. Heat restarts a seed. Dry does not.',
+          },
+          questions: [
+            'Why did the grandmother use the oven?',
+            'What happened to the seed?',
+            'When did she tell the writer about it?',
+            'What was the writer doing when she told her?',
+            'Which word in the story means covered in mould from being damp?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My grandmother', 'The seed', 'The oven', 'We'],
+            verbs: ['dried', 'died', 'told', 'spread', 'listened'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about a mistake somebody kept to themselves for years. Why did they tell you when they did?',
+            support: {
+              wordBank: ['grandmother', 'setting', 'spare', 'spring', 'beans', 'tray', 'shed'],
+              sentenceStarters: [
+                'She said it in one sentence because...',
+                'What she never told anybody was...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'oven', clue: 'you bake in it', letters: 'o _ _ _', from: '2026-08-25' },
+            { word: 'restarts', clue: 'begins again after stopping', letters: 'r _ _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'packet', clue: 'a small paper bag things are sold in', letters: 'p _ _ _ _ _', from: '2026-08-25' },
+            { word: 'mouldy', clue: 'covered in mould from being damp', letters: 'm _ _ _ _ _', from: '2026-08-17' },
+            { word: 'airy', clue: 'with plenty of air moving through', letters: 'a _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 7,
+          teacherNote:
+            'mouldy and airy are on their third meeting. The last two sentences are four words each and carry the whole explanation; worth reading aloud.',
+        },
+        {
+          reading: {
+            title: 'The Extra Row',
+            passage:
+              'My father believes in sowing a third more than he needs. He sows the extra without thinking about it and gives the rest away at the gate in a box with an honesty tin. My aunt calls it waste. He says it is insurance, and that the risk he is covering is a whole season, not a packet of seed. In the year the slugs took everything in April he was the only person on the street with beans in January. The yield is not the point. My aunt took two lettuces from the box and said nothing.',
+          },
+          questions: [
+            'What does the father do with the extra?',
+            'What does the aunt call it?',
+            'What does the father call it?',
+            'What happened in the year of the slugs?',
+            'Which word in the story means protection against something going wrong?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My father', 'My aunt', 'The slugs', 'We'],
+            verbs: ['sowed', 'gave away', 'called', 'took', 'said'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about somebody who does more than they need to. Is it waste or is it sense?',
+            support: {
+              wordBank: ['gate', 'honesty tin', 'waste', 'slugs', 'street', 'lettuces', 'January'],
+              sentenceStarters: [
+                'What my aunt calls waste is actually...',
+                'She did not say anything, but...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'sowing', clue: 'planting seed by scattering it', letters: 's _ _ _ _ _', from: '2026-08-25' },
+            { word: 'insurance', clue: 'protection against something going wrong', letters: 'i _ _ _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'extra', clue: 'more than is needed', letters: 'e _ _ _ _', from: '2026-08-25' },
+            { word: 'risk', clue: 'the chance that something goes wrong', letters: 'r _ _ _', from: '2026-08-17' },
+            { word: 'yield', clue: 'the amount a crop produces', letters: 'y _ _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 7,
+          teacherNote:
+            'risk and yield are on their third meeting. The aunt taking the lettuces and saying nothing is the end of the argument, not a detail.',
+        },
+      ],
+
+      // ────────────────────────────────────────────────────────
+      //  CODY — shorter than usual, writing down to 8 lines,
+      //  and letter frames added.
+      // ────────────────────────────────────────────────────────
+      Cody: [
+        {
+          reading: {
+            title: 'The Trial I Nearly Stopped',
+            passage:
+              'I grew two tomato plants the same way and watered them differently, and for six weeks the one I watered every morning looked better. I nearly pulled the trial in January. Then it did not rain for eleven days in February and that plant wilted by the third afternoon. The other one did not. When I dug them both out in April the difference in root depth was obvious without a ruler. I have not trusted advice the same way since.',
+          },
+          questions: [
+            'How did the writer water the two plants?',
+            'Which one looked better for six weeks?',
+            'What happened in February?',
+            'What did the writer find in April?',
+            'Which word in the story means a test set up to compare two things?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'The daily plant', 'The other plant', 'The roots', 'We'],
+            verbs: ['watered', 'wilted', 'waited', 'dug', 'compared'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about a time your own test beat what you had been told. What nearly stopped you?',
+            support: {
+              wordBank: ['tomato', 'differently', 'January', 'rain', 'dug', 'ruler', 'advice'],
+              sentenceStarters: [
+                'The plant that looked better for six weeks...',
+                'What changed my mind was not advice but...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'trial', clue: 'a test set up to compare two things', letters: 't _ _ _ _', from: '2026-08-25' },
+            { word: 'wilted', clue: 'went limp from lack of water', letters: 'w _ _ _ _ _', from: '2026-08-25' },
+            { word: 'February', clue: 'the month after January', letters: 'F _ _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'depth', clue: 'how far down something goes', letters: 'd _ _ _ _', from: '2026-08-17' },
+            { word: 'obvious', clue: 'easy to see, needing no explanation', letters: 'o _ _ _ _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 7,
+          teacherNote:
+            'Fiction, and shorter. Letter frames on his review words for the first time. depth and obvious are on their third meeting.',
+        },
+        {
+          reading: {
+            title: 'The Jar on the Windowsill',
+            passage:
+              'My grandfather kept a jar of our soil on the kitchen windowsill for a whole winter. He had shaken it with water and a drop of detergent in October and then left it completely alone. Nothing dissolved; it just sat there in layers. The clay particles were so fine they took a month to settle. By December you could see the bands: sand at the bottom, then silt, then clay. He would not tell me what to do about it. He said the jar had told me the proportions and that organic matter was the answer either way.',
+          },
+          questions: [
+            'What did the grandfather keep on the windowsill?',
+            'When did he shake it?',
+            'What could you see by December?',
+            'What did he refuse to do?',
+            'Which word in the story means the tiny pieces something is made of?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My grandfather', 'The jar', 'The clay', 'We'],
+            verbs: ['kept', 'shook', 'settled', 'watched', 'asked'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about somebody who showed you something instead of telling you the answer.',
+            support: {
+              wordBank: ['grandfather', 'detergent', 'October', 'December', 'bands', 'layers', 'either'],
+              sentenceStarters: [
+                'What the jar told him was...',
+                'He would not give me the answer because...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'particles', clue: 'the tiny pieces something is made of', letters: 'p _ _ _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'organic', clue: 'made from things that were once alive', letters: 'o _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'dissolved', clue: 'mixed into a liquid and disappeared', letters: 'd _ _ _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'silt', clue: 'soil particles between clay and sand in size', letters: 's _ _ _', from: '2026-08-17' },
+            { word: 'proportions', clue: 'how much there is of each part', letters: 'p _ _ _ _ _ _ _ _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 7,
+          teacherNote:
+            'silt and proportions are on their third meeting. He refuses to give the answer, which is the point of the story.',
+        },
+        {
+          reading: {
+            title: 'The Notebook by the Door',
+            passage:
+              'My neighbour keeps a notebook on a hook by her back door and writes one line in it a week. Nothing but dates: when she sowed, when it came up, when the frost got it. She has eleven years of them. She says she has never once used a companion planting chart and could not tell you a single pairing, but she can tell you to the week when it is safe to put beans out on this street. Nobody else on the street can do that.',
+          },
+          questions: [
+            'Where does the neighbour keep the notebook?',
+            'What does she write in it?',
+            'How many years of them does she have?',
+            'What can she tell you that nobody else can?',
+            'Which word in the story means two things put together?',
+          ],
+          sentenceStructure: {
+            subjects: ['I', 'My neighbour', 'The notebook', 'The frost', 'We'],
+            verbs: ['kept', 'wrote', 'sowed', 'recorded', 'asked'],
+            lines: 3,
+          },
+          writing: {
+            prompt: 'Write about somebody with a boring habit that turned out to be worth more than everybody else\'s method.',
+            support: {
+              wordBank: ['neighbour', 'hook', 'eleven', 'chart', 'safe', 'beans', 'street'],
+              sentenceStarters: [
+                'What she has instead of a chart is...',
+                'Eleven years of dates beats...',
+              ],
+            },
+          },
+          reviewWords: [
+            { word: 'notebook', clue: 'a small book you write notes in', letters: 'n _ _ _ _ _ _ _', from: '2026-08-25' },
+            { word: 'dates', clue: 'the days something happened on', letters: 'd _ _ _ _', from: '2026-08-25' },
+            { word: 'sowed', clue: 'planted seed', letters: 's _ _ _ _', from: '2026-08-25' },
+            { word: 'companion', clue: 'a plant said to help another growing beside it', letters: 'c _ _ _ _ _ _ _ _', from: '2026-08-17' },
+            { word: 'pairing', clue: 'two things put together', letters: 'p _ _ _ _ _ _', from: '2026-08-17' },
+          ],
+          writingLines: 7,
+          teacherNote:
+            'companion and pairing are on their third meeting, closing that run. Last week\'s opinion is now a person who proves it.',
+        },
+      ],
+    },
+  },
+
+  // ══════════════════════════════════════════════════════════
   //  25 AUGUST 2026 — week two of the gardening unit.
   //  The topic stays so that last week's garden vocabulary is
   //  reused rather than dropped, but the text types rotate:
