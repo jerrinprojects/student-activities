@@ -18,6 +18,14 @@ const subjects = [
     iconBg: 'bg-blue-200',
   },
   {
+    id: 'handwriting',
+    label: 'Handwriting',
+    icon: '✎',
+    description: 'Print script practice, 5 minutes a day',
+    color: 'bg-amber-100 border-amber-300 hover:bg-amber-200',
+    iconBg: 'bg-amber-200',
+  },
+  {
     id: 'oday',
     label: 'Oday · Pre-Reader',
     icon: 'Aa',

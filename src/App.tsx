@@ -9,6 +9,8 @@ import AddSubPage from './pages/AddSubPage';
 import WorksheetPage from './pages/WorksheetPage';
 import AddSubDatePage from './pages/AddSubDatePage';
 import OdayHome from './pages/OdayHome';
+import HandwritingPage from './pages/HandwritingPage';
+import HandwritingPrintPage from './pages/HandwritingPrintPage';
 import OdayPrintPage from './pages/OdayPrintPage';
 
 export default function App() {
@@ -24,6 +26,8 @@ export default function App() {
         <Route path="/numeracy/add-sub" element={<AddSubPage />} />
         <Route path="/numeracy/add-sub/:date" element={<AddSubDatePage />} />
         <Route path="/numeracy/add-sub/set/:setId" element={<WorksheetPage />} />
+        <Route path="/handwriting" element={<HandwritingPage />} />
+        <Route path="/handwriting/print/:id" element={<HandwritingPrintPage />} />
         <Route path="/oday" element={<OdayHome />} />
         <Route path="/oday/print/:date" element={<OdayPrintPage />} />
       </Routes>
